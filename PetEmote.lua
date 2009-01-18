@@ -1,11 +1,6 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_HappinessEmoteMinFrequency = 120;
-PetEmote_HappinessEmoteMaxFrequency = 480;
-
-PetEmote_FeedEmoteMinFrequency = 180;
-
 PetEmote_Family = {};
 PetEmote_Settings = {};
 
@@ -13,13 +8,10 @@ PetEmote_Settings = {};
 function PetEmote_OnLoad ()
 	
 	this:RegisterEvent("UNIT_HAPPINESS");
-	this:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS");
 	
 	SLASH_PETEMOTE1 = "/pet";
 	SLASH_PETEMOTE2 = "/tier";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
-	
-	MarsMessageParser_RegisterFunction("PetEmote", FEEDPET_LOG_FIRSTPERSON, PetEmote_FeedPet, false);
 	
 	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
 	ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent;
@@ -28,7 +20,6 @@ function PetEmote_OnLoad ()
 	SendChatMessage = PetEmote_new_SendChatMessage;
 	
 	PetEmote_SetNextHappinessEmoteTime();
-	PetEmote_SetNextFeedEmoteTime();
 	
 	if (PetEmote_Settings["RandomEmotes"] == nil) then
 		PetEmote_Settings["RandomEmotes"] = true;
@@ -43,9 +34,6 @@ function PetEmote_OnEvent()
 	
 	if (event == "UNIT_HAPPINESS") then
 		PetEmote_HappinessChanged();
-	end
-	if (event == "CHAT_MSG_SPELL_TRADESKILLS") then
-		MarsMessageParser_ParseMessage("PetEmote", arg1);
 	end
 	
 end
@@ -83,7 +71,7 @@ function PetEmote_Command (args)
 			PetEmote_ShowMaskStateMessage();
 		end
 		
-	elseif (cmd == "random") then
+	elseif (cmd == "random" or cmd == "foo") then
 		
 		if (val == "") then
 			PetEmote_DoEmote(PetEmote_GetHappinessMessage(random(1, 3)));
@@ -96,7 +84,7 @@ function PetEmote_Command (args)
 			DEFAULT_CHAT_FRAME:AddMessage(PETEMOTE_LOCAL_RANDOM_INACTIVE);
 		end
 		
-	else
+	elseif (args ~= "") then
 		
 		PetEmote_DoEmote(args);
 		
@@ -143,6 +131,17 @@ function PetEmote_DoEmote (text)
 	
 end
 
+function PetEmote_DoRandomEmote ()
+	
+	happiness, damagePercentage, loyaltyRate = GetPetHappiness();
+	
+	if (happiness ~= nil and not UnitIsAFK("player")) then
+		PetEmote_DoEmote(PetEmote_GetHappinessMessage(happiness));
+		PetEmote_SetNextHappinessEmoteTime();
+	end
+	
+end
+
 
 function PetEmote_ChangeFamily (pet, family)
 	
@@ -173,44 +172,14 @@ function PetEmote_ShowMaskStateMessage ()
 end
 
 
-function PetEmote_FeedPet (food)
-	
-	if (PetEmote_Settings["RandomEmotes"] ~= true) then
-		return;
-	end
-	
-	if (PetEmote_NextFeedEmote < GetTime() and PetEmote_FeedMessages ~= nil) then
-		
-		if (PetEmote_FeedMessages[UnitCreatureFamily("pet")] ~= nil) then
-			PetEmote_DoEmote(gsub(PetEmote_FeedMessages[UnitCreatureFamily("pet")][random(1, getn(PetEmote_FeedMessages[UnitCreatureFamily("pet")]))], "$f", food));
-		else
-			PetEmote_DoEmote(gsub(PetEmote_FeedMessages["default"][random(1, getn(PetEmote_FeedMessages["default"]))], "$f", food));
-		end
-		
-		PetEmote_SetNextFeedEmoteTime();
-		
-	end
-	
-end
-
-function PetEmote_SetNextFeedEmoteTime ()
-	PetEmote_NextFeedEmote = GetTime() + PetEmote_FeedEmoteMinFrequency;
-end
-
-
 function PetEmote_HappinessChanged ()
 	
 	if (PetEmote_Settings["RandomEmotes"] ~= true) then
 		return;
 	end
 	
-	if (PetEmote_NextHappinessEmote < GetTime()) then
-		happiness, damagePercentage, loyaltyRate = GetPetHappiness();
-		
-		if (happiness ~= nil and not UnitAffectingCombat("pet") and UnitHealth("pet") > 0) then
-			PetEmote_DoEmote(PetEmote_GetHappinessMessage(happiness));
-			PetEmote_SetNextHappinessEmoteTime();
-		end
+	if (PetEmote_NextHappinessEmote < GetTime() and not UnitAffectingCombat("pet") and UnitHealth("pet") > 0) then
+		PetEmote_DoRandomEmote();
 	end
 	
 end

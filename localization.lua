@@ -49,6 +49,7 @@ PetEmote_HappinessMessages = {
 		[1] = {
 			"hat einen Bärenhunger!",
 			"braucht unbedingt etwas zu fressen.",
+			"bäumt sich hungrig auf.",
 		},
 		[2] = {
 			"knurrt unzufrieden.",
@@ -90,19 +91,15 @@ PetEmote_HappinessMessages = {
 	["Katze"] = {
 		[1] = {
 			"knurrt laut. Hunger!",
-			-- Tanandra, Der Rat von Dalaran (EU) --
 			"brüllt vor Hunger.",
 			"sieht sich hungrig um.",
-			-- Jaime, Zirkel des Cenarius (EU) --
 			"mauzt lautstark.",
 			"kratzt hungrig auf dem Boden herum.",
 		},
 		[2] = {
 			"faucht hungrig.",
 			"schnurrt unglücklich.",
-			-- Tanandra, Der Rat von Dalaran (EU) --
 			"sieht sich hungrig um.",
-			-- Jaime, Zirkel des Cenarius (EU) --
 			"mauzt unzufrieden.",
 			"kratzt hungrig auf dem Boden herum.",
 		},
@@ -110,10 +107,8 @@ PetEmote_HappinessMessages = {
 			"schnurrt glücklich.",
 			"knurrt zufrieden.",
 			"schnurrt.",
-			-- Tanandra, Der Rat von Dalaran (EU) --
 			"schnurrt zufrieden. Jetzt nur noch etwas kraulen...",
 			"beginnt eine ausführliche Katzenwäsche.",
-			-- Jaime, Zirkel des Cenarius (EU) --
 			"streckt sich und gähnt ausgiebig.",
 			"streckt sich und gähnt zufrieden.",
 			"schnurrt leise.",
@@ -179,14 +174,12 @@ PetEmote_HappinessMessages = {
 			"jault leise.",
 			"winselt hungrig.",
 			"sehnt sich nach einem Stück Fleisch.",
-			-- Jichd, Lordaeron (EU) --
 			"winselt leise und sieht sich mit hungrigen Blicken um.",
 			"jault unzufrieden. Hunger!",
 		},
 		[2] = {
 			"knurrt unzufrieden.",
 			"knurrt hungrig.",
-			-- Jichd, Lordaeron (EU) --
 			"leckt sich über die Schnauze und wedelt hoffnungsvoll mit dem Schwanz.",
 			"schnüffelt auf der Suche nach etwas Futter auf dem Boden herum.",
 		},
@@ -195,7 +188,6 @@ PetEmote_HappinessMessages = {
 			"jault glücklich.",
 			"kratzt sich.",
 			"schnüffelt auf dem Boden herum.",
-			-- Jichd, Lordaeron (EU) --
 			"schnauft zufrieden.",
 		},
 	},
@@ -272,16 +264,15 @@ PetEmote_HappinessMessages = {
 	["Spinne"] = {
 		[1] = {
 			"krabbelt aufgeregt umher. Hunger!",
-			-- Opale, Die Aldor (EU) --
 			"klappert mit den Fangzähnen und sieht sich hungrig um.",
 			"sieht sich mit allen acht Augen hungrig nach Beute um.",
 			"zischt giftig. Hunger!",
 			"gibt ein leises, hungriges Kreischen von sich.",
+			"gibt beunruhigende Laute von sich.",
 		},
 		[2] = {
 			"zischt hungrig.",
 			"kriecht hungrig über den Boden.",
-			-- Opale, Die Aldor (EU) --
 			"trippelt nervös von einem Bein auf das nächste und sieht sich hungrig um.",
 			"wackelt mit dem Hinterteil und sieht sich nach Beute um.",
 			"reibt unzufrieden die Vorderbeine aneinander.",
@@ -289,10 +280,10 @@ PetEmote_HappinessMessages = {
 		[3] = {
 			"zischt glücklich.",
 			"krabbelt zufrieden umher.",
-			-- Opale, Die Aldor (EU) --
 			"klappert zufrieden mit den Fangzähnen.",
 			"wippt gemütlich von einer Seite auf die andere.",
 			"reibt sich zufrieden die Vorderbeine.",
+			"tänzelt leicht herum.",
 		},
 	},
 	["Sporensegler"] = {
@@ -355,14 +346,12 @@ PetEmote_HappinessMessages = {
 			"jault leise.",
 			"winselt hungrig.",
 			"sehnt sich nach einem Stück Fleisch.",
-			-- Jichd, Lordaeron (EU) --
 			"winselt leise und sieht sich mit hungrigen Blicken um.",
 			"jault unzufrieden. Hunger!",
 		},
 		[2] = {
 			"knurrt unzufrieden.",
 			"knurrt hungrig.",
-			-- Jichd, Lordaeron (EU) --
 			"leckt sich über die Schnauze und wedelt hoffnungsvoll mit dem Schwanz.",
 			"schnüffelt auf der Suche nach etwas Futter auf dem Boden herum.",
 		},
@@ -371,124 +360,10 @@ PetEmote_HappinessMessages = {
 			"jault glücklich.",
 			"kratzt sich.",
 			"schnüffelt auf dem Boden herum.",
-			-- Jichd, Lordaeron (EU) --
 			"schnauft zufrieden.",
 		},
 	},
 }
-
-PetEmote_FeedMessages = {
-	["default"] = {
-		"kaut auf $f herum und schluckt es gierig hinunter.",
-		"schlingt $f gierig hinunter.",
-		"frisst sich an $f satt.",
-	},
-	-- ["Fledermaus"] = {},
-	["Bär"] = {
-		"kaut auf $f herum und schluckt es gierig hinunter.",
-		"schlingt $f gierig hinunter.",
-		"stillt seinen Bärenhunger mit $f.",
-	},
-	["Eber"] = {
-		"grunzt leise und schluckt $f in einem Stück hinunter.",
-		"kaut auf $f herum und grunzt laut.",
-		"schlingt $f hinunter und grunzt.",
-	},
-	["Aasgeier"] = {
-		"krächzt leise und macht sich über $f her.",
-		"fängt $f im Flug und schlingt es dann hinunter.",
-		"schlingt $f hinunter.",
-	},
-	["Katze"] = {
-		"schnurrt leise und macht sich über $f her.",
-		"knurrt $f an und schlingt es dann hinunter.",
-		"schlingt $f hinunter und knurrt dabei genüsslich.",
-		-- Tanandra, Der Rat von Dalaran (EU) --
-		"schlingt $f in großen Brocken hinunter.",
-		"nagt genüsslich an $f.",
-		-- Jaime, Zirkel des Cenarius (EU) --
-		"kaut fauchend an $f herum.",
-		"nagt schmatzend an $f.",
-		"spielt mit $f herum und schlingt es dann gierig hinunter.",
-	},
-	["Krabbe"] = {
-		"zerlegt $f mit den Scheren in mundgerechte Stückchen.",
-		"schlingt $f hinunter und wetzt sich genüsslich die Scheren.",
-	},
-	["Krokilisk"] = {
-		"beißt einmal herzhaft auf $f und schlingt es dann hinunter.",
-		"schnappt nach $f frisst es gierig.",
-	},
-	["Drachenfalke"] = {
-		"röstet $f und schlingt es dann hinunter.",
-		"grillt $f mit seinem Feueratem.",
-		"flambiert $f und frisst es genüsslich.",
-	},
-	["Gorilla"] = {
-		"stopft $f gierig in sich hinein.",
-		"verspeist $f mit Genuss.",
-		"schlingt $f hinunter und reibt sich den Bauch.",
-	},
-	["Hyäne"] = {
-		"knurrt leise und macht sich über $f her.",
-		"knurrt $f an und schlingt es dann hinunter.",
-		"schlingt $f hinunter und knurrt dabei genüsslich.",
-	},
-	-- ["nether ray"] = {},
-	["Eule"] = {
-		"krächzt leise und macht sich über $f her.",
-		"fängt $f im Flug und schlingt es dann hinunter.",
-		"schlingt $f hinunter.",
-	},
-	["Raptor"] = {
-		"beißt einmal herzhaft auf $f und schlingt es dann hinunter.",
-		"schnappt nach $f frisst es gierig.",
-	},
-	["Felshetzer"] = {
-		"beißt einmal herzhaft auf $f und schlingt es dann hinunter.",
-		"schnappt nach $f frisst es gierig.",
-	},
-	["Skorpid"] = {
-		"zerlegt $f mit den Scheren in mundgerechte Stückchen.",
-		"schlingt $f hinunter und wetzt sich genüsslich die Scheren.",
-	},
-	["Schlange"] = {
-		"würgt $f in einem Stück hinunter.",
-		"schnappt nach $f und würgt es hinunter.",
-	},
-	["Spinne"] = {
-		"spinnt $f blitzschnell ein und saugt es anschließend aus.",
-		"stopft sich $f mit den Vorderbeinen genüsslich ins Maul.",
-		
-		"richtet alle acht Augen auf $f und fällt dann darüber her.",
-		"zischt freudig und schlägt dann die Fangzähne in $f.",
-	},
-	["Sporensegler"] = {
-		"röstet $f und schlingt es dann hinunter.",
-		"grillt $f mit seinem Feueratem.",
-		"flambiert $f und frisst es genüsslich.",
-	},
-	["Schreiter"] = {
-		"schlingt $f gierig hinunter.",
-		"schnappt nach $f und würgt es den langen Hals hinunter.",
-	},
-	["Schildkröte"] = {
-		"kaut gelassen auf $f herum.",
-		"verspeist $f in aller Ruhe.",
-	},
-	-- ["warp stalker"] = {},
-	["Windnatter"] = {
-		"zischt leise und macht sich über $f her.",
-		"fängt $f im Flug und schlingt es dann hinunter.",
-		"schlingt $f hinunter.",
-	},
-	["Wolf"] = {
-		"knurrt leise und macht sich über $f her.",
-		"knurrt $f an und schlingt es dann hinunter.",
-		"schlingt $f hinunter und knurrt dabei genüsslich.",
-	},
-}
-
 
 
 
@@ -523,20 +398,20 @@ PetEmote_HappinessMessages = {
 		},
 		[3] = {
 			"growls contentedly.",
-			"gnarls happily.",
+			"snarls happily.",
 		},
 	},
 	["Bat"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
 		},
 		[2] = {
 			"wheezes hungry.",
-			"flutters around unhappily.",
+			"flaps around unhappily.",
 		},
 		[3] = {
 			"wheezes happily.",
-			"flutters around contentedly.",
+			"flaps around contentedly.",
 		},
 	},
 	["Bear"] = {
@@ -545,11 +420,11 @@ PetEmote_HappinessMessages = {
 			"really needs something to eat.",
 		},
 		[2] = {
-			"gnarls unsatisfied.",
+			"snarls unsatisfied.",
 			"grumbles discontented.",
 		},
 		[3] = {
-			"gnarls happily.",
+			"snarls happily.",
 			"grumbles contentedly and scratches itself behind its " .. PETEMOTE_LOCAL_LEFT_RIGHT .. " ear.",
 			"grumbles.",
 		},
@@ -570,11 +445,12 @@ PetEmote_HappinessMessages = {
 	},
 	["Carrion Bird"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
 		},
 		[2] = {
 			"caws hungry.",
-			"flutters around unhappily.",
+			"flaps around unhappily.",
+			"looks for a corpse to scavenge.",
 		},
 		[3] = {
 			"caws happily.",
@@ -583,22 +459,22 @@ PetEmote_HappinessMessages = {
 	},
 	["Cat"] = {
 		[1] = {
-			"gnarls uproariously. Hunger!",
+			"snarls uproariously. Hunger!",
 			"roars hungry.",
 			"looks around for some food.",
-			"miaows vociferous.",
+			"meows vociferously.",
 			"scratches over the ground hungry.",
 		},
 		[2] = {
 			"hisses hungry.",
 			"purrs unhappily.",
-			"miaows unsatisfied.",
+			"meows unsatisfied.",
 			"scratches over the ground hungry.",
 			"looks around hungry.",
 		},
 		[3] = {
 			"purrs happily.",
-			"gnarls contentedly.",
+			"purrs contentedly.",
 			"purrs.",
 			"purrs contentedly. Now how about some crawling?",
 			"starts an extensive catlick.",
@@ -613,35 +489,35 @@ PetEmote_HappinessMessages = {
 		},
 		[2] = {
 			"scurries around anxiously.",
-			"chatters with its pinchers half-heartedly.",
+			"rattles with its pinchers half-heartedly.",
 		},
 		[3] = {
-			"chatters with its pinchers happily.",
+			"rattles with its pinchers happily.",
 			"scurries around contentedly.",
 		},
 	},
 	["Crocolisk"] = {
 		[1] = {
-			"gnarls uproariously. Hunger!",
+			"snarls uproariously. Hunger!",
 			"snaps around in the air excitedly.",
 		},
 		[2] = {
 			"hisses hungry.",
-			"gnarls unsatisfied.",
+			"snarls unsatisfied.",
 		},
 		[3] = {
-			"gnarls quietly.",
-			"gnarls contentedly.",
+			"snarls quietly.",
+			"snarls contentedly.",
 			"hisses contentedly.",
 		},
 	},
 	["Dragonhawk"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
 		},
 		[2] = {
 			"hisses hungry.",
-			"flutters around unhappily.",
+			"flaps around unhappily.",
 		},
 		[3] = {
 			"hisses happily.",
@@ -655,7 +531,7 @@ PetEmote_HappinessMessages = {
 		},
 		[2] = {
 			"snorts discontented.",
-			"gnarls discontented.",
+			"snarls discontented.",
 		},
 		[3] = {
 			"thumps its chest contentedly.",
@@ -671,13 +547,14 @@ PetEmote_HappinessMessages = {
 			"yowls discontented. Hunger!",
 		},
 		[2] = {
-			"gnarls unhappy.",
-			"gnarls hungry.",
-			"licks over the snout and and wags the tail hopefully.",
+			"snarls unhappy.",
+			"snarls hungry.",
+			"licks over its snout and and wags its tail hopefully.",
 			"sniffles on the ground for some food.",
+			"looks for a corpse to scavenge.",
 		},
 		[3] = {
-			"gnarls contentedly.",
+			"snarls contentedly.",
 			"yowls happily.",
 			"scratches itself.",
 			"sniffles on the ground.",
@@ -687,103 +564,106 @@ PetEmote_HappinessMessages = {
 	-- ["Nether Ray"] = {},
 	["Owl"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
+			"hoots forlornly...",
 		},
 		[2] = {
-			"caws hungry.",
-			"flutters around unhappily.",
+			"screeches hungrily.",
+			"flaps around unhappily.",
 		},
 		[3] = {
-			"caws happily.",
-			"caws contentedly.",
+			"hoots happily.",
+			"hoots contentedly.",
 		},
 	},
 	["Raptor"] = {
 		[1] = {
-			"gnarls uproariously. Hunger!",
+			"snarls uproariously. Hunger!",
 			"snaps around in the air excitedly.",
 		},
 		[2] = {
 			"hisses hungry.",
-			"gnarls unsatisfied.",
+			"snarls unsatisfied.",
 		},
 		[3] = {
-			"gnarls quietly.",
-			"gnarls contentedly.",
+			"snarls quietly.",
+			"snarls contentedly.",
 			"hisses contentedly.",
 		},
 	},
 	["Ravager"] = {
 		[1] = {
-			"gnarls uproariously. Hunger!",
+			"snarls uproariously. Hunger!",
 			"snaps around in the air excitedly.",
 		},
 		[2] = {
 			"hisses hungry.",
-			"gnarls unsatisfied.",
+			"snarls unsatisfied.",
 		},
 		[3] = {
-			"gnarls quietly.",
-			"gnarls contentedly.",
+			"snarls quietly.",
+			"snarls contentedly.",
 			"hisses contentedly.",
 		},
 	},
 	["Scorpid"] = {
 		[1] = {
 			"snatches around in the air with its pinchers excitedly. Hunger!",
+			"waves its stinger menacingly.",
 		},
 		[2] = {
 			"scurries around anxiously.",
-			"chatters with its pinchers half-heartedly.",
+			"rattles with its pinchers half-heartedly.",
 		},
 		[3] = {
-			"chatters with its pinchers happily.",
+			"rattles with its pinchers happily.",
 			"scurries around contentedly.",
 		},
 	},
 	["Serpent"] = {
 		[1] = {
-			"creeps around excitedly. Hunger!",
+			"slithers around excitedly. Hunger!",
 		},
 		[2] = {
-			"sizzles hungry.",
+			"slithers hungrily.",
 			"winds around on the ground.",
 		},
 		[3] = {
-			"shizzles happily.",
+			"slithers happily.",
 			"wiggles around contentedly.",
 		},
 	},
 	["Spider"] = {
 		[1] = {
 			"scuttles around excitedly. Hunger!",
-			"rattles with the tusks and looks around hungry.",
+			"rattles with its tusks and looks around hungry.",
 			"looks around with all eight eyes for something to eat.",
 			"hisses waspishly. Hunger!",
 			"launches out a quiet, hungry screech.",
 		},
 		[2] = {
-			"sizzles hungry.",
+			"scitters hungry.",
 			"crawls on the ground hungry.",
 			"scurries around from one leg to the next nervously and looks around hungry.",
-			"bounces the opisthosoma and watches out for some prey greedily.",
+			"bounces its opisthosoma and watches out for some prey greedily.",
 			"rubs its forelegs to one another discontented.",
+			"drools with hunger, dripping acid on the floor.",
 		},
 		[3] = {
-			"sizzles happily.",
+			"scitters happily.",
 			"crawls around contentedly.",
-			"rattles with the tusks contentedly.",
+			"rattles with its tusks contentedly.",
 			"nods from one side to the other snugly.",
 			"rubs its forelegs to one another contentedly.",
 		},
 	},
 	["Sporebat"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
 		},
 		[2] = {
 			"hisses hungry.",
-			"flutters around unhappily.",
+			"flaps around unhappily.",
 		},
 		[3] = {
 			"hisses happily.",
@@ -793,7 +673,7 @@ PetEmote_HappinessMessages = {
 	["Tallstrider"] = {
 		[1] = {
 			"caws excitedly. Hunger!",
-			"twists the throat while searching for something to eat.",
+			"twists its throat while searching for something to eat.",
 		},
 		[2] = {
 			"caws hungry.",
@@ -807,7 +687,7 @@ PetEmote_HappinessMessages = {
 	["Turtle"] = {
 		[1] = {
 			"waits patiently for some food.",
-			"twists the throat while searching for something to eat.",
+			"twists its throat while searching for something to eat.",
 		},
 		[2] = {
 			"frowns hungry.",
@@ -821,15 +701,15 @@ PetEmote_HappinessMessages = {
 	-- ["Warp Stalker"] = {},
 	["Windserpent"] = {
 		[1] = {
-			"flutters around excitedly. Hunger!",
+			"flaps around excitedly. Hunger!",
 		},
 		[2] = {
-			"sizzles hungry.",
+			"hisses hungry.",
 			"flies around while searching for something to eat.",
 		},
 		[3] = {
-			"sizzles happily.",
-			"flutters around contentedly.",
+			"crackles happily.",
+			"flaps around contentedly.",
 		},
 	},
 	["Wolf"] = {
@@ -841,127 +721,23 @@ PetEmote_HappinessMessages = {
 			"yowls discontented. Hunger!",
 		},
 		[2] = {
-			"gnarls unhappy.",
-			"gnarls hungry.",
-			"licks over the snout and and wags the tail hopefully.",
+			"snarls unhappy.",
+			"snarls hungry.",
+			"licks over its snout and and wags its tail hopefully.",
 			"sniffles on the ground for some food.",
+			"licks over its snout with a mean look on its face.",
 		},
 		[3] = {
-			"gnarls contentedly.",
+			"snarls contentedly.",
 			"yowls happily.",
 			"scratches itself.",
 			"sniffles on the ground.",
 			"wheezes contentedly.",
+			"wheezes and wags its tail happily.",
+			"raises a paw.",
+			"stretches into a playful pose while wagging its tail.",
+			"yips happily.",
 		},
-	},
-}
-
-PetEmote_FeedMessages = {
-	["default"] = {
-		"munches $f and swallows greedily.",
-		"gorges $f greedily.",
-		"eats its fill with $f.",
-	},
-	-- ["Bat"] = {},
-	["Bear"] = {
-		"munches $f and swallows greedily.",
-		"gorges $f greedily.",
-		"satisfies its ravenous appetite with $f.",
-	},
-	["Boar"] = {
-		"grunts quietly and swallows $f in one piece.",
-		"munches $f and grunts uproariously.",
-		"gorges $f and grunts.",
-	},
-	["Carrion Bird"] = {
-		"caws quietly and pitches into $f.",
-		"catches $f and gorges it greedily.",
-		"gorges $f.",
-	},
-	["Cat"] = {
-		"purrs quietly and pitches into $f.",
-		"snarls at $f and then gorges it quickly.",
-		"gorges $f and thereby gnarls with pleasure.",
-		"gorges $f in huge pieces.",
-		"gnaws at $f with pleasure.",
-		"gnaws on $f hissing.",
-		"gnaws on $f smacking.",
-		"plays around with $f and gorges it greedily.",
-	},
-	["Crab"] = {
-		"separates $f with its pinchers into bite-sized pieces.",
-		"gorges $f and whets its pinchers with pleasure.",
-	},
-	["Crocolisk"] = {
-		"bites once on $f lusty and then gorges it.",
-		"snaps at $f and eats it greedily.",
-	},
-	["Dragonhawk"] = {
-		"roasts $f and then gorges it.",
-		"broils $f with its flaming breath.",
-		"toasts $f and eats it with pleasure.",
-	},
-	["Gorilla"] = {
-		"stuffs itself with $f greedily.",
-		"eats $f up with pleasure.",
-		"gorges $f and rubs its belly.",
-	},
-	["Hyena"] = {
-		"gnarls quietly and pitches into $f.",
-		"snarls at $f and then gorges it quickly.",
-		"gorges $f and gnarls with pleasure.",
-	},
-	-- ["Nether Ray"] = {},
-	["Owl"] = {
-		"caws quietly and pitches into $f.",
-		"catches $f and gorges it greedily.",
-		"gorges $f.",
-	},
-	["Raptor"] = {
-		"bites once on $f lusty and then gorges it.",
-		"snaps at $f and eats it greedily.",
-	},
-	["Ravager"] = {
-		"bites once on $f lusty and then gorges it.",
-		"snaps at $f and eats it greedily.",
-	},
-	["Scorpid"] = {
-		"separates $f with its pinchers into bite-sized pieces.",
-		"gorges $f and whets its pinchers with pleasure.",
-	},
-	["Serpent"] = {
-		"chokes $f down in one piece.",
-		"snaps at $f and chokes it down.",
-	},
-	["Spider"] = {
-		"wraps $f very fast and exhausts it.",
-		"stuffs $f into its mouth with pleasure.",
-		"focuses $f with all eight eyes and pitches into it.",
-		"hisses delightedly and captures $f with its tusks.",
-	},
-	["Sporebat"] = {
-		"roasts $f and then gorges it.",
-		"broils $f with its flaming breath.",
-		"toasts $f and eats it with pleasure.",
-	},
-	["Tallstrider"] = {
-		"gorges $f greedily.",
-		"snaps at $f and chokes it down the long throat.",
-	},
-	["Turtle"] = {
-		"munches $f calmly.",
-		"eats $f up unhurriedly.",
-	},
-	-- ["Warp Stalker"] = {},
-	["Windserpent"] = {
-		"hisses quietly and pitches into $f.",
-		"catches $f and gorges it greedily.",
-		"gorges $f.",
-	},
-	["Wolf"] = {
-		"gnarls quietly and pitches into $f.",
-		"snarls at $f and then gorges it quickly.",
-		"gorges $f and gnarls with pleasure.",
 	},
 }
 

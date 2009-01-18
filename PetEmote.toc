@@ -1,12 +1,15 @@
-﻿## Interface: 20300
+﻿## Interface: 20400
 ## Title: PetEmote
 ## Author: Jorna
-## Version: 1.4
-## eMail: jorna@ammunition-company.net
-## URL: http://www.ammunition-company.net
+## Version: 1.41
+## eMail: jorna@zirkel-des-cenarius.eu
+## URL: http://ammunition-company.zirkel-des-cenarius.eu
 ## Notes: Allows you to send emotes from Hunter's and Warlock's pets
 ## Notes-deDE: Ermöglicht Emotes für die Begleiter von Jägern und Hexenmeistern
 ## SavedVariablesPerCharacter: PetEmote_Family
 ## SavedVariables: PetEmote_Settings
+MarsMessageParser.lua
+config.lua
 localization.lua
+PetEmote.lua
 PetEmote.xml
