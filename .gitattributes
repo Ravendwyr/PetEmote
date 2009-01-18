@@ -3,5 +3,6 @@
 /PetEmote.lua -text
 /PetEmote.toc -text
 /PetEmote.xml -text
+/localization.lua -text
 /readme.de.htm -text
 /readme.en.htm -text
