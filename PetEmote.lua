@@ -11,6 +11,9 @@ function PetEmote_OnLoad()
 	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
 	ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent;
 	
+	PetEmote_old_SendChatMessage = SendChatMessage;
+	SendChatMessage = PetEmote_new_SendChatMessage;
+	
 end
 
 function PetEmote_Command (args)
@@ -96,5 +99,21 @@ function PetEmote_new_AddMessage (obj, msg, r, g, b)
 	end
 	
 	return PetEmote_old_AddMessage(obj, msg, r, g, b);
+	
+end
+
+function PetEmote_new_SendChatMessage (msg, chatType, language, channel)
+	
+	if (PetEmote_HasPet()) then
+		msg = string.gsub(msg, "%%p", UnitName("pet"));
+	else
+		if (GetLocale() == "deDE") then
+			msg = string.gsub(msg, "%%p", "<kein Tier>");
+		else
+			msg = string.gsub(msg, "%%p", "<no pet>");
+		end
+	end
+	
+	PetEmote_old_SendChatMessage(msg, chatType, language, channel);
 	
 end
