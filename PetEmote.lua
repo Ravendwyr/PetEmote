@@ -8,6 +8,9 @@ function PetEmote_OnLoad()
 	SLASH_PETEMOTE1 = "/pet";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
 	
+	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
+	ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent;
+	
 end
 
 function PetEmote_Command (args)
@@ -70,19 +73,18 @@ function PetEmote_ChangeFamily (pet, family)
 	DEFAULT_CHAT_FRAME:AddMessage(pet .. " = " .. family);
 end
 
-
-PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
-
 function PetEmote_new_ChatFrame_OnEvent (event)
 	
-	PetEmote_old_AddMessage = this.AddMessage;
-	this.AddMessage = PetEmote_new_AddMessage;
-	PetEmote_old_ChatFrame_OnEvent(event);
-	this.AddMessage = PetEmote_old_AddMessage;
+	if (event == "CHAT_MSG_EMOTE") then
+		PetEmote_old_AddMessage = this.AddMessage;
+		this.AddMessage = PetEmote_new_AddMessage;
+		PetEmote_old_ChatFrame_OnEvent(event);
+		this.AddMessage = PetEmote_old_AddMessage;
+	else
+		PetEmote_old_ChatFrame_OnEvent(event);
+	end
 	
 end
-
-ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent;
 
 function PetEmote_new_AddMessage (obj, msg, r, g, b)
 	
