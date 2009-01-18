@@ -164,7 +164,7 @@ PETEMOTE_LOCAL_AND             = "and";
 
 PetEmote_RandomMessages["bored"] = {
 	[1] = {
-		["text"] = "is getting bored with",
+		["text"] = "is getting tired of",
 		["continues"] = {
 			[1] = {
 				["text"] = "doing silly emotes.",
@@ -173,15 +173,35 @@ PetEmote_RandomMessages["bored"] = {
 				["text"] = "playing the fool.",
 			},
 			[3] = {
-				["text"] = "playing the clown for its",
+				["text"] = "playing the clown for",
 				["continues"] = {
 					[1] = {
-						["text"] = "master.",
-						["condition"] = PlayerIsMale,
+						["text"] = "his",
+						["condition"] = PetIsMale,
+						["continues"] = {
+							[1] = {
+								["text"] = "master.",
+								["condition"] = PlayerIsMale,
+							},
+							[2] = {
+								["text"] = "mistress.",
+								["condition"] = PlayerIsFemale,
+							},
+						},
 					},
 					[2] = {
-						["text"] = "mistress.",
-						["condition"] = PlayerIsFemale,
+						["text"] = "her",
+						["condition"] = PetIsFemale,
+						["continues"] = {
+							[1] = {
+								["text"] = "master.",
+								["condition"] = PlayerIsMale,
+							},
+							[2] = {
+								["text"] = "mistress.",
+								["condition"] = PlayerIsFemale,
+							},
+						},
 					},
 				},
 			},
@@ -194,15 +214,15 @@ PetEmote_RandomMessages["bored"] = {
 				["text"] = "stressed out.",
 			},
 			[2] = {
-				["text"] = "wound.",
+				["text"] = "overstimulated.",
 			},
 			[3] = {
-				["text"] = "tormented.",
+				["text"] = "pestered.",
 			},
 		},
 	},
 	[3] = {
-		["text"] = "has enough.",
+		["text"] = "has had enough.",
 	},
 	[4] = {
 		["text"] = "doesn't like",
@@ -222,10 +242,27 @@ PetEmote_RandomMessages["bored"] = {
 		["text"] = "wants",
 		["continues"] = {
 			[1] = {
-				["text"] = "nothing more.",
+				["text"] = "a break.",
+			},
+			[3] = {
+				["text"] = "a rest.",
+			},
+			[4] = {
+				["text"] = "some peace and quiet.",
+			},
+		},
+	},
+	[6] = {
+		["text"] = "is getting bored",
+		["optional"] = {
+			[1] = {
+				["text"] = "– why not kill some monsters instead?",
 			},
 			[2] = {
-				["text"] = "its peace and quiet.",
+				["text"] = "– isn't there a quest you could be doing?",
+			},
+			[3] = {
+				["text"] = "– how about some PvP?",
 			},
 		},
 	},

@@ -255,79 +255,6 @@ function PetEmote_SetNextRandomEmoteTime (minFrequency, maxFrequency)
 end
 
 
-function PetEmote_GetRandomEmote ()
-	
-	local tree = PetEmote_GetRandomEmoteTree();
-	
-	if (tree == nil) then
-		return nil;
-	end
-	
-	local texts = {};
-	local used = {};
-	local disallow = {};
-	
-	local t, u, d = PetEmote_WalkRandomEmotes(tree, used, disallow);
-	if (t ~= nil) then
-		
-		texts[1] = t;
-		used[1] = u;
-		for i = 1, getn(d) do
-			table.insert(disallow, d[i]);
-		end
-		
-		if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < 40) then
-			
-			local t, u, d = PetEmote_WalkRandomEmotes(tree, used, disallow);
-			if (t ~= nil) then
-				
-				texts[2] = t;
-				used[2] = u;
-				for i = 1, getn(d) do
-					table.insert(disallow, d[i]);
-				end
-				
-				if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < 20) then
-					
-					local t, u, d = PetEmote_WalkRandomEmotes(tree, used, disallow);
-					if (t ~= nil) then
-						
-						texts[3] = t;
-						used[3] = u;
-						for i = 1, getn(d) do
-							table.insert(disallow, d[i]);
-						end
-						
-					end
-					
-				end
-				
-			end
-			
-		end
-		
-	end
-	
-	local result;
-	
-	if (getn(texts) == 3) then
-		result = texts[1] .. ", " .. texts[2] .. " " .. PETEMOTE_LOCAL_AND .. " " .. texts[3];
-	elseif (getn(texts) == 2) then
-		result = texts[1] .. " " .. PETEMOTE_LOCAL_AND .. " " .. texts[2];
-	elseif (getn(texts) == 1) then
-		result = texts[1];
-	else
-		return nil;
-	end
-	
-	if (not PetEmote_EmoteIsCompleting(result)) then
-		return result .. ".";
-	else
-		return result;
-	end
-	
-end
-
 function PetEmote_GetRandomEmoteTree ()
 	
 	if (PetEmote_RandomMessages == nil) then
@@ -357,36 +284,64 @@ function PetEmote_GetRandomEmoteTree ()
 	
 end
 
-function PetEmote_EmoteIsCompleting (text)
-	local completeChars = { ".", "!", "?" };
-	for i = 1, getn(completeChars) do
-		if (strsub(text, strlen(text)) == completeChars[i]) then
-			return true;
+function PetEmote_GetRandomEmote ()
+	
+	local tree = PetEmote_GetRandomEmoteTree();
+	
+	if (tree == nil) then
+		return nil;
+	end
+	
+	local parts = {};
+	
+	local t, used = PetEmote_WalkRandomEmotes(tree, nil);
+	if (t ~= nil) then
+		
+		parts[1] = t;
+		
+		if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(40, getn(tree), 15)) then
+			
+			local t, used = PetEmote_WalkRandomEmotes(tree, used);
+			if (t ~= nil) then
+				
+				parts[2] = t;
+				
+				if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(20, getn(tree), 15)) then
+					
+					local t, used = PetEmote_WalkRandomEmotes(tree, used);
+					if (t ~= nil) then
+						parts[3] = t;
+					end
+					
+				end
+			end
 		end
 	end
-	return false;
+	
+	return PetEmote_CombineResults(parts);
+	
 end
 
-function PetEmote_WalkRandomEmotes (tree, used, disallow)
+function PetEmote_WalkRandomEmotes (tree, used)
 	
 	local i = 1;
 	local usable = {};
 	
-	if (used == nil or disallow == nil) then
+	if (used == nil) then
+		used = {};
 		for t = 1, getn(tree) do
 			table.insert(usable, t);
 		end
 	else
 		for t = 1, getn(tree) do
 			local found = false;
-			for u = 1, getn(used) do
-				if (used[u] == t) then
-					found = true;
-				end
-			end
-			for d = 1, getn(disallow) do
-				if (disallow[d] == t) then
-					found = true;
+			if (tree[t]["keywords"] ~= nil) then
+				for u = 1, getn(used) do
+					for k = 1, getn(tree[t]["keywords"]) do
+						if (used[u] == tree[t]["keywords"][k]) then
+							found = true;
+						end
+					end
 				end
 			end
 			if (found == false) then
@@ -394,7 +349,7 @@ function PetEmote_WalkRandomEmotes (tree, used, disallow)
 			end
 		end
 		if (getn(usable) < 1) then
-			return nil, nil, nil;
+			return nil, nil;
 		end
 	end
 	
@@ -407,39 +362,104 @@ function PetEmote_WalkRandomEmotes (tree, used, disallow)
 	end
 	
 	if (getn(conditional_usable) < 1) then
-		return nil, nil, nil;
+		return nil, nil;
 	end
 	
-	i = conditional_usable[random(1, getn(conditional_usable))];
+	i = PetEmote_SelectEmoteNodeIndex(tree, conditional_usable);
 	local selected = tree[i];
 	
-	if (selected["optional"] ~= nil and random(1, 100) < 66) then
-		local t, u, d = PetEmote_WalkRandomEmotes(selected["optional"], nil, nil);
-		if (t ~= nil) then
-			if (selected["disallow"] ~= nil and d ~= nil) then
-				for n = 1, getn(selected["disallow"]) do
-					table.insert(d, selected["disallow"][n]);
-				end
-			end
-			return selected["text"] .. " " .. t, i, d;
+	if (selected["keywords"] ~= nil) then
+		for k = 1, getn(selected["keywords"]) do
+			table.insert(used, selected["keywords"][k]);
+		end
+	end
+	
+	if (selected["optional"] ~= nil and random(1, 100) < PetEmote_GetChanceToContinue(75, getn(selected["optional"]), 4)) then
+		local t, u = PetEmote_WalkRandomEmotes(selected["optional"], used);
+		if (t == nil) then
+			return selected["text"], used;
+		else
+			return selected["text"] .. " " .. t, u;
 		end
 	elseif (selected["continues"] ~= nil) then
-		local t, u, d = PetEmote_WalkRandomEmotes(selected["continues"], nil, nil);
-		if (t ~= nil) then
-			if (selected["disallow"] ~= nil and d ~= nil) then
-				for n = 1, getn(selected["disallow"]) do
-					table.insert(d, selected["disallow"][n]);
-				end
-			end
-			return selected["text"] .. " " .. t, i, d;
+		local t, u = PetEmote_WalkRandomEmotes(selected["continues"], used);
+		if (t == nil) then
+			return nil, used;
+		else
+			return selected["text"] .. " " .. t, u;
+		end
+	else
+		return selected["text"], used;
+	end
+	
+end
+
+function PetEmote_SelectEmoteNodeIndex (tree, usable)
+	
+	local options = {};
+	
+	for u = 1, getn(usable) do
+		table.insert(options, usable[u]);
+	end
+	
+	local sum = 0;
+	
+	for o = 1, getn(options) do
+		if (tree[options[o]]["chance"] == nil) then
+			sum = sum + 100;
+		else
+			sum = sum + tree[options[o]]["chance"];
 		end
 	end
 	
-	if (selected["disallow"] == nil) then
-		selected["disallow"] = {};
+	local r = random(1, sum);
+	
+	sum = 0;
+	
+	for o = 1, getn(options) do
+		if (tree[options[o]]["chance"] == nil) then
+			sum = sum + 100;
+		else
+			sum = sum + tree[options[o]]["chance"];
+		end
+		if (r <= sum) then
+			return options[o];
+		end
 	end
 	
-	return selected["text"], i, selected["disallow"];
+end
+
+function PetEmote_CombineResults (parts)
+	
+	local result;
+	
+	if (getn(parts) >= 3) then
+		if (string.find(parts[3], " " .. PETEMOTE_LOCAL_AND .. " ") ~= nil) then
+			result = parts[1] .. ", " .. parts[2] .. ", " .. parts[3];
+		elseif (string.find(parts[2], " " .. PETEMOTE_LOCAL_AND .. " ") ~= nil) then
+			result = parts[1] .. ", " .. parts[3] .. ", " .. parts[2];
+		else
+			result = parts[1] .. ", " .. parts[2] .. " " .. PETEMOTE_LOCAL_AND .. " " .. parts[3];
+		end
+	elseif (getn(parts) == 2) then
+		if (string.find(parts[2], " " .. PETEMOTE_LOCAL_AND .. " ") ~= nil) then
+			result = parts[1] .. ", " .. parts[2];
+		elseif (string.find(parts[1], " " .. PETEMOTE_LOCAL_AND .. " ") ~= nil) then
+			result = parts[2] .. ", " .. parts[1];
+		else
+			result = parts[1] .. " " .. PETEMOTE_LOCAL_AND .. " " .. parts[2];
+		end
+	elseif (getn(parts) == 1) then
+		result = parts[1];
+	else
+		return nil;
+	end
+	
+	if (not PetEmote_EmoteIsCompleting(result)) then
+		return result .. ".";
+	else
+		return result;
+	end
 	
 end
 
@@ -541,6 +561,27 @@ function PetEmote_ConditionIsTrue (section)
 	
 	return false;
 	
+end
+
+function PetEmote_GetChanceToContinue (aimedChance, realSize, aimedSize)
+	-- aimedChance is the chance we like to get, if the amount of emotes is high enough
+	-- realSize is the real number of emotes on the current level
+	-- aimedSize is the number of emotes, that a good configuration should have
+	local realChance = realSize * aimedChance / aimedSize;
+	if (realChance > aimedChance) then
+		return aimedChance;
+	end
+	return realChance;
+end
+
+function PetEmote_EmoteIsCompleting (text)
+	local completeChars = { ".", "!", "?" };
+	for i = 1, getn(completeChars) do
+		if (strsub(text, strlen(text)) == completeChars[i]) then
+			return true;
+		end
+	end
+	return false;
 end
 
 
