@@ -93,19 +93,19 @@
       <Node>
         <Text>sehnt sich nach</Text>
         <Properties>
-          <Condition>PetIsUnhappy</Condition>
+          <Condition>None</Condition>
           <MustContinue>true</MustContinue>
           <Keywords>
             <Keyword>sehnt</Keyword>
             <Keyword>nach</Keyword>
           </Keywords>
-          <Chance>100</Chance>
+          <Chance>50</Chance>
         </Properties>
         <ChildNodes>
           <Node>
             <Text>leckeren gerösteten Wachteln</Text>
             <Properties>
-              <Condition>None</Condition>
+              <Condition>PetIsContent</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
                 <Keyword>leckeren</Keyword>
@@ -119,7 +119,7 @@
           <Node>
             <Text>ein paar knusprigen Grollhufrippchen</Text>
             <Properties>
-              <Condition>None</Condition>
+              <Condition>PetIsUnhappy</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
                 <Keyword>paar</Keyword>
@@ -127,6 +127,21 @@
                 <Keyword>Grollhufrippchen</Keyword>
               </Keywords>
               <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>einem Baum, um sich daran den Rücken zu kratzen.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Baum</Keyword>
+                <Keyword>daran</Keyword>
+                <Keyword>Rücken</Keyword>
+                <Keyword>kratzen</Keyword>
+              </Keywords>
+              <Chance>50</Chance>
             </Properties>
             <ChildNodes />
           </Node>
@@ -605,19 +620,18 @@
         </ChildNodes>
       </Node>
       <Node>
-        <Text>streckt sich</Text>
+        <Text>streckt</Text>
         <Properties>
           <Condition>None</Condition>
-          <MustContinue>false</MustContinue>
+          <MustContinue>true</MustContinue>
           <Keywords>
             <Keyword>streckt</Keyword>
-            <Keyword>sich</Keyword>
           </Keywords>
           <Chance>100</Chance>
         </Properties>
         <ChildNodes>
           <Node>
-            <Text>zufrieden</Text>
+            <Text>sich zufrieden</Text>
             <Properties>
               <Condition>PetIsHappy</Condition>
               <MustContinue>false</MustContinue>
@@ -629,12 +643,39 @@
             <ChildNodes />
           </Node>
           <Node>
-            <Text>ausgiebig</Text>
+            <Text>sich ausgiebig</Text>
             <Properties>
               <Condition>None</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
                 <Keyword>ausgiebig</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>alle viere von sich</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>alle</Keyword>
+                <Keyword>viere</Keyword>
+                <Keyword>von</Keyword>
+                <Keyword>sich</Keyword>
+              </Keywords>
+              <Chance>125</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>sich</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
@@ -984,6 +1025,7 @@
               <Condition>None</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
+                <Keyword>faucht</Keyword>
                 <Keyword>tiefes</Keyword>
                 <Keyword>Fauchen</Keyword>
                 <Keyword>von</Keyword>
@@ -999,6 +1041,7 @@
               <Condition>PetIsUnhappy</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
+                <Keyword>faucht</Keyword>
                 <Keyword>hässliches</Keyword>
                 <Keyword>Fauchen</Keyword>
                 <Keyword>von</Keyword>
@@ -7548,6 +7591,60 @@
       <ClassType>Hunter</ClassType>
     </PetFamily>
     <RandomMessages>
+      <Node>
+        <Text>spits out a hairball</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>spits</Keyword>
+            <Keyword>hairball</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>hisses at %t</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>hisses</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>starts grooming itself with its tongue</Text>
+        <Properties>
+          <Condition>PetIsHappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>starts</Keyword>
+            <Keyword>grooming</Keyword>
+            <Keyword>itself</Keyword>
+            <Keyword>with</Keyword>
+            <Keyword>tongue</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>meows pitifully</Text>
+        <Properties>
+          <Condition>PetIsUnhappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>meows</Keyword>
+            <Keyword>pitifully</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
       <Node>
         <Text>snarls</Text>
         <Properties>
@@ -21707,6 +21804,432 @@
     </PetFamily>
     <RandomMessages>
       <Node>
+        <Text>chases</Text>
+        <Properties>
+          <Condition>PetIsHappy</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>chases</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>his tail</Text>
+            <Properties>
+              <Condition>PetIsMale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>tail</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>her tail</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>tail</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>a bug</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>bug</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>sings</Text>
+        <Properties>
+          <Condition>PetIsHappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>sings</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>growls at %t</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>growls</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>nudges</Text>
+        <Properties>
+          <Condition>PetIsContent</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>nudges</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>his</Text>
+            <Properties>
+              <Condition>PetIsMale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>master's bags.</Text>
+                <Properties>
+                  <Condition>PlayerIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>master</Keyword>
+                    <Keyword>bags</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>Is it time for a snack?</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>time</Keyword>
+                        <Keyword>snack</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+              <Node>
+                <Text>mistress's bags.</Text>
+                <Properties>
+                  <Condition>PlayerIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>mistress</Keyword>
+                    <Keyword>bags</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>Is it time for a snack?</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>time</Keyword>
+                        <Keyword>snack</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+            </ChildNodes>
+          </Node>
+          <Node>
+            <Text>her</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>master's bags.</Text>
+                <Properties>
+                  <Condition>PlayerIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>master</Keyword>
+                    <Keyword>bags</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>Is it time for a snack?</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>time</Keyword>
+                        <Keyword>snack</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+              <Node>
+                <Text>mistress' bags.</Text>
+                <Properties>
+                  <Condition>PlayerIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>mistress</Keyword>
+                    <Keyword>bags</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>Is it time for a snack?</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>time</Keyword>
+                        <Keyword>snack</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+            </ChildNodes>
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>begs for food pitifully</Text>
+        <Properties>
+          <Condition>PetIsUnhappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>begs</Keyword>
+            <Keyword>food</Keyword>
+            <Keyword>pitifully</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
+        <Text>stands on alert</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>stands</Keyword>
+            <Keyword>alert</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>while</Text>
+            <Properties>
+              <Condition>TargetExists</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>while</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>he</Text>
+                <Properties>
+                  <Condition>PetIsMale</Condition>
+                  <MustContinue>true</MustContinue>
+                  <Keywords />
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>sniffs the air</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>sniffs</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                  <Node>
+                    <Text>looks around</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>looks</Keyword>
+                        <Keyword>around</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+              <Node>
+                <Text>she</Text>
+                <Properties>
+                  <Condition>PetIsFemale</Condition>
+                  <MustContinue>true</MustContinue>
+                  <Keywords />
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <Node>
+                    <Text>sniffs the air</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>sniffs</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                  <Node>
+                    <Text>looks around</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>looks</Keyword>
+                        <Keyword>around</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </Node>
+                </ChildNodes>
+              </Node>
+            </ChildNodes>
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>runs around</Text>
+        <Properties>
+          <Condition>PetIsHappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>runs</Keyword>
+            <Keyword>around</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>his</Text>
+            <Properties>
+              <Condition>PetIsMale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>master</Text>
+                <Properties>
+                  <Condition>PlayerIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>master</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+              <Node>
+                <Text>mistress</Text>
+                <Properties>
+                  <Condition>PlayerIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>mistress</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+            </ChildNodes>
+          </Node>
+          <Node>
+            <Text>her</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>master</Text>
+                <Properties>
+                  <Condition>PlayerIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>master</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+              <Node>
+                <Text>mistress</Text>
+                <Properties>
+                  <Condition>PlayerIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>mistress</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+            </ChildNodes>
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>plays dead</Text>
+        <Properties>
+          <Condition>PetIsHappy</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>plays</Keyword>
+            <Keyword>dead</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </Node>
+      <Node>
         <Text>yowls quietly.</Text>
         <Properties>
           <Condition>PetIsUnhappy</Condition>
@@ -22197,6 +22720,324 @@
             </ChildNodes>
           </Node>
         </ChildNodes>
+      </Node>
+    </RandomMessages>
+  </EmoteConfiguration>
+  <EmoteConfiguration>
+    <Name>Voidwalker</Name>
+    <Language>en</Language>
+    <PetFamily>
+      <Name>Voidwalker</Name>
+      <Language>en</Language>
+      <FamilyType>Unknown</FamilyType>
+      <ClassType>Unknown</ClassType>
+    </PetFamily>
+    <RandomMessages>
+      <Node>
+        <Text>stares</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>stares</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>quietly</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>quietly</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>blankly</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>blankly</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>pensively</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>pensively</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>distantly</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>distantly</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>ponders</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>ponders</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>the meaning of</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>meaning</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <Node>
+                <Text>life.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>life</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+              <Node>
+                <Text>enlightenment.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>enlightenment</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+              <Node>
+                <Text>42.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>42</Keyword>
+                  </Keywords>
+                  <Chance>25</Chance>
+                </Properties>
+                <ChildNodes />
+              </Node>
+            </ChildNodes>
+          </Node>
+          <Node>
+            <Text>serenely</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>serenely</Keyword>
+              </Keywords>
+              <Chance>75</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>adjusts its cuffs</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>adjusts</Keyword>
+            <Keyword>cuffs</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>and tie</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+      <Node>
+        <Text>stretches</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>stretches</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>sleekly</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>sleekly</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>its muscles</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>muscles</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+    </RandomMessages>
+  </EmoteConfiguration>
+  <EmoteConfiguration>
+    <Name>Imp</Name>
+    <Language>en</Language>
+    <PetFamily>
+      <Name>Imp</Name>
+      <Language>en</Language>
+      <FamilyType>Unknown</FamilyType>
+      <ClassType>Unknown</ClassType>
+    </PetFamily>
+    <RandomMessages>
+      <Node>
+        <Text>pulls out a book and starts reading</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>pulls</Keyword>
+            <Keyword>out</Keyword>
+            <Keyword>book</Keyword>
+            <Keyword>starts</Keyword>
+            <Keyword>reading</Keyword>
+          </Keywords>
+          <Chance>1</Chance>
+        </Properties>
+        <ChildNodes>
+          <Node>
+            <Text>'How to Serve Man'.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>How</Keyword>
+                <Keyword>Serve</Keyword>
+                <Keyword>Man</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>'Minions for Dummies'.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Minions</Keyword>
+                <Keyword>Dummies</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>the World of Warcraft Instruction Manual.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>World</Keyword>
+                <Keyword>Warcraft</Keyword>
+                <Keyword>Instruction</Keyword>
+                <Keyword>Manual</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+          <Node>
+            <Text>'Accounting is for Everyone'.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Accounting</Keyword>
+                <Keyword>Everyone</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </Node>
+        </ChildNodes>
+      </Node>
+    </RandomMessages>
+  </EmoteConfiguration>
+  <EmoteConfiguration>
+    <Name>Succubus</Name>
+    <Language>en</Language>
+    <PetFamily>
+      <Name>Succubus</Name>
+      <Language>en</Language>
+      <FamilyType>Unknown</FamilyType>
+      <ClassType>Unknown</ClassType>
+    </PetFamily>
+    <RandomMessages>
+      <Node>
+        <Text>starts doing her manicure</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>starts</Keyword>
+            <Keyword>doing</Keyword>
+            <Keyword>manicure</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
       </Node>
     </RandomMessages>
   </EmoteConfiguration>

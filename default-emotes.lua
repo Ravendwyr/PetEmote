@@ -29,16 +29,23 @@
 PetEmote_RandomMessages["Bär-de"] = {
 	[1] = {
 		["text"] = "sehnt sich nach",
-		["condition"] = PetIsUnhappy,
+		["chance"] = 50,
 		["keywords"] = { "sehnt", "nach" },
 		["continues"] = {
 			[1] = {
 				["text"] = "leckeren gerösteten Wachteln",
+				["condition"] = PetIsContent,
 				["keywords"] = { "leckeren", "gerösteten", "Wachteln" },
 			},
 			[2] = {
 				["text"] = "ein paar knusprigen Grollhufrippchen",
+				["condition"] = PetIsUnhappy,
 				["keywords"] = { "paar", "knusprigen", "Grollhufrippchen" },
+			},
+			[3] = {
+				["text"] = "einem Baum, um sich daran den Rücken zu kratzen.",
+				["chance"] = 50,
+				["keywords"] = { "Baum", "daran", "Rücken", "kratzen" },
 			},
 		},
 	},
@@ -240,17 +247,26 @@ PetEmote_RandomMessages["Bär-de"] = {
 		},
 	},
 	[8] = {
-		["text"] = "streckt sich",
-		["keywords"] = { "streckt", "sich" },
-		["optional"] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
 			[1] = {
-				["text"] = "zufrieden",
+				["text"] = "sich zufrieden",
 				["condition"] = PetIsHappy,
 				["keywords"] = { "zufrieden" },
 			},
 			[2] = {
-				["text"] = "ausgiebig",
+				["text"] = "sich ausgiebig",
 				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle viere von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "viere", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
 			},
 		},
 	},
@@ -385,12 +401,12 @@ PetEmote_RandomMessages["Drachenfalke-de"] = {
 		["continues"] = {
 			[1] = {
 				["text"] = "tiefes Fauchen von sich",
-				["keywords"] = { "tiefes", "Fauchen", "von", "sich" },
+				["keywords"] = { "faucht", "tiefes", "Fauchen", "von", "sich" },
 			},
 			[2] = {
 				["text"] = "hässliches Fauchen von sich",
 				["condition"] = PetIsUnhappy,
-				["keywords"] = { "hässliches", "Fauchen", "von", "sich" },
+				["keywords"] = { "faucht", "hässliches", "Fauchen", "von", "sich" },
 			},
 		},
 	},
@@ -2738,6 +2754,25 @@ PetEmote_RandomMessages["Carrion Bird-en"] = {
 
 PetEmote_RandomMessages["Cat-en"] = {
 	[1] = {
+		["text"] = "spits out a hairball",
+		["keywords"] = { "spits", "hairball" },
+	},
+	[2] = {
+		["text"] = "hisses at %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "hisses" },
+	},
+	[3] = {
+		["text"] = "starts grooming itself with its tongue",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "starts", "grooming", "itself", "with", "tongue" },
+	},
+	[4] = {
+		["text"] = "meows pitifully",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "meows", "pitifully" },
+	},
+	[5] = {
 		["text"] = "snarls",
 		["keywords"] = { "snarls" },
 		["optional"] = {
@@ -2802,7 +2837,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[2] = {
+	[6] = {
 		["text"] = "grumbles",
 		["keywords"] = { "grumbles" },
 		["optional"] = {
@@ -2822,7 +2857,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[3] = {
+	[7] = {
 		["text"] = "needs something to bite into",
 		["condition"] = PetIsContent,
 		["keywords"] = { "needs", "something", "bite", "into" },
@@ -2837,7 +2872,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[4] = {
+	[8] = {
 		["text"] = "rears up",
 		["condition"] = PetIsContent,
 		["keywords"] = { "rears" },
@@ -2852,7 +2887,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[5] = {
+	[9] = {
 		["text"] = "licks",
 		["keywords"] = { "licks" },
 		["continues"] = {
@@ -2950,7 +2985,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[6] = {
+	[10] = {
 		["text"] = "scrabbles around in",
 		["condition"] = PetIsContent,
 		["keywords"] = { "scrabbles", "around" },
@@ -2967,7 +3002,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[7] = {
+	[11] = {
 		["text"] = "scratches",
 		["keywords"] = { "scratches" },
 		["continues"] = {
@@ -3008,7 +3043,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[8] = {
+	[12] = {
 		["text"] = "sniffs at",
 		["condition"] = PetIsContent,
 		["keywords"] = { "sniffs" },
@@ -3053,7 +3088,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[9] = {
+	[13] = {
 		["text"] = "nuzzles",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "nuzzles" },
@@ -3098,12 +3133,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[10] = {
+	[14] = {
 		["text"] = "whimpers quietly",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "whimpers", "quietly" },
 	},
-	[11] = {
+	[15] = {
 		["text"] = "looks",
 		["condition"] = PetIsContent,
 		["keywords"] = { "looks" },
@@ -3122,12 +3157,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[12] = {
+	[16] = {
 		["text"] = "walks around anxiously",
 		["condition"] = PetIsContent,
 		["keywords"] = { "walks", "around", "anxiously" },
 	},
-	[13] = {
+	[17] = {
 		["text"] = "cranes its neck",
 		["keywords"] = { "cranes", "its", "neck" },
 		["optional"] = {
@@ -3138,7 +3173,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[14] = {
+	[18] = {
 		["text"] = "wags its tail",
 		["keywords"] = { "wags", "its", "tail" },
 		["optional"] = {
@@ -3149,12 +3184,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[15] = {
+	[19] = {
 		["text"] = "stretches into a playful pose while wagging its tail.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "stretches", "into", "playful", "pose", "while", "wagging", "its", "tail" },
 	},
-	[16] = {
+	[20] = {
 		["text"] = "purrs",
 		["keywords"] = { "purrs" },
 		["optional"] = {
@@ -3194,12 +3229,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[17] = {
+	[21] = {
 		["text"] = "starts an extensive catlick.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "starts", "extensive", "catlick" },
 	},
-	[18] = {
+	[22] = {
 		["text"] = "yawns",
 		["keywords"] = { "yawns" },
 		["optional"] = {
@@ -3222,11 +3257,11 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[19] = {
+	[23] = {
 		["text"] = "has a stretch",
 		["keywords"] = { "has", "stretch" },
 	},
-	[20] = {
+	[24] = {
 		["text"] = "meows",
 		["keywords"] = { "meows" },
 		["optional"] = {
@@ -3242,17 +3277,17 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[21] = {
+	[25] = {
 		["text"] = "hisses",
 		["condition"] = PetIsContent,
 		["keywords"] = { "hisses" },
 	},
-	[22] = {
+	[26] = {
 		["text"] = "paws the ground in search of food",
 		["condition"] = PetIsContent,
 		["keywords"] = { "paws", "the", "ground", "search", "food" },
 	},
-	[23] = {
+	[27] = {
 		["text"] = "looks",
 		["condition"] = TargetIsUnfriendly,
 		["keywords"] = { "looks" },
@@ -3289,12 +3324,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[24] = {
+	[28] = {
 		["text"] = "looks at %t and purrs.",
 		["condition"] = TargetIsFriendly,
 		["keywords"] = { "looks", "purrs" },
 	},
-	[25] = {
+	[29] = {
 		["text"] = "rubs",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "rubs" },
@@ -3619,12 +3654,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[26] = {
+	[30] = {
 		["text"] = "sniffs %t's hand",
 		["condition"] = TargetIsFriendly,
 		["keywords"] = { "sniffs", "%t's", "hand" },
 	},
-	[27] = {
+	[31] = {
 		["text"] = "bites at",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "bites" },
@@ -3661,7 +3696,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[28] = {
+	[32] = {
 		["text"] = "scratches",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "scratches" },
@@ -3688,7 +3723,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[29] = {
+	[33] = {
 		["text"] = "sniffs at",
 		["condition"] = PetIsContent,
 		["keywords"] = { "sniffs" },
@@ -3727,7 +3762,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[30] = {
+	[34] = {
 		["text"] = "nuzzles",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "nuzzles" },
@@ -3770,7 +3805,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[31] = {
+	[35] = {
 		["text"] = "bites at",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "bites" },
@@ -3809,12 +3844,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[32] = {
+	[36] = {
 		["text"] = "growls hungrily",
 		["condition"] = PetIsContent,
 		["keywords"] = { "growls", "hungrily" },
 	},
-	[33] = {
+	[37] = {
 		["text"] = "roars",
 		["keywords"] = { "roars" },
 		["optional"] = {
@@ -3830,7 +3865,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[34] = {
+	[38] = {
 		["text"] = "rolls onto",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "rolls", "onto" },
@@ -3867,7 +3902,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[35] = {
+	[39] = {
 		["text"] = "grooms",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "grooms" },
@@ -3934,7 +3969,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[36] = {
+	[40] = {
 		["text"] = "shakes",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "shakes" },
@@ -3951,7 +3986,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[37] = {
+	[41] = {
 		["text"] = "stretches",
 		["keywords"] = { "stretches" },
 		["optional"] = {
@@ -3977,11 +4012,11 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[38] = {
+	[42] = {
 		["text"] = "chews on a claw",
 		["keywords"] = { "chews", "claw" },
 	},
-	[39] = {
+	[43] = {
 		["text"] = "lies down",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "lies", "down" },
@@ -4022,7 +4057,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[40] = {
+	[44] = {
 		["text"] = "looks up at",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "looks" },
@@ -4061,7 +4096,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[41] = {
+	[45] = {
 		["text"] = "sniffs",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "sniffs" },
@@ -4127,12 +4162,12 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[42] = {
+	[46] = {
 		["text"] = "gazes lazily into the distance",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "gazes", "lazily", "into", "distance" },
 	},
-	[43] = {
+	[47] = {
 		["text"] = "lays",
 		["keywords"] = { "lays" },
 		["continues"] = {
@@ -4206,7 +4241,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[44] = {
+	[48] = {
 		["text"] = "gives",
 		["condition"] = PetIsContent,
 		["keywords"] = { "gives" },
@@ -4317,7 +4352,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[45] = {
+	[49] = {
 		["text"] = "presses",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "presses" },
@@ -4358,7 +4393,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[46] = {
+	[50] = {
 		["text"] = "nudges",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "nudges" },
@@ -4417,7 +4452,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[47] = {
+	[51] = {
 		["text"] = "ostentatiously turns",
 		["condition"] = PetIsContent,
 		["keywords"] = { "ostentatiously", "turns" },
@@ -4458,7 +4493,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[48] = {
+	[52] = {
 		["text"] = "lashes",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "lashes" },
@@ -4475,7 +4510,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[49] = {
+	[53] = {
 		["text"] = "looks",
 		["keywords"] = { "looks" },
 		["continues"] = {
@@ -4495,7 +4530,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 			},
 		},
 	},
-	[50] = {
+	[54] = {
 		["text"] = "puts",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "puts" },
@@ -8140,96 +8175,280 @@ PetEmote_RandomMessages["Wind Serpent-en"] = {
 
 PetEmote_RandomMessages["Wolf-en"] = {
 	[1] = {
+		["text"] = "chases",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "chases" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his tail",
+				["condition"] = PetIsMale,
+				["keywords"] = { "tail" },
+			},
+			[2] = {
+				["text"] = "her tail",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "tail" },
+			},
+			[3] = {
+				["text"] = "a bug",
+				["keywords"] = { "bug" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "sings",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "sings" },
+	},
+	[3] = {
+		["text"] = "growls at %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "growls" },
+	},
+	[4] = {
+		["text"] = "nudges",
+		["condition"] = PetIsContent,
+		["keywords"] = { "nudges" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's bags.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "bags" },
+						["optional"] = {
+							[1] = {
+								["text"] = "Is it time for a snack?",
+								["keywords"] = { "time", "snack" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress's bags.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "bags" },
+						["optional"] = {
+							[1] = {
+								["text"] = "Is it time for a snack?",
+								["keywords"] = { "time", "snack" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's bags.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "bags" },
+						["optional"] = {
+							[1] = {
+								["text"] = "Is it time for a snack?",
+								["keywords"] = { "time", "snack" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress' bags.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "bags" },
+						["optional"] = {
+							[1] = {
+								["text"] = "Is it time for a snack?",
+								["keywords"] = { "time", "snack" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "begs for food pitifully",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "begs", "food", "pitifully" },
+	},
+	[6] = {
+		["text"] = "stands on alert",
+		["keywords"] = { "stands", "alert" },
+		["optional"] = {
+			[1] = {
+				["text"] = "while",
+				["condition"] = TargetExists,
+				["keywords"] = { "while" },
+				["continues"] = {
+					[1] = {
+						["text"] = "he",
+						["condition"] = PetIsMale,
+						["continues"] = {
+							[1] = {
+								["text"] = "sniffs the air",
+								["keywords"] = { "sniffs" },
+							},
+							[2] = {
+								["text"] = "looks around",
+								["keywords"] = { "looks", "around" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "she",
+						["condition"] = PetIsFemale,
+						["continues"] = {
+							[1] = {
+								["text"] = "sniffs the air",
+								["keywords"] = { "sniffs" },
+							},
+							[2] = {
+								["text"] = "looks around",
+								["keywords"] = { "looks", "around" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "runs around",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "runs", "around" },
+		["optional"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+					},
+					[2] = {
+						["text"] = "mistress",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+					},
+					[2] = {
+						["text"] = "mistress",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+					},
+				},
+			},
+		},
+	},
+	[8] = {
+		["text"] = "plays dead",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "plays", "dead" },
+	},
+	[9] = {
 		["text"] = "yowls quietly.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "yowls", "quietly" },
 	},
-	[2] = {
+	[10] = {
 		["text"] = "whimpers hungrily.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "whimpers", "hungrily" },
 	},
-	[3] = {
+	[11] = {
 		["text"] = "longs for a piece of flesh.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "longs", "for", "piece", "flesh" },
 	},
-	[4] = {
+	[12] = {
 		["text"] = "whimpers quietly and looks around with hungry gazes.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "whimpers", "quietly", "and", "looks", "around", "with", "hungry", "gazes" },
 	},
-	[5] = {
+	[13] = {
 		["text"] = "yowls discontented.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "yowls", "discontented" },
 	},
-	[6] = {
+	[14] = {
 		["text"] = "snarls unhappy.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "snarls", "unhappy" },
 	},
-	[7] = {
+	[15] = {
 		["text"] = "snarls hungrily.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "snarls", "hungrily" },
 	},
-	[8] = {
+	[16] = {
 		["text"] = "licks over its snout and and wags its tail hopefully.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "licks", "over", "its", "snout", "and", "and", "wags", "its", "tail", "hopefully" },
 	},
-	[9] = {
+	[17] = {
 		["text"] = "sniffles on the ground for some food.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "sniffles", "the", "ground", "for", "some", "food" },
 	},
-	[10] = {
+	[18] = {
 		["text"] = "licks over its snout with a mean look on its face.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "licks", "over", "its", "snout", "with", "mean", "look", "its", "face" },
 	},
-	[11] = {
+	[19] = {
 		["text"] = "snarls contentedly.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "snarls", "contentedly" },
 	},
-	[12] = {
+	[20] = {
 		["text"] = "yowls happily.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "yowls", "happily" },
 	},
-	[13] = {
+	[21] = {
 		["text"] = "scratches itself.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "scratches", "itself" },
 	},
-	[14] = {
+	[22] = {
 		["text"] = "sniffles on the ground.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "sniffles", "the", "ground" },
 	},
-	[15] = {
+	[23] = {
 		["text"] = "wheezes contentedly.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "wheezes", "contentedly" },
 	},
-	[16] = {
+	[24] = {
 		["text"] = "wheezes and wags its tail happily.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "wheezes", "and", "wags", "its", "tail", "happily" },
 	},
-	[17] = {
+	[25] = {
 		["text"] = "raises a paw.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "raises", "paw" },
 	},
-	[18] = {
+	[26] = {
 		["text"] = "stretches into a playful pose while wagging its tail.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "stretches", "into", "playful", "pose", "while", "wagging", "its", "tail" },
 	},
-	[19] = {
+	[27] = {
 		["text"] = "yips happily.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "yips", "happily" },
@@ -8307,6 +8526,117 @@ PetEmote_RandomMessages["Teufelsjäger-de"] = {
 				},
 			},
 		},
+	},
+}
+
+PetEmote_RandomMessages["Voidwalker-en"] = {
+	[1] = {
+		["text"] = "stares",
+		["keywords"] = { "stares" },
+		["optional"] = {
+			[1] = {
+				["text"] = "quietly",
+				["keywords"] = { "quietly" },
+			},
+			[2] = {
+				["text"] = "blankly",
+				["keywords"] = { "blankly" },
+			},
+			[3] = {
+				["text"] = "pensively",
+				["keywords"] = { "pensively" },
+			},
+			[4] = {
+				["text"] = "distantly",
+				["keywords"] = { "distantly" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "ponders",
+		["keywords"] = { "ponders" },
+		["continues"] = {
+			[1] = {
+				["text"] = "the meaning of",
+				["keywords"] = { "meaning" },
+				["continues"] = {
+					[1] = {
+						["text"] = "life.",
+						["keywords"] = { "life" },
+					},
+					[2] = {
+						["text"] = "enlightenment.",
+						["keywords"] = { "enlightenment" },
+					},
+					[3] = {
+						["text"] = "42.",
+						["chance"] = 25,
+						["keywords"] = { "42" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "serenely",
+				["chance"] = 75,
+				["keywords"] = { "serenely" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "adjusts its cuffs",
+		["keywords"] = { "adjusts", "cuffs" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and tie",
+			},
+		},
+	},
+	[4] = {
+		["text"] = "stretches",
+		["keywords"] = { "stretches" },
+		["optional"] = {
+			[1] = {
+				["text"] = "sleekly",
+				["keywords"] = { "sleekly" },
+			},
+			[2] = {
+				["text"] = "its muscles",
+				["keywords"] = { "muscles" },
+			},
+		},
+	},
+}
+
+PetEmote_RandomMessages["Imp-en"] = {
+	[1] = {
+		["text"] = "pulls out a book and starts reading",
+		["chance"] = 1,
+		["keywords"] = { "pulls", "out", "book", "starts", "reading" },
+		["optional"] = {
+			[1] = {
+				["text"] = "'How to Serve Man'.",
+				["keywords"] = { "How", "Serve", "Man" },
+			},
+			[2] = {
+				["text"] = "'Minions for Dummies'.",
+				["keywords"] = { "Minions", "Dummies" },
+			},
+			[3] = {
+				["text"] = "the World of Warcraft Instruction Manual.",
+				["keywords"] = { "World", "Warcraft", "Instruction", "Manual" },
+			},
+			[4] = {
+				["text"] = "'Accounting is for Everyone'.",
+				["keywords"] = { "Accounting", "Everyone" },
+			},
+		},
+	},
+}
+
+PetEmote_RandomMessages["Succubus-en"] = {
+	[1] = {
+		["text"] = "starts doing her manicure",
+		["keywords"] = { "starts", "doing", "manicure" },
 	},
 }
 

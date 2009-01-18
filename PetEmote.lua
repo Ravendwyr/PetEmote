@@ -1,11 +1,14 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
-PetEmote_spam = 6;
+
+PetEmote_Version = { 1, 5, 3 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
 PetEmote_Settings = {};
 PetEmote_TimeTable = {};
+
+PetEmote_RecentFood = nil;
 
 PetEmote_GenderTable = {
 	[1] = "male",
@@ -23,8 +26,13 @@ PetEmote_GenderTable = {
 
 function PetEmote_OnLoad ()
 	
+	this:RegisterEvent("CHAT_MSG_ADDON");
 	this:RegisterEvent("PLAYER_FLAGS_CHANGED");
 	this:RegisterEvent("PLAYER_REGEN_ENABLED");
+	
+	-- Unfinished 1.6 Stuff -- Hands off!
+--	this:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+--	this:RegisterEvent("ITEM_LOCK_CHANGED");
 	
 	SLASH_PETEMOTE1 = "/pet";
 	SLASH_PETEMOTE2 = "/tier";
@@ -47,7 +55,23 @@ function PetEmote_OnLoad ()
 	
 end
 
-function PetEmote_OnEvent ()
+function PetEmote_OnEvent (self, event, ...)
+	
+	-- receive messages from other PetEmote users
+	-- and arg4 ~= UnitName("player")
+	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote") then
+		return PetEmote_HandleAddonMessage(arg2, arg3, arg4);
+	end
+	
+	-- handle combat log events
+	if (event == "COMBAT_LOG_EVENT_UNFILTERED") then
+		return PetEmote_HandleCombatLogEvent(...);
+	end
+	
+	-- store the recently touched item for feeding-emotes
+	if (event == "ITEM_LOCK_CHANGED" and arg2 ~= nil) then
+		return PetEmote_SetRecentFood(arg1, arg2);
+	end
 	
 	-- leave some time to the next random emote when leaving afk mode
 	if (event == "PLAYER_FLAGS_CHANGED" and arg1 == "player") then
@@ -62,6 +86,13 @@ function PetEmote_OnEvent ()
 end
 
 function PetEmote_OnUpdate ()
+	
+	-- dirty workaround, need to find another way; Version is always nil in OnLoad
+	if (PetEmote_Settings["Version"] == nil or not PetEmote_CompareVersion(PetEmote_Settings["Version"], "eq", PetEmote_Version)) then
+		PetEmote_Settings["Version"] = PetEmote_Version;
+		PetEmote_Message(PETEMOTE_WELCOME_MESSAGE .. " " .. PetEmote_Version[1] .. "." .. PetEmote_Version[2] .. "." .. PetEmote_Version[3] .. "!");
+		PetEmote_Message(PETEMOTE_WELCOME_INFO);
+	end
 	
 	if (PetEmote_Settings["RandomEmotes"] ~= true) then
 		return;
@@ -82,6 +113,8 @@ function PetEmote_Command (args)
 		
 		if (PetEmote_HasPet()) then
 			if (val == "") then
+				PetEmote_Message(PETEMOTE_HELP_FAMILY_SET);
+				PetEmote_Message(PETEMOTE_HELP_FAMILY_RESET);
 				if (PetEmote_Family[UnitName("pet")] ~= nil) then
 					PetEmote_DoPetFamilyWarning(UnitName("pet"), PetEmote_Family[UnitName("pet")], false);
 				else
@@ -98,6 +131,8 @@ function PetEmote_Command (args)
 		
 		if (PetEmote_HasPet()) then
 			if (val == "") then
+				PetEmote_Message(PETEMOTE_HELP_GENDER_SET);
+				PetEmote_Message(PETEMOTE_HELP_GENDER_RESET);
 				if (PetEmote_Gender[UnitName("pet")] ~= nil) then
 					PetEmote_DoPetGenderWarning(UnitName("pet"), PetEmote_Gender[UnitName("pet")], false);
 				else
@@ -128,13 +163,21 @@ function PetEmote_Command (args)
 			PetEmote_DoRandomEmote();
 		elseif (val == "on" or val == "an") then
 			PetEmote_Settings["RandomEmotes"] = true;
-			DEFAULT_CHAT_FRAME:AddMessage(PETEMOTE_LOCAL_RANDOM_ACTIVE);
+			PetEmote_Message(PETEMOTE_LOCAL_RANDOM_ACTIVE);
 		else
 			PetEmote_Settings["RandomEmotes"] = false;
-			DEFAULT_CHAT_FRAME:AddMessage(PETEMOTE_LOCAL_RANDOM_INACTIVE);
+			PetEmote_Message(PETEMOTE_LOCAL_RANDOM_INACTIVE);
 		end
 		
-	elseif (args ~= "") then
+	elseif (args == "info") then
+		
+		PetEmote_Info();
+		
+	elseif (args == "help" or args == "hilfe" or args == "") then
+		
+		PetEmote_Help();
+		
+	else
 		
 		PetEmote_DoEmote(args);
 		
@@ -153,13 +196,168 @@ function PetEmote_GetCommand (args)
 	end
 end
 
+function PetEmote_Message (message)
+	
+	if (DEFAULT_CHAT_FRAME and type(message) == "string") then
+		message = string.gsub(message, "<cmd>", "|CFFBBFFBB");
+		message = string.gsub(message, "</cmd>", "|r");
+		DEFAULT_CHAT_FRAME:AddMessage("|CFFFFF888<PetEmote>|r " .. message, 1, 1, 1);
+	end
+	
+end
+
+function PetEmote_Help ()
+	
+	PetEmote_Message(PETEMOTE_HELP_TITLE);
+	PetEmote_Message(PETEMOTE_HELP_GENERAL);
+	PetEmote_Message(PETEMOTE_HELP_RANDOM);
+	PetEmote_Message(PETEMOTE_HELP_RANDOM_TOGGLE);
+	PetEmote_Message(PETEMOTE_HELP_FAMILY);
+	PetEmote_Message(PETEMOTE_HELP_GENDER);
+	PetEmote_Message(PETEMOTE_HELP_MORE);
+	PetEmote_Message(PETEMOTE_HELP_WEBLINK);
+	
+end
+
+function PetEmote_Info ()
+	if (UnitIsPlayer("target")) then
+		SendAddonMessage("PetEmote", "rq", "WHISPER", UnitName("target"));
+	end
+end
+
+function PetEmote_SendAddonMessage (command, params)
+	
+	if (UnitIsPlayer("target")) then
+		SendAddonMessage("PetEmote", command .. " " .. params, "WHISPER", UnitName("target"));
+	end
+	
+	if (IsInGuild()) then
+		SendAddonMessage("PetEmote", command .. " " .. params, "GUILD");
+	end
+	
+	if (GetNumRaidMembers() > 0) then
+		SendAddonMessage("PetEmote", command .. " " .. params, "RAID");
+	elseif (GetNumPartyMembers() > 0) then
+		SendAddonMessage("PetEmote", command .. " " .. params, "PARTY");
+	end
+	
+end
+
+function PetEmote_HandleAddonMessage (message, distributor, sender)
+	
+	local cmd, val = PetEmote_GetCommand(message);
+	
+	if (cmd == "vs") then -- version
+		
+		local major, minor = PetEmote_GetCommand(val);
+		local minor, build = PetEmote_GetCommand(minor);
+		major = tonumber(major);
+		minor = tonumber(minor);
+		build = tonumber(build);
+		
+		if (PetEmote_Settings["RecentVersionInfo"] == nil or PetEmote_Settings["RecentVersionInfo"] < (GetTime() - 14400) or PetEmote_Settings["RecentVersionInfo"] > GetTime()) then
+			if (PetEmote_CompareVersion({ major, minor, build }, "gt", PetEmote_Version)) then
+				if (PetEmote_Settings["LatestVersion"] ~= nil and PetEmote_CompareVersion(PetEmote_Settings["LatestVersion"], "gt", { major, minor, build })) then
+					major = PetEmote_Settings["LatestVersion"][1];
+					minor = PetEmote_Settings["LatestVersion"][2];
+					build = PetEmote_Settings["LatestVersion"][3];
+				end
+				PetEmote_Settings["RecentVersionInfo"] = GetTime();
+				PetEmote_Settings["LatestVersion"] = { major, minor, build };
+				PetEmote_Message(gsub(PETEMOTE_HELP_VERSION, "$v", major .. "." .. minor .. "." .. build));
+				PetEmote_Message(PETEMOTE_HELP_WEBLINK);
+			end
+		end
+		
+	end
+	
+	if (cmd == "rq") then -- request
+		SendAddonMessage("PetEmote", "rs " .. PetEmote_Version[1] .. " " .. PetEmote_Version[2] .. " " .. PetEmote_Version[3], "WHISPER", sender);
+	end
+	
+	if (cmd == "rs") then -- response
+		local major, minor = PetEmote_GetCommand(val);
+		local minor, build = PetEmote_GetCommand(minor);
+		PetEmote_Message(gsub(gsub(PETEMOTE_LOCAL_INFO, "$v", major .. "." .. minor .. "." .. build), "$p", sender));
+	end
+	
+end
+
+function PetEmote_CompareVersion (version1, operator, version2)
+	
+	if (operator == "gt") then
+		if (version1[1] > version2[1]) then
+			return true;
+		end
+		if (version1[1] == version2[1] and version1[2] > version2[2]) then
+			return true;
+		end
+		if (version1[1] == version2[1] and version1[2] == version2[2] and version1[3] > version2[3]) then
+			return true;
+		end
+	elseif (operator == "lt") then
+		if (version1[1] < version2[1]) then
+			return true;
+		end
+		if (version1[1] == version2[1] and version1[2] < version2[2]) then
+			return true;
+		end
+		if (version1[1] == version2[1] and version1[2] == version2[2] and version1[3] < version2[3]) then
+			return true;
+		end
+	elseif (operator == "eq") then
+		if (version1[1] == version2[1] and version1[2] == version2[2] and version1[3] == version2[3]) then
+			return true;
+		end
+	end
+	
+	return false;
+	
+end
+
+function PetEmote_SetRecentFood (bag, slot)
+	
+	local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture = GetItemInfo(GetContainerItemLink(bag, slot));
+	
+	PetEmote_RecentFood = {
+		["name"]  = itemName,
+		["link"]  = itemLink,
+		["count"] = itemStackCount,
+	};
+	
+end
+
+function PetEmote_HandleCombatLogEvent (timestamp, event, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, ...)
+	
+	if (event == "SPELL_CAST_SUCCESS") then
+		local spellID = select(1, ...);
+		if (spellID == 6991 and PetEmote_RecentFood ~= nil) then
+			PetEmote_DoEmote("schlingt " .. PetEmote_RecentFood["link"] .. " hinunter.");
+			PetEmote_RecentFood = nil;
+		end
+	end
+	
+	if (event == "SPELL_CAST_FAILED") then
+		local spellID = select(1, ...);
+		if (spellID == 6991 and PetEmote_RecentFood ~= nil) then
+			PetEmote_DoEmote("spuckt " .. PetEmote_RecentFood["link"] .. " aus.");
+			PetEmote_RecentFood = nil;
+		end
+	end
+	
+end
+
 
 function PetEmote_HasPet ()
 	return (HasPetUI() and UnitName("pet") ~= nil and UnitName("pet") ~= UNKNOWNOBJECT and UnitHealth("pet") > 0);
 end
 
 
-function PetEmote_DoEmote (text)
+function PetEmote_DoEmote (text, ret)
+	
+	if (ret == nil) then
+		ret = false;
+	end
 	
 	if (PetEmote_HasPet()) then
 		
@@ -175,10 +373,20 @@ function PetEmote_DoEmote (text)
 			family = UnitCreatureFamily("pet");
 		end
 		
-		SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
-		PetEmote_SetNextRandomEmoteTime(60, 300);
+		if (ret == true) then
+			return nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text;
+		else
+			SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
+			PetEmote_SetNextRandomEmoteTime(60, 300);
+		end
 		
 	end
+	
+	if (ret == true) then
+		return nil;
+	end
+	
+	PetEmote_SendAddonMessage("vs", PetEmote_Version[1] .. " " .. PetEmote_Version[2] .. " " .. PetEmote_Version[3]);
 	
 end
 
@@ -201,16 +409,48 @@ function PetEmote_ChangeFamily (pet, family)
 	
 	PetEmote_Family[pet] = family;
 	PetEmote_DoPetFamilyWarning(pet, family, true);
+	PetEmote_DemonstrateFamily();
+	
+end
+
+function PetEmote_DemonstrateFamily ()
+	
+	if (PetEmote_HasPet() and not UnitIsAFK("player")) then
+		
+		local text = PetEmote_GetRandomEmote();
+		
+		if (text ~= nil) then
+			text = PetEmote_DoEmote(text, true);
+		end
+		
+		if (text ~= nil and DEFAULT_CHAT_FRAME) then
+			PetEmote_Message(PETEMOTE_HELP_FAMILY_EXAMPLE);
+			DEFAULT_CHAT_FRAME:AddMessage(UnitName("player") .. " " .. text, 1, 0.5, 0.25);
+		end
+		
+	end
 	
 end
 
 function PetEmote_DoPetFamilyWarning (pet, family, changed)
 	
+	local message = "";
+	
 	if (changed) then
-		DEFAULT_CHAT_FRAME:AddMessage(gsub(gsub(PETEMOTE_LOCAL_FAMILY_INFO, "$p", pet), "$f", family));
+		if (PetEmote_Gender[pet] ~= nil and PetEmote_Gender[pet] == 3) then
+			message = PETEMOTE_LOCAL_FAMILY_INFO_FEMALE;
+		else
+			message = PETEMOTE_LOCAL_FAMILY_INFO_MALE;
+		end
 	else
-		DEFAULT_CHAT_FRAME:AddMessage(gsub(gsub(PETEMOTE_LOCAL_FAMILY_REMINDER, "$p", pet), "$f", family));
+		if (PetEmote_Gender[pet] ~= nil and PetEmote_Gender[pet] == 3) then
+			message = PETEMOTE_LOCAL_FAMILY_REMINDER_FEMALE;
+		else
+			message = PETEMOTE_LOCAL_FAMILY_REMINDER_MALE;
+		end
 	end
+	
+	PetEmote_Message(gsub(gsub(message, "$p", pet), "$f", family));
 	
 end
 
@@ -231,9 +471,9 @@ function PetEmote_DoPetGenderWarning (pet, gender, changed)
 	end
 	
 	if (changed) then
-		DEFAULT_CHAT_FRAME:AddMessage(gsub(gsub(PETEMOTE_LOCAL_GENDER_INFO, "$p", pet), "$g", gender));
+		PetEmote_Message(gsub(gsub(PETEMOTE_LOCAL_GENDER_INFO, "$p", pet), "$g", gender));
 	else
-		DEFAULT_CHAT_FRAME:AddMessage(gsub(gsub(PETEMOTE_LOCAL_GENDER_REMINDER, "$p", pet), "$g", gender));
+		PetEmote_Message(gsub(gsub(PETEMOTE_LOCAL_GENDER_REMINDER, "$p", pet), "$g", gender));
 	end
 	
 end
@@ -242,9 +482,9 @@ end
 function PetEmote_ShowMaskStateMessage ()
 	
 	if (PetEmote_Settings["UseMask"] == true) then
-		DEFAULT_CHAT_FRAME:AddMessage(PETEMOTE_LOCAL_MASK_ACTIVE);
+		PetEmote_Message(PETEMOTE_LOCAL_MASK_ACTIVE);
 	else
-		DEFAULT_CHAT_FRAME:AddMessage(PETEMOTE_LOCAL_MASK_INACTIVE);
+		PetEmote_Message(PETEMOTE_LOCAL_MASK_INACTIVE);
 	end
 	
 end
@@ -264,9 +504,7 @@ function PetEmote_GetRandomEmoteTree ()
 	table.insert(PetEmote_TimeTable, GetTime());
 	local tt = getn(PetEmote_TimeTable);
 	
-	if (tt > PetEmote_spam and PetEmote_TimeTable[tt] - PetEmote_TimeTable[tt - PetEmote_spam] < (PetEmote_spam * 10) and PetEmote_RandomMessages["bored"] ~= nil) then
-		tree = PetEmote_RandomMessages["bored"];
-	elseif (PetEmote_RandomMessages[UnitName("pet")] ~= nil) then
+	if (PetEmote_RandomMessages[UnitName("pet")] ~= nil) then
 		tree = PetEmote_RandomMessages[UnitName("pet")];
 	elseif (PetEmote_RandomMessages[UnitCreatureFamily("pet")] ~= nil) then
 		tree = PetEmote_RandomMessages[UnitCreatureFamily("pet")];
@@ -278,6 +516,10 @@ function PetEmote_GetRandomEmoteTree ()
 	
 	if (getn(tree) < 1) then
 		return nil;
+	end
+	
+	if (tt > 6 and PetEmote_TimeTable[tt] - PetEmote_TimeTable[tt - 6] < (6 * 10) and PetEmote_RandomMessages["bored"] ~= nil) then
+		tree = PetEmote_RandomMessages["bored"];
 	end
 	
 	return tree;
@@ -585,42 +827,36 @@ function PetEmote_EmoteIsCompleting (text)
 end
 
 
-function PetEmote_new_ChatFrame_OnEvent (event)
-	
-	if (event == "CHAT_MSG_EMOTE") then
-		PetEmote_old_AddMessage = this.AddMessage;
-		this.AddMessage = PetEmote_new_AddMessage;
-		PetEmote_old_ChatFrame_OnEvent(event);
-		this.AddMessage = PetEmote_old_AddMessage;
-	else
-		PetEmote_old_ChatFrame_OnEvent(event);
-	end
-	
+function PetEmote_new_ChatFrame_OnEvent (event, ...)
+	PetEmote_old_AddMessage = this.AddMessage;
+	this.AddMessage = PetEmote_new_AddMessage;
+	PetEmote_old_ChatFrame_OnEvent(event, ...);
+	this.AddMessage = PetEmote_old_AddMessage;
 end
 
-function PetEmote_new_AddMessage (obj, msg, r, g, b)
+function PetEmote_new_AddMessage (obj, message, r, g, b)
 	
-	if (string.find(msg, PetEmote_apos) ~= nil and string.find(msg, PetEmote_nbsp) ~= nil) then
+	if (string.find(message, PetEmote_apos) ~= nil and string.find(message, PetEmote_nbsp) ~= nil) then
 		if (PetEmote_Settings["UseMask"] == true) then
 			for i = 1, 2 do
-				s, e = string.find(msg, PetEmote_nbsp);
-				msg = string.sub(msg, s + 2);
+				s, e = string.find(message, PetEmote_nbsp);
+				message = string.sub(message, s + 2);
 			end
 		end
 	end
 	
-	return PetEmote_old_AddMessage(obj, msg, r, g, b);
+	return PetEmote_old_AddMessage(obj, message, r, g, b);
 	
 end
 
-function PetEmote_new_SendChatMessage (msg, chatType, language, channel)
+function PetEmote_new_SendChatMessage (message, chatType, language, channel)
 	
 	if (PetEmote_HasPet()) then
-		msg = string.gsub(msg, "%%p", UnitName("pet"));
+		message = string.gsub(message, "%%p", UnitName("pet"));
 	else
-		msg = string.gsub(msg, "%%p", PETEMOTE_LOCAL_NOPET);
+		message = string.gsub(message, "%%p", PETEMOTE_LOCAL_NOPET);
 	end
 	
-	PetEmote_old_SendChatMessage(msg, chatType, language, channel);
+	PetEmote_old_SendChatMessage(message, chatType, language, channel);
 	
 end
