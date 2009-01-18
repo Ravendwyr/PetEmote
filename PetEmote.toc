@@ -1,0 +1,9 @@
+## Interface: 11100
+## Title: PetEmote
+## Author: Funny
+## Version: 1.1
+## eMail: funny@ammunition-company.net
+## URL: http://www.ammunition-company.net
+## Notes: Allows you to send emotes from Hunter's and Warlock's pets
+## Notes-deDE: Ermöglicht Emotes für die Begleiter von Jägern und Hexenmeistern
+PetEmote.xml
