@@ -1,0 +1,5 @@
+<Bindings>
+	<Binding name="RANDOMEMOTE" description="Zufälliges Emote" header="PETEMOTE">
+		PetEmote_DoRandomEmote();
+	</Binding>
+</Bindings>

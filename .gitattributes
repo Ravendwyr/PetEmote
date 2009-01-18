@@ -1,9 +1,10 @@
 * text=auto !eol
-/MarsMessageParser.lua -text
+/Bindings.xml -text
+/PetEmote[!!-~]verwenden.url -text
 /PetEmote.lua -text
 /PetEmote.toc -text
 /PetEmote.xml -text
+/Using[!!-~]PetEmote.url -text
 /config.lua -text
+/custom-emotes.lua -text
 /localization.lua -text
-/readme.de.htm -text
-/readme.en.htm -text

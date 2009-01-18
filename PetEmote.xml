@@ -4,6 +4,7 @@ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
 		<Scripts>
 			<OnLoad> PetEmote_OnLoad(); </OnLoad>
 			<OnEvent> PetEmote_OnEvent(); </OnEvent>
+			<OnUpdate> PetEmote_OnUpdate(); </OnUpdate>
 		</Scripts>
 	</Frame>
 </Ui>

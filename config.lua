@@ -1,6 +1,6 @@
 -- Please, leave these values as they are!
 -- PetEmote shall achieve a good reputation by not producing spam.
--- Thank you, Jorna
+-- Thank you -- Jorna
 
-PetEmote_HappinessEmoteMinFrequency = 120; -- 120
-PetEmote_HappinessEmoteMaxFrequency = 480; -- 480
+PetEmote_RandomEmoteMinFrequency = 60;  -- 60
+PetEmote_RandomEmoteMaxFrequency = 300; -- 300
