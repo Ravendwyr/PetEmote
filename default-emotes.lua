@@ -29,7 +29,8 @@
 PetEmote_DefaultEmotes["Bär-de"] = {
 	[1] = {
 		["text"] = "sehnt sich nach",
-		["chance"] = 50,
+		["chance"] = 10,
+		["condition"] = IsFirstCall,
 		["keywords"] = { "sehnt", "nach" },
 		["continues"] = {
 			[1] = {
@@ -44,7 +45,6 @@ PetEmote_DefaultEmotes["Bär-de"] = {
 			},
 			[3] = {
 				["text"] = "einem Baum, um sich daran den Rücken zu kratzen.",
-				["chance"] = 50,
 				["keywords"] = { "Baum", "daran", "Rücken", "kratzen" },
 			},
 		},
@@ -294,6 +294,7 @@ PetEmote_DefaultEmotes["Bär-de"] = {
 	[10] = {
 		["text"] = "findet sich selbst unheimlich gut!",
 		["chance"] = 5,
+		["condition"] = IsFirstCall,
 		["keywords"] = { "findet", "selbst", "unheimlich", "gut" },
 	},
 	[11] = {
@@ -322,17 +323,17 @@ PetEmote_CombatEmotes["Bär-de"] = {
 		["continues"] = {
 			[1] = {
 				["text"] = "einen gehörigen Prankenhieb",
-				["keywords"] = { "einen", "gehörigen", "Hieb" },
+				["keywords"] = { "einen", "gehörigen", "Prankenhieb" },
 			},
 			[2] = {
 				["text"] = "einen heftigen Prankenhieb",
-				["keywords"] = { "einen", "heftigen", "Hieb" },
+				["keywords"] = { "einen", "heftigen", "Prankenhieb" },
 			},
 		},
 	},
 	[2] = {
 		["text"] = "brüllt",
-		["keywords"] = { "grunzt" },
+		["keywords"] = { "brüllt" },
 		["optional"] = {
 			[1] = {
 				["text"] = "laut",
@@ -465,15 +466,27 @@ PetEmote_CombatEmotes["Bär-de"] = {
 	},
 	[6] = {
 		["text"] = "verteilt großzügig Prankenhiebe",
-		["keywords"] = { "beißt", "sich", "großzügig", "durch", "die", "Reihen" },
-		["optional"] = {
+		["keywords"] = { "verteilt", "großzügig", "Prankenhieb" },
+		["continues"] = {
 			[1] = {
 				["text"] = "unter seinen Feinden",
-				["keywords"] = { "seiner", "Feinde" },
+				["condition"] = PetIsMale,
+				["keywords"] = { "unter", "seinen", "Feinden" },
 			},
 			[2] = {
 				["text"] = "unter seinen Gegnern",
-				["keywords"] = { "seiner", "Gegner" },
+				["condition"] = PetIsMale,
+				["keywords"] = { "unter", "seinen", "Gegnern" },
+			},
+			[3] = {
+				["text"] = "unter ihren Feinden",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "unter", "ihren", "Feinden" },
+			},
+			[4] = {
+				["text"] = "unter ihren Gegnern",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "unter", "ihren", "Gegnern" },
 			},
 		},
 	},
@@ -487,30 +500,54 @@ PetEmote_CombatEmotes["Bär-de"] = {
 				["keywords"] = { "%t" },
 				["continues"] = {
 					[1] = {
-						["text"] = "seine Krallen",
-						["keywords"] = { "seine", "Hauer" },
-					},
-					[2] = {
 						["text"] = "die Zähne",
 						["keywords"] = { "die", "Zähne" },
 					},
-					[3] = {
+					[2] = {
 						["text"] = "sein schönstes Grinsen",
+						["condition"] = PetIsMale,
 						["keywords"] = { "sein", "schönstes", "Grinsen" },
 					},
+					[3] = {
+						["text"] = "sein breitestes Grinsen",
+						["condition"] = PetIsMale,
+						["keywords"] = { "sein", "breitestes", "Grinsen" },
+					},
 					[4] = {
-						["text"] = "breitestes Grinsen",
-						["keywords"] = { "breitestes", "Grinsen" },
+						["text"] = "ihr schönstes Grinsen",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "ihr", "schönstes", "Grinsen" },
+					},
+					[5] = {
+						["text"] = "ihr breitestes Grinsen",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "ihr", "breitestes", "Grinsen" },
+					},
+					[6] = {
+						["text"] = "ihre Krallen",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "ihre", "Krallen" },
+					},
+					[7] = {
+						["text"] = "seine Krallen",
+						["condition"] = PetIsMale,
+						["keywords"] = { "seine", "Krallen" },
 					},
 				},
 			},
 			[2] = {
-				["text"] = "seine Krallen",
-				["keywords"] = { "seine", "Hauer" },
-			},
-			[3] = {
 				["text"] = "die Zähne",
 				["keywords"] = { "die", "Zähne" },
+			},
+			[3] = {
+				["text"] = "ihre Krallen",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihre", "Krallen" },
+			},
+			[4] = {
+				["text"] = "seine Krallen",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seine", "Krallen" },
 			},
 		},
 	},

@@ -95,13 +95,13 @@
       <EmoteNode>
         <Text>sehnt sich nach</Text>
         <Properties>
-          <Condition>None</Condition>
+          <Condition>IsFirstCall</Condition>
           <MustContinue>true</MustContinue>
           <Keywords>
             <Keyword>sehnt</Keyword>
             <Keyword>nach</Keyword>
           </Keywords>
-          <Chance>50</Chance>
+          <Chance>10</Chance>
         </Properties>
         <ChildNodes>
           <EmoteNode>
@@ -143,7 +143,7 @@
                 <Keyword>Rücken</Keyword>
                 <Keyword>kratzen</Keyword>
               </Keywords>
-              <Chance>50</Chance>
+              <Chance>100</Chance>
             </Properties>
             <ChildNodes />
           </EmoteNode>
@@ -742,7 +742,7 @@
       <EmoteNode>
         <Text>findet sich selbst unheimlich gut!</Text>
         <Properties>
-          <Condition>None</Condition>
+          <Condition>IsFirstCall</Condition>
           <MustContinue>false</MustContinue>
           <Keywords>
             <Keyword>findet</Keyword>
@@ -819,7 +819,7 @@
               <Keywords>
                 <Keyword>einen</Keyword>
                 <Keyword>gehörigen</Keyword>
-                <Keyword>Hieb</Keyword>
+                <Keyword>Prankenhieb</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
@@ -833,7 +833,7 @@
               <Keywords>
                 <Keyword>einen</Keyword>
                 <Keyword>heftigen</Keyword>
-                <Keyword>Hieb</Keyword>
+                <Keyword>Prankenhieb</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
@@ -847,7 +847,7 @@
           <Condition>None</Condition>
           <MustContinue>false</MustContinue>
           <Keywords>
-            <Keyword>grunzt</Keyword>
+            <Keyword>brüllt</Keyword>
           </Keywords>
           <Chance>100</Chance>
         </Properties>
@@ -1191,14 +1191,11 @@
         <Text>verteilt großzügig Prankenhiebe</Text>
         <Properties>
           <Condition>None</Condition>
-          <MustContinue>false</MustContinue>
+          <MustContinue>true</MustContinue>
           <Keywords>
-            <Keyword>beißt</Keyword>
-            <Keyword>sich</Keyword>
+            <Keyword>verteilt</Keyword>
             <Keyword>großzügig</Keyword>
-            <Keyword>durch</Keyword>
-            <Keyword>die</Keyword>
-            <Keyword>Reihen</Keyword>
+            <Keyword>Prankenhieb</Keyword>
           </Keywords>
           <Chance>100</Chance>
         </Properties>
@@ -1206,11 +1203,12 @@
           <EmoteNode>
             <Text>unter seinen Feinden</Text>
             <Properties>
-              <Condition>None</Condition>
+              <Condition>PetIsMale</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
-                <Keyword>seiner</Keyword>
-                <Keyword>Feinde</Keyword>
+                <Keyword>unter</Keyword>
+                <Keyword>seinen</Keyword>
+                <Keyword>Feinden</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
@@ -1219,11 +1217,40 @@
           <EmoteNode>
             <Text>unter seinen Gegnern</Text>
             <Properties>
-              <Condition>None</Condition>
+              <Condition>PetIsMale</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
-                <Keyword>seiner</Keyword>
-                <Keyword>Gegner</Keyword>
+                <Keyword>unter</Keyword>
+                <Keyword>seinen</Keyword>
+                <Keyword>Gegnern</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>unter ihren Feinden</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>unter</Keyword>
+                <Keyword>ihren</Keyword>
+                <Keyword>Feinden</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>unter ihren Gegnern</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>unter</Keyword>
+                <Keyword>ihren</Keyword>
+                <Keyword>Gegnern</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
@@ -1254,19 +1281,6 @@
             </Properties>
             <ChildNodes>
               <EmoteNode>
-                <Text>seine Krallen</Text>
-                <Properties>
-                  <Condition>None</Condition>
-                  <MustContinue>false</MustContinue>
-                  <Keywords>
-                    <Keyword>seine</Keyword>
-                    <Keyword>Hauer</Keyword>
-                  </Keywords>
-                  <Chance>100</Chance>
-                </Properties>
-                <ChildNodes />
-              </EmoteNode>
-              <EmoteNode>
                 <Text>die Zähne</Text>
                 <Properties>
                   <Condition>None</Condition>
@@ -1282,7 +1296,7 @@
               <EmoteNode>
                 <Text>sein schönstes Grinsen</Text>
                 <Properties>
-                  <Condition>None</Condition>
+                  <Condition>PetIsMale</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>sein</Keyword>
@@ -1294,11 +1308,12 @@
                 <ChildNodes />
               </EmoteNode>
               <EmoteNode>
-                <Text>breitestes Grinsen</Text>
+                <Text>sein breitestes Grinsen</Text>
                 <Properties>
-                  <Condition>None</Condition>
+                  <Condition>PetIsMale</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
+                    <Keyword>sein</Keyword>
                     <Keyword>breitestes</Keyword>
                     <Keyword>Grinsen</Keyword>
                   </Keywords>
@@ -1306,20 +1321,61 @@
                 </Properties>
                 <ChildNodes />
               </EmoteNode>
+              <EmoteNode>
+                <Text>ihr schönstes Grinsen</Text>
+                <Properties>
+                  <Condition>PetIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>ihr</Keyword>
+                    <Keyword>schönstes</Keyword>
+                    <Keyword>Grinsen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>ihr breitestes Grinsen</Text>
+                <Properties>
+                  <Condition>PetIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>ihr</Keyword>
+                    <Keyword>breitestes</Keyword>
+                    <Keyword>Grinsen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>ihre Krallen</Text>
+                <Properties>
+                  <Condition>PetIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>ihre</Keyword>
+                    <Keyword>Krallen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>seine Krallen</Text>
+                <Properties>
+                  <Condition>PetIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>seine</Keyword>
+                    <Keyword>Krallen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
             </ChildNodes>
-          </EmoteNode>
-          <EmoteNode>
-            <Text>seine Krallen</Text>
-            <Properties>
-              <Condition>None</Condition>
-              <MustContinue>false</MustContinue>
-              <Keywords>
-                <Keyword>seine</Keyword>
-                <Keyword>Hauer</Keyword>
-              </Keywords>
-              <Chance>100</Chance>
-            </Properties>
-            <ChildNodes />
           </EmoteNode>
           <EmoteNode>
             <Text>die Zähne</Text>
@@ -1329,6 +1385,32 @@
               <Keywords>
                 <Keyword>die</Keyword>
                 <Keyword>Zähne</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>ihre Krallen</Text>
+            <Properties>
+              <Condition>PetIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ihre</Keyword>
+                <Keyword>Krallen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>seine Krallen</Text>
+            <Properties>
+              <Condition>PetIsMale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>seine</Keyword>
+                <Keyword>Krallen</Keyword>
               </Keywords>
               <Chance>100</Chance>
             </Properties>
