@@ -1,18 +1,46 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
+PetEmote_HappinessEmoteFrequency = 3;
+
+PetEmote_LastUseOfHappinessEmote = 0;
+PetEmote_LastUseOfFeedEmote = 0;
+PetEmote_HappinessEmoteMinRepeatTime = 60;
+PetEmote_FeedEmoteMinRepeatTime = 120;
+
 PetEmote_Family = {};
 
 function PetEmote_OnLoad()
 	
+	this:RegisterEvent("CHAT_MSG_SPELL_FAILED_LOCALPLAYER");
+	this:RegisterEvent("UNIT_HAPPINESS");
+	this:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS");
+	
 	SLASH_PETEMOTE1 = "/pet";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
+	
+	MarsMessageParser_RegisterFunction("PetEmote", SPELLFAILPERFORMSELF, PetEmote_FeedPetError, false);
+	MarsMessageParser_RegisterFunction("PetEmote", FEEDPET_LOG_FIRSTPERSON, PetEmote_FeedPet, false);
 	
 	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
 	ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent;
 	
 	PetEmote_old_SendChatMessage = SendChatMessage;
 	SendChatMessage = PetEmote_new_SendChatMessage;
+	
+end
+
+function PetEmote_OnEvent()
+	
+	if(event == "CHAT_MSG_SPELL_FAILED_LOCALPLAYER") then
+		MarsMessageParser_ParseMessage("PetEmote", arg1);
+	end
+	if(event == "UNIT_HAPPINESS") then
+		PetEmote_HappinessChanged();
+	end
+	if(event == "CHAT_MSG_SPELL_TRADESKILLS") then
+		MarsMessageParser_ParseMessage("PetEmote", arg1);
+	end
 	
 end
 
@@ -75,6 +103,53 @@ function PetEmote_ChangeFamily (pet, family)
 	PetEmote_Family[pet] = family;
 	DEFAULT_CHAT_FRAME:AddMessage(pet .. " = " .. family);
 end
+
+function PetEmote_FeedPet (food)
+	
+	if (PetEmote_LastUseOfFeedEmote + PetEmote_FeedEmoteMinRepeatTime < GetTime()) then
+		--DEFAULT_CHAT_FRAME:AddMessage(food);
+		PetEmote_LastUseOfFeedEmote = GetTime();
+	end
+	
+end
+
+function PetEmote_FeedPetError (spell, error)
+	
+	if (SPELL_FAILED_WRONG_PET_FOOD == error) then
+		-- TODO :: irgendwas damit machen
+		--DEFAULT_CHAT_FRAME:AddMessage(error);
+	end
+	
+end
+
+function PetEmote_HappinessChanged ()
+	
+	if (PetEmote_LastUseOfHappinessEmote + PetEmote_HappinessEmoteMinRepeatTime < GetTime()) then
+		happiness, damagePercentage, loyaltyRate = GetPetHappiness();
+		
+		if (happiness ~= nil and not UnitAffectingCombat("pet") and UnitHealth("pet") > 0) then
+			if (random(1, 300) <= PetEmote_HappinessEmoteFrequency) then
+				--DEFAULT_CHAT_FRAME:AddMessage(UnitName("pet") .. " " .. PetEmote_GetHappinessMessage(happiness));
+				PetEmote_LastUseOfHappinessEmote = GetTime();
+				--PetEmote_DoEmote(PetEmote_GetHappinessMessage(happiness));
+			end
+		end
+	end
+	
+end
+
+function PetEmote_GetHappinessMessage(happiness)
+	
+	if (happiness == 1) then
+		return "jammert vor sich hin.";
+	elseif (happiness == 2) then
+		return "knurrt unzufrieden.";
+	else
+		return "knurrt zufrieden.";
+	end
+	
+end
+
 
 function PetEmote_new_ChatFrame_OnEvent (event)
 	
