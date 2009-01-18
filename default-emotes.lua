@@ -1,4 +1,4 @@
-﻿PetEmote_RandomMessages["Aasvogel-de"] = {
+﻿PetEmote_DefaultEmotes["Aasvogel-de"] = {
 	[1] = {
 		["text"] = "flattert aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -26,7 +26,7 @@
 	},
 }
 
-PetEmote_RandomMessages["Bär-de"] = {
+PetEmote_DefaultEmotes["Bär-de"] = {
 	[1] = {
 		["text"] = "sehnt sich nach",
 		["chance"] = 50,
@@ -303,6 +303,7 @@ PetEmote_RandomMessages["Bär-de"] = {
 	},
 	[12] = {
 		["text"] = "braucht unbedingt etwas zu fressen",
+		["chance"] = 50,
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "braucht", "unbedingt", "etwas", "fressen" },
 	},
@@ -313,7 +314,345 @@ PetEmote_RandomMessages["Bär-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Drachenfalke-de"] = {
+PetEmote_CombatEmotes["Bär-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Prankenhieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Prankenhieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "brüllt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "wirft sich",
+		["keywords"] = { "wirft", "sich" },
+		["continues"] = {
+			[1] = {
+				["text"] = "mit seinem ganzen Gewicht",
+				["condition"] = PetIsMale,
+				["keywords"] = { "mit", "seinem", "ganzen", "Gewicht" },
+				["continues"] = {
+					[1] = {
+						["text"] = "auf %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "auf", "%t" },
+					},
+					[2] = {
+						["text"] = "gegen %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "gegen", "%t" },
+					},
+					[3] = {
+						["text"] = "in die Schlacht",
+						["chance"] = 50,
+						["keywords"] = { "die", "Schlacht" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "mit ihrem ganzen Gewicht",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "mit", "ihrem", "ganzen", "Gewicht" },
+				["continues"] = {
+					[1] = {
+						["text"] = "auf %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "auf", "%t" },
+					},
+					[2] = {
+						["text"] = "gegen %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "gegen", "%t" },
+					},
+					[3] = {
+						["text"] = "in die Schlacht",
+						["chance"] = 50,
+						["keywords"] = { "die", "Schlacht" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[6] = {
+		["text"] = "verteilt großzügig Prankenhiebe",
+		["keywords"] = { "beißt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unter seinen Feinden",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "unter seinen Gegnern",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[7] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Krallen",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Krallen",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Bär-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Drachenfalke-de"] = {
 	[1] = {
 		["text"] = "flattert",
 		["keywords"] = { "flattert" },
@@ -439,7 +778,7 @@ PetEmote_RandomMessages["Drachenfalke-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Eber-de"] = {
+PetEmote_DefaultEmotes["Eber-de"] = {
 	[1] = {
 		["text"] = "scharrt ein Loch im Boden auf der Suche nach etwas Futter.",
 		["condition"] = PetIsUnhappy,
@@ -448,7 +787,7 @@ PetEmote_RandomMessages["Eber-de"] = {
 	[2] = {
 		["text"] = "macht sich durch lautes Grunzen bemerkbar.",
 		["condition"] = PetIsUnhappy,
-		["keywords"] = { "macht", "sich", "durch", "lautes", "Grunzen", "bemerkbar" },
+		["keywords"] = { "macht", "sich", "durch", "lautes", "Grunzen", "bemerkbar", "grunzt" },
 	},
 	[3] = {
 		["text"] = "sucht am Boden nach Futter.",
@@ -456,23 +795,567 @@ PetEmote_RandomMessages["Eber-de"] = {
 		["keywords"] = { "sucht", "Boden", "nach", "Futter" },
 	},
 	[4] = {
-		["text"] = "grunzt unzufrieden.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "grunzt", "unzufrieden" },
-	},
-	[5] = {
-		["text"] = "grunzt zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "grunzt", "zufrieden" },
-	},
-	[6] = {
-		["text"] = "grunzt.",
+		["text"] = "grunzt",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "scharrt",
+		["keywords"] = { "scharrt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "mit den Vorderpfoten auf dem Boden herum",
+				["keywords"] = { "Vorderpfoten", "Boden", "herum" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "stößt mit dem Kopf an die Tasche",
+		["chance"] = 50,
+		["condition"] = PetIsContent,
+		["keywords"] = { "stößt", "Kopf", "Tasche" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seines",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seines" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "ihres",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihres" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle viere von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "viere", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "braucht unbedingt etwas zu fressen",
+		["chance"] = 50,
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "braucht", "unbedingt", "etwas", "fressen" },
 	},
 }
 
-PetEmote_RandomMessages["Eule-de"] = {
+PetEmote_CombatEmotes["Eber-de"] = {
+	[1] = {
+		["text"] = "grunzt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[3] = {
+		["text"] = "lässt seine Hauer",
+		["keywords"] = { "beißt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unter seinen Feinden wüten",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "unter seinen Gegnern wüten",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Hauer",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Hauer",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "wirft sich",
+		["keywords"] = { "wirft", "sich" },
+		["continues"] = {
+			[1] = {
+				["text"] = "mit seinem ganzen Gewicht",
+				["condition"] = PetIsMale,
+				["keywords"] = { "mit", "seinem", "ganzen", "Gewicht" },
+				["continues"] = {
+					[1] = {
+						["text"] = "auf %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "auf", "%t" },
+					},
+					[2] = {
+						["text"] = "gegen %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "gegen", "%t" },
+					},
+					[3] = {
+						["text"] = "in die Schlacht",
+						["chance"] = 50,
+						["keywords"] = { "die", "Schlacht" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "mit ihrem ganzen Gewicht",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "mit", "ihrem", "ganzen", "Gewicht" },
+				["continues"] = {
+					[1] = {
+						["text"] = "auf %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "auf", "%t" },
+					},
+					[2] = {
+						["text"] = "gegen %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "gegen", "%t" },
+					},
+					[3] = {
+						["text"] = "in die Schlacht",
+						["chance"] = 50,
+						["keywords"] = { "die", "Schlacht" },
+					},
+				},
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Eber-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[6] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[7] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Raubvogel-de"] = {
 	[1] = {
 		["text"] = "flattert aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -500,45 +1383,418 @@ PetEmote_RandomMessages["Eule-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Felshetzer-de"] = {
+PetEmote_DefaultEmotes["Felshetzer-de"] = {
 	[1] = {
-		["text"] = "knurrt laut.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "knurrt", "laut" },
-	},
-	[2] = {
 		["text"] = "schnappt aufgeregt in der Luft herum.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "schnappt", "aufgeregt", "der", "Luft", "herum" },
 	},
+	[2] = {
+		["text"] = "knurrt",
+		["chance"] = 125,
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
 	[3] = {
-		["text"] = "faucht hungrig.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "faucht", "hungrig" },
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle viere von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "Glieder", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
 	},
 	[4] = {
-		["text"] = "knurrt unglücklich.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "knurrt", "unglücklich" },
-	},
-	[5] = {
-		["text"] = "knurrt leise.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "knurrt", "leise" },
-	},
-	[6] = {
-		["text"] = "knurrt zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "knurrt", "zufrieden" },
-	},
-	[7] = {
-		["text"] = "faucht zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "faucht", "zufrieden" },
+		["text"] = "faucht",
+		["chance"] = 125,
+		["keywords"] = { "faucht" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
 	},
 }
 
-PetEmote_RandomMessages["Fledermaus-de"] = {
+PetEmote_CombatEmotes["Felshetzer-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Hieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Hieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[4] = {
+		["text"] = "beißt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "faucht",
+		["keywords"] = { "faucht" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Felshetzer-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Fledermaus-de"] = {
 	[1] = {
 		["text"] = "flattert aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -566,40 +1822,448 @@ PetEmote_RandomMessages["Fledermaus-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Gorilla-de"] = {
+PetEmote_DefaultEmotes["Gorilla-de"] = {
 	[1] = {
-		["text"] = "stampft hungrig auf den Boden.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "stampft", "hungrig", "auf", "den", "Boden" },
+		["text"] = "stampft",
+		["keywords"] = { "stampft" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf den Boden",
+				["keywords"] = { "auf", "den", "Boden" },
+			},
+			[2] = {
+				["text"] = "hungrig auf den Boden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "hungrig", "auf", "den", "Boden" },
+			},
+		},
 	},
 	[2] = {
-		["text"] = "sehnt sich nach einer Banane.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "sehnt", "sich", "nach", "einer", "Banane" },
+		["text"] = "sehnt sich nach",
+		["keywords"] = { "sehnt", "sich", "nach" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einer Banane",
+				["condition"] = PetIsContent,
+				["keywords"] = { "einer", "Banane" },
+			},
+		},
 	},
 	[3] = {
-		["text"] = "schnaubt unzufrieden.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "schnaubt", "unzufrieden" },
+		["text"] = "schnaubt",
+		["keywords"] = { "schnaubt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+		},
 	},
 	[4] = {
-		["text"] = "knurrt missmutig.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "knurrt", "missmutig" },
+		["text"] = "trommelt",
+		["keywords"] = { "trommelt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden auf die Brust",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "sich", "zufrieden", "auf", "die", "Brust" },
+			},
+			[2] = {
+				["text"] = "auf den Boden",
+				["keywords"] = { "auf", "den", "Boden" },
+			},
+		},
 	},
 	[5] = {
-		["text"] = "trommelt sich zufrieden auf die Brust.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "trommelt", "sich", "zufrieden", "auf", "die", "Brust" },
+		["text"] = "kratzt",
+		["keywords"] = { "kratzt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich am Hintern",
+				["keywords"] = { "sich", "am", "Hintern" },
+			},
+			[2] = {
+				["text"] = "sich genüsslich am Hintern",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "sich", "genüsslich", "am", "Hintern" },
+			},
+			[3] = {
+				["text"] = "sich hinter dem rechten Ohr",
+				["keywords"] = { "hinter", "rechten", "Ohr" },
+			},
+			[4] = {
+				["text"] = "sich hinter dem linken Ohr",
+				["keywords"] = { "hinter", "linken", "Ohr" },
+			},
+		},
 	},
 	[6] = {
-		["text"] = "kratzt sich am Hintern.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "kratzt", "sich", "Hintern" },
+		["text"] = "knurrt",
+		["chance"] = 125,
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+	[7] = {
+		["text"] = "scharrt",
+		["chance"] = 50,
+		["keywords"] = { "scharrt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "in seinem Fell herum",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seinem", "Fell", "herum" },
+			},
+			[2] = {
+				["text"] = "in ihrem Fell herum",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihrem", "Fell", "herum" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle viere von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "Glieder", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
 	},
 }
 
-PetEmote_RandomMessages["Hyäne-de"] = {
+PetEmote_CombatEmotes["Gorilla-de"] = {
+	[1] = {
+		["text"] = "lässt %t seine Faust spüren.",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "lässt", "%t", "seine", "Faust", "spüren" },
+	},
+	[2] = {
+		["text"] = "stampft auf den Boden.",
+		["keywords"] = { "stampft", "auf", "den", "Boden" },
+	},
+	[3] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Hieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Hieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "brüllt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[6] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[7] = {
+		["text"] = "prügelt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Gorilla-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Hyäne-de"] = {
 	[1] = {
 		["text"] = "jault leise.",
 		["condition"] = PetIsUnhappy,
@@ -672,7 +2336,7 @@ PetEmote_RandomMessages["Hyäne-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Katze-de"] = {
+PetEmote_DefaultEmotes["Katze-de"] = {
 	[1] = {
 		["text"] = "knurrt",
 		["keywords"] = { "knurrt" },
@@ -1063,7 +2727,339 @@ PetEmote_RandomMessages["Katze-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Krebs-de"] = {
+PetEmote_CombatEmotes["Katze-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Hieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Hieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "brüllt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[5] = {
+		["text"] = "beißt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Krallen",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Krallen",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+	[7] = {
+		["text"] = "kratzt um sich",
+		["keywords"] = { "kratzt", "sich" },
+	},
+}
+
+PetEmote_FeedingEmotes["Katze-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "schnuppert",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "schnuppert" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "schnüffelt",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "schnüffelt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Krebs-de"] = {
 	[1] = {
 		["text"] = "schnappt",
 		["keywords"] = { "schnappt" },
@@ -1138,9 +3134,149 @@ PetEmote_RandomMessages["Krebs-de"] = {
 			},
 		},
 	},
+	[4] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle Glieder von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "Glieder", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
+	},
 }
 
-PetEmote_RandomMessages["Krokilisk-de"] = {
+PetEmote_FeedingEmotes["Krebs-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Krokilisk-de"] = {
 	[1] = {
 		["text"] = "knurrt laut.",
 		["condition"] = PetIsUnhappy,
@@ -1178,7 +3314,7 @@ PetEmote_RandomMessages["Krokilisk-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Leerwandler-de"] = {
+PetEmote_DefaultEmotes["Leerwandler-de"] = {
 	[1] = {
 		["text"] = "verzehrt einen Schatten",
 		["keywords"] = { "verzehrt", "einen", "Schatten" },
@@ -1193,45 +3329,516 @@ PetEmote_RandomMessages["Leerwandler-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Raptor-de"] = {
+PetEmote_DefaultEmotes["Raptor-de"] = {
 	[1] = {
-		["text"] = "knurrt laut.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "knurrt", "laut" },
-	},
-	[2] = {
 		["text"] = "schnappt aufgeregt in der Luft herum.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "schnappt", "aufgeregt", "der", "Luft", "herum" },
 	},
+	[2] = {
+		["text"] = "nagt an",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "nagt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seiner Vorderpfote herum",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seiner", "Vorderpfote", "herum" },
+			},
+			[2] = {
+				["text"] = "ihrer Vorderpfote herum",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihrer", "Vorderpfote", "herum" },
+			},
+		},
+	},
 	[3] = {
-		["text"] = "faucht hungrig.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "faucht", "hungrig" },
+		["text"] = "knurrt",
+		["chance"] = 125,
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
 	},
 	[4] = {
-		["text"] = "knurrt unglücklich.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "knurrt", "unglücklich" },
+		["text"] = "scharrt",
+		["chance"] = 50,
+		["keywords"] = { "scharrt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "mit den Krallen auf dem Boden herum",
+				["keywords"] = { "mit", "den", "Krallen", "auf", "dem", "Boden", "herum" },
+			},
+		},
 	},
 	[5] = {
-		["text"] = "knurrt leise.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "knurrt", "leise" },
+		["text"] = "stößt mit dem Kopf an die Tasche",
+		["chance"] = 50,
+		["condition"] = PetIsContent,
+		["keywords"] = { "stößt", "Kopf", "Tasche" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seines",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seines" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "ihres",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihres" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+		},
 	},
 	[6] = {
-		["text"] = "knurrt zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "knurrt", "zufrieden" },
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
 	},
 	[7] = {
-		["text"] = "faucht zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "faucht", "zufrieden" },
+		["text"] = "faucht",
+		["chance"] = 125,
+		["keywords"] = { "faucht" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
 	},
 }
 
-PetEmote_RandomMessages["Schildkröte-de"] = {
+PetEmote_CombatEmotes["Raptor-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Hieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Hieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "brüllt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[5] = {
+		["text"] = "beißt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Krallen",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Krallen",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Raptor-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Schildkröte-de"] = {
 	[1] = {
 		["text"] = "wartet geduldig auf etwas Futter.",
 		["condition"] = PetIsUnhappy,
@@ -1264,7 +3871,7 @@ PetEmote_RandomMessages["Schildkröte-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Schlange-de"] = {
+PetEmote_DefaultEmotes["Schlange-de"] = {
 	[1] = {
 		["text"] = "kriecht aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -1292,7 +3899,7 @@ PetEmote_RandomMessages["Schlange-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Skorpid-de"] = {
+PetEmote_DefaultEmotes["Skorpid-de"] = {
 	[1] = {
 		["text"] = "schnappt aufgeregt mit den Scheren in der Luft herum.",
 		["condition"] = PetIsUnhappy,
@@ -1320,7 +3927,7 @@ PetEmote_RandomMessages["Skorpid-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Spinne-de"] = {
+PetEmote_DefaultEmotes["Spinne-de"] = {
 	[1] = {
 		["text"] = "krabbelt aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -1408,7 +4015,7 @@ PetEmote_RandomMessages["Spinne-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Sporensegler-de"] = {
+PetEmote_DefaultEmotes["Sporensegler-de"] = {
 	[1] = {
 		["text"] = "flattert aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -1436,7 +4043,7 @@ PetEmote_RandomMessages["Sporensegler-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Sukkubus-de"] = {
+PetEmote_DefaultEmotes["Sukkubus-de"] = {
 	[1] = {
 		["text"] = "lässt die Peitsche knallen",
 		["keywords"] = { "lässt", "die", "Peitsche", "knallen" },
@@ -1528,7 +4135,499 @@ PetEmote_RandomMessages["Sukkubus-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Weitschreiter-de"] = {
+PetEmote_DefaultEmotes["Teufelssaurier-de"] = {
+	[1] = {
+		["text"] = "schnappt aufgeregt in der Luft herum.",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "schnappt", "aufgeregt", "der", "Luft", "herum" },
+	},
+	[2] = {
+		["text"] = "knurrt",
+		["chance"] = 125,
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "scharrt",
+		["chance"] = 50,
+		["keywords"] = { "scharrt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "mit den Krallen auf dem Boden herum",
+				["keywords"] = { "mit", "den", "Krallen", "auf", "dem", "Boden", "herum" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "stößt mit dem Kopf an die Tasche",
+		["chance"] = 50,
+		["condition"] = PetIsContent,
+		["keywords"] = { "stößt", "Kopf", "Tasche" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seines",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seines" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "ihres",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihres" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "faucht",
+		["chance"] = 125,
+		["keywords"] = { "faucht" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+}
+
+PetEmote_CombatEmotes["Teufelssaurier-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Hieb",
+				["keywords"] = { "einen", "gehörigen", "Hieb" },
+			},
+			[2] = {
+				["text"] = "einen heftigen Hieb",
+				["keywords"] = { "einen", "heftigen", "Hieb" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "brüllt",
+		["keywords"] = { "grunzt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "teilt ordentlich aus",
+		["chance"] = 25,
+		["keywords"] = { "teilt", "ordentlich", "aus" },
+	},
+	[5] = {
+		["text"] = "beißt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Krallen",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Krallen",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Teufelssaurier-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Weitschreiter-de"] = {
 	[1] = {
 		["text"] = "krächzt",
 		["keywords"] = { "krächzt" },
@@ -1655,7 +4754,7 @@ PetEmote_RandomMessages["Weitschreiter-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Wichtel-de"] = {
+PetEmote_DefaultEmotes["Wichtel-de"] = {
 	[1] = {
 		["text"] = "riecht streng nach grünem Höllenglibber.",
 		["keywords"] = { "riecht", "streng", "nach", "grünem", "Höllenglibber" },
@@ -1682,7 +4781,7 @@ PetEmote_RandomMessages["Wichtel-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Windnatter-de"] = {
+PetEmote_DefaultEmotes["Windnatter-de"] = {
 	[1] = {
 		["text"] = "flattert aufgeregt umher.",
 		["condition"] = PetIsUnhappy,
@@ -1710,80 +4809,537 @@ PetEmote_RandomMessages["Windnatter-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Wolf-de"] = {
+PetEmote_DefaultEmotes["Wolf-de"] = {
 	[1] = {
-		["text"] = "jault leise.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "jault", "leise" },
-	},
-	[2] = {
 		["text"] = "winselt hungrig.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "winselt", "hungrig" },
 	},
-	[3] = {
+	[2] = {
 		["text"] = "sehnt sich nach einem Stück Fleisch.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "sehnt", "sich", "nach", "einem", "Stück", "Fleisch" },
 	},
-	[4] = {
+	[3] = {
 		["text"] = "winselt leise und sieht sich mit hungrigen Blicken um.",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "winselt", "leise", "und", "sieht", "sich", "mit", "hungrigen", "Blicken" },
 	},
-	[5] = {
-		["text"] = "jault unzufrieden.",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "jault", "unzufrieden" },
-	},
-	[6] = {
-		["text"] = "knurrt unzufrieden.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "knurrt", "unzufrieden" },
-	},
-	[7] = {
-		["text"] = "knurrt hungrig.",
-		["condition"] = PetIsContent,
-		["keywords"] = { "knurrt", "hungrig" },
-	},
-	[8] = {
+	[4] = {
 		["text"] = "leckt sich über die Schnauze und wedelt hoffnungsvoll mit dem Schwanz.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "leckt", "sich", "über", "die", "Schnauze", "und", "wedelt", "hoffnungsvoll", "mit", "dem", "Schwanz" },
 	},
-	[9] = {
+	[5] = {
 		["text"] = "schnüffelt auf der Suche nach etwas Futter auf dem Boden herum.",
 		["condition"] = PetIsContent,
 		["keywords"] = { "schnüffelt", "auf", "der", "Suche", "nach", "etwas", "Futter", "auf", "dem", "Boden", "herum" },
 	},
-	[10] = {
-		["text"] = "knurrt zufrieden.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "knurrt", "zufrieden" },
-	},
-	[11] = {
-		["text"] = "jault glücklich.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "jault", "glücklich" },
-	},
-	[12] = {
-		["text"] = "kratzt sich.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "kratzt", "sich" },
-	},
-	[13] = {
+	[6] = {
 		["text"] = "schnüffelt auf dem Boden herum.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "schnüffelt", "auf", "dem", "Boden", "herum" },
 	},
-	[14] = {
+	[7] = {
 		["text"] = "schnauft zufrieden.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "schnauft", "zufrieden" },
 	},
+	[8] = {
+		["text"] = "nagt an",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "nagt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seiner Vorderpfote herum",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seiner", "Vorderpfote", "herum" },
+			},
+			[2] = {
+				["text"] = "ihrer Vorderpfote herum",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihrer", "Vorderpfote", "herum" },
+			},
+		},
+	},
+	[9] = {
+		["text"] = "knurrt",
+		["chance"] = 125,
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "kratzt",
+		["keywords"] = { "kratzt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich hinter dem rechten Ohr",
+				["keywords"] = { "hinter", "rechten", "Ohr" },
+			},
+			[2] = {
+				["text"] = "sich hinter dem linken Ohr",
+				["keywords"] = { "hinter", "linken", "Ohr" },
+			},
+			[3] = {
+				["text"] = "sich mit der Hinterpfote",
+				["keywords"] = { "Hinterpfote" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "scharrt",
+		["chance"] = 50,
+		["keywords"] = { "scharrt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "in seinem Fell herum",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seinem", "Fell", "herum" },
+			},
+			[2] = {
+				["text"] = "in ihrem Fell herum",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihrem", "Fell", "herum" },
+			},
+			[3] = {
+				["text"] = "mit den Vorderpfoten auf dem Boden herum",
+				["keywords"] = { "mit", "den", "Krallen", "auf", "dem", "Boden", "herum" },
+			},
+		},
+	},
+	[12] = {
+		["text"] = "stößt mit dem Kopf an die Tasche",
+		["chance"] = 50,
+		["condition"] = PetIsContent,
+		["keywords"] = { "stößt", "Kopf", "Tasche" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seines",
+				["condition"] = PetIsMale,
+				["keywords"] = { "seines" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "ihres",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "ihres" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Herrchens",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "Herrchens" },
+					},
+					[2] = {
+						["text"] = "Frauchens",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "Frauchens" },
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[2] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[3] = {
+				["text"] = "alle viere von sich",
+				["chance"] = 125,
+				["keywords"] = { "alle", "Glieder", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "sich",
+				["keywords"] = { "sich" },
+			},
+		},
+	},
+	[14] = {
+		["text"] = "jault",
+		["chance"] = 125,
+		["keywords"] = { "jault" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "hungrig",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrig" },
+			},
+			[4] = {
+				["text"] = "zufrieden",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "zufrieden" },
+			},
+			[5] = {
+				["text"] = "gelassen",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "gelassen" },
+			},
+			[6] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[7] = {
+				["text"] = "launisch",
+				["condition"] = PetIsContent,
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
 }
 
-PetEmote_RandomMessages["Bat-en"] = {
+PetEmote_CombatEmotes["Wolf-de"] = {
+	[1] = {
+		["text"] = "versetzt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "versetzt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen gehörigen Biss",
+				["keywords"] = { "einen", "gehörigen", "Biss" },
+			},
+			[2] = {
+				["text"] = "einen lähmenden Biss",
+				["keywords"] = { "einen", "lähmenden", "Biss" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt sich großzügig durch die Reihen",
+		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
+		["optional"] = {
+			[1] = {
+				["text"] = "seiner Feinde",
+				["keywords"] = { "seiner", "Feinde" },
+			},
+			[2] = {
+				["text"] = "seiner Gegner",
+				["keywords"] = { "seiner", "Gegner" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Krallen",
+						["keywords"] = { "seine", "Hauer" },
+					},
+					[2] = {
+						["text"] = "die Zähne",
+						["keywords"] = { "die", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Krallen",
+				["keywords"] = { "seine", "Hauer" },
+			},
+			[3] = {
+				["text"] = "die Zähne",
+				["keywords"] = { "die", "Zähne" },
+			},
+		},
+	},
+}
+
+PetEmote_FeedingEmotes["Wolf-de"] = {
+	[1] = {
+		["text"] = "schlingt",
+		["condition"] = FoodAccepted,
+		["keywords"] = { "schlingt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%f",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "%f" },
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "es",
+				["condition"] = IsSecondCall,
+				["continues"] = {
+					[1] = {
+						["text"] = "hinunter",
+						["keywords"] = { "hinunter" },
+					},
+					[2] = {
+						["text"] = "gierig hinunter",
+						["condition"] = PetIsContent,
+						["keywords"] = { "gierig", "hinunter" },
+					},
+					[3] = {
+						["text"] = "hastig hinunter",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "hastig", "hinunter" },
+					},
+					[4] = {
+						["text"] = "genüsslich hinunter",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "genüsslich", "hinunter" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "kaut",
+		["keywords"] = { "kaut" },
+		["continues"] = {
+			[1] = {
+				["text"] = "auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "auf", "%f", "herum" },
+			},
+			[2] = {
+				["text"] = "hastig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "hastig", "auf", "%f", "herum" },
+			},
+			[3] = {
+				["text"] = "gierig auf %f herum",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "gierig", "auf", "%f", "herum" },
+			},
+			[4] = {
+				["text"] = "darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "darauf", "herum" },
+			},
+			[5] = {
+				["text"] = "hastig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "hastig", "darauf", "herum" },
+			},
+			[6] = {
+				["text"] = "gierig darauf herum",
+				["condition"] = IsSecondCall,
+				["keywords"] = { "gierig", "darauf", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "beißt",
+		["keywords"] = { "beißt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "herzhaft in %f",
+				["keywords"] = { "herzhaft", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig in %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch in %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "riecht",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "neugierig an %f",
+				["keywords"] = { "neugierig", "%f" },
+			},
+			[2] = {
+				["text"] = "vorsichtig an %f",
+				["keywords"] = { "vorsichtig", "%f" },
+			},
+			[3] = {
+				["text"] = "misstrauisch an %f",
+				["condition"] = FoodRefused,
+				["keywords"] = { "misstrauisch", "%f" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Bat-en"] = {
 	[1] = {
 		["text"] = "flaps around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -1811,7 +5367,7 @@ PetEmote_RandomMessages["Bat-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Bear-en"] = {
+PetEmote_DefaultEmotes["Bear-en"] = {
 	[1] = {
 		["text"] = "grumbles contentedly and scratches itself behind its right ear.",
 		["condition"] = PetIsHappy,
@@ -2190,7 +5746,7 @@ PetEmote_RandomMessages["Bear-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Boar-en"] = {
+PetEmote_DefaultEmotes["Boar-en"] = {
 	[1] = {
 		["text"] = "paws a hole on the ground while searching for something to eat.",
 		["condition"] = PetIsUnhappy,
@@ -2719,7 +6275,7 @@ PetEmote_RandomMessages["Boar-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Carrion Bird-en"] = {
+PetEmote_DefaultEmotes["Carrion Bird-en"] = {
 	[1] = {
 		["text"] = "flaps around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -2752,7 +6308,7 @@ PetEmote_RandomMessages["Carrion Bird-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Cat-en"] = {
+PetEmote_DefaultEmotes["Cat-en"] = {
 	[1] = {
 		["text"] = "spits out a hairball",
 		["keywords"] = { "spits", "hairball" },
@@ -4609,7 +8165,7 @@ PetEmote_RandomMessages["Cat-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Crab-en"] = {
+PetEmote_DefaultEmotes["Crab-en"] = {
 	[1] = {
 		["text"] = "snatches around in the air with its pinchers excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -4637,7 +8193,7 @@ PetEmote_RandomMessages["Crab-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Crocolisk-en"] = {
+PetEmote_DefaultEmotes["Crocolisk-en"] = {
 	[1] = {
 		["text"] = "snarls uproariously.",
 		["condition"] = PetIsUnhappy,
@@ -4675,7 +8231,452 @@ PetEmote_RandomMessages["Crocolisk-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Dragonhawk-en"] = {
+PetEmote_DefaultEmotes["Devilsaur-en"] = {
+	[1] = {
+		["text"] = "hisses",
+		["condition"] = PetIsContent,
+		["keywords"] = { "hisses" },
+	},
+	[2] = {
+		["text"] = "snarls",
+		["condition"] = PetIsContent,
+		["keywords"] = { "snarls" },
+	},
+	[3] = {
+		["text"] = "lowers",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "lowers" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head and",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head" },
+				["continues"] = {
+					[1] = {
+						["text"] = "roars at %t.",
+						["keywords"] = { "roars" },
+					},
+					[2] = {
+						["text"] = "hisses at %t.",
+						["keywords"] = { "hisses" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her head and",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head" },
+				["continues"] = {
+					[1] = {
+						["text"] = "roars at %t.",
+						["keywords"] = { "roars" },
+					},
+					[2] = {
+						["text"] = "hisses at %t.",
+						["keywords"] = { "hisses" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "looks at %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "looks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "thoughtfully, as if gauging strengths and weaknesses.",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "thoughtfully", "gauging", "strengths", "weaknesses" },
+			},
+			[2] = {
+				["text"] = "hungrily, as if wondering which part will be tastiest.",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hungrily", "wondering", "which", "part", "will", "tastiest" },
+			},
+			[3] = {
+				["text"] = "furiously, as if about to lunge for the throat.",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "furiously", "about", "lunge", "throat" },
+			},
+			[4] = {
+				["text"] = "contemptuously, as if expecting a very short fight.",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "contemptuously", "expecting", "very", "short", "fight" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "cocks",
+		["condition"] = TargetIsFriendly,
+		["keywords"] = { "cocks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head and examines %t curiously.",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head", "examines", "curiously" },
+			},
+			[2] = {
+				["text"] = "her head and examines %t curiously.",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head", "examines", "curiously" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "butts at",
+		["condition"] = PetIsContent,
+		["keywords"] = { "butts" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack with his nose. Isn't it feeding time yet?",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "with", "nose", "Isn't", "feeding", "time" },
+					},
+					[2] = {
+						["text"] = "mistress's pack with his nose. Isn't it feeding time yet?",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "with", "nose", "Isn't", "feeding", "time" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack with her nose. Isn't it feeding time yet?",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "with", "nose", "Isn't", "feeding", "time" },
+					},
+					[2] = {
+						["text"] = "mistress's pack with her nose. Isn't it feeding time yet?",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "with", "nose", "Isn't", "feeding", "time" },
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "scratches",
+		["keywords"] = { "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his flank with a claw",
+				["condition"] = PetIsMale,
+				["keywords"] = { "flank", "with", "claw" },
+			},
+			[2] = {
+				["text"] = "under his chin with a claw",
+				["condition"] = PetIsMale,
+				["keywords"] = { "under", "chin", "with", "claw" },
+			},
+			[3] = {
+				["text"] = "the top of his head with a claw",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head", "with", "claw" },
+			},
+			[4] = {
+				["text"] = "his belly with a claw",
+				["condition"] = PetIsMale,
+				["keywords"] = { "belly", "with", "claw" },
+			},
+			[5] = {
+				["text"] = "her flank with a claw",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "flank", "with", "claw" },
+			},
+			[6] = {
+				["text"] = "under her chin with a claw",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "under", "chin", "with", "claw" },
+			},
+			[7] = {
+				["text"] = "the top of her head with a claw",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head", "with", "claw" },
+			},
+			[8] = {
+				["text"] = "her belly with a claw",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "belly", "with", "claw" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "tries to chew on a claw, but",
+		["chance"] = 25,
+		["keywords"] = { "tries", "chew", "claw", "but" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his arms are too short",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "arms", "are", "too", "short" },
+			},
+			[2] = {
+				["text"] = "her arms are too short",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "arms", "are", "too", "short" },
+			},
+		},
+	},
+	[9] = {
+		["text"] = "lashes",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "lashes" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his tail from side to side",
+				["condition"] = PetIsMale,
+				["keywords"] = { "tail", "from", "side", "side" },
+			},
+			[2] = {
+				["text"] = "her tail from side to side",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "tail", "from", "side", "side" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "nudges",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "nudges" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master affectionately with",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "affectionately", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "the side of his head.",
+								["keywords"] = { "side", "head" },
+							},
+							[2] = {
+								["text"] = "the top of his head.",
+								["keywords"] = { "head" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress affectionately with",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "affectionately", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "the side of his head.",
+								["keywords"] = { "side", "head" },
+							},
+							[2] = {
+								["text"] = "the top of his head.",
+								["keywords"] = { "head" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master affectionately with",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "affectionately", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "the side of her head.",
+								["keywords"] = { "side", "head" },
+							},
+							[2] = {
+								["text"] = "the top of her head.",
+								["keywords"] = { "head" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress affectionately with",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "affectionately", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "the side of her head.",
+								["keywords"] = { "side", "head" },
+							},
+							[2] = {
+								["text"] = "the top of her head.",
+								["keywords"] = { "head" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[11] = {
+		["text"] = "bobs",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "bobs" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head affectionately at his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head", "affectionately" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+					},
+					[2] = {
+						["text"] = "mistress.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her head affectionately at her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head", "affectionately" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+					},
+					[2] = {
+						["text"] = "mistress.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+					},
+				},
+			},
+		},
+	},
+	[12] = {
+		["text"] = "gives",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "gives" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master an affectionate thump with his",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "affectionate", "thump", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "tail.",
+								["keywords"] = { "tail" },
+							},
+							[2] = {
+								["text"] = "tail, nearly knocking him over.",
+								["keywords"] = { "tail", "nearly", "knocking", "over" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress an affectionate thump with his",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "affectionate", "thump", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "tail.",
+								["keywords"] = { "tail" },
+							},
+							[2] = {
+								["text"] = "tail, nearly knocking her over.",
+								["keywords"] = { "tail", "nearly", "knocking", "over" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master an affectionate thump with her",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "affectionate", "thump", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "tail.",
+								["keywords"] = { "tail" },
+							},
+							[2] = {
+								["text"] = "tail, nearly knocking him over.",
+								["keywords"] = { "tail", "nearly", "knocking", "over" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress an affectionate thump with her",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "affectionate", "thump", "with" },
+						["continues"] = {
+							[1] = {
+								["text"] = "tail.",
+								["keywords"] = { "tail" },
+							},
+							[2] = {
+								["text"] = "tail, nearly knocking her over.",
+								["keywords"] = { "tail", "nearly", "knocking", "over" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "drags",
+		["condition"] = PetIsContent,
+		["keywords"] = { "drags" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his tail on the ground listlessly.",
+				["condition"] = PetIsMale,
+				["keywords"] = { "tail", "ground", "listlessly" },
+			},
+			[2] = {
+				["text"] = "her tail on the ground listlessly",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "tail", "ground", "listlessly" },
+			},
+		},
+	},
+	[14] = {
+		["text"] = "raises",
+		["keywords"] = { "raises" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head and roars.",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head", "roars" },
+			},
+			[2] = {
+				["text"] = "her head and roars",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head", "roars" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Dragonhawk-en"] = {
 	[1] = {
 		["text"] = "flaps around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -4703,7 +8704,7 @@ PetEmote_RandomMessages["Dragonhawk-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Gorilla-en"] = {
+PetEmote_DefaultEmotes["Gorilla-en"] = {
 	[1] = {
 		["text"] = "stomps on the ground hungrily.",
 		["condition"] = PetIsUnhappy,
@@ -4736,7 +8737,7 @@ PetEmote_RandomMessages["Gorilla-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Hyena-en"] = {
+PetEmote_DefaultEmotes["Hyena-en"] = {
 	[1] = {
 		["text"] = "yowls",
 		["keywords"] = { "yowls" },
@@ -5684,7 +9685,7 @@ PetEmote_RandomMessages["Hyena-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Owl-en"] = {
+PetEmote_DefaultEmotes["Bird of Prey-en"] = {
 	[1] = {
 		["text"] = "lowers",
 		["condition"] = TargetIsUnfriendly,
@@ -6281,7 +10282,7 @@ PetEmote_RandomMessages["Owl-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Raptor-en"] = {
+PetEmote_DefaultEmotes["Raptor-en"] = {
 	[1] = {
 		["text"] = "hisses",
 		["condition"] = PetIsContent,
@@ -6827,7 +10828,7 @@ PetEmote_RandomMessages["Raptor-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Ravager-en"] = {
+PetEmote_DefaultEmotes["Ravager-en"] = {
 	[1] = {
 		["text"] = "snarls uproariously.",
 		["condition"] = PetIsUnhappy,
@@ -6865,7 +10866,7 @@ PetEmote_RandomMessages["Ravager-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Scorpid-en"] = {
+PetEmote_DefaultEmotes["Scorpid-en"] = {
 	[1] = {
 		["text"] = "rattles with",
 		["keywords"] = { "rattles", "with" },
@@ -7420,7 +11421,7 @@ PetEmote_RandomMessages["Scorpid-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Serpent-en"] = {
+PetEmote_DefaultEmotes["Serpent-en"] = {
 	[1] = {
 		["text"] = "slithers around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -7448,7 +11449,7 @@ PetEmote_RandomMessages["Serpent-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Spider-en"] = {
+PetEmote_DefaultEmotes["Spider-en"] = {
 	[1] = {
 		["text"] = "looks around with all eight eyes for something to eat.",
 		["condition"] = PetIsUnhappy,
@@ -8007,7 +12008,7 @@ PetEmote_RandomMessages["Spider-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Sporebat-en"] = {
+PetEmote_DefaultEmotes["Sporebat-en"] = {
 	[1] = {
 		["text"] = "flaps around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -8035,7 +12036,7 @@ PetEmote_RandomMessages["Sporebat-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Tallstrider-en"] = {
+PetEmote_DefaultEmotes["Tallstrider-en"] = {
 	[1] = {
 		["text"] = "caws excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -8068,7 +12069,7 @@ PetEmote_RandomMessages["Tallstrider-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Turtle-en"] = {
+PetEmote_DefaultEmotes["Turtle-en"] = {
 	[1] = {
 		["text"] = "waits patiently for some food.",
 		["condition"] = PetIsUnhappy,
@@ -8101,7 +12102,7 @@ PetEmote_RandomMessages["Turtle-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Wind Serpent-en"] = {
+PetEmote_DefaultEmotes["Wind Serpent-en"] = {
 	[1] = {
 		["text"] = "flaps around excitedly.",
 		["condition"] = PetIsUnhappy,
@@ -8173,7 +12174,7 @@ PetEmote_RandomMessages["Wind Serpent-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Wolf-en"] = {
+PetEmote_DefaultEmotes["Wolf-en"] = {
 	[1] = {
 		["text"] = "chases",
 		["condition"] = PetIsHappy,
@@ -8455,7 +12456,7 @@ PetEmote_RandomMessages["Wolf-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Teufelsjäger-de"] = {
+PetEmote_DefaultEmotes["Teufelsjäger-de"] = {
 	[1] = {
 		["text"] = "knurrt",
 		["keywords"] = { "knurrt" },
@@ -8529,7 +12530,7 @@ PetEmote_RandomMessages["Teufelsjäger-de"] = {
 	},
 }
 
-PetEmote_RandomMessages["Voidwalker-en"] = {
+PetEmote_DefaultEmotes["Voidwalker-en"] = {
 	[1] = {
 		["text"] = "stares",
 		["keywords"] = { "stares" },
@@ -8607,10 +12608,11 @@ PetEmote_RandomMessages["Voidwalker-en"] = {
 	},
 }
 
-PetEmote_RandomMessages["Imp-en"] = {
+PetEmote_DefaultEmotes["Imp-en"] = {
 	[1] = {
 		["text"] = "pulls out a book and starts reading",
 		["chance"] = 1,
+		["condition"] = IsFirstCall,
 		["keywords"] = { "pulls", "out", "book", "starts", "reading" },
 		["optional"] = {
 			[1] = {
@@ -8631,9 +12633,102 @@ PetEmote_RandomMessages["Imp-en"] = {
 			},
 		},
 	},
+	[2] = {
+		["text"] = "creeps around looking for trouble.",
+		["keywords"] = { "creeps", "around", "looking", "trouble" },
+	},
+	[3] = {
+		["text"] = "clicks his claws to annoy %t.",
+		["chance"] = 200,
+		["condition"] = TargetExists,
+		["keywords"] = { "clicks", "claws", "annoy", "%t" },
+	},
+	[4] = {
+		["text"] = "grins evilly as it mocks %t.",
+		["chance"] = 200,
+		["condition"] = TargetExists,
+		["keywords"] = { "grins", "evilly", "mocks", "%t" },
+	},
+	[5] = {
+		["text"] = "titters and makes faces at %t.",
+		["chance"] = 200,
+		["condition"] = TargetExists,
+		["keywords"] = { "titters", "and", "makes", "faces", "%t" },
+	},
+	[6] = {
+		["text"] = "cackles menacingly",
+		["keywords"] = { "cackles", "menacingly" },
+	},
+	[7] = {
+		["text"] = "snickers to himself as he sets his",
+		["keywords"] = { "snickers", "himself", "sets", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master's shoes on fire.",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master's", "shoes", "fire" },
+			},
+			[2] = {
+				["text"] = "mistress's shoes on fire.",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress's", "shoes", "fire" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "picks his nose and examines it – ooh, that's a nice one.",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "picks", "his", "nose", "and", "examines", "ooh", "that's", "nice", "one" },
+	},
+	[9] = {
+		["text"] = "giggles as he hides his",
+		["keywords"] = { "giggles", "hides", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master's wand.",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master's", "wand" },
+			},
+			[2] = {
+				["text"] = "mistress's wand.",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress's", "wand" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "makes rude gestures behind his",
+		["keywords"] = { "makes", "rude", "gestures", "behind", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master's back.",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master's", "back" },
+			},
+			[2] = {
+				["text"] = "mistress's back.",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress's", "back" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "bounces around like a Gnome on expresso.",
+		["keywords"] = { "bounces", "around", "like", "Gnome", "expresso" },
+	},
+	[12] = {
+		["text"] = "stares intently at his tail, then pounces it and sucks on the tip.",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "stares", "intently", "his", "tail", "then", "pounces", "and", "sucks", "the", "tip" },
+	},
+	[13] = {
+		["text"] = "sings a bawdy song in a horribly off-key voice.",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "sings", "bawdy", "song", "horribly", "off-key", "voice" },
+	},
 }
 
-PetEmote_RandomMessages["Succubus-en"] = {
+PetEmote_DefaultEmotes["Succubus-en"] = {
 	[1] = {
 		["text"] = "starts doing her manicure",
 		["keywords"] = { "starts", "doing", "manicure" },

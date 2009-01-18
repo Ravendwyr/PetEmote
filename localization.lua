@@ -10,14 +10,22 @@ TargetExists = 8;
 TargetIsFriendly = 9;
 TargetIsUnfriendly = 10;
 TargetIsSpider = 11; -- undocumented
+FoodAccepted = 12;
+FoodRefused = 13;
+IsFirstCall = 14;
+IsSecondCall = 15;
+IsThirdCall = 16;
 
 
-PetEmote_RandomMessages = {}
 -- Needs to be set
+PetEmote_RandomMessages = {} -- not needed anymore
+PetEmote_DefaultEmotes = {}
+PetEmote_FeedingEmotes = {}
+PetEmote_CombatEmotes  = {}
 
 
-if (GetLocale() == "deDE") then
 -- German configuration
+if (GetLocale() == "deDE") then
 
 
 BINDING_HEADER_PETEMOTE               = "PetEmote";
@@ -72,98 +80,8 @@ PETEMOTE_CONTROLFRAME_PETGENDER_COLON = "Geschlecht:";
 PETEMOTE_CONTROLFRAME_RANDOM_TOOLTIP  = "Zufällige Emotes aktivieren oder deaktivieren";
 
 
-PetEmote_RandomMessages["bored"] = {
-	[1] = {
-		["text"] = "hat keine Lust mehr,",
-		["continues"] = {
-			[1] = {
-				["text"] = "alberne Emotes von sich zu geben.",
-			},
-			[2] = {
-				["text"] = "hier den Affen zu machen.",
-			},
-			[3] = {
-				["text"] = "für sein",
-				["condition"] = PetIsMale,
-				["continues"] = {
-					[1] = {
-						["text"] = "Herrchen den Clown zu spielen.",
-						["condition"] = PlayerIsMale,
-					},
-					[2] = {
-						["text"] = "Frauchen den Clown zu spielen.",
-						["condition"] = PlayerIsFemale,
-					},
-				},
-			},
-			[4] = {
-				["text"] = "für ihr",
-				["condition"] = PetIsFemale,
-				["continues"] = {
-					[1] = {
-						["text"] = "Herrchen den Clown zu spielen.",
-						["condition"] = PlayerIsMale,
-					},
-					[2] = {
-						["text"] = "Frauchen den Clown zu spielen.",
-						["condition"] = PlayerIsFemale,
-					},
-				},
-			},
-		},
-	},
-	[2] = {
-		["text"] = "fühlt sich",
-		["continues"] = {
-			[1] = {
-				["text"] = "gestresst!",
-			},
-			[2] = {
-				["text"] = "gemobbt!",
-			},
-			[3] = {
-				["text"] = "gepeinigt!",
-			},
-		},
-	},
-	[3] = {
-		["text"] = "hat genug.",
-	},
-	[4] = {
-		["text"] = "mag",
-		["continues"] = {
-			[1] = {
-				["text"] = "keinen Spam.",
-			},
-			[2] = {
-				["text"] = "kein Frühstücksfleisch.",
-			},
-			[3] = {
-				["text"] = "kein gepökeltes Schweinefleisch.",
-			},
-		},
-	},
-	[5] = {
-		["text"] = "will",
-		["continues"] = {
-			[1] = {
-				["text"] = "nicht mehr.",
-			},
-			[2] = {
-				["text"] = "seine Ruhe.",
-				["condition"] = PetIsMale,
-			},
-			[3] = {
-				["text"] = "ihre Ruhe.",
-				["condition"] = PetIsFemale,
-			},
-		},
-	},
-}
-
-
-else
 -- default (enUK) configuration
+else
 
 
 BINDING_HEADER_PETEMOTE               = "PetEmote";
@@ -216,113 +134,6 @@ PETEMOTE_CONTROLFRAME_SUBTITLE        = "Settings for";
 PETEMOTE_CONTROLFRAME_PETFAMILY_COLON = "Family:";
 PETEMOTE_CONTROLFRAME_PETGENDER_COLON = "Gender:";
 PETEMOTE_CONTROLFRAME_RANDOM_TOOLTIP  = "Toggle random emotes on or off";
-
-
-PetEmote_RandomMessages["bored"] = {
-	[1] = {
-		["text"] = "is getting tired of",
-		["continues"] = {
-			[1] = {
-				["text"] = "doing silly emotes.",
-			},
-			[2] = {
-				["text"] = "playing the fool.",
-			},
-			[3] = {
-				["text"] = "playing the clown for",
-				["continues"] = {
-					[1] = {
-						["text"] = "his",
-						["condition"] = PetIsMale,
-						["continues"] = {
-							[1] = {
-								["text"] = "master.",
-								["condition"] = PlayerIsMale,
-							},
-							[2] = {
-								["text"] = "mistress.",
-								["condition"] = PlayerIsFemale,
-							},
-						},
-					},
-					[2] = {
-						["text"] = "her",
-						["condition"] = PetIsFemale,
-						["continues"] = {
-							[1] = {
-								["text"] = "master.",
-								["condition"] = PlayerIsMale,
-							},
-							[2] = {
-								["text"] = "mistress.",
-								["condition"] = PlayerIsFemale,
-							},
-						},
-					},
-				},
-			},
-		},
-	},
-	[2] = {
-		["text"] = "feels",
-		["continues"] = {
-			[1] = {
-				["text"] = "stressed out.",
-			},
-			[2] = {
-				["text"] = "overstimulated.",
-			},
-			[3] = {
-				["text"] = "pestered.",
-			},
-		},
-	},
-	[3] = {
-		["text"] = "has had enough.",
-	},
-	[4] = {
-		["text"] = "doesn't like",
-		["continues"] = {
-			[1] = {
-				["text"] = "spam.",
-			},
-			[2] = {
-				["text"] = "Spam®.",
-			},
-			[3] = {
-				["text"] = "cured pork.",
-			},
-		},
-	},
-	[5] = {
-		["text"] = "wants",
-		["continues"] = {
-			[1] = {
-				["text"] = "a break.",
-			},
-			[3] = {
-				["text"] = "a rest.",
-			},
-			[4] = {
-				["text"] = "some peace and quiet.",
-			},
-		},
-	},
-	[6] = {
-		["text"] = "is getting bored",
-		["optional"] = {
-			[1] = {
-				["text"] = "– why not kill some monsters instead?",
-			},
-			[2] = {
-				["text"] = "– isn't there a quest you could be doing?",
-			},
-			[3] = {
-				["text"] = "– how about some PvP?",
-			},
-		},
-	},
-}
 
 
 end
