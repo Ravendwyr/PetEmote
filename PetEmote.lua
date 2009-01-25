@@ -42,7 +42,8 @@ function PetEmote_OnLoad ()
 	PetEmote_old_SendChatMessage = SendChatMessage;
 	SendChatMessage = PetEmote_new_SendChatMessage;
 	
-	PetEmote_SetNextRandomEmoteTime(30, 60);
+	PetEmote_SetNextDefaultEmoteTime(30, 60);
+	PetEmote_SetNextCombatEmoteTime(60, 180);
 	
 	if (PetEmote_Settings["RandomEmotes"] == nil) then
 		PetEmote_Settings["RandomEmotes"] = true;
@@ -73,7 +74,7 @@ function PetEmote_OnEvent (self, event, ...)
 	
 	-- leave some time to the next random emote when leaving afk mode
 	if (event == "PLAYER_FLAGS_CHANGED" and arg1 == "player") then
-		return PetEmote_SetNextRandomEmoteTime(10, 180);
+		return PetEmote_SetNextDefaultEmoteTime(10, 180);
 	end
 	
 	-- handle the feeding message, which contains information about the food
@@ -96,7 +97,7 @@ function PetEmote_OnUpdate ()
 		return;
 	end
 	
-	if (PetEmote_NextRandomEmoteTime < GetTime()) then
+	if (PetEmote_NextDefaultEmoteTime < GetTime()) then
 		PetEmote_DoRandomEmote();
 	end
 	
@@ -218,14 +219,14 @@ function PetEmote_Help ()
 end
 
 function PetEmote_Info ()
-	if (UnitIsPlayer("target")) then
+	if (UnitIsPlayer("target") and UnitIsFriend("player", "target")) then
 		SendAddonMessage("PetEmote", "rq", "WHISPER", UnitName("target"));
 	end
 end
 
 function PetEmote_SendAddonMessage (command, params)
 	
-	if (UnitIsPlayer("target")) then
+	if (UnitIsPlayer("target") and UnitIsFriend("player", "target")) then
 		SendAddonMessage("PetEmote", command .. " " .. params, "WHISPER", UnitName("target"));
 	end
 	
@@ -243,7 +244,7 @@ end
 
 function PetEmote_HandleAddonMessage (message, distributor, sender)
 	
-	-- PetEmote_Message(message .. " (" .. distributor .. ")");
+	-- PetEmote_Message(message .. " (" .. distributor .. ", " .. sender .. ")");
 	
 	local cmd, val = PetEmote_GetCommand(message);
 	
@@ -334,6 +335,12 @@ end
 
 function PetEmote_HandleCombatLogEvent (timestamp, event, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, ...)
 	
+	if (PetEmote_HasPet() and sourceName == UnitName("pet") and UnitAffectingCombat("pet")) then
+		if (PetEmote_NextCombatEmoteTime < GetTime()) then
+			PetEmote_DoRandomEmote();
+		end
+	end
+	
 	if (event == "SPELL_CAST_FAILED") then
 		local spellID = select(1, ...);
 		if (spellID == 6991 and sourceName == UnitName("player") and PetEmote_RecentFood ~= nil and PetEmote_RecentFood["time"] + 5 > GetTime()) then
@@ -395,7 +402,8 @@ function PetEmote_DoEmote (text, ret)
 			return nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text;
 		else
 			SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
-			PetEmote_SetNextRandomEmoteTime(60, 300);
+			PetEmote_SetNextDefaultEmoteTime(90, 360);
+			PetEmote_SetNextCombatEmoteTime(30, 240);
 		end
 		
 	end
@@ -508,8 +516,12 @@ function PetEmote_ShowMaskStateMessage ()
 end
 
 
-function PetEmote_SetNextRandomEmoteTime (minFrequency, maxFrequency)
-	PetEmote_NextRandomEmoteTime = GetTime() + random(minFrequency, maxFrequency);
+function PetEmote_SetNextDefaultEmoteTime (minFrequency, maxFrequency)
+	PetEmote_NextDefaultEmoteTime = GetTime() + random(minFrequency, maxFrequency);
+end
+
+function PetEmote_SetNextCombatEmoteTime (minFrequency, maxFrequency)
+	PetEmote_NextCombatEmoteTime = GetTime() + random(minFrequency, maxFrequency);
 end
 
 
@@ -592,14 +604,14 @@ function PetEmote_GetRandomEmote (treeType, ...)
 		
 		parts[1] = t;
 		
-		if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(40, getn(tree), 15)) then
+		if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(30, getn(tree), 20)) then
 			
 			local t, used = PetEmote_WalkRandomEmotes(tree, used, IsSecondCall, ...);
 			if (t ~= nil) then
 				
 				parts[2] = t;
 				
-				if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(20, getn(tree), 15)) then
+				if (not PetEmote_EmoteIsCompleting(t) and random(1, 100) < PetEmote_GetChanceToContinue(15, getn(tree), 20)) then
 					
 					local t, used = PetEmote_WalkRandomEmotes(tree, used, IsThirdCall, ...);
 					if (t ~= nil) then
@@ -675,7 +687,7 @@ function PetEmote_WalkRandomEmotes (tree, used, ...)
 		end
 	end
 	
-	if (selected["optional"] ~= nil and random(1, 100) < PetEmote_GetChanceToContinue(75, getn(selected["optional"]), 4)) then
+	if (selected["optional"] ~= nil and random(1, 100) < PetEmote_GetChanceToContinue(75, getn(selected["optional"]), 5)) then
 		local t, u = PetEmote_WalkRandomEmotes(selected["optional"], used, ...);
 		if (t == nil) then
 			return selected["text"], used;

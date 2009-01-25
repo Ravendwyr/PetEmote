@@ -1,9 +1,466 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DefaultEmotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>1.6.0</Version>
+  <PetFamilies>
+    <PetFamily>
+      <Name>Aasvogel</Name>
+      <Language>de</Language>
+      <FamilyType>Vulture</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Bär</Name>
+      <Language>de</Language>
+      <FamilyType>Bear</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Drachenfalke</Name>
+      <Language>de</Language>
+      <FamilyType>DragonHawk</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Eber</Name>
+      <Language>de</Language>
+      <FamilyType>Boar</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Felshetzer</Name>
+      <Language>de</Language>
+      <FamilyType>Ravager</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Fledermaus</Name>
+      <Language>de</Language>
+      <FamilyType>Bat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Gorilla</Name>
+      <Language>de</Language>
+      <FamilyType>Gorilla</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Hyäne</Name>
+      <Language>de</Language>
+      <FamilyType>Hyena</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Katze</Name>
+      <Language>de</Language>
+      <FamilyType>Cat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Kernhund</Name>
+      <Language>de</Language>
+      <FamilyType>CoreHound</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Krebs</Name>
+      <Language>de</Language>
+      <FamilyType>Crab</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Krokilisk</Name>
+      <Language>de</Language>
+      <FamilyType>Crocolisk</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Motte</Name>
+      <Language>de</Language>
+      <FamilyType>Moth</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Netherrochen</Name>
+      <Language>de</Language>
+      <FamilyType>NetherRay</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Raptor</Name>
+      <Language>de</Language>
+      <FamilyType>Raptor</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Raubvogel</Name>
+      <Language>de</Language>
+      <FamilyType>BirdOfPrey</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Rhinozeros</Name>
+      <Language>de</Language>
+      <FamilyType>Rhino</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Schildkröte</Name>
+      <Language>de</Language>
+      <FamilyType>Turtle</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Schimäre</Name>
+      <Language>de</Language>
+      <FamilyType>Chimera</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Schlange</Name>
+      <Language>de</Language>
+      <FamilyType>Serpent</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Silithid</Name>
+      <Language>de</Language>
+      <FamilyType>Silithid</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Skorpid</Name>
+      <Language>de</Language>
+      <FamilyType>Scorpid</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Sphärenjäger</Name>
+      <Language>de</Language>
+      <FamilyType>WarpStalker</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Spinne</Name>
+      <Language>de</Language>
+      <FamilyType>Spider</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Sporensegler</Name>
+      <Language>de</Language>
+      <FamilyType>Sporebat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Teufelssaurier</Name>
+      <Language>de</Language>
+      <FamilyType>Devilsaur</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Weitschreiter</Name>
+      <Language>de</Language>
+      <FamilyType>TallStrider</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wespe</Name>
+      <Language>de</Language>
+      <FamilyType>Wasp</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Windnatter</Name>
+      <Language>de</Language>
+      <FamilyType>WindSerpent</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wolf</Name>
+      <Language>de</Language>
+      <FamilyType>Wolf</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wurm</Name>
+      <Language>de</Language>
+      <FamilyType>Worm</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Höllenbestie</Name>
+      <Language>de</Language>
+      <FamilyType>Infernal</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Leerwandler</Name>
+      <Language>de</Language>
+      <FamilyType>VoidWalker</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Sukkubus</Name>
+      <Language>de</Language>
+      <FamilyType>Succubus</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Teufelsjäger</Name>
+      <Language>de</Language>
+      <FamilyType>FelHunter</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Teufelswache</Name>
+      <Language>de</Language>
+      <FamilyType>FelGuard</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wichtel</Name>
+      <Language>de</Language>
+      <FamilyType>Imp</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Ghul</Name>
+      <Language>de</Language>
+      <FamilyType>Ghoul</FamilyType>
+      <ClassType>DeathKnight</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Bat</Name>
+      <Language>en</Language>
+      <FamilyType>Bat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Bear</Name>
+      <Language>en</Language>
+      <FamilyType>Bear</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Bird of Prey</Name>
+      <Language>en</Language>
+      <FamilyType>BirdOfPrey</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Boar</Name>
+      <Language>en</Language>
+      <FamilyType>Boar</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Carrion Bird</Name>
+      <Language>en</Language>
+      <FamilyType>Vulture</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Cat</Name>
+      <Language>en</Language>
+      <FamilyType>Cat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Chimera</Name>
+      <Language>en</Language>
+      <FamilyType>Chimera</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Core Hound</Name>
+      <Language>en</Language>
+      <FamilyType>CoreHound</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Crab</Name>
+      <Language>en</Language>
+      <FamilyType>Crab</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Crocolisk</Name>
+      <Language>en</Language>
+      <FamilyType>Crocolisk</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Devilsaur</Name>
+      <Language>en</Language>
+      <FamilyType>Devilsaur</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Dragonhawk</Name>
+      <Language>en</Language>
+      <FamilyType>DragonHawk</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Gorilla</Name>
+      <Language>en</Language>
+      <FamilyType>Gorilla</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Hyena</Name>
+      <Language>en</Language>
+      <FamilyType>Hyena</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Moth</Name>
+      <Language>en</Language>
+      <FamilyType>Moth</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Nether Ray</Name>
+      <Language>en</Language>
+      <FamilyType>NetherRay</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Raptor</Name>
+      <Language>en</Language>
+      <FamilyType>Raptor</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Ravager</Name>
+      <Language>en</Language>
+      <FamilyType>Ravager</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Rhino</Name>
+      <Language>en</Language>
+      <FamilyType>Rhino</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Scorpid</Name>
+      <Language>en</Language>
+      <FamilyType>Scorpid</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Serpent</Name>
+      <Language>en</Language>
+      <FamilyType>Serpent</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Silithid</Name>
+      <Language>en</Language>
+      <FamilyType>Silithid</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Spider</Name>
+      <Language>en</Language>
+      <FamilyType>Spider</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Sporebat</Name>
+      <Language>en</Language>
+      <FamilyType>Sporebat</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Tallstrider</Name>
+      <Language>en</Language>
+      <FamilyType>TallStrider</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Turtle</Name>
+      <Language>en</Language>
+      <FamilyType>Turtle</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Warp Stalker</Name>
+      <Language>en</Language>
+      <FamilyType>WarpStalker</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wasp</Name>
+      <Language>en</Language>
+      <FamilyType>Wasp</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wind Serpent</Name>
+      <Language>en</Language>
+      <FamilyType>WindSerpent</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Wolf</Name>
+      <Language>en</Language>
+      <FamilyType>Wolf</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Worm</Name>
+      <Language>en</Language>
+      <FamilyType>Worm</FamilyType>
+      <ClassType>Hunter</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Felguard</Name>
+      <Language>en</Language>
+      <FamilyType>FelGuard</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Felhunter</Name>
+      <Language>en</Language>
+      <FamilyType>FelHunter</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Imp</Name>
+      <Language>en</Language>
+      <FamilyType>Imp</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Infernal</Name>
+      <Language>en</Language>
+      <FamilyType>Infernal</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Succubus</Name>
+      <Language>en</Language>
+      <FamilyType>Succubus</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Voidwalker</Name>
+      <Language>en</Language>
+      <FamilyType>VoidWalker</FamilyType>
+      <ClassType>Warlock</ClassType>
+    </PetFamily>
+    <PetFamily>
+      <Name>Ghoul</Name>
+      <Language>en</Language>
+      <FamilyType>Ghoul</FamilyType>
+      <ClassType>DeathKnight</ClassType>
+    </PetFamily>
+  </PetFamilies>
   <EmoteConfiguration>
     <Name>Aasvogel</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Aasvogel</Name>
       <Language>de</Language>
@@ -84,7 +541,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Bär</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -738,21 +1194,6 @@
             <ChildNodes />
           </EmoteNode>
         </ChildNodes>
-      </EmoteNode>
-      <EmoteNode>
-        <Text>findet sich selbst unheimlich gut!</Text>
-        <Properties>
-          <Condition>IsFirstCall</Condition>
-          <MustContinue>false</MustContinue>
-          <Keywords>
-            <Keyword>findet</Keyword>
-            <Keyword>selbst</Keyword>
-            <Keyword>unheimlich</Keyword>
-            <Keyword>gut</Keyword>
-          </Keywords>
-          <Chance>5</Chance>
-        </Properties>
-        <ChildNodes />
       </EmoteNode>
       <EmoteNode>
         <Text>hat einen Bärenhunger!</Text>
@@ -1765,7 +2206,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Drachenfalke</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -2120,7 +2560,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Eber</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -3596,7 +4035,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Raubvogel</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Raubvogel</Name>
       <Language>de</Language>
@@ -3677,7 +4115,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Felshetzer</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -4722,7 +5159,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Fledermaus</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -4804,7 +5240,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Gorilla</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Gorilla</Name>
       <Language>de</Language>
@@ -5957,7 +6392,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Hyäne</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -6184,7 +6618,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Katze</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -8098,7 +8531,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Krebs</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -8678,7 +9110,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Krokilisk</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -8786,7 +9217,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Leerwandler</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -8851,7 +9281,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Raptor</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10135,7 +10564,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Schildkröte</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10241,7 +10669,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Schlange</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10326,7 +10753,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Skorpid</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10419,7 +10845,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Spinne</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10713,7 +11138,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Sporensegler</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -10794,7 +11218,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Sukkubus</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -11072,7 +11495,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Teufelssaurier</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Teufelssaurier</Name>
       <Language>de</Language>
@@ -12315,7 +12737,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Weitschreiter</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -12680,7 +13101,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Wichtel</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -12782,7 +13202,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Windnatter</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -12869,7 +13288,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Wolf</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>de</Language>
@@ -14243,7 +14661,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Bat</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -14325,7 +14742,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Bear</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Bear</Name>
       <Language>en</Language>
@@ -15304,7 +15720,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Boar</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Boar</Name>
       <Language>en</Language>
@@ -16656,7 +17071,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Carrion Bird</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -16752,7 +17166,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Cat</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Cat</Name>
       <Language>en</Language>
@@ -21487,7 +21900,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Crab</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -21580,7 +21992,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Crocolisk</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -21688,7 +22099,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Devilsaur</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Devilsaur</Name>
       <Language>en</Language>
@@ -22826,7 +23236,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Dragonhawk</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -22907,7 +23316,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Gorilla</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -23005,7 +23413,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Hyena</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Hyena</Name>
       <Language>en</Language>
@@ -25410,7 +25817,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Bird of Prey</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Bird of Prey</Name>
       <Language>en</Language>
@@ -27022,7 +27428,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Raptor</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Raptor</Name>
       <Language>en</Language>
@@ -28430,7 +28835,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Ravager</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -28538,7 +28942,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Scorpid</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Scorpid</Name>
       <Language>en</Language>
@@ -29964,7 +30367,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Serpent</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -30047,7 +30449,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Spider</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Spider</Name>
       <Language>en</Language>
@@ -31641,7 +32042,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Sporebat</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -31722,7 +32122,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Tallstrider</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -31822,7 +32221,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Turtle</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -31927,7 +32325,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Wind Serpent</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -32134,7 +32531,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Wolf</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Untitled</Name>
       <Language>en</Language>
@@ -32859,7 +33255,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Teufelsjäger</Name>
-    <Language>de</Language>
     <PetFamily>
       <Name>Teufelsjäger</Name>
       <Language>de</Language>
@@ -33068,7 +33463,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Voidwalker</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Voidwalker</Name>
       <Language>en</Language>
@@ -33278,7 +33672,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Imp</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Imp</Name>
       <Language>en</Language>
@@ -33640,7 +34033,6 @@
   </EmoteConfiguration>
   <EmoteConfiguration>
     <Name>Succubus</Name>
-    <Language>en</Language>
     <PetFamily>
       <Name>Succubus</Name>
       <Language>en</Language>
@@ -33664,6 +34056,1472 @@
       </EmoteNode>
     </DefaultEmotes>
     <CombatEmotes />
+    <FeedingEmotes />
+  </EmoteConfiguration>
+  <EmoteConfiguration>
+    <Name>Ghul</Name>
+    <PetFamily>
+      <Name>Ghul</Name>
+      <Language>de</Language>
+      <FamilyType>Ghoul</FamilyType>
+      <ClassType>DeathKnight</ClassType>
+    </PetFamily>
+    <DefaultEmotes>
+      <EmoteNode>
+        <Text>breitet die Arme aus</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>breitet</Keyword>
+            <Keyword>die</Keyword>
+            <Keyword>Arme</Keyword>
+            <Keyword>aus</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>und betrachtet</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>und</Keyword>
+                <Keyword>betrachtet</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>interessiert die herunterhängenden Bandagen.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>interessiert</Keyword>
+                    <Keyword>die</Keyword>
+                    <Keyword>herunterhängenden</Keyword>
+                    <Keyword>Bandagen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>verwirrt die herunterhängenden Bandagen.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>verwirrt</Keyword>
+                    <Keyword>die</Keyword>
+                    <Keyword>herunterhängenden</Keyword>
+                    <Keyword>Bandagen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>nagt an</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>nagt</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>seinem linken Arm herum</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>seinem</Keyword>
+                <Keyword>linken</Keyword>
+                <Keyword>Arm</Keyword>
+                <Keyword>herum</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>seinem rechten Arm herum</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>seinem</Keyword>
+                <Keyword>rechten</Keyword>
+                <Keyword>Arm</Keyword>
+                <Keyword>herum</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>knurrt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>knurrt</Keyword>
+            <Keyword>brummt</Keyword>
+          </Keywords>
+          <Chance>75</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>unzufrieden</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>unzufrieden</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>missmutig</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>missmutig</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>gelassen</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>gelassen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>%t</Text>
+            <Properties>
+              <Condition>TargetExists</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords />
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>bedrohlich an</Text>
+                <Properties>
+                  <Condition>TargetIsUnfriendly</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>bedrohlich</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>grimmig an</Text>
+                <Properties>
+                  <Condition>TargetIsUnfriendly</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>grimmig</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>freundlich an</Text>
+                <Properties>
+                  <Condition>TargetIsFriendly</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>freundlich</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>überlegen an</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>überlegen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>launisch</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>launisch</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>kratzt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>kratzt</Keyword>
+          </Keywords>
+          <Chance>75</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>sich an einer Stelle, wo</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
+                <Keyword>einer</Keyword>
+                <Keyword>Stelle</Keyword>
+              </Keywords>
+              <Chance>75</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>möglicherweise einmal ein Ohr war.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>möglicherweise</Keyword>
+                    <Keyword>einmal</Keyword>
+                    <Keyword>ein</Keyword>
+                    <Keyword>Ohr</Keyword>
+                    <Keyword>war</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>vielleicht einmal eine Nase war.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>vielleicht</Keyword>
+                    <Keyword>einmal</Keyword>
+                    <Keyword>eine</Keyword>
+                    <Keyword>Nase</Keyword>
+                    <Keyword>war</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>sich beiläufig</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
+                <Keyword>beiläufig</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>sich geistesabwesend</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
+                <Keyword>geistesabwesend</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>ein Stück faulige Haut mit einem Knochen.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ein</Keyword>
+                <Keyword>Stück</Keyword>
+                <Keyword>faulige</Keyword>
+                <Keyword>Haut</Keyword>
+                <Keyword>mit</Keyword>
+                <Keyword>einem</Keyword>
+                <Keyword>Knochen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>sich mit dem Finger in seinem fauligen Ohr. Noch ein Stück tiefer... und noch ein Stück... igitt!</Text>
+            <Properties>
+              <Condition>IsFirstCall</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
+                <Keyword>mit</Keyword>
+                <Keyword>dem</Keyword>
+                <Keyword>Finger</Keyword>
+                <Keyword>seinem</Keyword>
+                <Keyword>fauligen</Keyword>
+                <Keyword>Ohr</Keyword>
+                <Keyword>Noch</Keyword>
+                <Keyword>ein</Keyword>
+                <Keyword>Stück</Keyword>
+                <Keyword>tiefer</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>noch</Keyword>
+                <Keyword>ein</Keyword>
+                <Keyword>Stück</Keyword>
+                <Keyword>igitt</Keyword>
+              </Keywords>
+              <Chance>25</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>streckt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>streckt</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>sich ausgiebig</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ausgiebig</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>sich und verliert dabei beinahe</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>sich</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>verliert</Keyword>
+                <Keyword>dabei</Keyword>
+                <Keyword>beinahe</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>eine Rippe.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>eine</Keyword>
+                    <Keyword>Rippe</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>den rechten Arm.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>den</Keyword>
+                    <Keyword>rechten</Keyword>
+                    <Keyword>Arm</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>den linken Arm.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>den</Keyword>
+                    <Keyword>linken</Keyword>
+                    <Keyword>Arm</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>den Rest seiner Bandagen.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>den</Keyword>
+                    <Keyword>Rest</Keyword>
+                    <Keyword>seiner</Keyword>
+                    <Keyword>Bandagen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>lässt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>lässt</Keyword>
+          </Keywords>
+          <Chance>75</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>geräuschvoll seine verbleibenden Knochen knacken</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>geräuschvoll</Keyword>
+                <Keyword>seine</Keyword>
+                <Keyword>verbleibenden</Keyword>
+                <Keyword>Knochen</Keyword>
+                <Keyword>knacken</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>die Arme sowie diverse andere Körperteile hängen.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>die</Keyword>
+                <Keyword>Arme</Keyword>
+                <Keyword>sowie</Keyword>
+                <Keyword>diverse</Keyword>
+                <Keyword>andere</Keyword>
+                <Keyword>Körperteile</Keyword>
+                <Keyword>hängen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>zupft an seinen</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>zupft</Keyword>
+            <Keyword>seinen</Keyword>
+          </Keywords>
+          <Chance>75</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>verbleibenden Haaren herum</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>verbleibenden</Keyword>
+                <Keyword>Haaren</Keyword>
+                <Keyword>herum</Keyword>
+              </Keywords>
+              <Chance>25</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>zerzausten Haaren herum</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>zerzausten</Keyword>
+                <Keyword>Haaren</Keyword>
+                <Keyword>herum</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Bandagen herum</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Bandagen</Keyword>
+                <Keyword>herum</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>fault</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>fault</Keyword>
+          </Keywords>
+          <Chance>50</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>genüsslich vor sich hin.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>genüsslich</Keyword>
+                <Keyword>vor</Keyword>
+                <Keyword>sich</Keyword>
+                <Keyword>hin</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>gibt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>gibt</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>seltsame kehlige Geräusche von sich</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>seltsame</Keyword>
+                <Keyword>kehlige</Keyword>
+                <Keyword>Geräusche</Keyword>
+                <Keyword>von</Keyword>
+                <Keyword>sich</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>quirlige Laute von sich</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>quirlige</Keyword>
+                <Keyword>Laute</Keyword>
+                <Keyword>von</Keyword>
+                <Keyword>sich</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>ein leises Stöhnen von sich</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ein</Keyword>
+                <Keyword>leises</Keyword>
+                <Keyword>Stöhnen</Keyword>
+                <Keyword>von</Keyword>
+                <Keyword>sich</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>erschreckend menschliche Laute von sich.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>erschreckend</Keyword>
+                <Keyword>menschliche</Keyword>
+                <Keyword>Laute</Keyword>
+                <Keyword>von</Keyword>
+                <Keyword>sich</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>verscheucht</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>verscheucht</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>ein paar Fliegen vor seinem Gesicht</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ein</Keyword>
+                <Keyword>paar</Keyword>
+                <Keyword>Fliegen</Keyword>
+                <Keyword>vor</Keyword>
+                <Keyword>seinem</Keyword>
+                <Keyword>Gesicht</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>eine lästige Fliege</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>eine</Keyword>
+                <Keyword>lästige</Keyword>
+                <Keyword>Fliege</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>riecht</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>riecht</Keyword>
+          </Keywords>
+          <Chance>10</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>nicht besonders einladend.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>nicht</Keyword>
+                <Keyword>besonders</Keyword>
+                <Keyword>einladend</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>heute besonders</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>heute</Keyword>
+                <Keyword>besonders</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>frisch.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>frisch</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>faulig,</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>faulig</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>einladend.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>einladend</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>ein wenig schimmlig.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ein</Keyword>
+                <Keyword>wenig</Keyword>
+                <Keyword>schimmlig</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>tropft</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>tropft</Keyword>
+          </Keywords>
+          <Chance>50</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>– aus welcher Wunde auch immer.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>aus</Keyword>
+                <Keyword>welcher</Keyword>
+                <Keyword>Wunde</Keyword>
+                <Keyword>auch</Keyword>
+                <Keyword>immer</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>aus der Nase ohne es zu merken.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>aus</Keyword>
+                <Keyword>der</Keyword>
+                <Keyword>Nase</Keyword>
+                <Keyword>ohne</Keyword>
+                <Keyword>merken</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>aus einer</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>aus</Keyword>
+                <Keyword>einer</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>Wunde.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>Wunde</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>offenen Stelle.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>offenen</Keyword>
+                    <Keyword>Stelle</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>bemerkt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>bemerkt</Keyword>
+          </Keywords>
+          <Chance>25</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>scheinbar nicht,</Text>
+            <Properties>
+              <Condition>IsFirstCall</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>scheinbar</Keyword>
+                <Keyword>nicht</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>dass eine gelbliche Flüssigkeit aus</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>true</MustContinue>
+                  <Keywords>
+                    <Keyword>dass</Keyword>
+                    <Keyword>eine</Keyword>
+                    <Keyword>gelbliche</Keyword>
+                    <Keyword>Flüssigkeit</Keyword>
+                    <Keyword>aus</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <EmoteNode>
+                    <Text>seinem Arm tropft.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>seinem</Keyword>
+                        <Keyword>Arm</Keyword>
+                        <Keyword>tropft</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                </ChildNodes>
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>scheint</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>scheint</Keyword>
+          </Keywords>
+          <Chance>10</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>der geringfügige Blutverlust nichts auszumachen.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>der</Keyword>
+                <Keyword>geringfügige</Keyword>
+                <Keyword>Blutverlust</Keyword>
+                <Keyword>nichts</Keyword>
+                <Keyword>auszumachen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>mit dem leichten Blutverlust keine nennenswerten Probleme zu haben.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>mit</Keyword>
+                <Keyword>dem</Keyword>
+                <Keyword>leichten</Keyword>
+                <Keyword>Blutverlust</Keyword>
+                <Keyword>keine</Keyword>
+                <Keyword>nennenswerten</Keyword>
+                <Keyword>Probleme</Keyword>
+                <Keyword>haben</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>mit dem Blutverlust recht gut klar zu kommen.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>mit</Keyword>
+                <Keyword>dem</Keyword>
+                <Keyword>Blutverlust</Keyword>
+                <Keyword>recht</Keyword>
+                <Keyword>gut</Keyword>
+                <Keyword>klar</Keyword>
+                <Keyword>kommen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>findet sich selbst</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>findet</Keyword>
+            <Keyword>sich</Keyword>
+            <Keyword>selbst</Keyword>
+          </Keywords>
+          <Chance>5</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>unheimlich attraktiv.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>unheimlich</Keyword>
+                <Keyword>attraktiv</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>krabbelt ein Käfer aus</Text>
+        <Properties>
+          <Condition>IsFirstCall</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>krabbelt</Keyword>
+            <Keyword>ein</Keyword>
+            <Keyword>Käfer</Keyword>
+            <Keyword>aus</Keyword>
+          </Keywords>
+          <Chance>75</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>der Nase und ins linke Ohr wieder rein.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>der</Keyword>
+                <Keyword>Nase</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>ins</Keyword>
+                <Keyword>linke</Keyword>
+                <Keyword>Ohr</Keyword>
+                <Keyword>wieder</Keyword>
+                <Keyword>rein</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>der Nase und ins rechte Ohr wieder rein.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>der</Keyword>
+                <Keyword>Nase</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>ins</Keyword>
+                <Keyword>rechte</Keyword>
+                <Keyword>Ohr</Keyword>
+                <Keyword>wieder</Keyword>
+                <Keyword>rein</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>dem linken Ohr und zur Nase wieder rein.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>dem</Keyword>
+                <Keyword>linken</Keyword>
+                <Keyword>Ohr</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>zur</Keyword>
+                <Keyword>Nase</Keyword>
+                <Keyword>wieder</Keyword>
+                <Keyword>rein</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>dem rechten Ohr und zur Nase wieder rein.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>dem</Keyword>
+                <Keyword>rechten</Keyword>
+                <Keyword>Ohr</Keyword>
+                <Keyword>und</Keyword>
+                <Keyword>zur</Keyword>
+                <Keyword>Nase</Keyword>
+                <Keyword>wieder</Keyword>
+                <Keyword>rein</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+    </DefaultEmotes>
+    <CombatEmotes>
+      <EmoteNode>
+        <Text>fügt %t</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>fügt</Keyword>
+            <Keyword>%t</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>einen hässlichen Kratzer zu</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>einen</Keyword>
+                <Keyword>hässlichen</Keyword>
+                <Keyword>Kratzer</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>einen tiefen Kratzer zu</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>einen</Keyword>
+                <Keyword>tiefen</Keyword>
+                <Keyword>Kratzer</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>knurrt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>knurrt</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>laut</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>laut</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>wild</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>wild</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>furchterregend</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>furchterregend</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>%t</Text>
+            <Properties>
+              <Condition>TargetIsUnfriendly</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>%t</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>laut an</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>laut</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>wild an</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>wild</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>furchterregend an</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>furchterregend</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>wirft sich</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>wirft</Keyword>
+            <Keyword>sich</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>furchtlos</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>furchtlos</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>auf %t.</Text>
+                <Properties>
+                  <Condition>TargetIsUnfriendly</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>auf</Keyword>
+                    <Keyword>%t</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>gegen %t.</Text>
+                <Properties>
+                  <Condition>TargetIsUnfriendly</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>gegen</Keyword>
+                    <Keyword>%t</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>in die Schlacht</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>die</Keyword>
+                    <Keyword>Schlacht</Keyword>
+                  </Keywords>
+                  <Chance>50</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>zeigt</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>zeigt</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>%t</Text>
+            <Properties>
+              <Condition>TargetIsUnfriendly</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>%t</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>seine Klauen</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>seine</Keyword>
+                    <Keyword>Klauen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>seine fauligen Zähne</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>seine</Keyword>
+                    <Keyword>fauligen</Keyword>
+                    <Keyword>Zähne</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>sein schönstes Grinsen</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>sein</Keyword>
+                    <Keyword>schönstes</Keyword>
+                    <Keyword>Grinsen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>breitestes Grinsen</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>breitestes</Keyword>
+                    <Keyword>Grinsen</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>seine Klauen</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>seine</Keyword>
+                <Keyword>Klauen</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>die fauligen Zähne</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>die</Keyword>
+                <Keyword>fauligen</Keyword>
+                <Keyword>Zähne</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>springt in einem hohen Bogen auf %t zu.</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>springt</Keyword>
+            <Keyword>einem</Keyword>
+            <Keyword>hohen</Keyword>
+            <Keyword>Bogen</Keyword>
+            <Keyword>auf</Keyword>
+            <Keyword>%t</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+    </CombatEmotes>
     <FeedingEmotes />
   </EmoteConfiguration>
 </DefaultEmotes>

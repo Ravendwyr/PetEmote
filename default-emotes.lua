@@ -292,23 +292,17 @@ PetEmote_DefaultEmotes["Bär-de"] = {
 		},
 	},
 	[10] = {
-		["text"] = "findet sich selbst unheimlich gut!",
-		["chance"] = 5,
-		["condition"] = IsFirstCall,
-		["keywords"] = { "findet", "selbst", "unheimlich", "gut" },
-	},
-	[11] = {
 		["text"] = "hat einen Bärenhunger!",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "hat", "einen", "Bärenhunger" },
 	},
-	[12] = {
+	[11] = {
 		["text"] = "braucht unbedingt etwas zu fressen",
 		["chance"] = 50,
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "braucht", "unbedingt", "etwas", "fressen" },
 	},
-	[13] = {
+	[12] = {
 		["text"] = "bäumt sich hungrig auf",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "bäumt", "hungrig", "auf" },
@@ -12769,6 +12763,514 @@ PetEmote_DefaultEmotes["Succubus-en"] = {
 	[1] = {
 		["text"] = "starts doing her manicure",
 		["keywords"] = { "starts", "doing", "manicure" },
+	},
+}
+
+PetEmote_DefaultEmotes["Ghul-de"] = {
+	[1] = {
+		["text"] = "breitet die Arme aus",
+		["keywords"] = { "breitet", "die", "Arme", "aus" },
+		["continues"] = {
+			[1] = {
+				["text"] = "und betrachtet",
+				["keywords"] = { "und", "betrachtet" },
+				["continues"] = {
+					[1] = {
+						["text"] = "interessiert die herunterhängenden Bandagen.",
+						["keywords"] = { "interessiert", "die", "herunterhängenden", "Bandagen" },
+					},
+					[2] = {
+						["text"] = "verwirrt die herunterhängenden Bandagen.",
+						["keywords"] = { "verwirrt", "die", "herunterhängenden", "Bandagen" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "nagt an",
+		["keywords"] = { "nagt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seinem linken Arm herum",
+				["keywords"] = { "seinem", "linken", "Arm", "herum" },
+			},
+			[2] = {
+				["text"] = "seinem rechten Arm herum",
+				["keywords"] = { "seinem", "rechten", "Arm", "herum" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "knurrt",
+		["chance"] = 75,
+		["keywords"] = { "knurrt", "brummt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "unzufrieden",
+				["keywords"] = { "unzufrieden" },
+			},
+			[2] = {
+				["text"] = "missmutig",
+				["keywords"] = { "missmutig" },
+			},
+			[3] = {
+				["text"] = "gelassen",
+				["keywords"] = { "gelassen" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["continues"] = {
+					[1] = {
+						["text"] = "bedrohlich an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "bedrohlich" },
+					},
+					[2] = {
+						["text"] = "grimmig an",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "grimmig" },
+					},
+					[3] = {
+						["text"] = "freundlich an",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "freundlich" },
+					},
+					[4] = {
+						["text"] = "überlegen an",
+						["keywords"] = { "überlegen" },
+					},
+				},
+			},
+			[5] = {
+				["text"] = "launisch",
+				["keywords"] = { "launisch" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "kratzt",
+		["chance"] = 75,
+		["keywords"] = { "kratzt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich an einer Stelle, wo",
+				["chance"] = 75,
+				["keywords"] = { "sich", "einer", "Stelle" },
+				["continues"] = {
+					[1] = {
+						["text"] = "möglicherweise einmal ein Ohr war.",
+						["keywords"] = { "möglicherweise", "einmal", "ein", "Ohr", "war" },
+					},
+					[2] = {
+						["text"] = "vielleicht einmal eine Nase war.",
+						["keywords"] = { "vielleicht", "einmal", "eine", "Nase", "war" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "sich beiläufig",
+				["keywords"] = { "sich", "beiläufig" },
+			},
+			[3] = {
+				["text"] = "sich geistesabwesend",
+				["keywords"] = { "sich", "geistesabwesend" },
+			},
+			[4] = {
+				["text"] = "ein Stück faulige Haut mit einem Knochen.",
+				["keywords"] = { "ein", "Stück", "faulige", "Haut", "mit", "einem", "Knochen" },
+			},
+			[5] = {
+				["text"] = "sich mit dem Finger in seinem fauligen Ohr. Noch ein Stück tiefer... und noch ein Stück... igitt!",
+				["chance"] = 25,
+				["condition"] = IsFirstCall,
+				["keywords"] = { "sich", "mit", "dem", "Finger", "seinem", "fauligen", "Ohr", "Noch", "ein", "Stück", "tiefer", "und", "noch", "ein", "Stück", "igitt" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "streckt",
+		["keywords"] = { "streckt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "sich ausgiebig",
+				["keywords"] = { "ausgiebig" },
+			},
+			[2] = {
+				["text"] = "sich und verliert dabei beinahe",
+				["keywords"] = { "sich", "und", "verliert", "dabei", "beinahe" },
+				["continues"] = {
+					[1] = {
+						["text"] = "eine Rippe.",
+						["keywords"] = { "eine", "Rippe" },
+					},
+					[2] = {
+						["text"] = "den rechten Arm.",
+						["keywords"] = { "den", "rechten", "Arm" },
+					},
+					[3] = {
+						["text"] = "den linken Arm.",
+						["keywords"] = { "den", "linken", "Arm" },
+					},
+					[4] = {
+						["text"] = "den Rest seiner Bandagen.",
+						["keywords"] = { "den", "Rest", "seiner", "Bandagen" },
+					},
+				},
+			},
+		},
+	},
+	[6] = {
+		["text"] = "lässt",
+		["chance"] = 75,
+		["keywords"] = { "lässt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "geräuschvoll seine verbleibenden Knochen knacken",
+				["keywords"] = { "geräuschvoll", "seine", "verbleibenden", "Knochen", "knacken" },
+			},
+			[2] = {
+				["text"] = "die Arme sowie diverse andere Körperteile hängen.",
+				["keywords"] = { "die", "Arme", "sowie", "diverse", "andere", "Körperteile", "hängen" },
+			},
+		},
+	},
+	[7] = {
+		["text"] = "zupft an seinen",
+		["chance"] = 75,
+		["keywords"] = { "zupft", "seinen" },
+		["continues"] = {
+			[1] = {
+				["text"] = "verbleibenden Haaren herum",
+				["chance"] = 25,
+				["keywords"] = { "verbleibenden", "Haaren", "herum" },
+			},
+			[2] = {
+				["text"] = "zerzausten Haaren herum",
+				["keywords"] = { "zerzausten", "Haaren", "herum" },
+			},
+			[3] = {
+				["text"] = "Bandagen herum",
+				["keywords"] = { "Bandagen", "herum" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "fault",
+		["chance"] = 50,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "fault" },
+		["continues"] = {
+			[1] = {
+				["text"] = "genüsslich vor sich hin.",
+				["keywords"] = { "genüsslich", "vor", "sich", "hin" },
+			},
+		},
+	},
+	[9] = {
+		["text"] = "gibt",
+		["keywords"] = { "gibt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "seltsame kehlige Geräusche von sich",
+				["keywords"] = { "seltsame", "kehlige", "Geräusche", "von", "sich" },
+			},
+			[2] = {
+				["text"] = "quirlige Laute von sich",
+				["keywords"] = { "quirlige", "Laute", "von", "sich" },
+			},
+			[3] = {
+				["text"] = "ein leises Stöhnen von sich",
+				["keywords"] = { "ein", "leises", "Stöhnen", "von", "sich" },
+			},
+			[4] = {
+				["text"] = "erschreckend menschliche Laute von sich.",
+				["keywords"] = { "erschreckend", "menschliche", "Laute", "von", "sich" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "verscheucht",
+		["keywords"] = { "verscheucht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "ein paar Fliegen vor seinem Gesicht",
+				["keywords"] = { "ein", "paar", "Fliegen", "vor", "seinem", "Gesicht" },
+			},
+			[2] = {
+				["text"] = "eine lästige Fliege",
+				["keywords"] = { "eine", "lästige", "Fliege" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "riecht",
+		["chance"] = 10,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "riecht" },
+		["continues"] = {
+			[1] = {
+				["text"] = "nicht besonders einladend.",
+				["keywords"] = { "nicht", "besonders", "einladend" },
+			},
+			[2] = {
+				["text"] = "heute besonders",
+				["keywords"] = { "heute", "besonders" },
+				["continues"] = {
+					[1] = {
+						["text"] = "frisch.",
+						["keywords"] = { "frisch" },
+					},
+					[2] = {
+						["text"] = "faulig,",
+						["keywords"] = { "faulig" },
+					},
+					[3] = {
+						["text"] = "einladend.",
+						["keywords"] = { "einladend" },
+					},
+				},
+			},
+			[3] = {
+				["text"] = "ein wenig schimmlig.",
+				["keywords"] = { "ein", "wenig", "schimmlig" },
+			},
+		},
+	},
+	[12] = {
+		["text"] = "tropft",
+		["chance"] = 50,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "tropft" },
+		["continues"] = {
+			[1] = {
+				["text"] = "– aus welcher Wunde auch immer.",
+				["keywords"] = { "aus", "welcher", "Wunde", "auch", "immer" },
+			},
+			[2] = {
+				["text"] = "aus der Nase ohne es zu merken.",
+				["keywords"] = { "aus", "der", "Nase", "ohne", "merken" },
+			},
+			[3] = {
+				["text"] = "aus einer",
+				["keywords"] = { "aus", "einer" },
+				["continues"] = {
+					[1] = {
+						["text"] = "Wunde.",
+						["keywords"] = { "Wunde" },
+					},
+					[2] = {
+						["text"] = "offenen Stelle.",
+						["keywords"] = { "offenen", "Stelle" },
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "bemerkt",
+		["chance"] = 25,
+		["keywords"] = { "bemerkt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "scheinbar nicht,",
+				["condition"] = IsFirstCall,
+				["keywords"] = { "scheinbar", "nicht" },
+				["continues"] = {
+					[1] = {
+						["text"] = "dass eine gelbliche Flüssigkeit aus",
+						["keywords"] = { "dass", "eine", "gelbliche", "Flüssigkeit", "aus" },
+						["continues"] = {
+							[1] = {
+								["text"] = "seinem Arm tropft.",
+								["keywords"] = { "seinem", "Arm", "tropft" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[14] = {
+		["text"] = "scheint",
+		["chance"] = 10,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "scheint" },
+		["continues"] = {
+			[1] = {
+				["text"] = "der geringfügige Blutverlust nichts auszumachen.",
+				["keywords"] = { "der", "geringfügige", "Blutverlust", "nichts", "auszumachen" },
+			},
+			[2] = {
+				["text"] = "mit dem leichten Blutverlust keine nennenswerten Probleme zu haben.",
+				["keywords"] = { "mit", "dem", "leichten", "Blutverlust", "keine", "nennenswerten", "Probleme", "haben" },
+			},
+			[3] = {
+				["text"] = "mit dem Blutverlust recht gut klar zu kommen.",
+				["keywords"] = { "mit", "dem", "Blutverlust", "recht", "gut", "klar", "kommen" },
+			},
+		},
+	},
+	[15] = {
+		["text"] = "findet sich selbst",
+		["chance"] = 5,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "findet", "sich", "selbst" },
+		["continues"] = {
+			[1] = {
+				["text"] = "unheimlich attraktiv.",
+				["keywords"] = { "unheimlich", "attraktiv" },
+			},
+		},
+	},
+	[16] = {
+		["text"] = "krabbelt ein Käfer aus",
+		["chance"] = 75,
+		["condition"] = IsFirstCall,
+		["keywords"] = { "krabbelt", "ein", "Käfer", "aus" },
+		["continues"] = {
+			[1] = {
+				["text"] = "der Nase und ins linke Ohr wieder rein.",
+				["keywords"] = { "der", "Nase", "und", "ins", "linke", "Ohr", "wieder", "rein" },
+			},
+			[2] = {
+				["text"] = "der Nase und ins rechte Ohr wieder rein.",
+				["keywords"] = { "der", "Nase", "und", "ins", "rechte", "Ohr", "wieder", "rein" },
+			},
+			[3] = {
+				["text"] = "dem linken Ohr und zur Nase wieder rein.",
+				["keywords"] = { "dem", "linken", "Ohr", "und", "zur", "Nase", "wieder", "rein" },
+			},
+			[4] = {
+				["text"] = "dem rechten Ohr und zur Nase wieder rein.",
+				["keywords"] = { "dem", "rechten", "Ohr", "und", "zur", "Nase", "wieder", "rein" },
+			},
+		},
+	},
+}
+
+PetEmote_CombatEmotes["Ghul-de"] = {
+	[1] = {
+		["text"] = "fügt %t",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "fügt", "%t" },
+		["continues"] = {
+			[1] = {
+				["text"] = "einen hässlichen Kratzer zu",
+				["keywords"] = { "einen", "hässlichen", "Kratzer" },
+			},
+			[2] = {
+				["text"] = "einen tiefen Kratzer zu",
+				["keywords"] = { "einen", "tiefen", "Kratzer" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "knurrt",
+		["keywords"] = { "knurrt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "laut",
+				["keywords"] = { "laut" },
+			},
+			[2] = {
+				["text"] = "wild",
+				["keywords"] = { "wild" },
+			},
+			[3] = {
+				["text"] = "furchterregend",
+				["keywords"] = { "furchterregend" },
+			},
+			[4] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "laut an",
+						["keywords"] = { "laut" },
+					},
+					[2] = {
+						["text"] = "wild an",
+						["keywords"] = { "wild" },
+					},
+					[3] = {
+						["text"] = "furchterregend an",
+						["keywords"] = { "furchterregend" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "wirft sich",
+		["keywords"] = { "wirft", "sich" },
+		["continues"] = {
+			[1] = {
+				["text"] = "furchtlos",
+				["keywords"] = { "furchtlos" },
+				["continues"] = {
+					[1] = {
+						["text"] = "auf %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "auf", "%t" },
+					},
+					[2] = {
+						["text"] = "gegen %t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "gegen", "%t" },
+					},
+					[3] = {
+						["text"] = "in die Schlacht",
+						["chance"] = 50,
+						["keywords"] = { "die", "Schlacht" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "zeigt",
+		["keywords"] = { "zeigt" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+				["continues"] = {
+					[1] = {
+						["text"] = "seine Klauen",
+						["keywords"] = { "seine", "Klauen" },
+					},
+					[2] = {
+						["text"] = "seine fauligen Zähne",
+						["keywords"] = { "seine", "fauligen", "Zähne" },
+					},
+					[3] = {
+						["text"] = "sein schönstes Grinsen",
+						["keywords"] = { "sein", "schönstes", "Grinsen" },
+					},
+					[4] = {
+						["text"] = "breitestes Grinsen",
+						["keywords"] = { "breitestes", "Grinsen" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "seine Klauen",
+				["keywords"] = { "seine", "Klauen" },
+			},
+			[3] = {
+				["text"] = "die fauligen Zähne",
+				["keywords"] = { "die", "fauligen", "Zähne" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "springt in einem hohen Bogen auf %t zu.",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "springt", "einem", "hohen", "Bogen", "auf", "%t" },
 	},
 }
 
