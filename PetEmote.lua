@@ -1,7 +1,7 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 6, 0 };
+PetEmote_Version = { 1, 6, 1 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
@@ -31,6 +31,7 @@ function PetEmote_OnLoad ()
 	this:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS");
 	this:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
 	this:RegisterEvent("ITEM_LOCK_CHANGED");
+	this:RegisterEvent("UNIT_PET");
 	
 	SLASH_PETEMOTE1 = "/pet";
 	SLASH_PETEMOTE2 = "/tier";
@@ -57,8 +58,7 @@ end
 function PetEmote_OnEvent (self, event, ...)
 	
 	-- receive messages from other PetEmote users
-	-- and arg4 ~= UnitName("player")
-	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote") then
+	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote" and arg4 ~= UnitName("player")) then
 		return PetEmote_HandleAddonMessage(arg2, arg3, arg4);
 	end
 	
@@ -73,8 +73,9 @@ function PetEmote_OnEvent (self, event, ...)
 	end
 	
 	-- leave some time to the next random emote when leaving afk mode
-	if (event == "PLAYER_FLAGS_CHANGED" and arg1 == "player") then
-		return PetEmote_SetNextDefaultEmoteTime(10, 180);
+	-- leave some time to the next random emote when changing the pet (dismounting, picking pet from stable...)
+	if ((event == "PLAYER_FLAGS_CHANGED" or event == "UNIT_PET") and arg1 == "player") then
+		return PetEmote_SetNextDefaultEmoteTime(20, 120);
 	end
 	
 	-- handle the feeding message, which contains information about the food
@@ -243,8 +244,6 @@ function PetEmote_SendAddonMessage (command, params)
 end
 
 function PetEmote_HandleAddonMessage (message, distributor, sender)
-	
-	-- PetEmote_Message(message .. " (" .. distributor .. ", " .. sender .. ")");
 	
 	local cmd, val = PetEmote_GetCommand(message);
 	

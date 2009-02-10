@@ -1,5 +1,6 @@
 * text=auto !eol
 /Bindings.xml -text
+/PetEmote[!!-~]Core.dll -text
 /PetEmote[!!-~]Editor.exe -text
 /PetEmote[!!-~]verwenden.url -text
 /PetEmote.lua -text
