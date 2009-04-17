@@ -1,7 +1,7 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 6, 1 };
+PetEmote_Version = { 1, 6, 2 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
@@ -402,7 +402,7 @@ function PetEmote_DoEmote (text, ret)
 		else
 			SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
 			PetEmote_SetNextDefaultEmoteTime(90, 360);
-			PetEmote_SetNextCombatEmoteTime(30, 240);
+			PetEmote_SetNextCombatEmoteTime(60, 300);
 		end
 		
 	end

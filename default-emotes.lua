@@ -268,6 +268,11 @@ PetEmote_DefaultEmotes["Bär-de"] = {
 				["text"] = "sich",
 				["keywords"] = { "sich" },
 			},
+			[5] = {
+				["text"] = "sich genüsslich",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "sich", "genüsslich" },
+			},
 		},
 	},
 	[9] = {
@@ -5184,7 +5189,7 @@ PetEmote_CombatEmotes["Wolf-de"] = {
 	[3] = {
 		["text"] = "beißt sich großzügig durch die Reihen",
 		["keywords"] = { "prügelt", "sich", "großzügig", "durch", "die", "Reihen" },
-		["optional"] = {
+		["continues"] = {
 			[1] = {
 				["text"] = "seiner Feinde",
 				["keywords"] = { "seiner", "Feinde" },
@@ -6561,14 +6566,14 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 				},
 			},
 			[3] = {
-				["text"] = "over his snout",
+				["text"] = "over his nose",
 				["condition"] = PetIsMale,
-				["keywords"] = { "over", "his", "snout" },
+				["keywords"] = { "over", "his", "nose" },
 			},
 			[4] = {
-				["text"] = "over her snout",
+				["text"] = "over her nose",
 				["condition"] = PetIsFemale,
-				["keywords"] = { "over", "her", "snout" },
+				["keywords"] = { "over", "her", "nose" },
 			},
 		},
 	},
@@ -6578,14 +6583,14 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 		["keywords"] = { "scrabbles", "around" },
 		["continues"] = {
 			[1] = {
-				["text"] = "his fur irritated",
+				["text"] = "his fur irritatedly",
 				["condition"] = PetIsMale,
-				["keywords"] = { "his", "fur", "irritated" },
+				["keywords"] = { "his", "fur", "irritatedly" },
 			},
 			[2] = {
-				["text"] = "her fur irritated",
+				["text"] = "her fur irritatedly",
 				["condition"] = PetIsFemale,
-				["keywords"] = { "her", "fur", "irritated" },
+				["keywords"] = { "her", "fur", "irritatedly" },
 			},
 		},
 	},
@@ -6750,8 +6755,9 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 		["keywords"] = { "walks", "around", "anxiously" },
 	},
 	[17] = {
-		["text"] = "cranes its neck",
-		["keywords"] = { "cranes", "its", "neck" },
+		["text"] = "cranes his neck",
+		["condition"] = PetIsMale,
+		["keywords"] = { "cranes", "his", "neck" },
 		["optional"] = {
 			[1] = {
 				["text"] = "with pleasure",
@@ -6761,8 +6767,21 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 		},
 	},
 	[18] = {
-		["text"] = "wags its tail",
-		["keywords"] = { "wags", "its", "tail" },
+		["text"] = "cranes her neck",
+		["condition"] = PetIsFemale,
+		["keywords"] = { "cranes", "her", "neck" },
+		["optional"] = {
+			[1] = {
+				["text"] = "with pleasure",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "with", "pleasure" },
+			},
+		},
+	},
+	[19] = {
+		["text"] = "swishes his tail",
+		["condition"] = PetIsMale,
+		["keywords"] = { "swishes", "his", "tail" },
 		["optional"] = {
 			[1] = {
 				["text"] = "hopefully",
@@ -6771,12 +6790,24 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[19] = {
-		["text"] = "stretches into a playful pose while wagging its tail.",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "stretches", "into", "playful", "pose", "while", "wagging", "its", "tail" },
-	},
 	[20] = {
+		["text"] = "swishes her tail",
+		["condition"] = PetIsFemale,
+		["keywords"] = { "swishes", "her", "tail" },
+		["optional"] = {
+			[1] = {
+				["text"] = "hopefully",
+				["condition"] = PetIsContent,
+				["keywords"] = { "hopefully" },
+			},
+		},
+	},
+	[21] = {
+		["text"] = "stretches into a playful pose",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "stretches", "into", "playful", "pose" },
+	},
+	[22] = {
 		["text"] = "purrs",
 		["keywords"] = { "purrs" },
 		["optional"] = {
@@ -6816,12 +6847,12 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[21] = {
+	[23] = {
 		["text"] = "starts an extensive catlick.",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "starts", "extensive", "catlick" },
 	},
-	[22] = {
+	[24] = {
 		["text"] = "yawns",
 		["keywords"] = { "yawns" },
 		["optional"] = {
@@ -6844,11 +6875,11 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[23] = {
+	[25] = {
 		["text"] = "has a stretch",
 		["keywords"] = { "has", "stretch" },
 	},
-	[24] = {
+	[26] = {
 		["text"] = "meows",
 		["keywords"] = { "meows" },
 		["optional"] = {
@@ -6864,17 +6895,17 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[25] = {
+	[27] = {
 		["text"] = "hisses",
 		["condition"] = PetIsContent,
 		["keywords"] = { "hisses" },
 	},
-	[26] = {
+	[28] = {
 		["text"] = "paws the ground in search of food",
 		["condition"] = PetIsContent,
 		["keywords"] = { "paws", "the", "ground", "search", "food" },
 	},
-	[27] = {
+	[29] = {
 		["text"] = "looks",
 		["condition"] = TargetIsUnfriendly,
 		["keywords"] = { "looks" },
@@ -6911,12 +6942,12 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[28] = {
+	[30] = {
 		["text"] = "looks at %t and purrs.",
 		["condition"] = TargetIsFriendly,
 		["keywords"] = { "looks", "purrs" },
 	},
-	[29] = {
+	[31] = {
 		["text"] = "rubs",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "rubs" },
@@ -7241,12 +7272,12 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[30] = {
+	[32] = {
 		["text"] = "sniffs %t's hand",
 		["condition"] = TargetIsFriendly,
 		["keywords"] = { "sniffs", "%t's", "hand" },
 	},
-	[31] = {
+	[33] = {
 		["text"] = "bites at",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "bites" },
@@ -7283,7 +7314,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[32] = {
+	[34] = {
 		["text"] = "scratches",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "scratches" },
@@ -7310,7 +7341,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[33] = {
+	[35] = {
 		["text"] = "sniffs at",
 		["condition"] = PetIsContent,
 		["keywords"] = { "sniffs" },
@@ -7349,7 +7380,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[34] = {
+	[36] = {
 		["text"] = "bites at",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "bites" },
@@ -7388,12 +7419,12 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[35] = {
+	[37] = {
 		["text"] = "growls hungrily",
 		["condition"] = PetIsContent,
 		["keywords"] = { "growls", "hungrily" },
 	},
-	[36] = {
+	[38] = {
 		["text"] = "roars",
 		["keywords"] = { "roars" },
 		["optional"] = {
@@ -7409,7 +7440,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[37] = {
+	[39] = {
 		["text"] = "rolls onto",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "rolls", "onto" },
@@ -7446,7 +7477,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[38] = {
+	[40] = {
 		["text"] = "grooms",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "grooms" },
@@ -7513,7 +7544,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[39] = {
+	[41] = {
 		["text"] = "shakes",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "shakes" },
@@ -7530,7 +7561,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[40] = {
+	[42] = {
 		["text"] = "stretches",
 		["keywords"] = { "stretches" },
 		["optional"] = {
@@ -7556,11 +7587,11 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[41] = {
+	[43] = {
 		["text"] = "chews on a claw",
 		["keywords"] = { "chews", "claw" },
 	},
-	[42] = {
+	[44] = {
 		["text"] = "lies down",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "lies", "down" },
@@ -7601,7 +7632,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[43] = {
+	[45] = {
 		["text"] = "looks up at",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "looks" },
@@ -7640,7 +7671,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[44] = {
+	[46] = {
 		["text"] = "sniffs",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "sniffs" },
@@ -7706,12 +7737,12 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[45] = {
+	[47] = {
 		["text"] = "gazes lazily into the distance",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "gazes", "lazily", "into", "distance" },
 	},
-	[46] = {
+	[48] = {
 		["text"] = "lays",
 		["keywords"] = { "lays" },
 		["continues"] = {
@@ -7785,7 +7816,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[47] = {
+	[49] = {
 		["text"] = "gives",
 		["condition"] = PetIsContent,
 		["keywords"] = { "gives" },
@@ -7896,7 +7927,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[48] = {
+	[50] = {
 		["text"] = "presses",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "presses" },
@@ -7937,7 +7968,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[49] = {
+	[51] = {
 		["text"] = "nudges",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "nudges" },
@@ -7996,7 +8027,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[50] = {
+	[52] = {
 		["text"] = "ostentatiously turns",
 		["condition"] = PetIsContent,
 		["keywords"] = { "ostentatiously", "turns" },
@@ -8037,7 +8068,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[51] = {
+	[53] = {
 		["text"] = "lashes",
 		["condition"] = PetIsUnhappy,
 		["keywords"] = { "lashes" },
@@ -8054,7 +8085,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[52] = {
+	[54] = {
 		["text"] = "looks",
 		["keywords"] = { "looks" },
 		["continues"] = {
@@ -8074,7 +8105,7 @@ PetEmote_DefaultEmotes["Cat-en"] = {
 			},
 		},
 	},
-	[53] = {
+	[55] = {
 		["text"] = "puts",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "puts" },
