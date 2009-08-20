@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DefaultEmotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Version>1.6.2</Version>
+  <Version>1.6.3</Version>
   <PetFamilies>
     <PetFamily>
       <Name>Aasvogel</Name>
@@ -34935,15 +34935,15 @@
             </Properties>
             <ChildNodes>
               <EmoteNode>
-                <Text>and says "Back to work!"</Text>
+                <Text>and says 'Back to work!'</Text>
                 <Properties>
                   <Condition>TargetIsFriendly</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>and</Keyword>
                     <Keyword>says</Keyword>
-                    <Keyword>"Back</Keyword>
-                    <Keyword>work!"</Keyword>
+                    <Keyword>'Back</Keyword>
+                    <Keyword>work!'</Keyword>
                   </Keywords>
                   <Chance>100</Chance>
                 </Properties>
@@ -42237,6 +42237,1544 @@
       </EmoteNode>
     </DefaultEmotes>
     <CombatEmotes />
+    <FeedingEmotes />
+  </EmoteConfiguration>
+  <EmoteConfiguration>
+    <Name>Ghoul</Name>
+    <PetFamily>
+      <Name>Ghoul</Name>
+      <Language>en</Language>
+      <FamilyType>Ghoul</FamilyType>
+      <ClassType>DeathKnight</ClassType>
+    </PetFamily>
+    <DefaultEmotes>
+      <EmoteNode>
+        <Text>longs for a piece of flesh!</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>longs</Keyword>
+            <Keyword>for</Keyword>
+            <Keyword>piece</Keyword>
+            <Keyword>flesh</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>grins evilly at %t.</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>grins</Keyword>
+            <Keyword>evilly</Keyword>
+            <Keyword>%t</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>plays dead.</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>plays</Keyword>
+            <Keyword>dead</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>puts his hand on his</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>puts</Keyword>
+            <Keyword>his</Keyword>
+            <Keyword>hand</Keyword>
+            <Keyword>his</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>master's shoulder.</Text>
+            <Properties>
+              <Condition>PlayerIsMale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>master's</Keyword>
+                <Keyword>shoulder</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>mistress's shoulder.</Text>
+            <Properties>
+              <Condition>PlayerIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>mistress's</Keyword>
+                <Keyword>shoulder</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>looks</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>looks</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>around with a sudden craving for brains.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>around</Keyword>
+                <Keyword>with</Keyword>
+                <Keyword>sudden</Keyword>
+                <Keyword>craving</Keyword>
+                <Keyword>for</Keyword>
+                <Keyword>brains</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>ahead alertly and is ready to leap.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>ahead</Keyword>
+                <Keyword>alertly</Keyword>
+                <Keyword>and</Keyword>
+                <Keyword>ready</Keyword>
+                <Keyword>leap</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>around alertly.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>around</Keyword>
+                <Keyword>alertly</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>at his</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>his</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>master adoringly.</Text>
+                <Properties>
+                  <Condition>PlayerIsMale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>master</Keyword>
+                    <Keyword>adoringly</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>mistress adoringly.</Text>
+                <Properties>
+                  <Condition>PlayerIsFemale</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>mistress</Keyword>
+                    <Keyword>adoringly</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>clenches his hands furiously.</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>clenches</Keyword>
+            <Keyword>his</Keyword>
+            <Keyword>hands</Keyword>
+            <Keyword>furiously</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>holds his</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>holds</Keyword>
+            <Keyword>his</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>master's hand</Text>
+            <Properties>
+              <Condition>PlayerIsMale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>master's</Keyword>
+                <Keyword>hand</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>mistress's hand</Text>
+            <Properties>
+              <Condition>PlayerIsFemale</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>mistress's</Keyword>
+                <Keyword>hand</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>gives his</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>gives</Keyword>
+            <Keyword>his</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>master a dirty look and</Text>
+            <Properties>
+              <Condition>PlayerIsMale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>master</Keyword>
+                <Keyword>dirty</Keyword>
+                <Keyword>look</Keyword>
+                <Keyword>and</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>stalks away.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>stalks away in annoyance.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                    <Keyword>annoyance</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>stalks away, disgusted.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                    <Keyword>disgusted</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>wonders if this is the best they could do?</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>wonders</Keyword>
+                    <Keyword>this</Keyword>
+                    <Keyword>the</Keyword>
+                    <Keyword>best</Keyword>
+                    <Keyword>they</Keyword>
+                    <Keyword>could</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>thinks 'Oh great, more protecting his butt'</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>thinks</Keyword>
+                    <Keyword>'Oh</Keyword>
+                    <Keyword>great</Keyword>
+                    <Keyword>more</Keyword>
+                    <Keyword>protecting</Keyword>
+                    <Keyword>his</Keyword>
+                    <Keyword>butt'</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>says 'I hate Deathknights'</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>says</Keyword>
+                    <Keyword>hate</Keyword>
+                    <Keyword>Deathknights'</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>mistress a dirty look and</Text>
+            <Properties>
+              <Condition>PlayerIsFemale</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>mistress</Keyword>
+                <Keyword>dirty</Keyword>
+                <Keyword>look</Keyword>
+                <Keyword>and</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>stalks away.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>stalks away in annoyance.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                    <Keyword>annoyance</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>stalks away, disgusted.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>stalks</Keyword>
+                    <Keyword>away</Keyword>
+                    <Keyword>disgusted</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>wonders if this is the best they could do?</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>wonders</Keyword>
+                    <Keyword>this</Keyword>
+                    <Keyword>the</Keyword>
+                    <Keyword>best</Keyword>
+                    <Keyword>they</Keyword>
+                    <Keyword>could</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>thinks 'Oh great, more protecting her butt'</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>thinks</Keyword>
+                    <Keyword>'Oh</Keyword>
+                    <Keyword>great</Keyword>
+                    <Keyword>more</Keyword>
+                    <Keyword>protecting</Keyword>
+                    <Keyword>her</Keyword>
+                    <Keyword>butt'</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>says 'I hate Deathknights'</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>says</Keyword>
+                    <Keyword>hate</Keyword>
+                    <Keyword>Deathknights'</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>gazes lazily into the distance.</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>gazes</Keyword>
+            <Keyword>lazily</Keyword>
+            <Keyword>into</Keyword>
+            <Keyword>the</Keyword>
+            <Keyword>distance</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>runs his fingers through his hair</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>runs</Keyword>
+            <Keyword>his</Keyword>
+            <Keyword>fingers</Keyword>
+            <Keyword>through</Keyword>
+            <Keyword>his</Keyword>
+            <Keyword>hair</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>to remove the magots.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>remove</Keyword>
+                <Keyword>the</Keyword>
+                <Keyword>magots</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>looking for a snack.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>looking</Keyword>
+                <Keyword>for</Keyword>
+                <Keyword>snack</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>to straighten it.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>straighten</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>to get it out of his eyes.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>get</Keyword>
+                <Keyword>out</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>eyes</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>to remove some gore.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>remove</Keyword>
+                <Keyword>some</Keyword>
+                <Keyword>gore</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>chews on a</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>chews</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>finger.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>finger</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>The question is.. Who's?</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>The</Keyword>
+                    <Keyword>question</Keyword>
+                    <Keyword>Who's</Keyword>
+                  </Keywords>
+                  <Chance>25</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>bone</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>bone</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>rat</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>rat</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>rock</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>rock</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>cat</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>cat</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>piece of flesh</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>piece</Keyword>
+                <Keyword>flesh</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>dagger</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>dagger</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>bullet</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>bullet</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>bandage</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>bandage</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>scratches</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>scratches</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>under his chin with his clawed fingers.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>under</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>chin</Keyword>
+                <Keyword>with</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>clawed</Keyword>
+                <Keyword>fingers</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>behind his ear with his clawed fingers.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>behind</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>ear</Keyword>
+                <Keyword>with</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>clawed</Keyword>
+                <Keyword>fingers</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>at an old wound.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>old</Keyword>
+                <Keyword>wound</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>at his bandages.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>his</Keyword>
+                <Keyword>bandages</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>at the broken sword in his side.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>the</Keyword>
+                <Keyword>broken</Keyword>
+                <Keyword>sword</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>side</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>at the arrow shaft sticking out of his leg.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>the</Keyword>
+                <Keyword>arrow</Keyword>
+                <Keyword>shaft</Keyword>
+                <Keyword>sticking</Keyword>
+                <Keyword>out</Keyword>
+                <Keyword>his</Keyword>
+                <Keyword>leg</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>looks at %t</Text>
+        <Properties>
+          <Condition>TargetIsFriendly</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>looks</Keyword>
+            <Keyword>%t</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>and</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>true</MustContinue>
+              <Keywords>
+                <Keyword>and</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>smiles.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>smiles</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>waves.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>waves</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>wants to know what time they get off work.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>wants</Keyword>
+                    <Keyword>know</Keyword>
+                    <Keyword>what</Keyword>
+                    <Keyword>time</Keyword>
+                    <Keyword>they</Keyword>
+                    <Keyword>get</Keyword>
+                    <Keyword>off</Keyword>
+                    <Keyword>work</Keyword>
+                  </Keywords>
+                  <Chance>50</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>licks his lips.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>licks</Keyword>
+                    <Keyword>his</Keyword>
+                    <Keyword>lips</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>slowly edges closer to them.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>slowly</Keyword>
+                    <Keyword>edges</Keyword>
+                    <Keyword>closer</Keyword>
+                    <Keyword>them</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>wants to know if they have seen any healers.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>wants</Keyword>
+                    <Keyword>know</Keyword>
+                    <Keyword>they</Keyword>
+                    <Keyword>have</Keyword>
+                    <Keyword>seen</Keyword>
+                    <Keyword>any</Keyword>
+                    <Keyword>healers</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+              <EmoteNode>
+                <Text>blows them a kiss.</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>blows</Keyword>
+                    <Keyword>them</Keyword>
+                    <Keyword>kiss</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>looks</Text>
+        <Properties>
+          <Condition>TargetIsUnfriendly</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>looks</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>at %t</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>%t</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>and</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>true</MustContinue>
+                  <Keywords>
+                    <Keyword>and</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <EmoteNode>
+                    <Text>clenches his fists.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>clenches</Keyword>
+                        <Keyword>his</Keyword>
+                        <Keyword>fists</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>snarls</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>snarls</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>licks his lips.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>licks</Keyword>
+                        <Keyword>his</Keyword>
+                        <Keyword>lips</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>crouches, ready to leap.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>crouches</Keyword>
+                        <Keyword>ready</Keyword>
+                        <Keyword>leap</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>disdainfully.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>disdainfully</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>blows them a kiss.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>blows</Keyword>
+                        <Keyword>them</Keyword>
+                        <Keyword>kiss</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>makes a rude gesture.</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>makes</Keyword>
+                        <Keyword>rude</Keyword>
+                        <Keyword>gesture</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>longs to eat their brain</Text>
+                    <Properties>
+                      <Condition>None</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>longs</Keyword>
+                        <Keyword>eat</Keyword>
+                        <Keyword>their</Keyword>
+                        <Keyword>brain</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                </ChildNodes>
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>right through %t.</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>right</Keyword>
+                <Keyword>through</Keyword>
+                <Keyword>%t</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>asks if someone can send for more healers</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>asks</Keyword>
+            <Keyword>someone</Keyword>
+            <Keyword>can</Keyword>
+            <Keyword>send</Keyword>
+            <Keyword>for</Keyword>
+            <Keyword>more</Keyword>
+            <Keyword>healers</Keyword>
+          </Keywords>
+          <Chance>10</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>has a bone to pick with this Lich King Fellow</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>has</Keyword>
+            <Keyword>bone</Keyword>
+            <Keyword>pick</Keyword>
+            <Keyword>with</Keyword>
+            <Keyword>this</Keyword>
+            <Keyword>Lich</Keyword>
+            <Keyword>King</Keyword>
+            <Keyword>Fellow</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+      <EmoteNode>
+        <Text>enjoys eating</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>true</MustContinue>
+          <Keywords>
+            <Keyword>enjoys</Keyword>
+            <Keyword>eating</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>Blood Elf. The other white meat</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Blood</Keyword>
+                <Keyword>Elf</Keyword>
+                <Keyword>The</Keyword>
+                <Keyword>other</Keyword>
+                <Keyword>white</Keyword>
+                <Keyword>meat</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Forsaken. Becauce it's already falling off the bone</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Forsaken</Keyword>
+                <Keyword>Becauce</Keyword>
+                <Keyword>it's</Keyword>
+                <Keyword>already</Keyword>
+                <Keyword>falling</Keyword>
+                <Keyword>off</Keyword>
+                <Keyword>the</Keyword>
+                <Keyword>bone</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Orc. Orc… Pork… What's the difference?  Just make sure you cook it first</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Orc</Keyword>
+                <Keyword>Orc…</Keyword>
+                <Keyword>Pork…</Keyword>
+                <Keyword>What's</Keyword>
+                <Keyword>the</Keyword>
+                <Keyword>difference</Keyword>
+                <Keyword>Just</Keyword>
+                <Keyword>make</Keyword>
+                <Keyword>sure</Keyword>
+                <Keyword>you</Keyword>
+                <Keyword>cook</Keyword>
+                <Keyword>first</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Tauren. It's what's for dinner!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Tauren</Keyword>
+                <Keyword>It's</Keyword>
+                <Keyword>what's</Keyword>
+                <Keyword>for</Keyword>
+                <Keyword>dinner</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Troll. The meal that keeps on giving</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Troll</Keyword>
+                <Keyword>The</Keyword>
+                <Keyword>meal</Keyword>
+                <Keyword>that</Keyword>
+                <Keyword>keeps</Keyword>
+                <Keyword>giving</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Draenei. It's a Good Time for the Great Taste of Space Goat</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Draenei</Keyword>
+                <Keyword>It's</Keyword>
+                <Keyword>Good</Keyword>
+                <Keyword>Time</Keyword>
+                <Keyword>for</Keyword>
+                <Keyword>the</Keyword>
+                <Keyword>Great</Keyword>
+                <Keyword>Taste</Keyword>
+                <Keyword>Space</Keyword>
+                <Keyword>Goat</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Dwarf. But, hates it when they ain't been shaved</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Dwarf</Keyword>
+                <Keyword>But</Keyword>
+                <Keyword>hates</Keyword>
+                <Keyword>when</Keyword>
+                <Keyword>they</Keyword>
+                <Keyword>ain't</Keyword>
+                <Keyword>been</Keyword>
+                <Keyword>shaved</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Gnome. Snack time!  Once you catch them</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Gnome</Keyword>
+                <Keyword>Snack</Keyword>
+                <Keyword>time</Keyword>
+                <Keyword>Once</Keyword>
+                <Keyword>you</Keyword>
+                <Keyword>catch</Keyword>
+                <Keyword>them</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Night Elf. Tastes like chicken</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Night</Keyword>
+                <Keyword>Elf</Keyword>
+                <Keyword>Tastes</Keyword>
+                <Keyword>like</Keyword>
+                <Keyword>chicken</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Human. Betcha can't eat just one</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Human</Keyword>
+                <Keyword>Betcha</Keyword>
+                <Keyword>can't</Keyword>
+                <Keyword>eat</Keyword>
+                <Keyword>just</Keyword>
+                <Keyword>one</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+    </DefaultEmotes>
+    <CombatEmotes>
+      <EmoteNode>
+        <Text>yells</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>yells</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes>
+          <EmoteNode>
+            <Text>hungrily!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>hungrily</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>angrily!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>angrily</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>You! NO hurt</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>true</MustContinue>
+                  <Keywords>
+                    <Keyword>You</Keyword>
+                    <Keyword>hurt</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes>
+                  <EmoteNode>
+                    <Text>master!</Text>
+                    <Properties>
+                      <Condition>PlayerIsMale</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>master</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                  <EmoteNode>
+                    <Text>mistress!</Text>
+                    <Properties>
+                      <Condition>PlayerIsFemale</Condition>
+                      <MustContinue>false</MustContinue>
+                      <Keywords>
+                        <Keyword>mistress</Keyword>
+                      </Keywords>
+                      <Chance>100</Chance>
+                    </Properties>
+                    <ChildNodes />
+                  </EmoteNode>
+                </ChildNodes>
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>BRRAAAAAAIIIINNS!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>BRRAAAAAAIIIINNS</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>in glee</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>glee</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes>
+              <EmoteNode>
+                <Text>for now it's time to feed!</Text>
+                <Properties>
+                  <Condition>None</Condition>
+                  <MustContinue>false</MustContinue>
+                  <Keywords>
+                    <Keyword>for</Keyword>
+                    <Keyword>now</Keyword>
+                    <Keyword>it's</Keyword>
+                    <Keyword>time</Keyword>
+                    <Keyword>feed</Keyword>
+                  </Keywords>
+                  <Chance>100</Chance>
+                </Properties>
+                <ChildNodes />
+              </EmoteNode>
+            </ChildNodes>
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Feeding Time!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Feeding</Keyword>
+                <Keyword>Time</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>You No Take Candle!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>You</Keyword>
+                <Keyword>Take</Keyword>
+                <Keyword>Candle</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>Play Time!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>Play</Keyword>
+                <Keyword>Time</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+          <EmoteNode>
+            <Text>You're doomed. You're all doomed!</Text>
+            <Properties>
+              <Condition>None</Condition>
+              <MustContinue>false</MustContinue>
+              <Keywords>
+                <Keyword>You're</Keyword>
+                <Keyword>doomed</Keyword>
+                <Keyword>You're</Keyword>
+                <Keyword>all</Keyword>
+                <Keyword>doomed</Keyword>
+              </Keywords>
+              <Chance>100</Chance>
+            </Properties>
+            <ChildNodes />
+          </EmoteNode>
+        </ChildNodes>
+      </EmoteNode>
+      <EmoteNode>
+        <Text>snarls</Text>
+        <Properties>
+          <Condition>None</Condition>
+          <MustContinue>false</MustContinue>
+          <Keywords>
+            <Keyword>snarls</Keyword>
+          </Keywords>
+          <Chance>100</Chance>
+        </Properties>
+        <ChildNodes />
+      </EmoteNode>
+    </CombatEmotes>
     <FeedingEmotes />
   </EmoteConfiguration>
 </DefaultEmotes>

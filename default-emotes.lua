@@ -13115,9 +13115,9 @@ PetEmote_DefaultEmotes["Succubus-en"] = {
 				["keywords"] = { "%t" },
 				["optional"] = {
 					[1] = {
-						["text"] = "and says "Back to work!"",
+						["text"] = "and says 'Back to work!'",
 						["condition"] = TargetIsFriendly,
-						["keywords"] = { "and", "says", ""Back", "work!"" },
+						["keywords"] = { "and", "says", "'Back", "work!'" },
 					},
 				},
 			},
@@ -15885,6 +15885,490 @@ PetEmote_DefaultEmotes["Spirit Beast-en"] = {
 				["keywords"] = { "around", "alertly" },
 			},
 		},
+	},
+}
+
+PetEmote_DefaultEmotes["Ghoul-en"] = {
+	[1] = {
+		["text"] = "longs for a piece of flesh!",
+		["keywords"] = { "longs", "for", "piece", "flesh" },
+	},
+	[2] = {
+		["text"] = "grins evilly at %t.",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "grins", "evilly", "%t" },
+	},
+	[3] = {
+		["text"] = "plays dead.",
+		["keywords"] = { "plays", "dead" },
+	},
+	[4] = {
+		["text"] = "puts his hand on his",
+		["keywords"] = { "puts", "his", "hand", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master's shoulder.",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master's", "shoulder" },
+			},
+			[2] = {
+				["text"] = "mistress's shoulder.",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress's", "shoulder" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "looks",
+		["keywords"] = { "looks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "around with a sudden craving for brains.",
+				["keywords"] = { "around", "with", "sudden", "craving", "for", "brains" },
+			},
+			[2] = {
+				["text"] = "ahead alertly and is ready to leap.",
+				["keywords"] = { "ahead", "alertly", "and", "ready", "leap" },
+			},
+			[3] = {
+				["text"] = "around alertly.",
+				["keywords"] = { "around", "alertly" },
+			},
+			[4] = {
+				["text"] = "at his",
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master adoringly.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "adoringly" },
+					},
+					[2] = {
+						["text"] = "mistress adoringly.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "adoringly" },
+					},
+				},
+			},
+		},
+	},
+	[6] = {
+		["text"] = "clenches his hands furiously.",
+		["keywords"] = { "clenches", "his", "hands", "furiously" },
+	},
+	[7] = {
+		["text"] = "holds his",
+		["keywords"] = { "holds", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master's hand",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master's", "hand" },
+			},
+			[2] = {
+				["text"] = "mistress's hand",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress's", "hand" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "gives his",
+		["keywords"] = { "gives", "his" },
+		["continues"] = {
+			[1] = {
+				["text"] = "master a dirty look and",
+				["condition"] = PlayerIsMale,
+				["keywords"] = { "master", "dirty", "look", "and" },
+				["continues"] = {
+					[1] = {
+						["text"] = "stalks away.",
+						["keywords"] = { "stalks", "away" },
+					},
+					[2] = {
+						["text"] = "stalks away in annoyance.",
+						["keywords"] = { "stalks", "away", "annoyance" },
+					},
+					[3] = {
+						["text"] = "stalks away, disgusted.",
+						["keywords"] = { "stalks", "away", "disgusted" },
+					},
+					[4] = {
+						["text"] = "wonders if this is the best they could do?",
+						["keywords"] = { "wonders", "this", "the", "best", "they", "could" },
+					},
+					[5] = {
+						["text"] = "thinks 'Oh great, more protecting his butt'",
+						["keywords"] = { "thinks", "'Oh", "great", "more", "protecting", "his", "butt'" },
+					},
+					[6] = {
+						["text"] = "says 'I hate Deathknights'",
+						["keywords"] = { "says", "hate", "Deathknights'" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "mistress a dirty look and",
+				["condition"] = PlayerIsFemale,
+				["keywords"] = { "mistress", "dirty", "look", "and" },
+				["continues"] = {
+					[1] = {
+						["text"] = "stalks away.",
+						["keywords"] = { "stalks", "away" },
+					},
+					[2] = {
+						["text"] = "stalks away in annoyance.",
+						["keywords"] = { "stalks", "away", "annoyance" },
+					},
+					[3] = {
+						["text"] = "stalks away, disgusted.",
+						["keywords"] = { "stalks", "away", "disgusted" },
+					},
+					[4] = {
+						["text"] = "wonders if this is the best they could do?",
+						["keywords"] = { "wonders", "this", "the", "best", "they", "could" },
+					},
+					[5] = {
+						["text"] = "thinks 'Oh great, more protecting her butt'",
+						["keywords"] = { "thinks", "'Oh", "great", "more", "protecting", "her", "butt'" },
+					},
+					[6] = {
+						["text"] = "says 'I hate Deathknights'",
+						["keywords"] = { "says", "hate", "Deathknights'" },
+					},
+				},
+			},
+		},
+	},
+	[9] = {
+		["text"] = "gazes lazily into the distance.",
+		["keywords"] = { "gazes", "lazily", "into", "the", "distance" },
+	},
+	[10] = {
+		["text"] = "runs his fingers through his hair",
+		["keywords"] = { "runs", "his", "fingers", "through", "his", "hair" },
+		["optional"] = {
+			[1] = {
+				["text"] = "to remove the magots.",
+				["keywords"] = { "remove", "the", "magots" },
+			},
+			[2] = {
+				["text"] = "looking for a snack.",
+				["keywords"] = { "looking", "for", "snack" },
+			},
+			[3] = {
+				["text"] = "to straighten it.",
+				["keywords"] = { "straighten" },
+			},
+			[4] = {
+				["text"] = "to get it out of his eyes.",
+				["keywords"] = { "get", "out", "his", "eyes" },
+			},
+			[5] = {
+				["text"] = "to remove some gore.",
+				["keywords"] = { "remove", "some", "gore" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "chews on a",
+		["keywords"] = { "chews" },
+		["continues"] = {
+			[1] = {
+				["text"] = "finger.",
+				["keywords"] = { "finger" },
+				["optional"] = {
+					[1] = {
+						["text"] = "The question is.. Who's?",
+						["chance"] = 25,
+						["keywords"] = { "The", "question", "Who's" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "bone",
+				["keywords"] = { "bone" },
+			},
+			[3] = {
+				["text"] = "rat",
+				["keywords"] = { "rat" },
+			},
+			[4] = {
+				["text"] = "rock",
+				["keywords"] = { "rock" },
+			},
+			[5] = {
+				["text"] = "cat",
+				["keywords"] = { "cat" },
+			},
+			[6] = {
+				["text"] = "piece of flesh",
+				["keywords"] = { "piece", "flesh" },
+			},
+			[7] = {
+				["text"] = "dagger",
+				["keywords"] = { "dagger" },
+			},
+			[8] = {
+				["text"] = "bullet",
+				["keywords"] = { "bullet" },
+			},
+			[9] = {
+				["text"] = "bandage",
+				["keywords"] = { "bandage" },
+			},
+		},
+	},
+	[12] = {
+		["text"] = "scratches",
+		["keywords"] = { "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "under his chin with his clawed fingers.",
+				["keywords"] = { "under", "his", "chin", "with", "his", "clawed", "fingers" },
+			},
+			[2] = {
+				["text"] = "behind his ear with his clawed fingers.",
+				["keywords"] = { "behind", "his", "ear", "with", "his", "clawed", "fingers" },
+			},
+			[3] = {
+				["text"] = "at an old wound.",
+				["keywords"] = { "old", "wound" },
+			},
+			[4] = {
+				["text"] = "at his bandages.",
+				["keywords"] = { "his", "bandages" },
+			},
+			[5] = {
+				["text"] = "at the broken sword in his side.",
+				["keywords"] = { "the", "broken", "sword", "his", "side" },
+			},
+			[6] = {
+				["text"] = "at the arrow shaft sticking out of his leg.",
+				["keywords"] = { "the", "arrow", "shaft", "sticking", "out", "his", "leg" },
+			},
+		},
+	},
+	[13] = {
+		["text"] = "looks at %t",
+		["condition"] = TargetIsFriendly,
+		["keywords"] = { "looks", "%t" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and",
+				["keywords"] = { "and" },
+				["continues"] = {
+					[1] = {
+						["text"] = "smiles.",
+						["keywords"] = { "smiles" },
+					},
+					[2] = {
+						["text"] = "waves.",
+						["keywords"] = { "waves" },
+					},
+					[3] = {
+						["text"] = "wants to know what time they get off work.",
+						["chance"] = 50,
+						["keywords"] = { "wants", "know", "what", "time", "they", "get", "off", "work" },
+					},
+					[4] = {
+						["text"] = "licks his lips.",
+						["keywords"] = { "licks", "his", "lips" },
+					},
+					[5] = {
+						["text"] = "slowly edges closer to them.",
+						["keywords"] = { "slowly", "edges", "closer", "them" },
+					},
+					[6] = {
+						["text"] = "wants to know if they have seen any healers.",
+						["keywords"] = { "wants", "know", "they", "have", "seen", "any", "healers" },
+					},
+					[7] = {
+						["text"] = "blows them a kiss.",
+						["keywords"] = { "blows", "them", "kiss" },
+					},
+				},
+			},
+		},
+	},
+	[14] = {
+		["text"] = "looks",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "looks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "at %t",
+				["keywords"] = { "%t" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and",
+						["keywords"] = { "and" },
+						["continues"] = {
+							[1] = {
+								["text"] = "clenches his fists.",
+								["keywords"] = { "clenches", "his", "fists" },
+							},
+							[2] = {
+								["text"] = "snarls",
+								["keywords"] = { "snarls" },
+							},
+							[3] = {
+								["text"] = "licks his lips.",
+								["keywords"] = { "licks", "his", "lips" },
+							},
+							[4] = {
+								["text"] = "crouches, ready to leap.",
+								["keywords"] = { "crouches", "ready", "leap" },
+							},
+							[5] = {
+								["text"] = "disdainfully.",
+								["keywords"] = { "disdainfully" },
+							},
+							[6] = {
+								["text"] = "blows them a kiss.",
+								["keywords"] = { "blows", "them", "kiss" },
+							},
+							[7] = {
+								["text"] = "makes a rude gesture.",
+								["keywords"] = { "makes", "rude", "gesture" },
+							},
+							[8] = {
+								["text"] = "longs to eat their brain",
+								["keywords"] = { "longs", "eat", "their", "brain" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "right through %t.",
+				["keywords"] = { "right", "through", "%t" },
+			},
+		},
+	},
+	[15] = {
+		["text"] = "asks if someone can send for more healers",
+		["chance"] = 10,
+		["keywords"] = { "asks", "someone", "can", "send", "for", "more", "healers" },
+	},
+	[16] = {
+		["text"] = "has a bone to pick with this Lich King Fellow",
+		["keywords"] = { "has", "bone", "pick", "with", "this", "Lich", "King", "Fellow" },
+	},
+	[17] = {
+		["text"] = "enjoys eating",
+		["keywords"] = { "enjoys", "eating" },
+		["continues"] = {
+			[1] = {
+				["text"] = "Blood Elf. The other white meat",
+				["keywords"] = { "Blood", "Elf", "The", "other", "white", "meat" },
+			},
+			[2] = {
+				["text"] = "Forsaken. Becauce it's already falling off the bone",
+				["keywords"] = { "Forsaken", "Becauce", "it's", "already", "falling", "off", "the", "bone" },
+			},
+			[3] = {
+				["text"] = "Orc. Orc… Pork… What's the difference?  Just make sure you cook it first",
+				["keywords"] = { "Orc", "Orc…", "Pork…", "What's", "the", "difference", "Just", "make", "sure", "you", "cook", "first" },
+			},
+			[4] = {
+				["text"] = "Tauren. It's what's for dinner!",
+				["keywords"] = { "Tauren", "It's", "what's", "for", "dinner" },
+			},
+			[5] = {
+				["text"] = "Troll. The meal that keeps on giving",
+				["keywords"] = { "Troll", "The", "meal", "that", "keeps", "giving" },
+			},
+			[6] = {
+				["text"] = "Draenei. It's a Good Time for the Great Taste of Space Goat",
+				["keywords"] = { "Draenei", "It's", "Good", "Time", "for", "the", "Great", "Taste", "Space", "Goat" },
+			},
+			[7] = {
+				["text"] = "Dwarf. But, hates it when they ain't been shaved",
+				["keywords"] = { "Dwarf", "But", "hates", "when", "they", "ain't", "been", "shaved" },
+			},
+			[8] = {
+				["text"] = "Gnome. Snack time!  Once you catch them",
+				["keywords"] = { "Gnome", "Snack", "time", "Once", "you", "catch", "them" },
+			},
+			[9] = {
+				["text"] = "Night Elf. Tastes like chicken",
+				["keywords"] = { "Night", "Elf", "Tastes", "like", "chicken" },
+			},
+			[10] = {
+				["text"] = "Human. Betcha can't eat just one",
+				["keywords"] = { "Human", "Betcha", "can't", "eat", "just", "one" },
+			},
+		},
+	},
+}
+
+PetEmote_CombatEmotes["Ghoul-en"] = {
+	[1] = {
+		["text"] = "yells",
+		["keywords"] = { "yells" },
+		["optional"] = {
+			[1] = {
+				["text"] = "hungrily!",
+				["keywords"] = { "hungrily" },
+			},
+			[2] = {
+				["text"] = "angrily!",
+				["keywords"] = { "angrily" },
+				["optional"] = {
+					[1] = {
+						["text"] = "You! NO hurt",
+						["keywords"] = { "You", "hurt" },
+						["continues"] = {
+							[1] = {
+								["text"] = "master!",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "master" },
+							},
+							[2] = {
+								["text"] = "mistress!",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "mistress" },
+							},
+						},
+					},
+				},
+			},
+			[3] = {
+				["text"] = "BRRAAAAAAIIIINNS!",
+				["keywords"] = { "BRRAAAAAAIIIINNS" },
+			},
+			[4] = {
+				["text"] = "in glee",
+				["keywords"] = { "glee" },
+				["optional"] = {
+					[1] = {
+						["text"] = "for now it's time to feed!",
+						["keywords"] = { "for", "now", "it's", "time", "feed" },
+					},
+				},
+			},
+			[5] = {
+				["text"] = "Feeding Time!",
+				["keywords"] = { "Feeding", "Time" },
+			},
+			[6] = {
+				["text"] = "You No Take Candle!",
+				["keywords"] = { "You", "Take", "Candle" },
+			},
+			[7] = {
+				["text"] = "Play Time!",
+				["keywords"] = { "Play", "Time" },
+			},
+			[8] = {
+				["text"] = "You're doomed. You're all doomed!",
+				["keywords"] = { "You're", "doomed", "You're", "all", "doomed" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "snarls",
+		["keywords"] = { "snarls" },
 	},
 }
 
