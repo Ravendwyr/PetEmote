@@ -16002,8 +16002,8 @@ PetEmote_DefaultEmotes["Ghoul-en"] = {
 						["keywords"] = { "thinks", "'Oh", "great", "more", "protecting", "his", "butt'" },
 					},
 					[6] = {
-						["text"] = "says 'I hate Deathknights'",
-						["keywords"] = { "says", "hate", "Deathknights'" },
+						["text"] = "says 'I hate Death Knights'",
+						["keywords"] = { "says", "hate", "Death", "Knights'" },
 					},
 				},
 			},
@@ -16033,8 +16033,8 @@ PetEmote_DefaultEmotes["Ghoul-en"] = {
 						["keywords"] = { "thinks", "'Oh", "great", "more", "protecting", "her", "butt'" },
 					},
 					[6] = {
-						["text"] = "says 'I hate Deathknights'",
-						["keywords"] = { "says", "hate", "Deathknights'" },
+						["text"] = "says 'I hate Death Knights'",
+						["keywords"] = { "says", "hate", "Death", "Knights'" },
 					},
 				},
 			},
@@ -16264,8 +16264,8 @@ PetEmote_DefaultEmotes["Ghoul-en"] = {
 				["keywords"] = { "Blood", "Elf", "The", "other", "white", "meat" },
 			},
 			[2] = {
-				["text"] = "Forsaken. Becauce it's already falling off the bone",
-				["keywords"] = { "Forsaken", "Becauce", "it's", "already", "falling", "off", "the", "bone" },
+				["text"] = "Forsaken. Because it's already falling off the bone",
+				["keywords"] = { "Forsaken", "Because", "it's", "already", "falling", "off", "the", "bone" },
 			},
 			[3] = {
 				["text"] = "Orc. Orc… Pork… What's the difference?  Just make sure you cook it first",

@@ -42588,14 +42588,15 @@
                 <ChildNodes />
               </EmoteNode>
               <EmoteNode>
-                <Text>says 'I hate Deathknights'</Text>
+                <Text>says 'I hate Death Knights'</Text>
                 <Properties>
                   <Condition>None</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>says</Keyword>
                     <Keyword>hate</Keyword>
-                    <Keyword>Deathknights'</Keyword>
+                    <Keyword>Death</Keyword>
+                    <Keyword>Knights'</Keyword>
                   </Keywords>
                   <Chance>100</Chance>
                 </Properties>
@@ -42694,14 +42695,15 @@
                 <ChildNodes />
               </EmoteNode>
               <EmoteNode>
-                <Text>says 'I hate Deathknights'</Text>
+                <Text>says 'I hate Death Knights'</Text>
                 <Properties>
                   <Condition>None</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>says</Keyword>
                     <Keyword>hate</Keyword>
-                    <Keyword>Deathknights'</Keyword>
+                    <Keyword>Death</Keyword>
+                    <Keyword>Knights'</Keyword>
                   </Keywords>
                   <Chance>100</Chance>
                 </Properties>
@@ -43420,13 +43422,13 @@
             <ChildNodes />
           </EmoteNode>
           <EmoteNode>
-            <Text>Forsaken. Becauce it's already falling off the bone</Text>
+            <Text>Forsaken. Because it's already falling off the bone</Text>
             <Properties>
               <Condition>None</Condition>
               <MustContinue>false</MustContinue>
               <Keywords>
                 <Keyword>Forsaken</Keyword>
-                <Keyword>Becauce</Keyword>
+                <Keyword>Because</Keyword>
                 <Keyword>it's</Keyword>
                 <Keyword>already</Keyword>
                 <Keyword>falling</Keyword>
