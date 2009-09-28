@@ -2145,6 +2145,7 @@ PetEmote_CombatEmotes["Gorilla-de"] = {
 	[6] = {
 		["text"] = "teilt ordentlich aus",
 		["chance"] = 25,
+		["condition"] = IsFirstCall,
 		["keywords"] = { "teilt", "ordentlich", "aus" },
 	},
 	[7] = {
@@ -13024,11 +13025,6 @@ PetEmote_DefaultEmotes["Felguard-en"] = {
 						},
 					},
 				},
-			},
-			[2] = {
-				["text"] = "to kill himself. How depressing!",
-				["chance"] = 25,
-				["keywords"] = { "kill", "himself", "How", "depressing" },
 			},
 		},
 	},

@@ -6015,7 +6015,7 @@
       <EmoteNode>
         <Text>teilt ordentlich aus</Text>
         <Properties>
-          <Condition>None</Condition>
+          <Condition>IsFirstCall</Condition>
           <MustContinue>false</MustContinue>
           <Keywords>
             <Keyword>teilt</Keyword>
@@ -34690,21 +34690,6 @@
                 </ChildNodes>
               </EmoteNode>
             </ChildNodes>
-          </EmoteNode>
-          <EmoteNode>
-            <Text>to kill himself. How depressing!</Text>
-            <Properties>
-              <Condition>None</Condition>
-              <MustContinue>false</MustContinue>
-              <Keywords>
-                <Keyword>kill</Keyword>
-                <Keyword>himself</Keyword>
-                <Keyword>How</Keyword>
-                <Keyword>depressing</Keyword>
-              </Keywords>
-              <Chance>25</Chance>
-            </Properties>
-            <ChildNodes />
           </EmoteNode>
         </ChildNodes>
       </EmoteNode>
