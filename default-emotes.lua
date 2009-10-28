@@ -9880,9 +9880,9 @@ PetEmote_DefaultEmotes["Bird of Prey-en"] = {
 						["keywords"] = { "master's", "shoulder", "nibbles", "lock", "hair" },
 					},
 					[2] = {
-						["text"] = "mistress's shoulder and nibbles at a lock of his hair.",
+						["text"] = "mistress's shoulder and nibbles at a lock of her hair.",
 						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "shoulder", "nibbles", "lock", "hair" },
+						["keywords"] = { "mistress's", "shoulder", "and", "nibbles", "lock", "her", "hair" },
 					},
 					[3] = {
 						["text"] = "master's shoulder and nibbles affectionately at his ear.",
@@ -9926,9 +9926,9 @@ PetEmote_DefaultEmotes["Bird of Prey-en"] = {
 						["keywords"] = { "master's", "shoulder", "nibbles", "lock", "hair" },
 					},
 					[2] = {
-						["text"] = "mistress's shoulder and nibbles at a lock of his hair.",
+						["text"] = "mistress's shoulder and nibbles at a lock of her hair.",
 						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "shoulder", "nibbles", "lock", "hair" },
+						["keywords"] = { "mistress's", "shoulder", "and", "nibbles", "lock", "her", "hair" },
 					},
 					[3] = {
 						["text"] = "master's shoulder and nibbles affectionately at his ear.",

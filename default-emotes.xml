@@ -26255,15 +26255,17 @@
                 <ChildNodes />
               </EmoteNode>
               <EmoteNode>
-                <Text>mistress's shoulder and nibbles at a lock of his hair.</Text>
+                <Text>mistress's shoulder and nibbles at a lock of her hair.</Text>
                 <Properties>
                   <Condition>PlayerIsFemale</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>mistress's</Keyword>
                     <Keyword>shoulder</Keyword>
+                    <Keyword>and</Keyword>
                     <Keyword>nibbles</Keyword>
                     <Keyword>lock</Keyword>
+                    <Keyword>her</Keyword>
                     <Keyword>hair</Keyword>
                   </Keywords>
                   <Chance>100</Chance>
@@ -26398,15 +26400,17 @@
                 <ChildNodes />
               </EmoteNode>
               <EmoteNode>
-                <Text>mistress's shoulder and nibbles at a lock of his hair.</Text>
+                <Text>mistress's shoulder and nibbles at a lock of her hair.</Text>
                 <Properties>
                   <Condition>PlayerIsFemale</Condition>
                   <MustContinue>false</MustContinue>
                   <Keywords>
                     <Keyword>mistress's</Keyword>
                     <Keyword>shoulder</Keyword>
+                    <Keyword>and</Keyword>
                     <Keyword>nibbles</Keyword>
                     <Keyword>lock</Keyword>
+                    <Keyword>her</Keyword>
                     <Keyword>hair</Keyword>
                   </Keywords>
                   <Chance>100</Chance>
