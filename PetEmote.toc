@@ -1,4 +1,4 @@
-﻿## Interface: 30200
+﻿## Interface: 30300
 ## Title: PetEmote
 ## Author: Jorna
 ## Version: 1.6.4
