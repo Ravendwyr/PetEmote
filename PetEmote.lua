@@ -33,7 +33,7 @@ function PetEmote_OnLoad ()
 	this:RegisterEvent("ITEM_LOCK_CHANGED");
 	this:RegisterEvent("UNIT_PET");
 	
-	SLASH_PETEMOTE1 = "/pet";
+	SLASH_PETEMOTE1 = "/pe";
 	SLASH_PETEMOTE2 = "/tier";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
 	
