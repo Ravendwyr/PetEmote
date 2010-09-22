@@ -2,4 +2,7 @@
 	<Binding name="RANDOMEMOTE" description="Zufälliges Emote" header="PETEMOTE">
 		PetEmote_DoRandomEmote();
 	</Binding>
+	<Binding name="TOGGLERANDOMEMOTES" description="Zufällige Emotes an / aus" header="PETEMOTE">
+		PetEmote_ToggleRandomEmotesOnOff();
+	</Binding>
 </Bindings>

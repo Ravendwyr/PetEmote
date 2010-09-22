@@ -315,6 +315,18 @@ function PetEmote_CompareVersion (version1, operator, version2)
 	
 end
 
+function PetEmote_ToggleRandomEmotesOnOff ()
+	
+	if (PetEmote_Settings["RandomEmotes"] == false) then
+		PetEmote_Settings["RandomEmotes"] = true;
+		PetEmote_Message(PETEMOTE_LOCAL_RANDOM_ACTIVE);
+	else
+		PetEmote_Settings["RandomEmotes"] = false;
+		PetEmote_Message(PETEMOTE_LOCAL_RANDOM_INACTIVE);
+	end
+	
+end
+
 function PetEmote_HandleFeedingEvent (foodInfo)
 	
 	if (not PetEmote_FeedPetLogPattern) then

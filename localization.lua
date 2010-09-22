@@ -30,6 +30,7 @@ if (GetLocale() == "deDE") then
 
 BINDING_HEADER_PETEMOTE               = "PetEmote";
 BINDING_NAME_RANDOMEMOTE              = "Zufälliges Emote";
+BINDING_NAME_TOGGLERANDOMEMOTES       = "Zufällige Emotes an / aus";
 
 PETEMOTE_LOCAL_LANG                   = "de";
 PETEMOTE_LOCAL_NOPET                  = "<kein Tier>";
@@ -86,6 +87,7 @@ else
 
 BINDING_HEADER_PETEMOTE               = "PetEmote";
 BINDING_NAME_RANDOMEMOTE              = "Random Emote";
+BINDING_NAME_TOGGLERANDOMEMOTES       = "Random Emotes On / Off";
 
 PETEMOTE_LOCAL_LANG                   = "en";
 PETEMOTE_LOCAL_NOPET                  = "<no pet>";
