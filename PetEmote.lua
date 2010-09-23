@@ -1,7 +1,7 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 6, 4 };
+PetEmote_Version = { 1, 6, 5 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};

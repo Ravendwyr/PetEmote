@@ -1,7 +1,7 @@
 ﻿## Interface: 30300
 ## Title: PetEmote
 ## Author: Jorna
-## Version: 1.6.4
+## Version: 1.6.5
 ## eMail: jorna@zirkel-des-cenarius.eu
 ## URL: http://ammunition-company.zirkel-des-cenarius.eu/
 ## Notes: Allows you to send emotes from Hunter's, Warlock's and Death Knight's pets
