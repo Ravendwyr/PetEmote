@@ -413,7 +413,7 @@ function PetEmote_DoEmote (text, ret)
 			return nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text;
 		else
 			SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
-			PetEmote_SetNextDefaultEmoteTime(90, 360);
+			PetEmote_SetNextDefaultEmoteTime(120, 420);
 			PetEmote_SetNextCombatEmoteTime(60, 300);
 		end
 		
