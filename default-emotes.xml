@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <DefaultEmotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Version>1.6.3</Version>
+  <Version>1.6.6</Version>
   <PetFamilies>
     <PetFamily>
       <Name>Aasvogel</Name>
@@ -35972,7 +35972,7 @@
         <ChildNodes />
       </EmoteNode>
       <EmoteNode>
-        <Text>scampers over to &amp;t and bites them, grinning happily</Text>
+        <Text>scampers over to %t and bites them, grinning happily</Text>
         <Properties>
           <Condition>TargetIsFriendly</Condition>
           <MustContinue>false</MustContinue>
@@ -59383,7 +59383,7 @@
             </ChildNodes>
           </EmoteNode>
           <EmoteNode>
-            <Text>gibbers and shrieks maniacally, while darting towards &amp;t.</Text>
+            <Text>gibbers and shrieks maniacally, while darting towards %t.</Text>
             <Properties>
               <Condition>None</Condition>
               <MustContinue>false</MustContinue>
@@ -59613,11 +59613,13 @@
             </ChildNodes>
           </EmoteNode>
           <EmoteNode>
-            <Text>&amp;t</Text>
+            <Text>%t</Text>
             <Properties>
               <Condition>TargetIsFriendly</Condition>
               <MustContinue>false</MustContinue>
-              <Keywords />
+              <Keywords>
+                <Keyword>%t</Keyword>
+              </Keywords>
               <Chance>100</Chance>
             </Properties>
             <ChildNodes />
