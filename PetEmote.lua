@@ -1,7 +1,7 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 6, 5 };
+PetEmote_Version = { 1, 7, 0 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
@@ -25,16 +25,17 @@ PetEmote_GenderTable = {
 
 function PetEmote_OnLoad ()
 	
-	this:RegisterEvent("CHAT_MSG_ADDON");
-	this:RegisterEvent("PLAYER_FLAGS_CHANGED");
-	this:RegisterEvent("CHAT_MSG_PET_INFO");
-	this:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS");
-	this:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
-	this:RegisterEvent("ITEM_LOCK_CHANGED");
-	this:RegisterEvent("UNIT_PET");
+	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON");
+	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED");
+	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_PET_INFO");
+	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS");
+	PetEmote_MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+	PetEmote_MainFrame:RegisterEvent("ITEM_LOCK_CHANGED");
+	PetEmote_MainFrame:RegisterEvent("UNIT_PET");
 	
 	SLASH_PETEMOTE1 = "/pe";
 	SLASH_PETEMOTE2 = "/tier";
+	SLASH_PETEMOTE3 = "/pet";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
 	
 	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
@@ -56,6 +57,8 @@ function PetEmote_OnLoad ()
 end
 
 function PetEmote_OnEvent (self, event, ...)
+	
+	local arg1, arg2, arg3, arg4 = select(1, ...);
 	
 	-- receive messages from other PetEmote users
 	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote" and arg4 ~= UnitName("player")) then
@@ -329,17 +332,21 @@ end
 
 function PetEmote_HandleFeedingEvent (foodInfo)
 	
-	if (not PetEmote_FeedPetLogPattern) then
-		PetEmote_FeedPetLogPattern = string.gsub(FEEDPET_LOG_FIRSTPERSON, "%%1%$s", "(.+)"); -- %1$s to (.+)
-	end
+	if (foodInfo ~= nil) then
+		
+		if (not PetEmote_FeedPetLogPattern) then
+			PetEmote_FeedPetLogPattern = string.gsub(FEEDPET_LOG_FIRSTPERSON, "%%1%$s", "(.+)"); -- %1$s to (.+)
+		end
+		
+		local _, _, food = string.find(foodInfo, PetEmote_FeedPetLogPattern);
+		
+		if (food) then
+			PetEmote_SetRecentFood(food);
+			PetEmote_DoRandomEmote("FEEDING", FoodAccepted);
+		else
+			PetEmote_SetRecentFood();
+		end
 	
-	local _, _, food = string.find(foodInfo, PetEmote_FeedPetLogPattern);
-	
-	if (food) then
-		PetEmote_SetRecentFood(food);
-		PetEmote_DoRandomEmote("FEEDING", FoodAccepted);
-	else
-		PetEmote_SetRecentFood();
 	end
 	
 end
@@ -919,12 +926,13 @@ function PetEmote_EmoteIsCompleting (text)
 	return false;
 end
 
-
 function PetEmote_new_ChatFrame_OnEvent (event, ...)
-	PetEmote_old_AddMessage = this.AddMessage;
-	this.AddMessage = PetEmote_new_AddMessage;
+	
+	PetEmote_old_AddMessage = DEFAULT_CHAT_FRAME.AddMessage;
+	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_new_AddMessage;
 	PetEmote_old_ChatFrame_OnEvent(event, ...);
-	this.AddMessage = PetEmote_old_AddMessage;
+	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_old_AddMessage;
+	
 end
 
 function PetEmote_new_AddMessage (obj, message, r, g, b)
