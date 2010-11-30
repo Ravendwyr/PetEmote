@@ -26,7 +26,7 @@
 	},
 }
 
-PetEmote_DefaultEmotes["-de"] = {
+PetEmote_DefaultEmotes["Bär-de"] = {
 	[1] = {
 		["text"] = "sehnt sich nach",
 		["chance"] = 10,
@@ -314,7 +314,7 @@ PetEmote_DefaultEmotes["-de"] = {
 	},
 }
 
-PetEmote_CombatEmotes["-de"] = {
+PetEmote_CombatEmotes["Bär-de"] = {
 	[1] = {
 		["text"] = "versetzt %t",
 		["condition"] = TargetIsUnfriendly,
@@ -550,7 +550,7 @@ PetEmote_CombatEmotes["-de"] = {
 	},
 }
 
-PetEmote_FeedingEmotes["-de"] = {
+PetEmote_FeedingEmotes["Bär-de"] = {
 	[1] = {
 		["text"] = "schlingt",
 		["condition"] = FoodAccepted,
