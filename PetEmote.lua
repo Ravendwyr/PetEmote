@@ -1,7 +1,7 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 7, 0 };
+PetEmote_Version = { 1, 7, 1 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
@@ -34,8 +34,7 @@ function PetEmote_OnLoad ()
 	PetEmote_MainFrame:RegisterEvent("UNIT_PET");
 	
 	SLASH_PETEMOTE1 = "/pe";
-	SLASH_PETEMOTE2 = "/tier";
-	SLASH_PETEMOTE3 = "/pet";
+	SLASH_PETEMOTE3 = "/tier";
 	SlashCmdList["PETEMOTE"] = PetEmote_Command;
 	
 	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent;
@@ -332,6 +331,10 @@ end
 
 function PetEmote_HandleFeedingEvent (foodInfo)
 	
+	if (PetEmote_Settings["RandomEmotes"] ~= true) then
+		return;
+	end
+	
 	if (foodInfo ~= nil) then
 		
 		if (not PetEmote_FeedPetLogPattern) then
@@ -359,6 +362,10 @@ function PetEmote_HandleCombatLogEvent (timestamp, event, sourceGUID, sourceName
 		end
 	end
 	
+	if (PetEmote_Settings["RandomEmotes"] ~= true) then
+		return;
+	end
+	
 	if (event == "SPELL_CAST_FAILED") then
 		local spellID = select(1, ...);
 		if (spellID == 6991 and sourceName == UnitName("player") and PetEmote_RecentFood ~= nil and PetEmote_RecentFood["time"] + 5 > GetTime()) then
@@ -374,7 +381,16 @@ function PetEmote_SetRecentFood (arg1, arg2) -- container and slot / food name
 	local itemName, itemLink = nil;
 	
 	if (type(arg1) == "number" and type(arg2) == "number") then
-		itemName, itemLink = GetItemInfo(GetContainerItemLink(arg1, arg2));
+		
+		local containerItemLink = GetContainerItemLink(arg1, arg2);
+		
+		if (containerItemLink == nil) then
+			PetEmote_RecentFood = nil;
+			return;
+		end
+		
+		itemName, itemLink = GetItemInfo(containerItemLink);
+		
 	elseif (arg1 ~= nil) then
 		itemName, itemLink = GetItemInfo(arg1);
 	else
@@ -411,17 +427,25 @@ function PetEmote_DoEmote (text, ret)
 		end
 		
 		if (PetEmote_Family[UnitName("pet")] ~= nil) then
-			family = PetEmote_Family[UnitName("pet")]
-		else
+			family = PetEmote_Family[UnitName("pet")];
+		elseif (UnitCreatureFamily("pet") ~= nil) then
 			family = UnitCreatureFamily("pet");
+		else
+			family = "";
+		end
+		
+		if (family == "" or family == UnitName("pet")) then
+			family = "";
+		else
+			family = " " .. family;
 		end
 		
 		if (ret == true) then
-			return nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text;
+			return nameAdd .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text;
 		else
-			SendChatMessage(nameAdd .. PetEmote_nbsp .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
-			PetEmote_SetNextDefaultEmoteTime(120, 420);
-			PetEmote_SetNextCombatEmoteTime(60, 300);
+			SendChatMessage(nameAdd .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE");
+			PetEmote_SetNextDefaultEmoteTime(180, 480);
+			PetEmote_SetNextCombatEmoteTime(120, 420);
 		end
 		
 	end
@@ -642,6 +666,10 @@ function PetEmote_GetRandomEmote (treeType, ...)
 	end
 	
 	local result = PetEmote_CombineResults(parts);
+	
+	if (result == nil) then
+		return nil;
+	end
 	
 	if (treeType == "COMBAT" and UnitName("pettarget") ~= nil) then
 		result = string.gsub(result, "%%t", UnitName("pettarget"));
@@ -939,10 +967,8 @@ function PetEmote_new_AddMessage (obj, message, r, g, b)
 	
 	if (string.find(message, PetEmote_apos) ~= nil and string.find(message, PetEmote_nbsp) ~= nil) then
 		if (PetEmote_Settings["UseMask"] == true) then
-			for i = 1, 2 do
-				s, e = string.find(message, PetEmote_nbsp);
-				message = string.sub(message, s + 2);
-			end
+			s, e = string.find(message, PetEmote_nbsp);
+			message = string.sub(message, s + 2);
 		end
 	end
 	
