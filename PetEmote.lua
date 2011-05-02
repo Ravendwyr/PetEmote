@@ -1,13 +1,14 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 7, 1 };
+PetEmote_Version = { 1, 7, 2 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
 PetEmote_Settings = {};
 
 PetEmote_RecentFood = nil;
+PetEmote_Happiness = 3;
 
 PetEmote_GenderTable = {
 	[1] = "male",
@@ -182,6 +183,7 @@ function PetEmote_Command (args)
 	else
 		
 		PetEmote_DoEmote(args);
+		PetEmote_DecreaseHappiness();
 		
 	end
 	
@@ -346,6 +348,7 @@ function PetEmote_HandleFeedingEvent (foodInfo)
 		if (food) then
 			PetEmote_SetRecentFood(food);
 			PetEmote_DoRandomEmote("FEEDING", FoodAccepted);
+			PetEmote_ResetHappiness();
 		else
 			PetEmote_SetRecentFood();
 		end
@@ -354,7 +357,7 @@ function PetEmote_HandleFeedingEvent (foodInfo)
 	
 end
 
-function PetEmote_HandleCombatLogEvent (timestamp, event, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, ...)
+function PetEmote_HandleCombatLogEvent (timestamp, event, unknownNewBoolSinceVersion41, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, ...)
 	
 	if (PetEmote_HasPet() and sourceName == UnitName("pet") and UnitAffectingCombat("pet")) then
 		if (PetEmote_NextCombatEmoteTime < GetTime()) then
@@ -403,6 +406,26 @@ function PetEmote_SetRecentFood (arg1, arg2) -- container and slot / food name
 		["link"] = itemLink,
 		["time"] = GetTime(),
 	};
+	
+end
+
+function PetEmote_DecreaseHappiness ()
+
+	PetEmote_Happiness = PetEmote_Happiness - 0.25;
+	
+	if (PetEmote_Happiness < 0) then
+		PetEmote_Happiness = 0;
+	end
+	
+	--DEFAULT_CHAT_FRAME:AddMessage("Happiness decreased: " .. PetEmote_Happiness);
+	
+end
+
+function PetEmote_ResetHappiness ()
+
+	PetEmote_Happiness = 4;
+	
+	--DEFAULT_CHAT_FRAME:AddMessage("Happiness resetted: " .. PetEmote_Happiness);
 	
 end
 
@@ -466,6 +489,7 @@ function PetEmote_DoRandomEmote (treeType, ...)
 		
 		if (text ~= nil) then
 			PetEmote_DoEmote(text);
+			PetEmote_DecreaseHappiness();
 		end
 		
 	end
@@ -849,15 +873,13 @@ function PetEmote_ConditionIsTrue (section, ...)
 			return true;
 		end
 		
-		local happiness, damagePercentage, loyaltyRate = GetPetHappiness();
-		
-		if (c == PetIsUnhappy and happiness == 1) then
+		if (c == PetIsUnhappy and PetEmote_Happiness <= 1) then
 			return true;
 		end
-		if (c == PetIsContent and happiness == 2) then
+		if (c == PetIsContent and PetEmote_Happiness <= 2) then
 			return true;
 		end
-		if (c == PetIsHappy and happiness == 3) then
+		if (c == PetIsHappy and PetEmote_Happiness > 2) then
 			return true;
 		end
 		
