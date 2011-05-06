@@ -1,14 +1,14 @@
 ﻿PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
-PetEmote_Version = { 1, 7, 2 };
+PetEmote_Version = { 1, 7, 3 };
 
 PetEmote_Family = {};
 PetEmote_Gender = {};
 PetEmote_Settings = {};
 
 PetEmote_RecentFood = nil;
-PetEmote_Happiness = 3;
+PetEmote_Happiness = 5;
 
 PetEmote_GenderTable = {
 	[1] = "male",
@@ -52,6 +52,9 @@ function PetEmote_OnLoad ()
 	end
 	if (PetEmote_Settings["UseMask"] == nil) then
 		PetEmote_Settings["UseMask"] = true;
+	end
+	if (PetEmote_Settings["UseHappiness"] == nil) then
+		PetEmote_Settings["UseHappiness"] = true;
 	end
 	
 end
@@ -158,6 +161,18 @@ function PetEmote_Command (args)
 		else
 			PetEmote_Settings["UseMask"] = false;
 			PetEmote_ShowMaskStateMessage();
+		end
+		
+	elseif (cmd == "happiness" or cmd == "zufriedenheit") then
+		
+		if (val == "") then
+			PetEmote_ShowHappinessStateMessage();
+		elseif (val == "on" or val == "an") then
+			PetEmote_Settings["UseHappiness"] = true;
+			PetEmote_ShowHappinessStateMessage();
+		else
+			PetEmote_Settings["UseHappiness"] = false;
+			PetEmote_ShowHappinessStateMessage();
 		end
 		
 	elseif (cmd == "random" or cmd == "zufall") then
@@ -348,12 +363,13 @@ function PetEmote_HandleFeedingEvent (foodInfo)
 		if (food) then
 			PetEmote_SetRecentFood(food);
 			PetEmote_DoRandomEmote("FEEDING", FoodAccepted);
-			PetEmote_ResetHappiness();
 		else
 			PetEmote_SetRecentFood();
 		end
 	
 	end
+	
+	PetEmote_ResetHappiness();
 	
 end
 
@@ -411,7 +427,7 @@ end
 
 function PetEmote_DecreaseHappiness ()
 
-	PetEmote_Happiness = PetEmote_Happiness - 0.25;
+	PetEmote_Happiness = PetEmote_Happiness - 0.1;
 	
 	if (PetEmote_Happiness < 0) then
 		PetEmote_Happiness = 0;
@@ -423,7 +439,7 @@ end
 
 function PetEmote_ResetHappiness ()
 
-	PetEmote_Happiness = 4;
+	PetEmote_Happiness = 5;
 	
 	--DEFAULT_CHAT_FRAME:AddMessage("Happiness resetted: " .. PetEmote_Happiness);
 	
@@ -577,6 +593,16 @@ function PetEmote_ShowMaskStateMessage ()
 		PetEmote_Message(PETEMOTE_LOCAL_MASK_ACTIVE);
 	else
 		PetEmote_Message(PETEMOTE_LOCAL_MASK_INACTIVE);
+	end
+	
+end
+
+function PetEmote_ShowHappinessStateMessage ()
+	
+	if (PetEmote_Settings["UseHappiness"] == true) then
+		PetEmote_Message(PETEMOTE_LOCAL_HAPPINESS_ACTIVE);
+	else
+		PetEmote_Message(PETEMOTE_LOCAL_HAPPINESS_INACTIVE);
 	end
 	
 end
@@ -868,6 +894,10 @@ function PetEmote_ConditionIsTrue (section, ...)
 	if (c == PetIsUnhappy or c == PetIsContent or c == PetIsHappy) then
 		
 		local classNameLocalized, className = UnitClass("player");
+		
+		if (PetEmote_Settings["UseHappiness"] == false) then
+			return true;
+		end
 		
 		if (className ~= "HUNTER") then
 			return true;

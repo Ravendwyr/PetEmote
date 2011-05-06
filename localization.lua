@@ -52,6 +52,9 @@ PETEMOTE_LOCAL_RANDOM_INACTIVE        = "Zufällige Tier-Emotes sind deaktiviert
 PETEMOTE_LOCAL_MASK_ACTIVE            = "Maskierung ist aktiviert. Du siehst Emotes so, wie Spieler sie sehen, die PetEmote installiert haben.";
 PETEMOTE_LOCAL_MASK_INACTIVE          = "Maskierung ist deaktiviert. Du siehst Emotes so, wie Spieler sie sehen, die PetEmote nicht installiert haben.";
 
+PETEMOTE_LOCAL_HAPPINESS_ACTIVE       = "PetEmote simuliert die Zufriedenheit Eures Tieres. Wenn es knurrt, füttert es.";
+PETEMOTE_LOCAL_HAPPINESS_INACTIVE     = "Die Zufriedenheit Eures Tieres wird nicht für die Auswahl von Emotes berücksichtigt.";
+
 PETEMOTE_LOCAL_INFO                   = "Der Spieler $p hat PetEmote $v installiert.";
 
 PETEMOTE_WELCOME_MESSAGE              = "Viel Spaß mit PetEmote";
@@ -108,6 +111,9 @@ PETEMOTE_LOCAL_RANDOM_INACTIVE        = "Random pet emotes are inactive.";
 
 PETEMOTE_LOCAL_MASK_ACTIVE            = "Masking is active. You will see emotes as players do, who have PetEmote installed.";
 PETEMOTE_LOCAL_MASK_INACTIVE          = "Masking is inactive. You will see emotes as players do, who do not have PetEmote installed.";
+
+PETEMOTE_LOCAL_HAPPINESS_ACTIVE       = "PetEmote simulates happiness for your pet. If it looks hungry, feed it.";
+PETEMOTE_LOCAL_HAPPINESS_INACTIVE     = "The happiness of your pet does not affect emote selection.";
 
 PETEMOTE_LOCAL_INFO                   = "The player $p has PetEmote $v running.";
 
