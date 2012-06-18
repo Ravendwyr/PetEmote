@@ -1,8 +1,8 @@
-﻿## Interface: 40100
+﻿## Interface: 40300
 ## Title: PetEmote
-## Author: Jorna
-## Version: 1.7.3
-## eMail: jorna@zirkel-des-cenarius.eu
+## Author: Jorna, Travis Casey
+## Version: 1.8.0
+## eMail: efindel@gmail.com
 ## URL: http://ammunition-company.zirkel-des-cenarius.eu/
 ## Notes: Allows you to send emotes from Hunter's, Warlock's, Death Knight's and Mage's pets
 ## Notes-deDE: Ermöglicht Emotes für die Begleiter von Jägern, Hexenmeistern, Todesrittern und Magiern
