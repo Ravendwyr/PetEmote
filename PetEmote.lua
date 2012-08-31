@@ -254,9 +254,9 @@ function PetEmote_SendAddonMessage (command, params)
 		SendAddonMessage("PetEmote", command .. " " .. params, "GUILD");
 	end
 	
-	if (GetNumRaidMembers() > 0) then
+	if (IsInRaid()) then
 		SendAddonMessage("PetEmote", command .. " " .. params, "RAID");
-	elseif (GetNumPartyMembers() > 0) then
+	elseif (GetNumSubgroupMembers() > 0) then
 		SendAddonMessage("PetEmote", command .. " " .. params, "PARTY");
 	end
 	
