@@ -373,7 +373,7 @@ function PetEmote_HandleFeedingEvent (foodInfo)
 	
 end
 
-function PetEmote_HandleCombatLogEvent (timestamp, event, unknownNewBoolSinceVersion41, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, ...)
+function PetEmote_HandleCombatLogEvent (timestamp, event, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, ...)
 	
 	if (PetEmote_HasPet() and sourceName == UnitName("pet") and UnitAffectingCombat("pet")) then
 		if (PetEmote_NextCombatEmoteTime < GetTime()) then
