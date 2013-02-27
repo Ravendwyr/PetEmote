@@ -3,12 +3,12 @@ README for PetEmote
 The Quick Intro
 ---------------
 
-PetEmote is a roleplay-focused add-on for classes in World of Warcraft who 
-have combat pets (Hunters and Warlocks primarily, although there is support 
+PetEmote is a roleplay-focused add-on for classes in World of Warcraft who
+have combat pets (Hunters and Warlocks primarily, although there is support
 for Mage's water elementals and Death Knight's ghouls).
 
-It gives you a /pe command, which can be used to send emotes from your pet.  
-It also can (and will by default) periodically do random emotes for your pet.  
+It gives you a /pe command, which can be used to send emotes from your pet.
+It also can (and will by default) periodically do random emotes for your pet.
 More information about both these function is below.
 
 
@@ -19,23 +19,23 @@ So, let's say you type this:
 
 /pe yawns.
 
-If, say, your character's name was Jorna, and your character had a bear 
+If, say, your character's name was Jorna, and your character had a bear
 named Mad, then when you gave the above command, people would see this:
 
 Jorna 's Bear Mad yawns.
 
-(PetEmote is using WoW's normal emotes to send this, which is why there's a 
-space between the character name and the 's.  Unfortunately, there's no way 
+(PetEmote is using WoW's normal emotes to send this, which is why there's a
+space between the character name and the 's.  Unfortunately, there's no way
 to avoid this without requiring other people to have the add-on as well.)
 
 If they have PetEmote installed themselves, then they'd simply see:
 
 Mad yawns.
 
-(Note that since if you're using PetEmote, you definitely have it installed, 
+(Note that since if you're using PetEmote, you definitely have it installed,
 you'll always see the second version when doing emotes this way.)
 
-You can use the standard target substitution string of %t in your messages, 
+You can use the standard target substitution string of %t in your messages,
 so you could do something like:
 
 /pe eyes %t hungrily.
@@ -44,15 +44,15 @@ The %t would be replaced with your target's name, like so:
 
 Jorna's Bear Mad eyes Rockhide Boar hungrily.
 
-You can also use %p for your pet's name, although there's not usually much 
-need to do that, since your pet's name is already included in the emote 
+You can also use %p for your pet's name, although there's not usually much
+need to do that, since your pet's name is already included in the emote
 automatically.
 
 
 Random Emotes
 -------------
 
-Using the command "/pe random on" will turn on random emotes.  Periodically, 
+Using the command "/pe random on" will turn on random emotes.  Periodically,
 your pet will emote something, based on its type.  There are also combat and
 feeding-specific emotes that can happen.  If you go AFK, random emotes will
 be stopped, so as not to overly annoy other players.
@@ -138,7 +138,7 @@ Warlock Minions:
 
 Succubus - Teigan, Jorna
 Felguard - Teigan, Jorna, Varethyn, Jadein (with a nod to Bioware), Kalliope, Vephriel, Blizzard for the Eredun language, and the Bible
-Felhunter - Teigan 
+Felhunter - Teigan
 Imp - Teigan, Jorna
 Voidwalker - Teigan, Varethyn
 
