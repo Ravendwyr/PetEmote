@@ -1,4 +1,4 @@
-﻿PetEmote_apos = "’";
+PetEmote_apos = "’";
 PetEmote_nbsp = " ";
 
 PetEmote_Version = { 1, 8, 3 };
