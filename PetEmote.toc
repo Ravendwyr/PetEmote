@@ -1,4 +1,4 @@
-## Interface: 50300
+## Interface: 50400
 ## Title: PetEmote
 ## Author: Jorna, Travis Casey, Teigan, others on the Petopia forums
 ## Version: 1.8.4
