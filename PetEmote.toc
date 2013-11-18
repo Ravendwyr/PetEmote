@@ -9,6 +9,7 @@
 ## SavedVariablesPerCharacter: PetEmote_Family, PetEmote_Gender
 ## SavedVariables: PetEmote_Settings
 
+Globals.lua
 localization.lua
 default-emotes.lua
 custom-emotes.lua

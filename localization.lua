@@ -1,28 +1,3 @@
--- Conditions for Random Emotes
-PetIsUnhappy = 1
-PetIsContent = 2
-PetIsHappy = 3
-PetIsMale = 4
-PetIsFemale = 5
-PlayerIsMale = 6
-PlayerIsFemale = 7
-TargetExists = 8
-TargetIsFriendly = 9
-TargetIsUnfriendly = 10
-TargetIsSpider = 11  -- undocumented
-FoodAccepted = 12
-FoodRefused = 13
-IsFirstCall = 14
-IsSecondCall = 15
-IsThirdCall = 16
-
-
--- Needs to be set
-PetEmote_RandomMessages = {} -- not needed anymore
-PetEmote_DefaultEmotes = {}
-PetEmote_FeedingEmotes = {}
-PetEmote_CombatEmotes  = {}
-
 
 -- German configuration
 if (GetLocale() == "deDE") then

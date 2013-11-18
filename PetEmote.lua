@@ -1,28 +1,3 @@
-PetEmote_apos = "’"
-PetEmote_nbsp = " "
-
-PetEmote_Version = { 1, 8, 4 }
-
-PetEmote_Family = {}
-PetEmote_Gender = {}
-PetEmote_Settings = {}
-
-PetEmote_RecentFood = nil
-PetEmote_Happiness = 5
-
-PetEmote_GenderTable = {
-	[1] = "male",
-	[2] = "male",
-	[3] = "female",
-	["male"] = 2,
-	["m"] = 2,
-	["männlich"] = 2,
-	["female"] = 3,
-	["f"] = 3,
-	["weiblich"] = 3,
-	["w"] = 3,
-}
-
 
 function PetEmote_OnLoad ()
 
