@@ -59,13 +59,13 @@ PETEMOTE_CONTROLFRAME_PETGENDER_COLON = "Geschlecht:"
 PETEMOTE_CONTROLFRAME_RANDOM_TOOLTIP  = "Zufällige Emotes aktivieren oder deaktivieren"
 
 
--- default (enUK) configuration
+-- default (enUS) configuration
 else
 
 
 BINDING_HEADER_PETEMOTE               = "PetEmote"
-BINDING_NAME_RANDOMEMOTE              = "Random Emote"
-BINDING_NAME_TOGGLERANDOMEMOTES       = "Random Emotes On / Off"
+BINDING_NAME_RANDOMEMOTE              = "Perform Random Emote"
+BINDING_NAME_TOGGLERANDOMEMOTES       = "Toggle Random Emotes On / Off"
 
 PETEMOTE_LOCAL_LANG                   = "en"
 PETEMOTE_LOCAL_NOPET                  = "<no pet>"
