@@ -10,6 +10,7 @@ function PetEmote_OnLoad ()
 	PetEmote_MainFrame:RegisterEvent("UNIT_PET")
 
 	SLASH_PETEMOTE1 = "/pe"
+	SLASH_PETEMOTE2 = "/petemote"
 	SLASH_PETEMOTE3 = "/tier"
 	SlashCmdList["PETEMOTE"] = PetEmote_Command
 
