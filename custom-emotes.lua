@@ -12750,6 +12750,172 @@ PetEmote_DefaultEmotes["Dog"] = {
 	},
 }
 
+PetEmote_DefaultEmotes["Doomguard"] = {
+	[1] = {
+		["text"] = "stares",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "stares" },
+		["continues"] = {
+			[1] = {
+				["text"] = "angrily",
+				["keywords"] = { "angrily" },
+			},
+			[2] = {
+				["text"] = "blankly",
+				["keywords"] = { "blankly" },
+			},
+			[3] = {
+				["text"] = "menacingly",
+				["keywords"] = { "menacingly" },
+			},
+			[4] = {
+				["text"] = "distantly",
+				["keywords"] = { "distantly" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "ponders",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "ponders" },
+		["continues"] = {
+			[1] = {
+				["text"] = "the meaning of",
+				["keywords"] = { "meaning" },
+				["continues"] = {
+					[1] = {
+						["text"] = "life.",
+						["keywords"] = { "life" },
+					},
+					[2] = {
+						["text"] = "death.",
+						["keywords"] = { "death" },
+					},
+					[3] = {
+						["text"] = "42.",
+						["chance"] = 25,
+						["keywords"] = { "42" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "killing",
+				["chance"] = 75,
+				["keywords"] = { "killing" },
+				["continues"] = {
+					[1] = {
+						["text"] = "%t.",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "%t" },
+					},
+					[2] = {
+						["text"] = "... things.",
+						["keywords"] = { "things" },
+					},
+					[3] = {
+						["text"] = "himself. How emo...",
+						["chance"] = 25,
+						["keywords"] = { "himself", "How", "emo" },
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "adjusts",
+		["keywords"] = { "adjusts" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his armor",
+				["keywords"] = { "his", "armor" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "moves to",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "moves" },
+		["continues"] = {
+			[1] = {
+				["text"] = "defend",
+				["keywords"] = { "defend" },
+				["optional"] = {
+					[1] = {
+						["text"] = "%t",
+						["condition"] = TargetIsFriendly,
+						["keywords"] = { "%t" },
+					},
+					[2] = {
+						["text"] = "his master",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "his", "master" },
+					},
+					[3] = {
+						["text"] = "his mistress",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "his", "mistress" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "attack",
+				["keywords"] = { "attack" },
+				["optional"] = {
+					[1] = {
+						["text"] = "%t",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "%t" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "threatens",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "threatens" },
+		["continues"] = {
+			[1] = {
+				["text"] = "%t with",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "with" },
+				["continues"] = {
+					[1] = {
+						["text"] = "shadow magic",
+						["keywords"] = { "shadow", "magic" },
+					},
+					[2] = {
+						["text"] = "the wrath of",
+						["keywords"] = { "the", "wrath" },
+						["continues"] = {
+							[1] = {
+								["text"] = "doom.",
+								["keywords"] = { "doom" },
+								["optional"] = {
+									[1] = {
+										["text"] = "Doom doom DOOOM!",
+										["keywords"] = { "Doom", "doom", "DOOOM" },
+									},
+								},
+							},
+							[2] = {
+								["text"] = "his master",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "his", "master" },
+							},
+							[3] = {
+								["text"] = "his mistress",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "his", "mistress" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+}
+
 PetEmote_DefaultEmotes["Dragonhawk"] = {
 	[1] = {
 		["text"] = "droops sadly, hissing plaintively for food.",
@@ -18395,6 +18561,84 @@ PetEmote_DefaultEmotes["Imp"] = {
 				["text"] = "mistress's back",
 				["condition"] = PlayerIsFemale,
 				["keywords"] = { "mistress's", "back" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Infernal-en"] = {
+	[1] = {
+		["text"] = "stares",
+		["keywords"] = { "stares" },
+		["continues"] = {
+			[1] = {
+				["text"] = "absently",
+				["keywords"] = { "absently" },
+			},
+			[2] = {
+				["text"] = "blankly",
+				["keywords"] = { "blankly" },
+			},
+			[3] = {
+				["text"] = "pensively",
+				["keywords"] = { "pensively" },
+			},
+			[4] = {
+				["text"] = "distantly",
+				["keywords"] = { "distantly" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "burns",
+		["keywords"] = { "burns" },
+		["continues"] = {
+			[1] = {
+				["text"] = "flames along",
+				["keywords"] = { "flames" },
+				["continues"] = {
+					[1] = {
+						["text"] = "its arms",
+						["keywords"] = { "arms" },
+					},
+					[2] = {
+						["text"] = "its back",
+						["keywords"] = { "back" },
+					},
+					[3] = {
+						["text"] = "the ground",
+						["chance"] = 25,
+						["keywords"] = { "ground" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "quietly",
+				["chance"] = 75,
+				["keywords"] = { "quietly" },
+			},
+		},
+	},
+	[3] = {
+		["text"] = "adjusts its rocks",
+		["keywords"] = { "adjusts", "its", "rocks" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and pebbles",
+			},
+		},
+	},
+	[4] = {
+		["text"] = "stretches",
+		["keywords"] = { "stretches" },
+		["optional"] = {
+			[1] = {
+				["text"] = "roughly",
+				["keywords"] = { "roughly" },
+			},
+			[2] = {
+				["text"] = "its form",
+				["keywords"] = { "its", "form" },
 			},
 		},
 	},
