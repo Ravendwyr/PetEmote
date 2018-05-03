@@ -4,7 +4,7 @@ function PetEmote_OnLoad ()
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON")
 	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_PET_INFO")
-	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_SPELL_TRADESKILLS")
+	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_TRADESKILLS")
 	PetEmote_MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	PetEmote_MainFrame:RegisterEvent("ITEM_LOCK_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("UNIT_PET")
@@ -61,7 +61,7 @@ function PetEmote_OnEvent (self, event, ...)
 	end
 
 	-- handle the feeding message, which contains information about the food
-	if (event == "CHAT_MSG_PET_INFO" or event == "CHAT_MSG_SPELL_TRADESKILLS") then
+	if (event == "CHAT_MSG_PET_INFO" or event == "CHAT_MSG_TRADESKILLS") then
 		return PetEmote_HandleFeedingEvent(arg1)
 	end
 
