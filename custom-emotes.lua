@@ -8030,7 +8030,7 @@ PetEmote_DefaultEmotes["Core Hound"] = {
 		},
 	},
 	[18] = {
-		["text"] = "casually sits on a small passing animal and grins quietly to ",
+		["text"] = "casually sits on a small passing animal and grins quietly to",
 		["condition"] = PetIsHappy,
 		["keywords"] = { "casually", "sits", "small", "passing", "animal", "and", "grins", "quietly" },
 		["continues"] = {
@@ -8774,8 +8774,8 @@ PetEmote_DefaultEmotes["Crane"] = {
 		["keywords"] = { "looks" },
 		["continues"] = {
 			[1] = {
-				["text"] = "and snaps menacingly,",
-				["keywords"] = { "snaps", "menacingly" },
+				["text"] = "and snaps menacingly",
+				["keywords"] = { "and", "snaps", "menacingly" },
 			},
 			[2] = {
 				["text"] = "shrieks with hostility",
@@ -12750,172 +12750,6 @@ PetEmote_DefaultEmotes["Dog"] = {
 	},
 }
 
-PetEmote_DefaultEmotes["Doomguard"] = {
-	[1] = {
-		["text"] = "stares",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "stares" },
-		["continues"] = {
-			[1] = {
-				["text"] = "angrily",
-				["keywords"] = { "angrily" },
-			},
-			[2] = {
-				["text"] = "blankly",
-				["keywords"] = { "blankly" },
-			},
-			[3] = {
-				["text"] = "menacingly",
-				["keywords"] = { "menacingly" },
-			},
-			[4] = {
-				["text"] = "distantly",
-				["keywords"] = { "distantly" },
-			},
-		},
-	},
-	[2] = {
-		["text"] = "ponders",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "ponders" },
-		["continues"] = {
-			[1] = {
-				["text"] = "the meaning of",
-				["keywords"] = { "meaning" },
-				["continues"] = {
-					[1] = {
-						["text"] = "life.",
-						["keywords"] = { "life" },
-					},
-					[2] = {
-						["text"] = "death.",
-						["keywords"] = { "death" },
-					},
-					[3] = {
-						["text"] = "42.",
-						["chance"] = 25,
-						["keywords"] = { "42" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "killing",
-				["chance"] = 75,
-				["keywords"] = { "killing" },
-				["continues"] = {
-					[1] = {
-						["text"] = "%t.",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "%t" },
-					},
-					[2] = {
-						["text"] = "... things.",
-						["keywords"] = { "things" },
-					},
-					[3] = {
-						["text"] = "himself. How emo...",
-						["chance"] = 25,
-						["keywords"] = { "himself", "How", "emo" },
-					},
-				},
-			},
-		},
-	},
-	[3] = {
-		["text"] = "adjusts",
-		["keywords"] = { "adjusts" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his armor",
-				["keywords"] = { "his", "armor" },
-			},
-		},
-	},
-	[4] = {
-		["text"] = "moves to",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "moves" },
-		["continues"] = {
-			[1] = {
-				["text"] = "defend",
-				["keywords"] = { "defend" },
-				["optional"] = {
-					[1] = {
-						["text"] = "%t",
-						["condition"] = TargetIsFriendly,
-						["keywords"] = { "%t" },
-					},
-					[2] = {
-						["text"] = "his master",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "his", "master" },
-					},
-					[3] = {
-						["text"] = "his mistress",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "his", "mistress" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "attack",
-				["keywords"] = { "attack" },
-				["optional"] = {
-					[1] = {
-						["text"] = "%t",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "%t" },
-					},
-				},
-			},
-		},
-	},
-	[5] = {
-		["text"] = "threatens",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "threatens" },
-		["continues"] = {
-			[1] = {
-				["text"] = "%t with",
-				["condition"] = TargetExists,
-				["keywords"] = { "%t", "with" },
-				["continues"] = {
-					[1] = {
-						["text"] = "shadow magic",
-						["keywords"] = { "shadow", "magic" },
-					},
-					[2] = {
-						["text"] = "the wrath of",
-						["keywords"] = { "the", "wrath" },
-						["continues"] = {
-							[1] = {
-								["text"] = "doom.",
-								["keywords"] = { "doom" },
-								["optional"] = {
-									[1] = {
-										["text"] = "Doom doom DOOOM!",
-										["keywords"] = { "Doom", "doom", "DOOOM" },
-									},
-								},
-							},
-							[2] = {
-								["text"] = "his master",
-								["condition"] = PlayerIsMale,
-								["keywords"] = { "his", "master" },
-							},
-							[3] = {
-								["text"] = "his mistress",
-								["condition"] = PlayerIsFemale,
-								["keywords"] = { "his", "mistress" },
-							},
-						},
-					},
-				},
-			},
-		},
-	},
-}
-
 PetEmote_DefaultEmotes["Dragonhawk"] = {
 	[1] = {
 		["text"] = "droops sadly, hissing plaintively for food.",
@@ -13498,6 +13332,1225 @@ PetEmote_FeedingEmotes["Dragonhawk"] = {
 				["text"] = "she likes it and snatches it away greedily",
 				["condition"] = PetIsFemale,
 				["keywords"] = { "she", "likes", "and", "snatches", "away", "greedily" },
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Feathermane"] = {
+	[1] = {
+		["text"] = "nuzzles",
+		["keywords"] = { "nuzzles" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's" },
+						["continues"] = {
+							[1] = {
+								["text"] = "arm lovingly",
+								["keywords"] = { "arm", "lovingly" },
+							},
+							[2] = {
+								["text"] = "hand, looking for fuss",
+								["keywords"] = { "hand", "looking", "for", "fuss" },
+							},
+							[3] = {
+								["text"] = "side affectionately",
+								["keywords"] = { "side", "affectionately" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress'",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'" },
+						["continues"] = {
+							[1] = {
+								["text"] = "arm lovingly",
+								["keywords"] = { "arm", "lovingly" },
+							},
+							[2] = {
+								["text"] = "hand, looking for fuss",
+								["keywords"] = { "hand", "looking", "for", "fuss" },
+							},
+							[3] = {
+								["text"] = "side affectionately",
+								["keywords"] = { "side", "affectionately" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["optional"] = {
+					[1] = {
+						["text"] = "master's",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's" },
+						["optional"] = {
+							[1] = {
+								["text"] = "arm lovingly",
+								["keywords"] = { "arm", "lovingly" },
+							},
+							[2] = {
+								["text"] = "hand, looking for fuss",
+								["keywords"] = { "hand", "looking", "for", "fuss" },
+							},
+							[3] = {
+								["text"] = "side affectionately",
+								["keywords"] = { "side", "affectionately" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress'",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'" },
+						["optional"] = {
+							[1] = {
+								["text"] = "arm lovingly",
+								["keywords"] = { "arm", "lovingly" },
+							},
+							[2] = {
+								["text"] = "hand, looking for fuss",
+								["keywords"] = { "hand", "looking", "for", "fuss" },
+							},
+							[3] = {
+								["text"] = "side affectionately",
+								["keywords"] = { "side", "affectionately" },
+							},
+						},
+					},
+				},
+			},
+			[3] = {
+				["text"] = "%t affectionately",
+				["condition"] = TargetIsFriendly,
+				["keywords"] = { "%t", "affectionately" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "pokes",
+		["keywords"] = { "pokes" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head under his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "head", "under", "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's arm",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "arm" },
+						["optional"] = {
+							[1] = {
+								["text"] = "for comfort",
+								["keywords"] = { "for", "comfort" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress' arm",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "arm" },
+						["optional"] = {
+							[1] = {
+								["text"] = "for comfort",
+								["keywords"] = { "for", "comfort" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her head under her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "head", "under", "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's arm",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "arm" },
+						["optional"] = {
+							[1] = {
+								["text"] = "for comfort",
+								["keywords"] = { "for", "comfort" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress' arm",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "arm" },
+						["optional"] = {
+							[1] = {
+								["text"] = "for comfort",
+								["keywords"] = { "for", "comfort" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[3] = {
+		["text"] = "stretches luxuriously",
+		["keywords"] = { "stretches", "luxuriously" },
+	},
+	[4] = {
+		["text"] = "scratches",
+		["keywords"] = { "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "flank with a claw",
+						["keywords"] = { "flank", "with", "claw" },
+					},
+					[2] = {
+						["text"] = "head with a claw",
+						["keywords"] = { "head", "with", "claw" },
+					},
+					[3] = {
+						["text"] = "belly with a claw",
+						["keywords"] = { "belly", "with", "claw" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "flank with a claw",
+						["keywords"] = { "flank", "with", "claw" },
+					},
+					[2] = {
+						["text"] = "head with a claw",
+						["keywords"] = { "head", "with", "claw" },
+					},
+					[3] = {
+						["text"] = "belly with a claw",
+						["keywords"] = { "belly", "with", "claw" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "puffs out",
+		["keywords"] = { "puffs", "out" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his coat",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "coat" },
+				["optional"] = {
+					[1] = {
+						["text"] = "defensively",
+						["keywords"] = { "defensively" },
+					},
+					[2] = {
+						["text"] = "intimidatingly",
+						["keywords"] = { "intimidatingly" },
+					},
+					[3] = {
+						["text"] = "to make himself look bigger",
+						["keywords"] = { "make", "himself", "look", "bigger" },
+					},
+					[4] = {
+						["text"] = "in attempt to bring attention to himself",
+						["keywords"] = { "attempt", "bring", "attention", "himself" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her coat",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "coat" },
+				["optional"] = {
+					[1] = {
+						["text"] = "defensively",
+						["keywords"] = { "defensively" },
+					},
+					[2] = {
+						["text"] = "intimidatingly",
+						["keywords"] = { "intimidatingly" },
+					},
+					[3] = {
+						["text"] = "to make herself look bigger",
+						["keywords"] = { "make", "herself", "look", "bigger" },
+					},
+					[4] = {
+						["text"] = "in attempt to bring attention to herself",
+						["keywords"] = { "attempt", "bring", "attention", "herself" },
+					},
+				},
+			},
+		},
+	},
+	[6] = {
+		["text"] = "thoroughly grooms",
+		["keywords"] = { "thoroughly", "grooms" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his coat",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "coat" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to remove some dirt",
+						["keywords"] = { "remove", "some", "dirt" },
+					},
+					[2] = {
+						["text"] = "to rid himself of pesky insects",
+						["keywords"] = { "rid", "himself", "pesky", "insects" },
+					},
+					[3] = {
+						["text"] = "just to look good",
+						["keywords"] = { "just", "look", "good" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her coat",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "coat" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to remove some dirt",
+						["keywords"] = { "remove", "some", "dirt" },
+					},
+					[2] = {
+						["text"] = "to rid herself of pesky insects",
+						["keywords"] = { "rid", "herself", "pesky", "insects" },
+					},
+					[3] = {
+						["text"] = "just to look good",
+						["keywords"] = { "just", "look", "good" },
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "nibbles at",
+		["keywords"] = { "nibbles" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "flank, annoyed by an itch",
+						["keywords"] = { "flank", "annoyed", "itch" },
+					},
+					[2] = {
+						["text"] = "leg, annoyed by an itch",
+						["keywords"] = { "leg", "annoyed", "itch" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "flank, annoyed by an itch",
+						["keywords"] = { "flank", "annoyed", "itch" },
+					},
+					[2] = {
+						["text"] = "leg, annoyed by an itch",
+						["keywords"] = { "leg", "annoyed", "itch" },
+					},
+				},
+			},
+		},
+	},
+	[8] = {
+		["text"] = "huffs impatiently",
+		["keywords"] = { "huffs", "impatiently" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and clicks",
+				["keywords"] = { "and", "clicks" },
+				["continues"] = {
+					[1] = {
+						["text"] = "his claws against the ground",
+						["condition"] = PetIsMale,
+						["keywords"] = { "his", "claws", "against", "the", "ground" },
+					},
+					[2] = {
+						["text"] = "her claws against the ground",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "her", "claws", "against", "the", "ground" },
+					},
+				},
+			},
+		},
+	},
+	[9] = {
+		["text"] = "glances around",
+		["keywords"] = { "glances", "around" },
+		["optional"] = {
+			[1] = {
+				["text"] = "warily",
+				["keywords"] = { "warily" },
+			},
+			[2] = {
+				["text"] = "curiously",
+				["keywords"] = { "curiously" },
+			},
+			[3] = {
+				["text"] = "for signs of trouble",
+				["keywords"] = { "for", "signs", "trouble" },
+			},
+			[4] = {
+				["text"] = "for food",
+				["keywords"] = { "for", "food" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "digs at the ground, hoping to unearth something tasty",
+		["keywords"] = { "digs", "the", "ground", "hoping", "unearth", "something", "tasty" },
+	},
+	[11] = {
+		["text"] = "trots around",
+		["keywords"] = { "trots", "around" },
+		["optional"] = {
+			[1] = {
+				["text"] = "daintily",
+				["keywords"] = { "daintily" },
+			},
+			[2] = {
+				["text"] = "in an agitated manner",
+				["keywords"] = { "agitated", "manner" },
+			},
+			[3] = {
+				["text"] = "in circles",
+				["keywords"] = { "circles" },
+			},
+		},
+	},
+	[12] = {
+		["text"] = "charges off",
+		["keywords"] = { "charges", "off" },
+		["optional"] = {
+			[1] = {
+				["text"] = "because",
+				["keywords"] = { "because" },
+				["continues"] = {
+					[1] = {
+						["text"] = "he saw something",
+						["condition"] = PetIsMale,
+						["keywords"] = { "saw", "something" },
+						["optional"] = {
+							[1] = {
+								["text"] = "interesting",
+								["keywords"] = { "interesting" },
+							},
+							[2] = {
+								["text"] = "tasty",
+								["keywords"] = { "tasty" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "she saw something",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "she", "saw", "something" },
+						["optional"] = {
+							[1] = {
+								["text"] = "interesting",
+								["keywords"] = { "interesting" },
+							},
+							[2] = {
+								["text"] = "tasty",
+								["keywords"] = { "tasty" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "then back",
+				["keywords"] = { "then", "back" },
+				["optional"] = {
+					[1] = {
+						["text"] = "again, pulling up short before hitting",
+						["keywords"] = { "again", "pulling", "short", "before", "hitting" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his",
+								["condition"] = PetIsMale,
+								["keywords"] = { "his" },
+								["continues"] = {
+									[1] = {
+										["text"] = "master",
+										["condition"] = PlayerIsMale,
+										["keywords"] = { "master" },
+									},
+									[2] = {
+										["text"] = "mistress",
+										["condition"] = PlayerIsFemale,
+										["keywords"] = { "mistress" },
+									},
+								},
+							},
+							[2] = {
+								["text"] = "her",
+								["condition"] = PetIsFemale,
+								["keywords"] = { "her" },
+								["continues"] = {
+									[1] = {
+										["text"] = "master",
+										["condition"] = PlayerIsMale,
+										["keywords"] = { "master" },
+									},
+									[2] = {
+										["text"] = "mistress",
+										["condition"] = PlayerIsFemale,
+										["keywords"] = { "mistress" },
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "emits a loud shriek",
+		["keywords"] = { "emits", "loud", "shriek" },
+		["optional"] = {
+			[1] = {
+				["text"] = "in warning",
+				["keywords"] = { "warning" },
+			},
+			[2] = {
+				["text"] = "in defiance",
+				["keywords"] = { "defiance" },
+			},
+			[3] = {
+				["text"] = "at %t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+			},
+			[4] = {
+				["text"] = "just because",
+				["keywords"] = { "just", "because" },
+				["optional"] = {
+					[1] = {
+						["text"] = "he is bored",
+						["condition"] = PetIsMale,
+						["keywords"] = { "bored" },
+					},
+					[2] = {
+						["text"] = "she is bored",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "she", "bored" },
+					},
+				},
+			},
+		},
+	},
+	[14] = {
+		["text"] = "cocks",
+		["keywords"] = { "cocks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "head" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to look at",
+						["keywords"] = { "look" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his master",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "his", "master" },
+							},
+							[2] = {
+								["text"] = "his mistress",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "his", "mistress" },
+							},
+							[3] = {
+								["text"] = "the sky",
+								["keywords"] = { "the", "sky" },
+							},
+							[4] = {
+								["text"] = "the ground",
+								["keywords"] = { "the", "ground" },
+							},
+							[5] = {
+								["text"] = "%t",
+								["condition"] = TargetExists,
+								["keywords"] = { "%t" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her head",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "head" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to look at",
+						["keywords"] = { "look" },
+						["continues"] = {
+							[1] = {
+								["text"] = "her master",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "her", "master" },
+							},
+							[2] = {
+								["text"] = "her mistress",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "her", "mistress" },
+							},
+							[3] = {
+								["text"] = "the sky",
+								["keywords"] = { "the", "sky" },
+							},
+							[4] = {
+								["text"] = "the ground",
+								["keywords"] = { "the", "ground" },
+							},
+							[5] = {
+								["text"] = "%t",
+								["condition"] = TargetExists,
+								["keywords"] = { "%t" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[15] = {
+		["text"] = "chuffs happily",
+		["keywords"] = { "chuffs", "happily" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and brushes up against",
+				["keywords"] = { "and", "brushes", "against" },
+				["continues"] = {
+					[1] = {
+						["text"] = "his",
+						["condition"] = PetIsMale,
+						["keywords"] = { "his" },
+						["continues"] = {
+							[1] = {
+								["text"] = "master",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "master" },
+							},
+							[2] = {
+								["text"] = "mistress",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "mistress" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "her",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "her" },
+						["continues"] = {
+							[1] = {
+								["text"] = "master",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "master" },
+							},
+							[2] = {
+								["text"] = "mistress",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "mistress" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[16] = {
+		["text"] = "bites",
+		["keywords"] = { "bites" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and tugs at it. Feed me!",
+								["keywords"] = { "and", "tugs", "Feed" },
+							},
+							[2] = {
+								["text"] = "and pulls at the straps. I'm bored!",
+								["keywords"] = { "and", "pulls", "the", "straps", "I'm", "bored" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress' pack",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "pack" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and tugs at it. Feed me!",
+								["keywords"] = { "and", "tugs", "Feed" },
+							},
+							[2] = {
+								["text"] = "and pulls at the straps. I'm bored!",
+								["keywords"] = { "and", "pulls", "the", "straps", "I'm", "bored" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and tugs at it. Feed me!",
+								["keywords"] = { "and", "tugs", "Feed" },
+							},
+							[2] = {
+								["text"] = "and pulls at the straps. I'm bored!",
+								["keywords"] = { "and", "pulls", "the", "straps", "I'm", "bored" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress' pack",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "pack" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and tugs at it. Feed me!",
+								["keywords"] = { "and", "tugs", "Feed" },
+							},
+							[2] = {
+								["text"] = "and pulls at the straps. I'm bored!",
+								["keywords"] = { "and", "pulls", "the", "straps", "I'm", "bored" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[17] = {
+		["text"] = "clacks",
+		["keywords"] = { "clacks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his claws against the ground",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "claws", "against", "the", "ground" },
+				["optional"] = {
+					[1] = {
+						["text"] = "impatiently",
+						["keywords"] = { "impatiently" },
+					},
+					[2] = {
+						["text"] = "in a bored manner",
+						["keywords"] = { "bored", "manner" },
+					},
+					[3] = {
+						["text"] = "noisily",
+						["keywords"] = { "noisily" },
+					},
+					[4] = {
+						["text"] = "and is pleased with the sound",
+						["keywords"] = { "and", "pleased", "with", "the", "sound" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her claws against the ground",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "claws", "against", "the", "ground" },
+				["optional"] = {
+					[1] = {
+						["text"] = "impatiently",
+						["keywords"] = { "impatiently" },
+					},
+					[2] = {
+						["text"] = "in a bored manner",
+						["keywords"] = { "bored", "manner" },
+					},
+					[3] = {
+						["text"] = "noisily",
+						["keywords"] = { "noisily" },
+					},
+					[4] = {
+						["text"] = "and is pleased with the sound",
+						["keywords"] = { "and", "pleased", "with", "the", "sound" },
+					},
+				},
+			},
+		},
+	},
+	[18] = {
+		["text"] = "rolls around in a patch of dirt",
+		["keywords"] = { "rolls", "around", "patch", "dirt" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and waves",
+				["keywords"] = { "and", "waves" },
+				["continues"] = {
+					[1] = {
+						["text"] = "his legs in the air",
+						["condition"] = PetIsMale,
+						["keywords"] = { "his", "legs", "the", "air" },
+					},
+					[2] = {
+						["text"] = "her legs in the air",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "her", "legs", "the", "air" },
+					},
+				},
+			},
+		},
+	},
+	[19] = {
+		["text"] = "gives",
+		["keywords"] = { "gives" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+						["continues"] = {
+							[1] = {
+								["text"] = "a friendly headbutt",
+								["keywords"] = { "friendly", "headbutt" },
+							},
+							[2] = {
+								["text"] = "a gift",
+								["keywords"] = { "gift" },
+								["optional"] = {
+									[1] = {
+										["text"] = "from his latest catch",
+										["keywords"] = { "from", "his", "latest", "catch" },
+									},
+									[2] = {
+										["text"] = "in the form of a shiny stone",
+										["keywords"] = { "the", "form", "shiny", "stone" },
+									},
+								},
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+						["optional"] = {
+							[1] = {
+								["text"] = "a friendly headbutt",
+								["keywords"] = { "friendly", "headbutt" },
+							},
+							[2] = {
+								["text"] = "a gift",
+								["keywords"] = { "gift" },
+								["optional"] = {
+									[1] = {
+										["text"] = "from his latest catch",
+										["keywords"] = { "from", "his", "latest", "catch" },
+									},
+									[2] = {
+										["text"] = "in the form of a shiny stone",
+										["keywords"] = { "the", "form", "shiny", "stone" },
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master" },
+						["continues"] = {
+							[1] = {
+								["text"] = "a friendly headbutt",
+								["keywords"] = { "friendly", "headbutt" },
+							},
+							[2] = {
+								["text"] = "a gift",
+								["keywords"] = { "gift" },
+								["optional"] = {
+									[1] = {
+										["text"] = "from her latest catch",
+										["keywords"] = { "from", "her", "latest", "catch" },
+									},
+									[2] = {
+										["text"] = "in the form of a shiny stone",
+										["keywords"] = { "the", "form", "shiny", "stone" },
+									},
+								},
+							},
+						},
+					},
+					[2] = {
+						["text"] = "mistress",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress" },
+						["continues"] = {
+							[1] = {
+								["text"] = "a friendly headbutt",
+								["keywords"] = { "friendly", "headbutt" },
+							},
+							[2] = {
+								["text"] = "a gift",
+								["keywords"] = { "gift" },
+								["optional"] = {
+									[1] = {
+										["text"] = "from her latest catch",
+										["keywords"] = { "from", "her", "latest", "catch" },
+									},
+									[2] = {
+										["text"] = "in the form of a shiny stone",
+										["keywords"] = { "the", "form", "shiny", "stone" },
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[20] = {
+		["text"] = "flops onto the ground for a rest",
+		["keywords"] = { "flops", "onto", "the", "ground", "for", "rest" },
+	},
+	[21] = {
+		["text"] = "lays down in a warm spot",
+		["keywords"] = { "lays", "down", "warm", "spot" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and almost falls asleep with contentment",
+				["keywords"] = { "and", "almost", "falls", "asleep", "with", "contentment" },
+			},
+		},
+	},
+	[22] = {
+		["text"] = "gently bites",
+		["keywords"] = { "gently", "bites" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's hand",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hand" },
+					},
+					[2] = {
+						["text"] = "mistress' hand",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "hand" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master's hand",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hand" },
+					},
+					[2] = {
+						["text"] = "mistress' hand",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress'", "hand" },
+					},
+				},
+			},
+		},
+	},
+	[23] = {
+		["text"] = "leans companionably against",
+		["keywords"] = { "leans", "companionably", "against" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master for a moment",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "for", "moment" },
+					},
+					[2] = {
+						["text"] = "mistress for a moment",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "for", "moment" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "master for a moment",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "for", "moment" },
+					},
+					[2] = {
+						["text"] = "mistress for a moment",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "for", "moment" },
+					},
+				},
+			},
+		},
+	},
+	[24] = {
+		["text"] = "lets loose a loud cry",
+		["keywords"] = { "lets", "loose", "loud", "cry" },
+		["optional"] = {
+			[1] = {
+				["text"] = "then pauses to listen",
+				["keywords"] = { "then", "pauses", "listen" },
+			},
+			[2] = {
+				["text"] = "and bristles when a reply is heard",
+				["keywords"] = { "and", "bristles", "when", "reply", "heard" },
+			},
+			[3] = {
+				["text"] = "in order to attract attention",
+				["keywords"] = { "order", "attract", "attention" },
+			},
+		},
+	},
+	[25] = {
+		["text"] = "lazily watches a butterfly go past",
+		["keywords"] = { "lazily", "watches", "butterfly", "past" },
+		["optional"] = {
+			[1] = {
+				["text"] = "then pounces on it",
+				["keywords"] = { "then", "pounces" },
+			},
+			[2] = {
+				["text"] = "then jumps up and eats it",
+				["keywords"] = { "then", "jumps", "and", "eats" },
+			},
+		},
+	},
+	[26] = {
+		["text"] = "flicks",
+		["keywords"] = { "flicks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his tail",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "tail" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to get rid of some annoying flies",
+						["keywords"] = { "get", "rid", "some", "annoying", "flies" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her tail",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "tail" },
+				["optional"] = {
+					[1] = {
+						["text"] = "to get rid of some annoying flies",
+						["keywords"] = { "get", "rid", "some", "annoying", "flies" },
+					},
+				},
+			},
+		},
+	},
+	[27] = {
+		["text"] = "drops to the ground and raises",
+		["keywords"] = { "drops", "the", "ground", "and", "raises" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his haunches as he stares at an anwary critter",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "haunches", "stares", "anwary", "critter" },
+				["optional"] = {
+					[1] = {
+						["text"] = "then pounces, but misses",
+						["keywords"] = { "then", "pounces", "but", "misses" },
+					},
+					[2] = {
+						["text"] = "then pounces, catching it",
+						["keywords"] = { "then", "pounces", "catching" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and deposits it",
+								["keywords"] = { "and", "deposits" },
+								["continues"] = {
+									[1] = {
+										["text"] = "at his",
+										["keywords"] = { "his" },
+										["continues"] = {
+											[1] = {
+												["text"] = "master's feet",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "master's", "feet" },
+											},
+											[2] = {
+												["text"] = "mistress' feet",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "mistress'", "feet" },
+											},
+										},
+									},
+									[2] = {
+										["text"] = "in his",
+										["keywords"] = { "his" },
+										["continues"] = {
+											[1] = {
+												["text"] = "master's pack",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "master's", "pack" },
+											},
+											[2] = {
+												["text"] = "mistress' pack",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "mistress'", "pack" },
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her haunches as she stares intently at an unwary critter",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "haunches", "she", "stares", "intently", "unwary", "critter" },
+				["optional"] = {
+					[1] = {
+						["text"] = "then pounces, but misses",
+						["keywords"] = { "then", "pounces", "but", "misses" },
+					},
+					[2] = {
+						["text"] = "then pounces, catching it",
+						["keywords"] = { "then", "pounces", "catching" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and deposits it",
+								["keywords"] = { "and", "deposits" },
+								["continues"] = {
+									[1] = {
+										["text"] = "at her",
+										["keywords"] = { "her" },
+										["continues"] = {
+											[1] = {
+												["text"] = "master's feet",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "master's", "feet" },
+											},
+											[2] = {
+												["text"] = "mistress' feet",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "mistress'", "feet" },
+											},
+										},
+									},
+									[2] = {
+										["text"] = "in her",
+										["keywords"] = { "her" },
+										["continues"] = {
+											[1] = {
+												["text"] = "master's pack",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "master's", "pack" },
+											},
+											[2] = {
+												["text"] = "mistress' pack",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "mistress'", "pack" },
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[28] = {
+		["text"] = "bats at an unfortunate critter",
+		["keywords"] = { "bats", "unfortunate", "critter" },
+		["optional"] = {
+			[1] = {
+				["text"] = "but it escapes",
+				["keywords"] = { "but", "escapes" },
+			},
+			[2] = {
+				["text"] = "before snatching it up and eating it",
+				["keywords"] = { "before", "snatching", "and", "eating" },
 			},
 		},
 	},
@@ -14528,7 +15581,7 @@ PetEmote_DefaultEmotes["Felhunter"] = {
 		["continues"] = {
 			[1] = {
 				["text"] = "her leathery hide with her long, pointed tongue",
-				["condition"] = PlayerIsFemale,
+				["condition"] = PetIsFemale,
 				["keywords"] = { "her", "leathery", "hide", "with", "her", "long", "pointed", "tongue" },
 			},
 			[2] = {
@@ -18566,84 +19619,6 @@ PetEmote_DefaultEmotes["Imp"] = {
 	},
 }
 
-PetEmote_DefaultEmotes["Infernal-en"] = {
-	[1] = {
-		["text"] = "stares",
-		["keywords"] = { "stares" },
-		["continues"] = {
-			[1] = {
-				["text"] = "absently",
-				["keywords"] = { "absently" },
-			},
-			[2] = {
-				["text"] = "blankly",
-				["keywords"] = { "blankly" },
-			},
-			[3] = {
-				["text"] = "pensively",
-				["keywords"] = { "pensively" },
-			},
-			[4] = {
-				["text"] = "distantly",
-				["keywords"] = { "distantly" },
-			},
-		},
-	},
-	[2] = {
-		["text"] = "burns",
-		["keywords"] = { "burns" },
-		["continues"] = {
-			[1] = {
-				["text"] = "flames along",
-				["keywords"] = { "flames" },
-				["continues"] = {
-					[1] = {
-						["text"] = "its arms",
-						["keywords"] = { "arms" },
-					},
-					[2] = {
-						["text"] = "its back",
-						["keywords"] = { "back" },
-					},
-					[3] = {
-						["text"] = "the ground",
-						["chance"] = 25,
-						["keywords"] = { "ground" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "quietly",
-				["chance"] = 75,
-				["keywords"] = { "quietly" },
-			},
-		},
-	},
-	[3] = {
-		["text"] = "adjusts its rocks",
-		["keywords"] = { "adjusts", "its", "rocks" },
-		["optional"] = {
-			[1] = {
-				["text"] = "and pebbles",
-			},
-		},
-	},
-	[4] = {
-		["text"] = "stretches",
-		["keywords"] = { "stretches" },
-		["optional"] = {
-			[1] = {
-				["text"] = "roughly",
-				["keywords"] = { "roughly" },
-			},
-			[2] = {
-				["text"] = "its form",
-				["keywords"] = { "its", "form" },
-			},
-		},
-	},
-}
-
 PetEmote_DefaultEmotes["Mechanical"] = {
 	[1] = {
 		["text"] = "clicks and whirrs",
@@ -18808,10 +19783,6 @@ PetEmote_DefaultEmotes["Mechanical"] = {
 			[2] = {
 				["text"] = "\"Exterminate. Exterminate\"",
 				["keywords"] = { "\"Exterminate", "Exterminate\"" },
-			},
-			[3] = {
-				["text"] = "\"Here is what I found on the web for \"you useless heap of scrap\"\"",
-				["keywords"] = { "\"Here", "what", "found", "the", "web", "for", "\"you", "useless", "heap", "scrap\"\"" },
 			},
 		},
 	},
@@ -21076,587 +22047,6 @@ PetEmote_DefaultEmotes["Oxen"] = {
 						["keywords"] = { "mistress", "with", "foreleg" },
 					},
 				},
-			},
-		},
-	},
-}
-
-PetEmote_DefaultEmotes["Porcupine"] = {
-	[1] = {
-		["text"] = "carefully scratches",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "carefully", "scratches" },
-		["continues"] = {
-			[1] = {
-				["text"] = "himself behind his",
-				["condition"] = PetIsMale,
-				["keywords"] = { "himself", "behind", "his" },
-				["continues"] = {
-					[1] = {
-						["text"] = "left ear",
-						["keywords"] = { "left", "ear" },
-					},
-					[2] = {
-						["text"] = "right ear",
-						["keywords"] = { "right", "ear" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "herself behind her",
-				["condition"] = PetIsFemale,
-				["keywords"] = { "herself", "behind", "her" },
-				["continues"] = {
-					[1] = {
-						["text"] = "left ear",
-						["keywords"] = { "left", "ear" },
-					},
-					[2] = {
-						["text"] = "right ear",
-						["keywords"] = { "right", "ear" },
-					},
-				},
-			},
-		},
-	},
-	[2] = {
-		["text"] = "chitters",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "chitters" },
-	},
-	[3] = {
-		["text"] = "flares",
-		["condition"] = TargetIsFriendly,
-		["keywords"] = { "flares" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his razor-sharp quills",
-				["condition"] = PetIsMale,
-				["keywords"] = { "his", "razor-sharp", "quills" },
-				["optional"] = {
-					[1] = {
-						["text"] = "flamboyantly",
-						["keywords"] = { "flamboyantly" },
-					},
-					[2] = {
-						["text"] = "angrily",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "angrily" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her razor-sharp quills",
-				["condition"] = PetIsFemale,
-				["keywords"] = { "her", "razor-sharp", "quills" },
-				["optional"] = {
-					[1] = {
-						["text"] = "flamboyantly",
-						["keywords"] = { "flamboyantly" },
-					},
-					[2] = {
-						["text"] = "angrily",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "angrily" },
-					},
-				},
-			},
-		},
-	},
-	[4] = {
-		["text"] = "rattles",
-		["condition"] = TargetIsUnfriendly,
-		["keywords"] = { "rattles" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his spines",
-				["condition"] = PetIsMale,
-				["keywords"] = { "his", "spines" },
-				["optional"] = {
-					[1] = {
-						["text"] = "threateningly at %t",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "threateningly", "%t" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her spines",
-				["condition"] = PetIsFemale,
-				["keywords"] = { "her", "spines" },
-				["optional"] = {
-					[1] = {
-						["text"] = "threateningly at %t",
-						["condition"] = TargetIsUnfriendly,
-						["keywords"] = { "threateningly", "%t" },
-					},
-				},
-			},
-		},
-	},
-	[5] = {
-		["text"] = "grunts",
-		["keywords"] = { "grunts" },
-		["continues"] = {
-			[1] = {
-				["text"] = "happily",
-				["condition"] = PetIsHappy,
-				["keywords"] = { "happily" },
-				["continues"] = {
-					[1] = {
-						["text"] = "and rolls over so",
-						["keywords"] = { "and", "rolls", "over" },
-						["continues"] = {
-							[1] = {
-								["text"] = "his",
-								["condition"] = PetIsMale,
-								["keywords"] = { "his" },
-								["continues"] = {
-									[1] = {
-										["text"] = "master can rub his belly",
-										["condition"] = PlayerIsMale,
-										["keywords"] = { "master", "can", "rub", "his", "belly" },
-									},
-									[2] = {
-										["text"] = "mistress can rub his belly",
-										["condition"] = PlayerIsFemale,
-										["keywords"] = { "mistress", "can", "rub", "his", "belly" },
-									},
-								},
-							},
-							[2] = {
-								["text"] = "her",
-								["condition"] = PetIsFemale,
-								["keywords"] = { "her" },
-								["continues"] = {
-									[1] = {
-										["text"] = "master can rub her belly",
-										["condition"] = PlayerIsMale,
-										["keywords"] = { "master", "can", "rub", "his", "belly" },
-									},
-									[2] = {
-										["text"] = "mistress can rub her belly",
-										["condition"] = PlayerIsMale,
-										["keywords"] = { "mistress", "can", "rub", "his", "belly" },
-									},
-								},
-							},
-							[3] = {
-								["text"] = "%t can rub",
-								["condition"] = TargetIsFriendly,
-								["keywords"] = { "can", "rub" },
-								["continues"] = {
-									[1] = {
-										["text"] = "his belly",
-										["condition"] = PetIsMale,
-										["keywords"] = { "his", "belly" },
-									},
-									[2] = {
-										["text"] = "her belly",
-										["condition"] = PetIsFemale,
-										["keywords"] = { "her", "belly" },
-									},
-								},
-							},
-						},
-					},
-				},
-			},
-			[2] = {
-				["text"] = "at %t",
-				["condition"] = TargetIsUnfriendly,
-				["keywords"] = { "%t" },
-			},
-		},
-	},
-	[6] = {
-		["text"] = "hisses",
-		["keywords"] = { "hisses" },
-		["optional"] = {
-			[1] = {
-				["text"] = "at %t",
-				["condition"] = TargetExists,
-				["keywords"] = { "%t" },
-			},
-			[2] = {
-				["text"] = "at an imagined threat",
-				["keywords"] = { "imagined", "threat" },
-			},
-			[3] = {
-				["text"] = "and stamps",
-				["condition"] = TargetExists,
-				["keywords"] = { "and", "stamps" },
-				["continues"] = {
-					[1] = {
-						["text"] = "his feet at %t",
-						["condition"] = PetIsMale,
-						["keywords"] = { "his", "feet", "%t" },
-					},
-					[2] = {
-						["text"] = "her feet at %t",
-						["condition"] = PetIsFemale,
-						["keywords"] = { "her", "feet", "%t" },
-					},
-				},
-			},
-		},
-	},
-	[7] = {
-		["text"] = "whines at",
-		["condition"] = PetIsUnhappy,
-		["keywords"] = { "whines" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his",
-				["condition"] = PetIsMale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master, begging for food",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master", "begging", "for", "food" },
-					},
-					[2] = {
-						["text"] = "mistress, begging for food",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress", "begging", "for", "food" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her",
-				["condition"] = PetIsFemale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master, begging for food",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master", "begging", "for", "food" },
-					},
-					[2] = {
-						["text"] = "mistress, begging for food",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress", "begging", "for", "food" },
-					},
-				},
-			},
-			[3] = {
-				["text"] = "%t, begging for food",
-				["condition"] = TargetIsFriendly,
-				["keywords"] = { "%t", "begging", "for", "food" },
-			},
-		},
-	},
-	[8] = {
-		["text"] = "snuffles around",
-		["condition"] = PetIsContent,
-		["keywords"] = { "snuffles", "around" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his",
-				["condition"] = PetIsMale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's pack, looking for food",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "pack", "looking", "food" },
-					},
-					[2] = {
-						["text"] = "mistress's pack, looking for food",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "pack", "looking", "food" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her",
-				["condition"] = PetIsFemale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's pack, looking for food",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "pack", "looking", "food" },
-					},
-					[2] = {
-						["text"] = "mistress's pack, looking for food",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "pack", "looking", "food" },
-					},
-				},
-			},
-			[3] = {
-				["text"] = "%t's pack, looking for food",
-				["condition"] = TargetIsFriendly,
-				["keywords"] = { "%t's", "pack", "looking", "food" },
-			},
-			[4] = {
-				["text"] = "the ground, hoping to find something tasty",
-				["keywords"] = { "the", "ground", "hoping", "find", "something", "tasty" },
-			},
-		},
-	},
-	[9] = {
-		["text"] = "rears up on",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "rears", "up" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his hind legs",
-				["condition"] = PetIsMale,
-				["keywords"] = { "hind", "legs" },
-				["continues"] = {
-					[1] = {
-						["text"] = "and puts his paws on his master's knees",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "and", "puts", "his", "paws", "his", "master's", "knees" },
-					},
-					[2] = {
-						["text"] = "and puts his paws on his mistress's knees",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "and", "puts", "his", "paws", "his", "mistress's", "knees" },
-					},
-					[3] = {
-						["text"] = "and peers into the distance",
-						["keywords"] = { "peers", "into", "distance" },
-					},
-					[4] = {
-						["text"] = "and sniffs the air",
-						["keywords"] = { "sniffs" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her hind legs",
-				["condition"] = PetIsFemale,
-				["keywords"] = { "hind", "legs" },
-				["continues"] = {
-					[1] = {
-						["text"] = "and puts her paws on her master's knees",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "and", "puts", "her", "paws", "her", "master's", "knees" },
-					},
-					[2] = {
-						["text"] = "and puts her paws on her mistress's knees",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "and", "puts", "her", "paws", "her", "mistress's", "knees" },
-					},
-					[3] = {
-						["text"] = "and peers into the distance",
-						["keywords"] = { "peers", "into", "distance" },
-					},
-					[4] = {
-						["text"] = "and sniffs the air",
-						["keywords"] = { "sniffs" },
-					},
-				},
-			},
-		},
-	},
-	[10] = {
-		["text"] = "yawns",
-		["keywords"] = { "yawns" },
-	},
-	[11] = {
-		["text"] = "gives a sharp rasp of surprise at an unusual noise",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "gives", "sharp", "rasp", "surprise", "unusual", "noise" },
-	},
-	[12] = {
-		["text"] = "gives a series of rasping huffs to get",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "gives", "series", "rasping", "huffs" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his",
-				["condition"] = PetIsMale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's attention",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "attention" },
-					},
-					[2] = {
-						["text"] = "mistress's attention",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "attention" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her",
-				["condition"] = PetIsFemale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's attention",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "attention" },
-					},
-					[2] = {
-						["text"] = "mistress's attention",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "attention" },
-					},
-				},
-			},
-		},
-	},
-	[13] = {
-		["text"] = "sniffs",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "sniffs" },
-		["continues"] = {
-			[1] = {
-				["text"] = "his",
-				["condition"] = PetIsMale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's leg",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's" },
-					},
-					[2] = {
-						["text"] = "mistress's leg",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's" },
-					},
-					[3] = {
-						["text"] = "master's hand",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "hand" },
-					},
-					[4] = {
-						["text"] = "mistress's hand",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "hand" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "her",
-				["condition"] = PetIsFemale,
-				["continues"] = {
-					[1] = {
-						["text"] = "master's leg",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's" },
-					},
-					[2] = {
-						["text"] = "mistress's leg",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's" },
-					},
-					[3] = {
-						["text"] = "master's hand",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "hand" },
-					},
-					[4] = {
-						["text"] = "mistress's hand",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "hand" },
-					},
-				},
-			},
-			[3] = {
-				["text"] = "the ground",
-				["keywords"] = { "ground" },
-			},
-			[4] = {
-				["text"] = "the air",
-			},
-		},
-	},
-	[14] = {
-		["text"] = "ambles around, casually sniffing the air",
-		["keywords"] = { "ambles", "around", "casually", "sniffing", "the", "air" },
-	},
-	[15] = {
-		["text"] = "nuzzles the back of",
-		["condition"] = PetIsHappy,
-		["keywords"] = { "nuzzles", "the", "back" },
-		["continues"] = {
-			[1] = {
-				["text"] = "her",
-				["condition"] = PetIsFemale,
-				["keywords"] = { "her" },
-				["continues"] = {
-					[1] = {
-						["text"] = "mistress's knees",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "knees", "nearly", "knocking", "her", "onto", "down" },
-						["optional"] = {
-							[1] = {
-								["text"] = "and gazes up at her",
-								["keywords"] = { "and", "gazes", "her" },
-							},
-						},
-					},
-					[2] = {
-						["text"] = "master's knees",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "knees", "nearly", "toppling", "him", "down", "onto", "herself" },
-						["optional"] = {
-							[1] = {
-								["text"] = "and gazes up at him",
-								["keywords"] = { "and", "gazes", "him" },
-							},
-						},
-					},
-				},
-			},
-			[2] = {
-				["text"] = "his",
-				["condition"] = PetIsMale,
-				["keywords"] = { "his" },
-				["continues"] = {
-					[1] = {
-						["text"] = "mistress's knees",
-						["condition"] = PlayerIsFemale,
-						["keywords"] = { "mistress's", "knees", "nearly", "toppling", "her", "down", "onto", "himself" },
-						["optional"] = {
-							[1] = {
-								["text"] = "and gazes up at her",
-								["keywords"] = { "and", "gazes", "her" },
-							},
-						},
-					},
-					[2] = {
-						["text"] = "master's knees",
-						["condition"] = PlayerIsMale,
-						["keywords"] = { "master's", "knees", "nearly", "toppling", "him", "down", "onto", "himself" },
-						["optional"] = {
-							[1] = {
-								["text"] = "and gazes up at him",
-								["keywords"] = { "and", "gazes", "him" },
-							},
-						},
-					},
-				},
-			},
-		},
-	},
-	[16] = {
-		["text"] = "chortles contentedly",
-		["keywords"] = { "chortles", "contentedly" },
-	},
-	[17] = {
-		["text"] = "chuffs",
-		["keywords"] = { "chuffs" },
-	},
-	[18] = {
-		["text"] = "excavates a small hole",
-		["condition"] = IsFirstCall,
-		["keywords"] = { "excavates", "small", "hole" },
-		["continues"] = {
-			[1] = {
-				["text"] = "hoping for a fungal snack",
-				["keywords"] = { "hoping", "for", "fungal", "snack" },
-			},
-			[2] = {
-				["text"] = "looking for a salt lick",
-				["keywords"] = { "looking", "for", "salt", "lick" },
-			},
-			[3] = {
-				["text"] = "and digs up a surprised critter",
-				["keywords"] = { "and", "digs", "surprised", "critter" },
 			},
 		},
 	},
@@ -24197,6 +24587,587 @@ PetEmote_DefaultEmotes["Riverbeast"] = {
 						["keywords"] = { "mistress'", "pack", "Where's", "the", "food" },
 					},
 				},
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Rodent"] = {
+	[1] = {
+		["text"] = "carefully scratches",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "carefully", "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "himself behind his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "himself", "behind", "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "left ear",
+						["keywords"] = { "left", "ear" },
+					},
+					[2] = {
+						["text"] = "right ear",
+						["keywords"] = { "right", "ear" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "herself behind her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "herself", "behind", "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "left ear",
+						["keywords"] = { "left", "ear" },
+					},
+					[2] = {
+						["text"] = "right ear",
+						["keywords"] = { "right", "ear" },
+					},
+				},
+			},
+		},
+	},
+	[2] = {
+		["text"] = "chitters",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "chitters" },
+	},
+	[3] = {
+		["text"] = "flares",
+		["condition"] = TargetIsFriendly,
+		["keywords"] = { "flares" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his razor-sharp quills",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "razor-sharp", "quills" },
+				["optional"] = {
+					[1] = {
+						["text"] = "flamboyantly",
+						["keywords"] = { "flamboyantly" },
+					},
+					[2] = {
+						["text"] = "angrily",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "angrily" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her razor-sharp quills",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "razor-sharp", "quills" },
+				["optional"] = {
+					[1] = {
+						["text"] = "flamboyantly",
+						["keywords"] = { "flamboyantly" },
+					},
+					[2] = {
+						["text"] = "angrily",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "angrily" },
+					},
+				},
+			},
+		},
+	},
+	[4] = {
+		["text"] = "rattles",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "rattles" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his spines",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his", "spines" },
+				["optional"] = {
+					[1] = {
+						["text"] = "threateningly at %t",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "threateningly", "%t" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her spines",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "spines" },
+				["optional"] = {
+					[1] = {
+						["text"] = "threateningly at %t",
+						["condition"] = TargetIsUnfriendly,
+						["keywords"] = { "threateningly", "%t" },
+					},
+				},
+			},
+		},
+	},
+	[5] = {
+		["text"] = "grunts",
+		["keywords"] = { "grunts" },
+		["continues"] = {
+			[1] = {
+				["text"] = "happily",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "happily" },
+				["continues"] = {
+					[1] = {
+						["text"] = "and rolls over so",
+						["keywords"] = { "and", "rolls", "over" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his",
+								["condition"] = PetIsMale,
+								["keywords"] = { "his" },
+								["continues"] = {
+									[1] = {
+										["text"] = "master can rub his belly",
+										["condition"] = PlayerIsMale,
+										["keywords"] = { "master", "can", "rub", "his", "belly" },
+									},
+									[2] = {
+										["text"] = "mistress can rub his belly",
+										["condition"] = PlayerIsFemale,
+										["keywords"] = { "mistress", "can", "rub", "his", "belly" },
+									},
+								},
+							},
+							[2] = {
+								["text"] = "her",
+								["condition"] = PetIsFemale,
+								["keywords"] = { "her" },
+								["continues"] = {
+									[1] = {
+										["text"] = "master can rub her belly",
+										["condition"] = PlayerIsMale,
+										["keywords"] = { "master", "can", "rub", "his", "belly" },
+									},
+									[2] = {
+										["text"] = "mistress can rub her belly",
+										["condition"] = PlayerIsMale,
+										["keywords"] = { "mistress", "can", "rub", "his", "belly" },
+									},
+								},
+							},
+							[3] = {
+								["text"] = "%t can rub",
+								["condition"] = TargetIsFriendly,
+								["keywords"] = { "can", "rub" },
+								["continues"] = {
+									[1] = {
+										["text"] = "his belly",
+										["condition"] = PetIsMale,
+										["keywords"] = { "his", "belly" },
+									},
+									[2] = {
+										["text"] = "her belly",
+										["condition"] = PetIsFemale,
+										["keywords"] = { "her", "belly" },
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "at %t",
+				["condition"] = TargetIsUnfriendly,
+				["keywords"] = { "%t" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "hisses",
+		["keywords"] = { "hisses" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+			},
+			[2] = {
+				["text"] = "at an imagined threat",
+				["keywords"] = { "imagined", "threat" },
+			},
+			[3] = {
+				["text"] = "and stamps",
+				["condition"] = TargetExists,
+				["keywords"] = { "and", "stamps" },
+				["continues"] = {
+					[1] = {
+						["text"] = "his feet at %t",
+						["condition"] = PetIsMale,
+						["keywords"] = { "his", "feet", "%t" },
+					},
+					[2] = {
+						["text"] = "her feet at %t",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "her", "feet", "%t" },
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "whines at",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "whines" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master, begging for food",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "begging", "for", "food" },
+					},
+					[2] = {
+						["text"] = "mistress, begging for food",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "begging", "for", "food" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master, begging for food",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "begging", "for", "food" },
+					},
+					[2] = {
+						["text"] = "mistress, begging for food",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "begging", "for", "food" },
+					},
+				},
+			},
+			[3] = {
+				["text"] = "%t, begging for food",
+				["condition"] = TargetIsFriendly,
+				["keywords"] = { "%t", "begging", "for", "food" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "snuffles around",
+		["condition"] = PetIsContent,
+		["keywords"] = { "snuffles", "around" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack, looking for food",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "looking", "food" },
+					},
+					[2] = {
+						["text"] = "mistress's pack, looking for food",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "looking", "food" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack, looking for food",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "looking", "food" },
+					},
+					[2] = {
+						["text"] = "mistress's pack, looking for food",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "looking", "food" },
+					},
+				},
+			},
+			[3] = {
+				["text"] = "%t's pack, looking for food",
+				["condition"] = TargetIsFriendly,
+				["keywords"] = { "%t's", "pack", "looking", "food" },
+			},
+			[4] = {
+				["text"] = "the ground, hoping to find something tasty",
+				["keywords"] = { "the", "ground", "hoping", "find", "something", "tasty" },
+			},
+		},
+	},
+	[9] = {
+		["text"] = "rears up on",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "rears", "up" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his hind legs",
+				["condition"] = PetIsMale,
+				["keywords"] = { "hind", "legs" },
+				["continues"] = {
+					[1] = {
+						["text"] = "and puts his paws on his master's knees",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "and", "puts", "his", "paws", "his", "master's", "knees" },
+					},
+					[2] = {
+						["text"] = "and puts his paws on his mistress's knees",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "and", "puts", "his", "paws", "his", "mistress's", "knees" },
+					},
+					[3] = {
+						["text"] = "and peers into the distance",
+						["keywords"] = { "peers", "into", "distance" },
+					},
+					[4] = {
+						["text"] = "and sniffs the air",
+						["keywords"] = { "sniffs" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her hind legs",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "hind", "legs" },
+				["continues"] = {
+					[1] = {
+						["text"] = "and puts her paws on her master's knees",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "and", "puts", "her", "paws", "her", "master's", "knees" },
+					},
+					[2] = {
+						["text"] = "and puts her paws on her mistress's knees",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "and", "puts", "her", "paws", "her", "mistress's", "knees" },
+					},
+					[3] = {
+						["text"] = "and peers into the distance",
+						["keywords"] = { "peers", "into", "distance" },
+					},
+					[4] = {
+						["text"] = "and sniffs the air",
+						["keywords"] = { "sniffs" },
+					},
+				},
+			},
+		},
+	},
+	[10] = {
+		["text"] = "yawns",
+		["keywords"] = { "yawns" },
+	},
+	[11] = {
+		["text"] = "gives a sharp rasp of surprise at an unusual noise",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "gives", "sharp", "rasp", "surprise", "unusual", "noise" },
+	},
+	[12] = {
+		["text"] = "gives a series of rasping huffs to get",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "gives", "series", "rasping", "huffs" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's attention",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "attention" },
+					},
+					[2] = {
+						["text"] = "mistress's attention",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "attention" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's attention",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "attention" },
+					},
+					[2] = {
+						["text"] = "mistress's attention",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "attention" },
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "sniffs",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "sniffs" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's leg",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's" },
+					},
+					[2] = {
+						["text"] = "mistress's leg",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's" },
+					},
+					[3] = {
+						["text"] = "master's hand",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hand" },
+					},
+					[4] = {
+						["text"] = "mistress's hand",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "hand" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's leg",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's" },
+					},
+					[2] = {
+						["text"] = "mistress's leg",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's" },
+					},
+					[3] = {
+						["text"] = "master's hand",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hand" },
+					},
+					[4] = {
+						["text"] = "mistress's hand",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "hand" },
+					},
+				},
+			},
+			[3] = {
+				["text"] = "the ground",
+				["keywords"] = { "ground" },
+			},
+			[4] = {
+				["text"] = "the air",
+			},
+		},
+	},
+	[14] = {
+		["text"] = "ambles around, casually sniffing the air",
+		["keywords"] = { "ambles", "around", "casually", "sniffing", "the", "air" },
+	},
+	[15] = {
+		["text"] = "nuzzles the back of",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "nuzzles", "the", "back" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress's knees",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "knees", "nearly", "knocking", "her", "onto", "down" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and gazes up at her",
+								["keywords"] = { "and", "gazes", "her" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "master's knees",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "knees", "nearly", "toppling", "him", "down", "onto", "herself" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and gazes up at him",
+								["keywords"] = { "and", "gazes", "him" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress's knees",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "knees", "nearly", "toppling", "her", "down", "onto", "himself" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and gazes up at her",
+								["keywords"] = { "and", "gazes", "her" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "master's knees",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "knees", "nearly", "toppling", "him", "down", "onto", "himself" },
+						["optional"] = {
+							[1] = {
+								["text"] = "and gazes up at him",
+								["keywords"] = { "and", "gazes", "him" },
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+	[16] = {
+		["text"] = "chortles contentedly",
+		["keywords"] = { "chortles", "contentedly" },
+	},
+	[17] = {
+		["text"] = "chuffs",
+		["keywords"] = { "chuffs" },
+	},
+	[18] = {
+		["text"] = "excavates a small hole",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "excavates", "small", "hole" },
+		["continues"] = {
+			[1] = {
+				["text"] = "hoping for a fungal snack",
+				["keywords"] = { "hoping", "for", "fungal", "snack" },
+			},
+			[2] = {
+				["text"] = "looking for a salt lick",
+				["keywords"] = { "looking", "for", "salt", "lick" },
+			},
+			[3] = {
+				["text"] = "and digs up a surprised critter",
+				["keywords"] = { "and", "digs", "surprised", "critter" },
 			},
 		},
 	},
@@ -26917,7 +27888,7 @@ PetEmote_DefaultEmotes["Shivarra"] = {
 		["keywords"] = { "uses", "one", "her", "blades", "remove", "the", "dried", "blood", "under", "her", "fingernails" },
 	},
 	[5] = {
-		["text"] = "quietly sings an discordant song",
+		["text"] = "quietly sings a discordant song",
 		["keywords"] = { "quietly", "sings", "discordant", "song" },
 		["optional"] = {
 			[1] = {
@@ -31122,6 +32093,615 @@ PetEmote_DefaultEmotes["Voidlord"] = {
 					[2] = {
 						["text"] = "nods in acceptance",
 						["keywords"] = { "nods", "acceptance" },
+					},
+				},
+			},
+		},
+	},
+}
+
+PetEmote_DefaultEmotes["Void Stalker"] = {
+	[1] = {
+		["text"] = "curls up in a warm spot to bask",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "curls", "up" },
+	},
+	[2] = {
+		["text"] = "sniffs the air curiously",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "sniffs" },
+	},
+	[3] = {
+		["text"] = " growls menacingly at %t, showing lots of sharp teeth",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "growls" },
+	},
+	[4] = {
+		["text"] = "cocks",
+		["condition"] = TargetIsFriendly,
+		["keywords"] = { "cocks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his head and gives %t a big, toothy grin",
+				["condition"] = PetIsMale,
+				["keywords"] = { "head", "upside-down", "peers" },
+			},
+			[2] = {
+				["text"] = "her head and gives %t a big, toothy grin",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "head", "upside-down", "peers" },
+			},
+		},
+	},
+	[5] = {
+		["text"] = "warps behind %t and bites playfully",
+		["condition"] = TargetIsFriendly,
+		["keywords"] = { "warps" },
+	},
+	[6] = {
+		["text"] = "whacks",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "whacks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master with her tail and hisses for food.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "head", "screeching", "food" },
+					},
+					[2] = {
+						["text"] = "mistress with her tail and hisses for food.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "head", "screeching", "food" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master with his tail and hisses for food.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "head", "screeching", "food" },
+					},
+					[2] = {
+						["text"] = "mistress with his tail and hisses for food.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "head", "screeching", "food" },
+					},
+				},
+			},
+		},
+	},
+	[7] = {
+		["text"] = "bites",
+		["condition"] = PetIsUnhappy,
+		["keywords"] = { "bites" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's hand. Feed me!",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hair", "pulls", "hard", "beating", "wings", "Feed" },
+					},
+					[2] = {
+						["text"] = "mistress's hand. Feed me!",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "hair", "pulls", "hard", "beating", "wings", "Feed" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's hand. Feed me!",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "hair", "pulls", "hard", "beating", "wings", "Feed" },
+					},
+					[2] = {
+						["text"] = "mistress's hand. Feed me!",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "hair", "pulls", "hard", "beating", "wings", "Feed" },
+					},
+				},
+			},
+		},
+	},
+	[8] = {
+		["text"] = "chews a small hole in the corner of the food pack and steals some warp stalker treats",
+		["condition"] = PetIsContent,
+		["keywords"] = { "chews", "a", "small", "hole" },
+	},
+	[9] = {
+		["text"] = "hisses fretfully",
+		["condition"] = PetIsContent,
+		["keywords"] = { "hisses", "fretfully" },
+	},
+	[10] = {
+		["text"] = "hisses",
+		["keywords"] = { "hisses" },
+		["continues"] = {
+			[1] = {
+				["text"] = "insouciantly",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "happily" },
+			},
+			[2] = {
+				["text"] = "forlornly",
+				["condition"] = PetIsUnhappy,
+				["keywords"] = { "forlornly" },
+			},
+			[3] = {
+				["text"] = "expectantly",
+				["condition"] = PetIsContent,
+				["keywords"] = { "contentedly" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "wraps around",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "wraps", "around" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's legs and gnaws gently on his armor.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "shoulder", "nibbles", "lock", "hair" },
+					},
+					[2] = {
+						["text"] = "mistress's legs and gnaws gently on her armor.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "shoulder", "nibbles", "lock", "hair" },
+					},
+					[3] = {
+						["text"] = "master's legs and affectionately rubs her cheek against him.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "shoulder", "affectionately", "rubs", "head", "against", "cheek" },
+					},
+					[4] = {
+						["text"] = "mistress's legs and affectionately rubs her cheek against her.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "shoulder", "affectionately", "rubs", "head", "against", "cheek" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's legs and gnaws gently on his armor.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "shoulder", "nibbles", "lock", "hair" },
+					},
+					[2] = {
+						["text"] = "mistress's legs and gnaws gently on her armor.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "shoulder", "nibbles", "lock", "hair" },
+					},
+					[3] = {
+						["text"] = "master's legs and affectionately rubs his cheek against him.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "shoulder", "nibbles", "affectionately" },
+					},
+					[4] = {
+						["text"] = "mistress's legs and affectionately rubs his cheek against her.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "shoulder", "nibbles", "affectionately" },
+					},
+				},
+			},
+		},
+	},
+	[12] = {
+		["text"] = "suddenly warps away and comes back with a",
+		["chance"] = 75,
+		["keywords"] = { "suddenly", "warps", "away" },
+		["continues"] = {
+			[1] = {
+				["text"] = "live",
+				["condition"] = PetIsMale,
+				["keywords"] = { "dead" },
+				["continues"] = {
+					[1] = {
+						["text"] = "fish, which he proudly places at",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "mouse", "which", "lovingly", "deposits" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his master's feet.",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "master's", "shoe" },
+							},
+							[2] = {
+								["text"] = "his mistress's feet.",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "mistress's", "shoe" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "fish, which he gobbles up head and all.",
+						["condition"] = PetIsContent,
+						["keywords"] = { "mouse", "which", "munches", "eagerly" },
+					},
+					[3] = {
+						["text"] = "fish. He gobbles it up and hisses sadly for more.",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "mouse", "gobbles", "messily", "screeching", "more" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "live",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "dead" },
+				["continues"] = {
+					[1] = {
+						["text"] = "fish, which she proudly places at",
+						["condition"] = PetIsHappy,
+						["keywords"] = { "mouse", "which", "lovingly", "deposits" },
+						["continues"] = {
+							[1] = {
+								["text"] = "her master's feet.",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "master's", "shoe" },
+							},
+							[2] = {
+								["text"] = "her mistress's feet.",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "mistress's", "shoe" },
+							},
+						},
+					},
+					[2] = {
+						["text"] = "fish, which she gobbles up head and all.",
+						["condition"] = PetIsContent,
+						["keywords"] = { "mouse", "which", "munches", "eagerly" },
+					},
+					[3] = {
+						["text"] = "fish. She gobbles it up and hisses sadly for more.",
+						["condition"] = PetIsUnhappy,
+						["keywords"] = { "mouse", "gobbles", "messily", "screeching", "more" },
+					},
+				},
+			},
+			[3] = {
+				["text"] = "fresh apple",
+				["keywords"] = { "fresh", "mushroom" },
+				["continues"] = {
+					[1] = {
+						["text"] = "which",
+						["keywords"] = { "which" },
+						["continues"] = {
+							[1] = {
+								["text"] = "he",
+								["condition"] = PetIsMale,
+								["continues"] = {
+									[1] = {
+										["text"] = "tries to share",
+										["condition"] = PetIsHappy,
+										["keywords"] = { "tries", "share" },
+										["continues"] = {
+											[1] = {
+												["text"] = "with his master",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "with", "his", "master" },
+											},
+											[2] = {
+												["text"] = "with his mistress",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "with", "his", "mistress" },
+											},
+										},
+									},
+									[2] = {
+										["text"] = "bats around, then pounces on and devours",
+										["condition"] = PetIsContent,
+										["keywords"] = { "bats", "around", "then", "pounces", "and", "devours" },
+									},
+								},
+							},
+							[2] = {
+								["text"] = "she",
+								["condition"] = PetIsFemale,
+								["keywords"] = { "she" },
+								["continues"] = {
+									[1] = {
+										["text"] = "tries to share",
+										["condition"] = PetIsHappy,
+										["keywords"] = { "tries", "share" },
+										["continues"] = {
+											[1] = {
+												["text"] = "with her master",
+												["condition"] = PlayerIsMale,
+												["keywords"] = { "with", "her", "master" },
+											},
+											[2] = {
+												["text"] = "with her mistress",
+												["condition"] = PlayerIsFemale,
+												["keywords"] = { "with", "her", "mistress" },
+											},
+										},
+									},
+									[2] = {
+										["text"] = "bats around, then pounces on and devours",
+										["condition"] = PetIsContent,
+										["keywords"] = { "bats", "around", "then", "pounces", "and", "devours" },
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			[4] = {
+				["text"] = "fresh mushroom",
+				["condition"] = PetIsHappy,
+				["keywords"] = { "fresh", "mushroom" },
+				["continues"] = {
+					[1] = {
+						["text"] = "which he bats around, then pushes away in disgust",
+						["condition"] = PetIsMale,
+						["keywords"] = { "which", "bats", "around", "then", "pushes", "away", "disgust" },
+					},
+					[2] = {
+						["text"] = "which she bats around, then pushes away in disgust",
+						["condition"] = PetIsFemale,
+						["keywords"] = { "which", "she", "bats", "around", "then", "pushes", "away", "disgust" },
+					},
+				},
+			},
+		},
+	},
+	[13] = {
+		["text"] = "scratches",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "a loose scale from his flank and examines it curiously.",
+				["condition"] = PetIsMale,
+				["keywords"] = { "loose", "feather", "from", "tail", "drops", "ground" },
+			},
+			[2] = {
+				["text"] = "a loose scale from her flank and examines it curiously.",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "loose", "feather", "from", "tail", "drops", "ground" },
+			},
+		},
+	},
+	[14] = {
+		["text"] = "polishes",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "polishes" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his scales against a nearby rock",
+				["condition"] = PetIsMale,
+				["keywords"] = { "beak", "wing" },
+			},
+			[2] = {
+				["text"] = "her scales against a nearby rock",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "beak", "wing" },
+			},
+		},
+	},
+	[15] = {
+		["text"] = "chews on a claw",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "chews", "claw" },
+	},
+	[16] = {
+		["text"] = "rattles",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "rattles" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his spikes loudly and is pleased with the noise",
+				["condition"] = PetIsMale,
+				["keywords"] = { "wing", "feather", "through", "bill", "smooth" },
+			},
+			[2] = {
+				["text"] = "her spikes loudly and is pleased with the noise",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "wing", "feather", "through", "bill", "smooth" },
+			},
+		},
+	},
+	[17] = {
+		["text"] = "chews a small hole in the corner of",
+		["condition"] = PetIsContent,
+		["keywords"] = { "chews", "a", "small", "hole" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack and steals some warp stalker kibble.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "looking", "treats" },
+					},
+					[2] = {
+						["text"] = "mistress's pack and steals some warp stalker kibble.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "looking", "treats" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["continues"] = {
+					[1] = {
+						["text"] = "master's pack and steals some warp stalker kibble.",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master's", "pack", "looking", "treats" },
+					},
+					[2] = {
+						["text"] = "mistress's pack and steals some warp stalker kibble.",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress's", "pack", "looking", "treats" },
+					},
+				},
+			},
+		},
+	},
+	[18] = {
+		["text"] = "scratches",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "scratches" },
+		["continues"] = {
+			[1] = {
+				["text"] = "behind his horns with his back claw",
+				["condition"] = PetIsMale,
+				["keywords"] = { "face", "with", "claw" },
+			},
+			[2] = {
+				["text"] = "behind her horns with her back claw",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "face", "with", "claw" },
+			},
+		},
+	},
+	[19] = {
+		["text"] = "warps behind %t, snapping and hissing",
+		["condition"] = TargetIsUnfriendly,
+		["keywords"] = { "warps", "behind", "%t" },
+	},
+	[20] = {
+		["text"] = "nudges",
+		["condition"] = PetIsContent,
+		["keywords"] = { "nudges" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her", "mistress", "and", "eyes", "the", "food", "pack", "avidly" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress and eyes the food pack avidly",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "and", "eyes", "the", "food", "pack", "avidly" },
+					},
+					[2] = {
+						["text"] = "master and eyes the food pack avidly",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "and", "eyes", "the", "food", "pack", "avidly" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress and eyes the food pack avidly",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "and", "eyes", "the", "food", "pack", "avidly" },
+					},
+					[2] = {
+						["text"] = "master and eyes the food pack avidly",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "and", "eyes", "the", "food", "pack", "avidly" },
+					},
+				},
+			},
+		},
+	},
+	[21] = {
+		["text"] = "grins up at",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "grins" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress mischeviously",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "mischeviously" },
+					},
+					[2] = {
+						["text"] = "master mischeviously",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "mischeviously" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress mischeviously",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "mischeviously" },
+					},
+					[2] = {
+						["text"] = "master mischeviously",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "mischeviously" },
+					},
+				},
+			},
+		},
+	},
+	[22] = {
+		["text"] = "sidles up to",
+		["condition"] = PetIsHappy,
+		["keywords"] = { "sidles" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her",
+				["condition"] = PetIsFemale,
+				["keywords"] = { "her" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress, asking to be scratched",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "asking", "scratched" },
+					},
+					[2] = {
+						["text"] = "master, asking to be scratched",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "asking", "scratched" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "his",
+				["condition"] = PetIsMale,
+				["keywords"] = { "his" },
+				["continues"] = {
+					[1] = {
+						["text"] = "mistress, asking to be scratched",
+						["condition"] = PlayerIsFemale,
+						["keywords"] = { "mistress", "asking", "scratched" },
+					},
+					[2] = {
+						["text"] = "master, asking to be scratched",
+						["condition"] = PlayerIsMale,
+						["keywords"] = { "master", "asking", "scratched" },
 					},
 				},
 			},
