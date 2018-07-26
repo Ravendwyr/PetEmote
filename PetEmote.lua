@@ -1,4 +1,6 @@
 
+local SendAddonMessage = _G.C_ChatInfo.SendAddonMessage
+
 function PetEmote_OnLoad ()
 
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON")
