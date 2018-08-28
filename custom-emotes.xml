@@ -54095,7 +54095,7 @@
             <Text>his</Text>
             <Properties>
               <Condition>PetIsMale</Condition>
-              <MustContinue>false</MustContinue>
+              <MustContinue>true</MustContinue>
               <Keywords>
                 <Keyword>his</Keyword>
               </Keywords>
