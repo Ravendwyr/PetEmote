@@ -16,11 +16,8 @@ function PetEmote_OnLoad ()
 	SLASH_PETEMOTE3 = "/tier"
 	SlashCmdList["PETEMOTE"] = PetEmote_Command
 
-	PetEmote_old_ChatFrame_OnEvent = ChatFrame_OnEvent
-	ChatFrame_OnEvent = PetEmote_new_ChatFrame_OnEvent
-
-	PetEmote_old_SendChatMessage = SendChatMessage
-	SendChatMessage = PetEmote_new_SendChatMessage
+	PetEmote_old_AddMessage = DEFAULT_CHAT_FRAME.AddMessage
+	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_new_AddMessage
 
 	PetEmote_SetNextDefaultEmoteTime(30, 60)
 	PetEmote_SetNextCombatEmoteTime(60, 180)
@@ -984,15 +981,6 @@ function PetEmote_EmoteIsCompleting (text)
 	return false
 end
 
-function PetEmote_new_ChatFrame_OnEvent (event, ...)
-
-	PetEmote_old_AddMessage = DEFAULT_CHAT_FRAME.AddMessage
-	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_new_AddMessage
-	PetEmote_old_ChatFrame_OnEvent(event, ...)
-	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_old_AddMessage
-
-end
-
 function PetEmote_new_AddMessage (obj, message, r, g, b)
 
 	if (string.find(message, PetEmote_apos) ~= nil and string.find(message, PetEmote_nbsp) ~= nil) then
@@ -1003,17 +991,5 @@ function PetEmote_new_AddMessage (obj, message, r, g, b)
 	end
 
 	return PetEmote_old_AddMessage(obj, message, r, g, b)
-
-end
-
-function PetEmote_new_SendChatMessage (message, chatType, language, channel)
-
-	if (PetEmote_HasPet()) then
-		message = string.gsub(message, "%%p", UnitName("pet"))
-	else
-		message = string.gsub(message, "%%p", PETEMOTE_LOCAL_NOPET)
-	end
-
-	PetEmote_old_SendChatMessage(message, chatType, language, channel)
 
 end
