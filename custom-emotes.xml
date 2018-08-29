@@ -37034,7 +37034,7 @@
                 <Text>mistress</Text>
                 <Properties>
                   <Condition>PlayerIsFemale</Condition>
-                  <MustContinue>false</MustContinue>
+                  <MustContinue>true</MustContinue>
                   <Keywords>
                     <Keyword>mistress</Keyword>
                   </Keywords>
