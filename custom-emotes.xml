@@ -98439,7 +98439,7 @@
             <Text>and twists around</Text>
             <Properties>
               <Condition>None</Condition>
-              <MustContinue>false</MustContinue>
+              <MustContinue>true</MustContinue>
               <Keywords>
                 <Keyword>and</Keyword>
                 <Keyword>twists</Keyword>
@@ -98536,7 +98536,7 @@
             <Text>and snaps at</Text>
             <Properties>
               <Condition>None</Condition>
-              <MustContinue>false</MustContinue>
+              <MustContinue>true</MustContinue>
               <Keywords>
                 <Keyword>and</Keyword>
                 <Keyword>snaps</Keyword>
