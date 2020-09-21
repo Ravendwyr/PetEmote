@@ -8,6 +8,8 @@
 
 ## SavedVariablesPerCharacter: PetEmote_Family, PetEmote_Gender
 ## SavedVariables: PetEmote_Settings
+## X-Curse-Project-ID: 40916
+## X-WoWI-ID: 17349
 
 Globals.lua
 localization.lua
