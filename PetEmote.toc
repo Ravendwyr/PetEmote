@@ -1,4 +1,4 @@
-## Interface: 90000
+## Interface: 90001
 ## Title: PetEmote
 ## Author: Jorna, Travis Casey, Teigan, others on the Petopia forums
 ## Version: @project-version@
