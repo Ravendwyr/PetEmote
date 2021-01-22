@@ -23,5 +23,10 @@ jobs:
         with:
           fetch-depth: 50
 
+      - name: Create Package for Classic
+        uses: BigWigsMods/packager@master
+        with:
+          args: -g 1.13.6
+
       - name: Create Package for Retail
         uses: BigWigsMods/packager@master
