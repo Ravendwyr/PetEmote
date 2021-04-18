@@ -433,6 +433,7 @@ function PetEmote_DoEmote (text, ret)
 	end
 
 	if (PetEmote_HasPet()) then
+		local nameAdd, family
 
 		if (string.sub(UnitName("player"), string.len(UnitName("player"))) == "s") then
 			nameAdd = PetEmote_apos
@@ -593,6 +594,7 @@ end
 
 
 function PetEmote_GetRandomEmoteTree (treeType)
+	local tree
 
 	if (treeType == "COMBAT") then
 
@@ -979,7 +981,7 @@ function PetEmote_new_AddMessage (obj, message, r, g, b)
 
 	if (string.find(message, PetEmote_apos) ~= nil and string.find(message, PetEmote_nbsp) ~= nil) then
 		if (PetEmote_Settings["UseMask"] == true) then
-			s, e = string.find(message, PetEmote_nbsp)
+			local s, e = string.find(message, PetEmote_nbsp)
 			message = string.sub(message, s + 2)
 		end
 	end
