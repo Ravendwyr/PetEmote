@@ -18,7 +18,6 @@ IsThirdCall = 16
 
 
 -- Needs to be set
-PetEmote_RandomMessages = {} -- not needed anymore
 PetEmote_DefaultEmotes = {}
 PetEmote_FeedingEmotes = {}
 PetEmote_CombatEmotes  = {}

@@ -1,10 +1,6 @@
 
 PetEmote_MainFrame = CreateFrame("Frame", "PetEmote_MainFrame")
 
-local SendAddonMessage = C_ChatInfo.SendAddonMessage
-local GetContainerItemLink = C_Container.GetContainerItemLink
-local GetItemInfo = C_Item.GetItemInfo
-
 function PetEmote_OnLoad ()
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON")
 	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED")
@@ -217,24 +213,24 @@ end
 
 function PetEmote_Info ()
 	if (UnitIsPlayer("target") and UnitIsFriend("player", "target")) then
-		SendAddonMessage("PetEmote", "rq", "WHISPER", UnitName("target"))
+		C_ChatInfo.SendAddonMessage("PetEmote", "rq", "WHISPER", UnitName("target"))
 	end
 end
 
 function PetEmote_SendAddonMessage (command, params)
 
 	if (UnitIsPlayer("target") and UnitIsFriend("player", "target")) then
-		SendAddonMessage("PetEmote", command .. " " .. params, "WHISPER", UnitName("target"))
+		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "WHISPER", UnitName("target"))
 	end
 
 	if (IsInGuild()) then
-		SendAddonMessage("PetEmote", command .. " " .. params, "GUILD")
+		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "GUILD")
 	end
 
 	if (IsInRaid()) then
-		SendAddonMessage("PetEmote", command .. " " .. params, "RAID")
+		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "RAID")
 	elseif (GetNumSubgroupMembers() > 0) then
-		SendAddonMessage("PetEmote", command .. " " .. params, "PARTY")
+		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "PARTY")
 	end
 
 end
@@ -271,7 +267,7 @@ function PetEmote_HandleAddonMessage (message, distributor, sender)
 	end
 
 	if (cmd == "rq") then -- request
-		SendAddonMessage("PetEmote", "rs " .. PetEmote_Version[1] .. " " .. PetEmote_Version[2] .. " " .. PetEmote_Version[3], "WHISPER", sender)
+		C_ChatInfo.SendAddonMessage("PetEmote", "rs " .. PetEmote_Version[1] .. " " .. PetEmote_Version[2] .. " " .. PetEmote_Version[3], "WHISPER", sender)
 	end
 
 	if (cmd == "rs") then -- response
@@ -381,17 +377,17 @@ function PetEmote_SetRecentFood (arg1, arg2) -- container and slot / food name
 
 	if (type(arg1) == "number" and type(arg2) == "number") then
 
-		local containerItemLink = GetContainerItemLink(arg1, arg2)
+		local containerItemLink = C_Container.GetContainerItemLink(arg1, arg2)
 
 		if (containerItemLink == nil) then
 			PetEmote_RecentFood = nil
 			return
 		end
 
-		itemName, itemLink = GetItemInfo(containerItemLink)
+		itemName, itemLink = C_Item.GetItemInfo(containerItemLink)
 
 	elseif (arg1 ~= nil) then
-		itemName, itemLink = GetItemInfo(arg1)
+		itemName, itemLink = C_Item.GetItemInfo(arg1)
 	else
 		PetEmote_RecentFood = nil
 		return
