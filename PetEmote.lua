@@ -1,8 +1,11 @@
 
-local SendAddonMessage = _G.C_ChatInfo.SendAddonMessage
+PetEmote_MainFrame = CreateFrame("Frame", "PetEmote_MainFrame")
+
+local SendAddonMessage = C_ChatInfo.SendAddonMessage
+local GetContainerItemLink = C_Container.GetContainerItemLink
+local GetItemInfo = C_Item.GetItemInfo
 
 function PetEmote_OnLoad ()
-
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON")
 	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_PET_INFO")
@@ -16,8 +19,7 @@ function PetEmote_OnLoad ()
 	SLASH_PETEMOTE3 = "/tier"
 	SlashCmdList["PETEMOTE"] = PetEmote_Command
 
-	PetEmote_old_AddMessage = DEFAULT_CHAT_FRAME.AddMessage
-	DEFAULT_CHAT_FRAME.AddMessage = PetEmote_new_AddMessage
+	ChatFrame_AddMessageEventFilter("CHAT_MSG_EMOTE", PetEmote_FilterMessage)
 
 	PetEmote_SetNextDefaultEmoteTime(30, 60)
 	PetEmote_SetNextCombatEmoteTime(60, 180)
@@ -243,8 +245,11 @@ function PetEmote_HandleAddonMessage (message, distributor, sender)
 
 	if (cmd == "vs") then -- version
 
-		local major, minor = PetEmote_GetCommand(val)
-		local minor, build = PetEmote_GetCommand(minor)
+		local major, minor, build
+
+		major, minor = PetEmote_GetCommand(val)
+		minor, build = PetEmote_GetCommand(minor)
+
 		major = tonumber(major)
 		minor = tonumber(minor)
 		build = tonumber(build)
@@ -372,7 +377,7 @@ end
 
 function PetEmote_SetRecentFood (arg1, arg2) -- container and slot / food name
 
-	local itemName, itemLink = nil
+	local itemName, itemLink
 
 	if (type(arg1) == "number" and type(arg2) == "number") then
 
@@ -977,15 +982,17 @@ function PetEmote_EmoteIsCompleting (text)
 	return false
 end
 
-function PetEmote_new_AddMessage (obj, message, r, g, b)
+function PetEmote_FilterMessage(self, event, message, author, ...)
 
-	if (string.find(message, PetEmote_apos) ~= nil and string.find(message, PetEmote_nbsp) ~= nil) then
-		if (PetEmote_Settings["UseMask"] == true) then
-			local s, e = string.find(message, PetEmote_nbsp)
-			message = string.sub(message, s + 2)
-		end
+	if (PetEmote_Settings["UseMask"] ~= true) then return end
+
+	if message:find(PetEmote_apos) and message:find(PetEmote_nbsp) then
+		local s, e = message:find(PetEmote_nbsp)
+		return false, message:sub(s+2), "", ...
 	end
 
-	return PetEmote_old_AddMessage(obj, message, r, g, b)
-
 end
+
+PetEmote_OnLoad()
+PetEmote_MainFrame:SetScript("OnEvent", PetEmote_OnEvent)
+PetEmote_MainFrame:SetScript("OnUpdate", PetEmote_OnUpdate)

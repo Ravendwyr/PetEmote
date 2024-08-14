@@ -1,6 +1,4 @@
-## Interface: 90100
-## Interface-Classic: 11307
-## Interface-BCC: 20501
+## Interface: 11503, 110002, 40400
 ## Title: PetEmote
 ## Author: Jorna, Travis Casey, Teigan, others on the Petopia forums
 ## Version: @project-version@
@@ -19,4 +17,3 @@ default-emotes.lua
 custom-emotes.lua
 
 PetEmote.lua
-PetEmote.xml
