@@ -18067,6 +18067,262 @@ PetEmote_DefaultEmotes["Imp"] = {
 	},
 }
 
+PetEmote_DefaultEmotes["Incubus"] = {
+	[1] = {
+		["text"] = "performs a manicure on his nails",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "performs", "manicure", "his", "nails" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and is pleased with the result",
+				["keywords"] = { "and", "pleased", "with", "the", "result" },
+			},
+			[2] = {
+				["text"] = "and shows them off to his master",
+				["keywords"] = { "and", "shows", "them", "off", "his", "master" },
+			},
+			[3] = {
+				["text"] = "and shows them off to %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "and", "shows", "them", "off", "%t" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "flirts with %t behind his master's back",
+		["condition"] = TargetExists,
+		["keywords"] = { "flirts", "with", "%t", "behind", "his", "master's", "back" },
+	},
+	[3] = {
+		["text"] = "sings a bawdy song",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "sings", "bawdy", "song" },
+		["optional"] = {
+			[1] = {
+				["text"] = "to %t in a seductive voice",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "seductive", "voice" },
+			},
+			[2] = {
+				["text"] = "to %t in a seductive voice, occasionally pausing for added emphasis.",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "seductive", "voice", "occasionally", "pausing", "for", "added", "emphasis" },
+			},
+			[3] = {
+				["text"] = "in a seductive voice",
+				["keywords"] = { "seductive", "voice" },
+			},
+			[4] = {
+				["text"] = "in a seductive voice, occasionally pausing for added emphasis.",
+				["keywords"] = { "seductive", "voice", "occasionally", "pausing", "for", "added", "emphasis" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "blows %t a kiss",
+		["condition"] = TargetExists,
+		["keywords"] = { "blows", "kiss" },
+	},
+	[5] = {
+		["text"] = "winks slyly",
+		["keywords"] = { "winks", "slyly" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "at", "%t" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "runs his fingers through his hair",
+		["keywords"] = { "runs", "his", "fingers", "through", "his", "hair" },
+	},
+	[7] = {
+		["text"] = "flexes",
+		["keywords"] = { "flexes" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+			},
+			[2] = {
+				["text"] = "at %t, deliberately showing off his body",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "deliberately", "showing", "off", "his", "body" },
+			},
+			[3] = {
+				["text"] = "at his master",
+				["keywords"] = { "his", "master" },
+			},
+			[4] = {
+				["text"] = "at his master, deliberately showing off his body",
+				["keywords"] = { "his", "master", "deliberately", "showing", "off", "his", "body" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "smirks knowingly",
+		["keywords"] = { "smirks", "knowingly" },
+	},
+	[9] = {
+		["text"] = "bends over to",
+		["keywords"] = { "bends", "over" },
+		["optional"] = {
+			[1] = {
+				["text"] = "inspect a spec of dirt on the ground",
+				["keywords"] = { "inspect", "spec", "dirt", "the", "ground" },
+			},
+			[2] = {
+				["text"] = "polish his hooves",
+				["keywords"] = { "polish", "his", "hooves" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "smiles",
+		["keywords"] = { "smiles" },
+		["optional"] = {
+			[1] = {
+				["text"] = "wickedly",
+				["condition"] = TargetExists,
+				["keywords"] = { "wickedly" },
+				["optional"] = {
+					[1] = {
+						["text"] = "at his master",
+						["keywords"] = { "his", "master" },
+					},
+					[2] = {
+						["text"] = "at %t",
+						["condition"] = TargetExists,
+						["keywords"] = { "%t" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "mysteriously",
+				["keywords"] = { "mysteriously" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "scratches the base of his horns",
+		["keywords"] = { "scratches", "the", "base", "his", "horns" },
+	},
+	[12] = {
+		["text"] = "swishes his tail",
+		["keywords"] = { "swishes", "his", "tail" },
+		["optional"] = {
+			[1] = {
+				["text"] = "back and forth",
+				["keywords"] = { "back", "and", "forth" },
+			},
+		},
+	},
+	[13] = {
+		["text"] = "licks his lips",
+		["keywords"] = { "licks", "his", "lips" },
+	},
+	[14] = {
+		["text"] = "lashes",
+		["keywords"] = { "lashes" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his tail",
+				["keywords"] = { "his", "tail" },
+			},
+			[2] = {
+				["text"] = "his tail, hitting his master with it",
+				["keywords"] = { "his", "tail", "hitting", "his", "master", "with" },
+			},
+			[3] = {
+				["text"] = "his tail, hitting %t with it",
+				["condition"] = TargetExists,
+				["keywords"] = { "his", "tail", "hitting", "%t", "with" },
+			},
+		},
+	},
+	[15] = {
+		["text"] = "leans in close to",
+		["keywords"] = { "leans", "close" },
+		["continues"] = {
+			[1] = {
+				["text"] = "his master",
+				["keywords"] = { "his", "master" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and whispers flirtatiously in",
+						["keywords"] = { "and", "whispers", "flirtatiously" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his ear",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "his", "ear" },
+							},
+							[2] = {
+								["text"] = "her ear",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "her", "ear" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and whispers flirtatiously in their ear",
+						["keywords"] = { "and", "whispers", "flirtatiously", "their", "ear" },
+					},
+				},
+			},
+		},
+	},
+	[16] = {
+		["text"] = "curls his tail around his master's waist",
+		["keywords"] = { "curls", "his", "tail", "around", "his", "master's", "waist" },
+	},
+	[17] = {
+		["text"] = "envelopes his master with his wings",
+		["keywords"] = { "envelopes", "his", "master", "with", "his", "wings" },
+	},
+	[18] = {
+		["text"] = "strokes his horns",
+		["keywords"] = { "strokes", "his", "horns" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and pokes his finger with the sharp tip. Ouch!",
+				["keywords"] = { "and", "pokes", "his", "finger", "with", "the", "sharp", "tip", "Ouch" },
+			},
+		},
+	},
+	[19] = {
+		["text"] = "looks",
+		["keywords"] = { "looks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and grins slyly",
+						["keywords"] = { "and", "grins", "slyly" },
+					},
+					[2] = {
+						["text"] = "and grins, running his tongue over his teeth",
+						["keywords"] = { "and", "grins", "running", "his", "tongue", "over", "his", "teeth" },
+					},
+				},
+			},
+		},
+	},
+}
+
 PetEmote_DefaultEmotes["Lizard"] = {
 	[1] = {
 		["text"] = "curls up in a warm spot to bask",
@@ -27563,144 +27819,6 @@ PetEmote_DefaultEmotes["Stone Hound"] = {
 	},
 }
 
-PetEmote_DefaultEmotes["Succubus"] = {
-	[1] = {
-		["text"] = "winks slyly",
-		["keywords"] = { "winks", "slyly" },
-		["optional"] = {
-			[1] = {
-				["text"] = "at %t",
-				["condition"] = TargetExists,
-				["keywords"] = { "at", "%t" },
-			},
-			[2] = {
-				["text"] = "at her master",
-				["keywords"] = { "her", "master" },
-			},
-		},
-	},
-	[2] = {
-		["text"] = "runs her fingers through her hair",
-		["keywords"] = { "runs", "her", "fingers", "through", "her", "hair" },
-	},
-	[3] = {
-		["text"] = "cracks her whip",
-		["keywords"] = { "cracks", "her", "whip" },
-		["optional"] = {
-			[1] = {
-				["text"] = "at %t",
-				["condition"] = TargetExists,
-				["keywords"] = { "%t" },
-			},
-			[2] = {
-				["text"] = "at her master",
-				["keywords"] = { "her", "master" },
-			},
-		},
-	},
-	[4] = {
-		["text"] = "licks her lips",
-		["keywords"] = { "licks", "her", "lips" },
-	},
-	[5] = {
-		["text"] = "bends over to",
-		["keywords"] = { "bends", "over" },
-		["continues"] = {
-			[1] = {
-				["text"] = "inspect a spec of dirt on the ground",
-				["keywords"] = { "inspect", "spec", "dirt", "the", "ground" },
-			},
-			[2] = {
-				["text"] = "polish her hooves",
-				["keywords"] = { "polish", "her", "hooves" },
-			},
-		},
-	},
-	[6] = {
-		["text"] = "smiles",
-		["keywords"] = { "smiles" },
-		["optional"] = {
-			[1] = {
-				["text"] = "wickedly",
-				["keywords"] = { "wickedly" },
-				["optional"] = {
-					[1] = {
-						["text"] = "at %t",
-						["condition"] = TargetIsFriendly,
-						["keywords"] = { "%t" },
-					},
-					[2] = {
-						["text"] = "at her master",
-						["keywords"] = { "her", "master" },
-					},
-				},
-			},
-			[2] = {
-				["text"] = "mysteriously",
-				["keywords"] = { "mysteriously" },
-			},
-		},
-	},
-	[7] = {
-		["text"] = "strokes her horns",
-		["keywords"] = { "strokes", "her", "horns" },
-		["optional"] = {
-			[1] = {
-				["text"] = "and pokes her finger with the sharp tip. Ouch!",
-				["keywords"] = { "and", "pokes", "her", "finger", "with", "the", "sharp", "tip", "Ouch" },
-			},
-		},
-	},
-	[8] = {
-		["text"] = "lashes her tail",
-		["keywords"] = { "lashes", "her", "tail" },
-		["optional"] = {
-			[1] = {
-				["text"] = "back and forth",
-				["keywords"] = { "back", "and", "forth" },
-			},
-			[2] = {
-				["text"] = "back and forth, hitting",
-				["keywords"] = { "back", "and", "forth", "hitting" },
-				["continues"] = {
-					[1] = {
-						["text"] = "her master with it",
-						["keywords"] = { "her", "master", "with" },
-					},
-					[2] = {
-						["text"] = "%t with it",
-						["condition"] = TargetExists,
-						["keywords"] = { "%t", "with" },
-					},
-				},
-			},
-		},
-	},
-	[9] = {
-		["text"] = "leans in close to",
-		["keywords"] = { "leans", "close" },
-		["continues"] = {
-			[1] = {
-				["text"] = "%t",
-				["condition"] = TargetIsFriendly,
-				["keywords"] = { "%t" },
-			},
-			[2] = {
-				["text"] = "her master",
-				["keywords"] = { "her", "master" },
-			},
-		},
-	},
-	[10] = {
-		["text"] = "curls her tail around her master's waist",
-		["keywords"] = { "curls", "her", "tail", "around", "her", "master's", "waist" },
-	},
-	[11] = {
-		["text"] = "envelopes her master with her wings",
-		["keywords"] = { "envelopes", "her", "master", "with", "her", "wings" },
-	},
-}
-
 PetEmote_DefaultEmotes["Tallstrider"] = {
 	[1] = {
 		["text"] = "caws",
@@ -28747,6 +28865,260 @@ PetEmote_DefaultEmotes["Turtle"] = {
 	},
 }
 
+PetEmote_DefaultEmotes["Succubus"] = {
+	[1] = {
+		["text"] = "performs a manicure on her nails",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "performs", "manicure", "his", "nails" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and is pleased with the result",
+				["keywords"] = { "and", "pleased", "with", "the", "result" },
+			},
+			[2] = {
+				["text"] = "and shows them off to her master",
+				["keywords"] = { "and", "shows", "them", "off", "her", "master" },
+			},
+			[3] = {
+				["text"] = "and shows them off to %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "and", "shows", "them", "off", "%t" },
+			},
+		},
+	},
+	[2] = {
+		["text"] = "flirts with %t behind her master's back",
+		["condition"] = TargetExists,
+		["keywords"] = { "flirts", "with", "%t", "behind", "his", "master's", "back" },
+	},
+	[3] = {
+		["text"] = "sings a bawdy song",
+		["condition"] = IsFirstCall,
+		["keywords"] = { "sings", "bawdy", "song" },
+		["optional"] = {
+			[1] = {
+				["text"] = "in a seductive voice",
+				["keywords"] = { "seductive", "voice" },
+			},
+			[2] = {
+				["text"] = "in a seductive voice, occasionally pausing for added emphasis.",
+				["keywords"] = { "seductive", "voice", "seductive", "voice", "occasionally", "pausing", "for", "added", "emphasis" },
+			},
+			[3] = {
+				["text"] = "to %t in a seductive voice",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "seductive", "voice" },
+			},
+			[4] = {
+				["text"] = "to %t in a seductive voice, occasionally pausing for added emphasis.",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t", "seductive", "voice", "seductive", "voice", "occasionally", "pausing", "for", "added", "emphasis" },
+			},
+		},
+	},
+	[4] = {
+		["text"] = "blows %t a kiss",
+		["condition"] = TargetExists,
+		["keywords"] = { "blows", "kiss" },
+	},
+	[5] = {
+		["text"] = "winks slyly",
+		["keywords"] = { "winks", "slyly" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "at", "%t" },
+			},
+		},
+	},
+	[6] = {
+		["text"] = "fluffs her hair",
+		["keywords"] = { "runs", "his", "fingers", "through", "his", "hair" },
+	},
+	[7] = {
+		["text"] = "cracks her whip",
+		["keywords"] = { "flexes" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+			},
+		},
+	},
+	[8] = {
+		["text"] = "flutters her eyelashes",
+		["keywords"] = { "flutters", "her", "eyelashes" },
+		["optional"] = {
+			[1] = {
+				["text"] = "at her master",
+				["keywords"] = { "her", "master" },
+			},
+			[2] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+			},
+		},
+	},
+	[9] = {
+		["text"] = "bends over to",
+		["keywords"] = { "bends", "over" },
+		["optional"] = {
+			[1] = {
+				["text"] = "inspect a spec of dirt on the ground",
+				["keywords"] = { "inspect", "spec", "dirt", "the", "ground" },
+			},
+			[2] = {
+				["text"] = "polish her hooves",
+				["keywords"] = { "polish", "her", "hooves" },
+			},
+		},
+	},
+	[10] = {
+		["text"] = "smiles",
+		["keywords"] = { "smiles" },
+		["optional"] = {
+			[1] = {
+				["text"] = "wickedly",
+				["condition"] = TargetExists,
+				["keywords"] = { "wickedly" },
+				["optional"] = {
+					[1] = {
+						["text"] = "at her master",
+						["keywords"] = { "her", "master" },
+					},
+					[2] = {
+						["text"] = "at %t",
+						["condition"] = TargetExists,
+						["keywords"] = { "%t" },
+					},
+				},
+			},
+			[2] = {
+				["text"] = "mysteriously",
+				["keywords"] = { "mysteriously" },
+			},
+		},
+	},
+	[11] = {
+		["text"] = "scratches the base of her horns",
+		["keywords"] = { "scratches", "the", "base", "his", "horns" },
+	},
+	[12] = {
+		["text"] = "swishes her tail",
+		["keywords"] = { "swishes", "his", "tail" },
+		["optional"] = {
+			[1] = {
+				["text"] = "back and forth",
+				["keywords"] = { "back", "and", "forth" },
+			},
+		},
+	},
+	[13] = {
+		["text"] = "licks her lips",
+		["keywords"] = { "licks", "her", "lips" },
+	},
+	[14] = {
+		["text"] = "lashes",
+		["keywords"] = { "lashes" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her tail",
+				["keywords"] = { "her", "tail" },
+			},
+			[2] = {
+				["text"] = "her tail, hitting her master with it",
+				["keywords"] = { "her", "tail", "hitting", "her", "master", "with" },
+			},
+			[3] = {
+				["text"] = "her tail, hitting %t with it",
+				["condition"] = TargetExists,
+				["keywords"] = { "her", "tail", "hitting", "%t", "with" },
+			},
+		},
+	},
+	[15] = {
+		["text"] = "leans in close to",
+		["keywords"] = { "leans", "close" },
+		["continues"] = {
+			[1] = {
+				["text"] = "her master",
+				["keywords"] = { "her", "master" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and whispers flirtatiously in",
+						["keywords"] = { "and", "whispers", "flirtatiously" },
+						["continues"] = {
+							[1] = {
+								["text"] = "his ear",
+								["condition"] = PlayerIsMale,
+								["keywords"] = { "his", "ear" },
+							},
+							[2] = {
+								["text"] = "her ear",
+								["condition"] = PlayerIsFemale,
+								["keywords"] = { "her", "ear" },
+							},
+						},
+					},
+				},
+			},
+			[2] = {
+				["text"] = "%t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and whispers flirtatiously in their ear",
+						["keywords"] = { "and", "whispers", "flirtatiously", "their", "ear" },
+					},
+				},
+			},
+		},
+	},
+	[16] = {
+		["text"] = "curls her tail around her master's waist",
+		["keywords"] = { "curls", "her", "tail", "around", "her", "master's", "waist" },
+	},
+	[17] = {
+		["text"] = "envelopes her master with her wings",
+		["keywords"] = { "envelopes", "her", "master", "with", "her", "wings" },
+	},
+	[18] = {
+		["text"] = "strokes her horns",
+		["keywords"] = { "strokes", "her", "horns" },
+		["optional"] = {
+			[1] = {
+				["text"] = "and pokes her finger with the sharp tip. Ouch!",
+				["keywords"] = { "and", "pokes", "her", "finger", "with", "the", "sharp", "tip", "Ouch" },
+			},
+		},
+	},
+	[19] = {
+		["text"] = "looks",
+		["keywords"] = { "looks" },
+		["continues"] = {
+			[1] = {
+				["text"] = "at %t",
+				["condition"] = TargetExists,
+				["keywords"] = { "%t" },
+				["optional"] = {
+					[1] = {
+						["text"] = "and grins slyly",
+						["keywords"] = { "and", "grins", "slyly" },
+					},
+					[2] = {
+						["text"] = "and grins, running her tongue over her lips",
+						["keywords"] = { "and", "grins", "running", "her", "tongue", "over", "her", "lips" },
+					},
+				},
+			},
+		},
+	},
+}
+
 PetEmote_DefaultEmotes["Voidlord"] = {
 	[1] = {
 		["text"] = "gradually phases into and out of the Void",
@@ -28826,9 +29198,9 @@ PetEmote_DefaultEmotes["Voidlord"] = {
 		["keywords"] = { "stares", "into" },
 		["continues"] = {
 			[1] = {
-				["text"] = "%t's sould and",
+				["text"] = "%t's soul and",
 				["condition"] = TargetExists,
-				["keywords"] = { "%t's", "sould", "and" },
+				["keywords"] = { "%t's", "soul", "and" },
 				["continues"] = {
 					[1] = {
 						["text"] = "hisses",
