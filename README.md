@@ -2,8 +2,8 @@
 
 PetEmote is a roleplay-focused add-on for classes in World of Warcraft who have combat pets (Hunters and Warlocks primarily, although there is support for Mage water elementals and Death Knight ghouls).
 
-[![Builder](https://img.shields.io/github/workflow/status/ravendwyr/petemote/Upload?label=Build&logo=github+actions&style=flat-square)](https://github.com/Ravendwyr/PetEmote/actions)
-[![Version](https://img.shields.io/github/v/tag/ravendwyr/petemote?label=Version&logo=curseforge&style=flat-square)](https://www.curseforge.com/wow/addons/petemote/files/all)
+[![Builder](https://img.shields.io/github/actions/workflow/status/ravendwyr/petemote/upload.yml?branch=master&label=Build&logo=github+actions&style=flat-square)](https://github.com/Ravendwyr/PetEmote/actions)
+[![Version](https://img.shields.io/github/v/tag/ravendwyr/petemote?label=Version&logo=curseforge&style=flat-square)](https://www.curseforge.com/wow/addons/handynotes-summerfestival/files/all)
 [![Tracker](https://img.shields.io/github/issues/ravendwyr/petemote?label=Issues&logo=github&style=flat-square)](https://github.com/Ravendwyr/PetEmote/issues)
 
 [Official Forum](https://forums.wow-petopia.com/viewtopic.php?f=3&t=20346)
@@ -156,11 +156,10 @@ Emote Contributors:
 
 ### Support
 
-[![Twitter](https://img.shields.io/twitter/follow/ravendwyr?label=Twitter&logo=twitter&style=flat-square)](https://twitter.com/Ravendwyr)
-[![Discord](https://img.shields.io/discord/299308204393889802?label=Discord&logo=discord&style=flat-square)](https://top.gg/servers/299308204393889802)
-[![Sponsor](https://img.shields.io/github/sponsors/ravendwyr?label=Sponsors&logo=github+sponsors&style=flat-square)](https://github.com/sponsors/Ravendwyr)
+[![Telegram](https://img.shields.io/badge/Telegram-contact-lightgray?style=flat-square&logo=telegram)](https://t.me/ravendwyr)
+[![Twitch](https://img.shields.io/twitch/status/ravendwyr?style=flat-square&logo=twitch&label=Twitch)](https://www.twitch.tv/ravendwyr)
+[![Discord](https://img.shields.io/discord/299308204393889802?style=flat-square&logo=discord&label=Discord)](https://discord.gg/rKWQ4HsXtt)
+[![Mastodon](https://img.shields.io/mastodon/follow/110671875370528026?domain=https%3A%2F%2Fgamepad.club&style=flat-square&logo=mastodon&label=Mastodon)](https://gamepad.club/@ravendwyr)
 
-[![Twitch](https://img.shields.io/badge/Twitch-subscribe-yellow?&logo=twitch&style=flat-square)](https://www.twitch.tv/subs/ravendwyr)
-[![Crypto](https://img.shields.io/badge/ETH-send-yellow?&logo=ethereum&style=flat-square)](https://etherscan.io/address/0x332224Ed82264298B3DC68dAcf643E8Df4abDCC3)
-[![PayPal](https://img.shields.io/badge/PayPal-donate-yellow?logo=paypal&style=flat-square)](https://www.paypal.me/Ravendwyr/5gbp)
-[![Coffee](https://img.shields.io/badge/Kofi-buy-yellow?logo=ko-fi&style=flat-square)](https://ko-fi.com/Ravendwyr)
+[![GitHub](https://img.shields.io/badge/GitHub-sponsor-yellow?style=flat-square&logo=github%20sponsors)](https://github.com/sponsors/Ravendwyr)
+[![Coffee](https://img.shields.io/badge/KoFi-support-yellow?style=flat-square&logo=kofi)](https://ko-fi.com/Ravendwyr)
