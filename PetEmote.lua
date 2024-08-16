@@ -2,6 +2,9 @@
 PetEmote_MainFrame = CreateFrame("Frame", "PetEmote_MainFrame")
 
 function PetEmote_OnLoad ()
+
+	C_ChatInfo.RegisterAddonMessagePrefix("PetEmote")
+
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_ADDON")
 	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_PET_INFO")
@@ -37,8 +40,12 @@ function PetEmote_OnEvent (self, event, ...)
 	local arg1, arg2, arg3, arg4 = select(1, ...)
 
 	-- receive messages from other PetEmote users
-	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote" and arg4 ~= UnitName("player")) then
-		return PetEmote_HandleAddonMessage(arg2, arg3, arg4)
+	if (event == "CHAT_MSG_ADDON" and arg1 == "PetEmote") then
+		local name, realm = UnitFullName("player")
+
+		if arg4 ~= name.."-"..realm then
+			return PetEmote_HandleAddonMessage(arg2, arg4)
+		end
 	end
 
 	-- handle combat log events
@@ -235,7 +242,7 @@ function PetEmote_SendAddonMessage (command, params)
 
 end
 
-function PetEmote_HandleAddonMessage (message, distributor, sender)
+function PetEmote_HandleAddonMessage (message, sender)
 
 	local cmd, val = PetEmote_GetCommand(message)
 
@@ -257,13 +264,14 @@ function PetEmote_HandleAddonMessage (message, distributor, sender)
 					minor = PetEmote_Settings["LatestVersion"][2]
 					build = PetEmote_Settings["LatestVersion"][3]
 				end
+
 				PetEmote_Settings["RecentVersionInfo"] = GetTime()
 				PetEmote_Settings["LatestVersion"] = { major, minor, build }
+
 				PetEmote_Message(gsub(PETEMOTE_HELP_VERSION, "$v", major .. "." .. minor .. "." .. build))
 				PetEmote_Message(PETEMOTE_HELP_WEBLINK)
 			end
 		end
-
 	end
 
 	if (cmd == "rq") then -- request
@@ -271,8 +279,11 @@ function PetEmote_HandleAddonMessage (message, distributor, sender)
 	end
 
 	if (cmd == "rs") then -- response
-		local major, minor = PetEmote_GetCommand(val)
-		local minor, build = PetEmote_GetCommand(minor)
+		local major, minor, build
+
+		major, minor = PetEmote_GetCommand(val)
+		minor, build = PetEmote_GetCommand(minor)
+
 		PetEmote_Message(gsub(gsub(PETEMOTE_LOCAL_INFO, "$v", major .. "." .. minor .. "." .. build), "$p", sender))
 	end
 
