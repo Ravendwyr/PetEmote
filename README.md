@@ -3,7 +3,7 @@
 PetEmote is a roleplay-focused add-on for classes in World of Warcraft who have combat pets (Hunters and Warlocks primarily, although there is support for Mage water elementals and Death Knight ghouls).
 
 [![Builder](https://img.shields.io/github/actions/workflow/status/ravendwyr/petemote/upload.yml?branch=master&label=Build&logo=github+actions&style=flat-square)](https://github.com/Ravendwyr/PetEmote/actions)
-[![Version](https://img.shields.io/github/v/tag/ravendwyr/petemote?label=Version&logo=curseforge&style=flat-square)](https://www.curseforge.com/wow/addons/handynotes-summerfestival/files/all)
+[![Version](https://img.shields.io/github/v/tag/ravendwyr/petemote?label=Version&logo=curseforge&style=flat-square)](https://www.curseforge.com/wow/addons/petemote/files/all)
 [![Tracker](https://img.shields.io/github/issues/ravendwyr/petemote?label=Issues&logo=github&style=flat-square)](https://github.com/Ravendwyr/PetEmote/issues)
 
 [Official Forum](https://forums.wow-petopia.com/viewtopic.php?f=3&t=20346)
