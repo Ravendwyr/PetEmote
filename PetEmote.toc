@@ -1,4 +1,4 @@
-## Interface: 11503, 110002, 40400
+## Interface: 11505, 110005, 40401
 ## Title: PetEmote
 ## Author: Jorna, Travis Casey, Teigan, others on the Petopia forums
 ## Version: @project-version@
