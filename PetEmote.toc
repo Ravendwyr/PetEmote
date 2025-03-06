@@ -1,9 +1,21 @@
-## Interface: 11505, 110005, 40401
+## Interface: 110100, 40402, 11506
 ## Title: PetEmote
 ## Author: Jorna, Travis Casey, Teigan, others on the Petopia forums
 ## Version: @project-version@
 ## Notes: Allows you to send emotes from Hunter, Warlock, Death Knight and Mage pets.
 ## Notes-deDE: Ermöglicht Emotes für die Begleiter von Jägern, Hexenmeistern, Todesrittern und Magiern.
+
+## Category: Roleplay
+## Category-deDE: Rollenspiel
+## Category-esES: Juego de rol
+## Category-esMX: Juego de rol
+## Category-frFR: Jeu de rôle
+## Category-itIT: Gioco di Ruolo
+## Category-koKR: 롤플레잉
+## Category-ptBR: Interpretação de Papel
+## Category-ruRU: Ролевая игра
+## Category-zhCN: 角色扮演
+## Category-zhTW: 角色扮演
 
 ## SavedVariablesPerCharacter: PetEmote_Family, PetEmote_Gender
 ## SavedVariables: PetEmote_Settings
