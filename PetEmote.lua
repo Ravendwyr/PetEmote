@@ -1,6 +1,8 @@
 
 PetEmote_MainFrame = CreateFrame("Frame", "PetEmote_MainFrame")
 
+local isMidnight = select(4, GetBuildInfo()) >= 120000 and true or false
+
 function PetEmote_OnLoad ()
 
 	C_ChatInfo.RegisterAddonMessagePrefix("PetEmote")
@@ -9,9 +11,10 @@ function PetEmote_OnLoad ()
 	PetEmote_MainFrame:RegisterEvent("PLAYER_FLAGS_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_PET_INFO")
 	PetEmote_MainFrame:RegisterEvent("CHAT_MSG_TRADESKILLS")
-	PetEmote_MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	PetEmote_MainFrame:RegisterEvent("ITEM_LOCK_CHANGED")
 	PetEmote_MainFrame:RegisterEvent("UNIT_PET")
+
+	if not isMidnight then PetEmote_MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED") end
 
 	SLASH_PETEMOTE1 = "/pe"
 	SLASH_PETEMOTE2 = "/petemote"
@@ -237,7 +240,7 @@ function PetEmote_SendAddonMessage (command, params)
 	if (IsInRaid()) then
 		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "RAID")
 	elseif (GetNumSubgroupMembers() > 0) then
-		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "PARTY")
+		C_ChatInfo.SendAddonMessage("PetEmote", command .. " " .. params, "INSTANCE_CHAT")
 	end
 
 end
@@ -434,7 +437,11 @@ end
 
 
 function PetEmote_HasPet ()
-	return (HasPetUI() and UnitName("pet") ~= nil and UnitName("pet") ~= UNKNOWNOBJECT and UnitHealth("pet") > 0)
+	if isMidnight then
+		return (HasPetUI() and UnitName("pet") ~= nil and UnitName("pet") ~= UNKNOWNOBJECT)
+	else
+		return (HasPetUI() and UnitName("pet") ~= nil and UnitName("pet") ~= UNKNOWNOBJECT and UnitHealth("pet") > 0)
+	end
 end
 
 
@@ -470,7 +477,8 @@ function PetEmote_DoEmote (text, ret)
 		if (ret == true) then
 			return nameAdd .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text
 		else
-			SendChatMessage(nameAdd .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE")
+			C_ChatInfo.SendChatMessage(nameAdd .. family .. PetEmote_nbsp .. UnitName("pet") .. PetEmote_nbsp .. text, "EMOTE")
+
 			PetEmote_SetNextDefaultEmoteTime(180, 480)
 			PetEmote_SetNextCombatEmoteTime(120, 420)
 		end
